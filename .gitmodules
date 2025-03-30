@@ -4,6 +4,3 @@
 [submodule "schemas/rime-wubi86-jidian"]
 	path = schemas/rime-wubi86-jidian
 	url = https://github.com/Beyond-Input-Method/rime-wubi86-jidian
-[submodule "schemas/rime_wanxiang_pro"]
-	path = schemas/rime_wanxiang_pro
-	url = https://github.com/Beyond-Input-Method/rime_wanxiang_pro
