@@ -1,0 +1,1128 @@
+# iRime 5 default style settings
+# encoding: utf-8
+
+version: "5.0"
+name: iRime 5 #方案名
+author: 筋斗云 #作者
+
+#style，preset_styles，preset_font，preset_candidates，preset_color_schemas，preset_keyboards 下的default键名是个公共的配置，没有填的话都从default里面取。
+style:
+  default:
+    light: light #竖屏
+    dark: dark #竖屏
+    keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  hmos:
+    light: light #竖屏
+    dark: dark #竖屏
+    keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  iOS:
+    light: light #竖屏
+    dark: dark #竖屏
+    keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  iPadOS:
+    light: default
+    dark: default
+  macOS:
+    light: default
+    dark: default
+#预设style
+preset_styles:
+  default:
+    color_schema: default
+    candidate: default
+    font: default
+  light:
+    color_schema: default
+    candidate: default
+    font: default
+  dark:
+    color_schema: dark
+    candidate: default
+    font: default
+
+#预设的字体
+preset_fonts:
+  default:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 20 #键字号
+    key_upper_text_size: 8 #符号字号
+    key_long_text_size: 14 #长标籤字号
+    preview_text_size: 34 #按键提示字号
+    long_preview_text_size: 20 #长按键提示字号
+    key_upper_press_text_offset_y: 0
+    #指定按键的字型。需要指定键有name属性，如：name: "a"。
+    specified_name:
+      candidate_pasteboard_banner:
+        candidate_text_size: 26
+      candidate_symbol_left:
+        candidate_text_size: 16
+      candidate_symbol_bottom:
+        candidate_text_size: 18
+      candidate_pasteboard:
+        candidate_text_size: 24 #候选区高度
+      candidate_tools:
+        candidate_text_size: 24 #候选区高度
+      candidate_composition_text_list:
+        candidate_text_size: 24 #候选区高度
+      candidate_text_collection_view:
+        candidate_text_size: 20 #候选区高度
+      backspace:
+        key_text_size: 16 #键字号
+      number:
+        key_text_size: 16 #键字号
+      return:
+        key_text_size: 16 #键字号
+      confirm:
+        key_text_size: 16 #键字号
+      shift:
+        key_text_size: 16 #键字号
+      symbol:
+        key_text_size: 16 #键字号
+      english:
+        key_text_size: 16 #键字号
+      english_keyboard:
+        key_text_size: 24 #键字号
+      mode_switch_cn_or_en:
+        key_text_size: 5 #键字号
+      delimiter:
+        key_text_size: 15 #键字号
+
+#预设候选栏
+preset_candidates:
+  default:
+    margin: 5 #候选项外边距
+    padding: 5 #候选项内边距
+    spacing: 5 #候选间距
+    use_cursor: true #高亮候选项
+    candidate_view_height: 44 #候选区高度
+    comment_height: 12 #编码提示区高度
+    comment_on_top: true #编码提示在上方或右侧
+    text_height: 20 #编码区高度
+    more_button_width: 44 #更多按钮宽度
+    corner_radius: 6 #圆角半径
+    hilited_corner_radius: 6 #高亮圆角半径
+    view_height: 28 #候选区高度
+    specified_name:
+      candidate_text_collection_view:
+        candidate_view_height: 44 #候选区高度
+      candidate_tools:
+        more_button_width: 64
+      candidate_menu:
+        spacing: 28
+
+  #注意：
+  #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
+  #2,同时有back_color和back_image时，back_image生效.
+preset_color_schemes:
+   default:
+
+    primary-100: &primary-100 0x2E8B57
+    primary-200: &primary-200 0x61bc84
+    primary-300: &primary-300 0xc6ffe6
+    accent-100: &accent-100 0xDB3715
+    accent-200: &accent-200 0x345e37
+    text-100: &text-100 0xFFFFFF
+    text-200: &text-200 0xe0e0e0
+    bg-100: &bg-100 0x1E1E1E
+    bg-200: &bg-200 0x2d2d2d
+    bg-300: &bg-300 0x454545
+
+    #keyboard
+    keyboard_back_color: *bg-100
+    #key
+    key_back_color: *bg-200
+    hilited_key_back_color: *primary-100
+
+    key_text_color: *text-100
+    hilited_key_text_color: *bg-100
+
+    key_under_color: *bg-300
+    hilited_key_under_color: *bg-100
+
+    key_border_color: *bg-100
+    hilited_key_border_color: *bg-100
+
+    key_upper_text_color: *text-200
+    hilited_key_upper_text_color: *bg-200
+
+    off_key_back_color: *primary-100
+    hilited_off_key_back_color: *primary-100
+
+    off_key_text_color: *text-200
+    hilited_off_key_text_color: *text-100
+
+    on_key_back_color: *accent-100
+    hilited_on_key_back_color: *accent-100
+
+    on_key_text_color: *text-100
+    hilited_on_key_text_color: *text-100
+
+    #candidate
+    candidate_back_color: *bg-100
+    hilited_candidate_back_color: *primary-100
+
+    candidate_text_color: *text-100
+    hilited_candidate_text_color: *accent-100
+
+    comment_text_color: *text-200
+    hilited_comment_text_color: *text-100
+
+    text_color: *text-100 #编码
+    hilited_text_color: *text-100
+
+    #privew
+    preview_boarder_color: *primary-200
+    preview_back_color: *primary-100
+    preview_text_color: *bg-100
+
+    #long preview
+    long_preview_boarder_color: *bg-100
+
+    long_preview_back_color: *primary-100
+    hilited_long_preview_back_color: *bg-200
+
+    long_preview_text_color: *bg-100
+    hilited_long_preview_text_color: *text-100
+
+    candidate_separator_color: *text-200
+
+    back_color: *bg-100 #候选区背景
+    hilited_back_color: *bg-300 #标明编码背景
+
+    border_color: *text-100 #边框
+    hilited_border_color: *bg-100
+
+    text_back_color: *text-100 #编码区背景
+
+    #指定按键设置。指定键必须有name设置才能从预设中读取颜色
+    specified_name:
+      candidate_menu:
+        candidate_text_color: *primary-100
+      candidate_pasteboard:
+        candidate_text_color: *text-100
+      candidate_tools:
+        candidate_text_color: *text-100
+      default:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      shift:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      backspace:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      return:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+
+        off_key_back_color: *primary-100
+        off_key_text_color: *bg-200
+        on_key_back_color: *accent-100
+        on_key_text_color: *accent-200
+      confirm:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      number:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      symbol:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      english:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      numberPeriodFull:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      white_back:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      delimiter:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      dot:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      halfat:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      table:
+        key_border_color: *bg-100
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      semicolon_nx:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      number_zero:
+        key_back_color: *bg-200
+        hilited_key_back_color: *primary-100
+        key_text_color: *text-100
+        hilited_key_text_color: *bg-100
+
+   dark:
+    #Dark Sage Green
+    primary-100: &primary-100 0x2E8B57
+    primary-200: &primary-200 0x61bc84
+    primary-300: &primary-300 0xc6ffe6
+    accent-100: &accent-100 0x8FBC8F
+    accent-200: &accent-200 0x345e37
+    text-100: &text-100 0xFFFFFF
+    text-200: &text-200 0xe0e0e0
+    bg-100: &bg-100 0x1E1E1E
+    bg-200: &bg-200 0x2d2d2d
+    bg-300: &bg-300 0x454545
+
+
+    #keyboard
+    keyboard_back_color: *bg-100
+    #key
+    key_back_color: *bg-200
+    hilited_key_back_color: *primary-100
+
+    key_text_color: *text-100
+    hilited_key_text_color: *bg-100
+
+    key_under_color: *bg-300
+    hilited_key_under_color: *bg-100
+
+    key_border_color: *bg-100
+    hilited_key_border_color: *bg-100
+
+    key_upper_text_color: *text-200
+    hilited_key_upper_text_color: *bg-200
+
+    off_key_back_color: *primary-100
+    hilited_off_key_back_color: *primary-100
+
+    off_key_text_color: *text-200
+    hilited_off_key_text_color: *text-100
+
+    on_key_back_color: *accent-100
+    hilited_on_key_back_color: *accent-100
+
+    on_key_text_color: *text-100
+    hilited_on_key_text_color: *text-100
+
+    #candidate
+    candidate_back_color: *bg-100
+    hilited_candidate_back_color: *accent-100
+
+    candidate_text_color: *text-100
+    hilited_candidate_text_color: *accent-200
+
+    comment_text_color: *text-200
+    hilited_comment_text_color: *text-100
+
+    text_color: *text-100 #编码
+    hilited_text_color: *text-100
+
+    #privew
+    preview_boarder_color: *primary-200
+    preview_back_color: *primary-100
+    preview_text_color: *primary-300
+
+    #long preview
+    long_preview_boarder_color: *bg-100
+
+    long_preview_back_color: *primary-100
+    hilited_long_preview_back_color: *bg-200
+
+    long_preview_text_color: *bg-100
+    hilited_long_preview_text_color: *text-100
+
+    candidate_separator_color: *text-200
+
+    back_color: *bg-100 #候选区背景
+    hilited_back_color: *bg-300 #标明编码背景
+
+    border_color: *text-100 #边框
+    hilited_border_color: *bg-100
+
+    text_back_color: *text-100 #编码区背景
+
+    #指定按键设置。指定键必须有name设置才能从预设中读取颜色
+    specified_name:
+      candidate_menu:
+        candidate_text_color: *primary-100
+      # candidate_symbol_right:
+        # candidate_back_color: *accent-100
+      candidate_symbol_left:
+        candidate_back_color: *primary-100
+        hilited_candidate_back_color: *primary-200
+      candidate_symbol_bottom:
+        candidate_back_color: *primary-200
+      candidate_pasteboard:
+        candidate_text_color: *text-100
+      candidate_tools:
+        candidate_text_color: *text-100
+      default:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      shift:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      backspace:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      return:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+
+        off_key_back_color: *primary-100
+        off_key_text_color: *bg-200
+        on_key_back_color: *accent-100
+        on_key_text_color: *accent-200
+
+      confirm:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      number:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      symbol:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      english:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      numberPeriodFull:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      white_back:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      delimiter:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      dot:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      halfat:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      table:
+        key_border_color: *bg-100
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      semicolon_nx:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      number_zero:
+        key_back_color: *bg-200
+        hilited_key_back_color: *primary-100
+        key_text_color: *text-100
+        hilited_key_text_color: *bg-100
+
+
+#键盘布局
+preset_keyboards:
+  default:
+    ascii_mode: 0
+    height: 46
+    width: 10
+    height_land: 30
+    horizontal_gap: 6
+    vertical_gap: 10
+    round_corner: 6
+    key_text_offset_x: 0
+    key_text_offset_y: 0
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 3
+    preview_round_corner: 9
+    long_preview_round_corner: 9
+    long_preview_padding: 0
+    long_preview_margin: 4
+    preview: true
+    shadow: {radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C"}
+    menu: {spacing: 28, first_scrollable: false, last_scrollable: false, events: [eisu_toggle_setting, eisu_toggle_user_feedback, eisu_toggle_switch_setting, eisu_toggle_schema_setting, eisu_toggle_clip_board, eisu_toggle_search_clip_board, eisu_toggle_emoji, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_dismiss_keyboard] }
+#现在只支持配置click,swipe_up,swipe_down键盘
+    keys:
+      # 1
+      - {click: q, label: Q, swipe_up: commit_1,  swipe_down: "一", long_click: [。, commit_1, commit_Q]}
+      - {click: w, label: W, swipe_up: commit_2,  swipe_down: "二", long_click: [commit_2, commit_W, commit_w]}
+      - {click: e, label: E, swipe_up: commit_3,  swipe_down: "三", long_click: [commit_3, commit_E, commit_e]}
+      - {click: r, label: R, swipe_up: commit_4,  swipe_down: "四", long_click: [commit_4, commit_R, commit_r]}
+      - {click: t, label: T, swipe_up: commit_5,  swipe_down: "五", long_click: [commit_5, commit_T, commit_t]}
+      - {click: y, label: Y, swipe_up: commit_6,  swipe_down: "六", long_click: [commit_6, commit_Y, commit_y]}
+      - {click: u, label: U, swipe_up: commit_7,  swipe_down: "七", long_click: [commit_7, commit_U, commit_u]}
+      - {click: i, label: I, swipe_up: commit_8,  swipe_down: "八", long_click: [commit_8, commit_I, commit_i]}
+      - {click: o, label: O, swipe_up: commit_9,  swipe_down: "九", long_click: [commit_9, commit_O, commit_o]}
+      - {click: p, label: P, swipe_up: commit_0,  swipe_down: "〇", long_click: [commit_0, commit_P, commit_p]}
+      - {width: 5}
+      #2
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [commit_fulltilde, commit_A]}
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [commit_halfslash, commit_S, commit_s]}
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [commit_fullcolon, commit_D, commit_d]}
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [commit_fullsemicolon, commit_F, commit_f]}
+      - {click: g, label: G, swipe_up: text_haflbracket_left, swipe_down: "(", long_click: [text_haflbracket_left, commit_G, commit_g]}
+      - {click: h, label: H, swipe_up: commit_rightparen, swipe_down: ")", long_click: [commit_rightparen, commit_H, commit_h]}
+      - {click: j, label: J, swipe_up: commit_halfat,  swipe_down: "@", long_click: [commit_halfat, commit_J, commit_j]}
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left,  swipe_down: '"', long_click: [text_fullquotationmark_left, commit_K, commit_k]}
+      - {click: l, label: L, swipe_up: commit_halfquote,  swipe_down: "'", long_click: [commit_halfquote, commit_L, commit_l]}
+      - {width: 5}
+      #3
+      - {click: shift, has_menu: text_delimiter, width: 14, name: shift, preview: false}
+      - {width: 1}
+      - {click: z, label: Z, swipe_up: "`",  swipe_down: "`", long_click: [commit_halfminus, commit_Z, commit_z]}
+      - {click: x, label: X, swipe_up: commit_halfunderline,  swipe_down: "_", long_click: [commit_halfunderline, commit_X, commit_x]}
+      - {click: c, label: C, swipe_up: commit_halfpoundsign,  swipe_down: "#", long_click: [commit_halfpoundsign, commit_C, commit_c]}
+      - {click: v, label: V, swipe_up: commit_fullquestionmark,  swipe_down: "?", long_click: [commit_fullquestionmark, commit_V, commit_v]}
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint,  swipe_down: "!", long_click: [commit_fullexclamationpoint, commit_B, commit_b]}
+      - {click: n, label: N, swipe_up: "，",  swipe_down: commit_halfcomma, long_click: [，, commit_N, commit_n]}
+      - {click: m, label: M, swipe_up: "。",  swipe_down: commit_halfperiod, long_click: [。, commit_M, commit_m]}
+      - {width: 1}
+      - {click: backspace, width: 14, name: backspace, preview: false}
+      #4
+      - {click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false}
+      - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 12, name: english, preview: false}
+      # - {width: 0.5}
+      - {click: space, width: 36, name: space, swipe_up: send_2, preview: false}
+      - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 12, name: number, preview: false}
+      - {click: semicolon_nx, name: semicolon_nx, width: 12, preview: false}
+#      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
+      # - {click: mode_switch_cn_or_en, has_menu: text_halfcomma, width: 11, name: mode_switch_cn_or_en, preview: false}
+      - {click: return, width: 14, name: return, swipe_up: send_3, composing: confirm, long_click: next, rect_preview: true, preview: false}
+
+  english:
+    ascii_mode: 1
+    name: english_keyboard
+    lock: true
+    keys:
+      #1
+      - {click: q, swipe_up: commit_1, long_click: [1, Q, q]}
+      - {click: w, swipe_up: commit_2, long_click: [2, W, w]}
+      - {click: e, swipe_up: commit_3, long_click: [3, E, e]}
+      - {click: r, swipe_up: commit_4, long_click: [4, R, r]}
+      - {click: t, swipe_up: commit_5, long_click: [5, T, t]}
+      - {click: y, swipe_up: commit_6, long_click: [6, Y, y]}
+      - {click: u, swipe_up: commit_7, long_click: [7, U, u]}
+      - {click: i, swipe_up: commit_8, long_click: [9, I, I]}
+      - {click: o, swipe_up: commit_9, long_click: [9, O, o]}
+      - {click: p, swipe_up: commit_0, long_click: [0, P, p]}
+      - {width: 5}
+      #2
+      - {click: a, swipe_up: "~", long_click: ["~", A, a]}
+      - {click: s, swipe_up: "/", long_click: ["/", S, s]}
+      - {click: d, swipe_up: ":", long_click: [":", D, d]}
+      - {click: f, swipe_up: ";", long_click: [";", F, f]}
+      - {click: g, swipe_up: text_haflbracket_left, long_click: ["(", G, g]}
+      - {click: h, swipe_up: ")", long_click: [")", H, h]}
+      - {click: j, swipe_up: "@", long_click: ["@", J, j]}
+      - {click: k, swipe_up: commit_halfbackslash,  long_click: ["\"", K, k]}
+      - {click: l, swipe_up: "”", long_click: ["”", L, l]}
+      - {width: 5}
+      #3
+      - {click: shift, width: 14, name: shift}
+      - {width: 1}
+      - {click: z, swipe_up: "-",  long_click: ["-", Z, z]}
+      - {click: x, swipe_up: "_",  long_click: ["_", X, x]}
+      - {click: c, swipe_up: "#",  long_click: ["#", C, c]}
+      - {click: v, swipe_up: "?",  long_click: ["?", V, v]}
+      - {click: b, swipe_up: "!",  long_click: ["!", B, b]}
+      - {click: n, swipe_up: ",",  long_click: [",", N, n]}
+      - {click: m, swipe_up: ".",  long_click: [".", M, m]}
+      - {width: 1}
+      - {click: backspace, width: 14, name: backspace}
+      #4
+      - {click: eisu_toggle_符_symbols, width: 14, name: symbol}
+      - {click: eisu_toggle_返回_default_schema_default, width: 12, name: english, preview: false}
+      - {click: space, width: 36, name: space}
+      - {click: eisu_toggle_123_number, width: 12, name: number}
+      - {click: send_dot, width: 12 }
+      #- {click: eisu_toggle_返回_default, width: 11, name: english}
+      - {click: return, width: 14, name: return, composing: confirm}
+  number_land:
+    #。？！…（））；、～:[]ï`#：+*/×
+    menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
+    ascii_mode: 1
+    horizontal_gap: 6
+    vertical_gap: 6.5
+    name: number_keyboard
+    preview: false
+    height: 46
+    width: 22
+    keys:
+      #1
+      # - {width: 1}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 115, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {click: 1, height: 34}
+      - {click: 2, height: 34}
+      - {click: 3, height: 34}
+      - {click: backspace, width: 17, height: 34, name: backspace}
+
+      # # #2
+      - {width: 17}
+      - {click: 4, height: 34}
+      - {click: 5, height: 34}
+      - {click: 6, height: 34}
+      - {click: send_dot, width: 17, height: 34, name: dot}
+
+      - {width: 17}
+      - {click: 7, height: 34}
+      - {click: 8, height: 34}
+      - {click: 9, height: 34}
+      - {click: commit_halfat, width: 17, height: 34, name: halfat}
+
+      # - {width: 1}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 32, name: default}
+      - {click: eisu_toggle_返回_default, width: 22, height: 32}
+      - {click: commit_0, height: 32, name: number_zero}
+      - {click: space, name: space, height: 32}
+      - {click: return, name: return, width: 17, height: 32, composing: confirm}
+
+  number:
+    #。？！…（））；、～:[]ï`#：+*/×
+    menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
+    ascii_mode: 1
+    name: number_keyboard
+    preview: false
+    height: 46
+    width: 22
+    keys:
+      #1
+      # - {width: 1}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 165, height_land: 111, row_height: 39, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {click: 1, height: 50}
+      - {click: 2, height: 50}
+      - {click: 3, height: 50}
+      - {click: backspace, width: 17, height: 50, name: backspace}
+
+      # # #2
+      - {width: 17}
+      - {click: 4, height: 50}
+      - {click: 5, height: 50}
+      - {click: 6, height: 50}
+      - {click: send_dot, width: 17, height: 50, name: dot}
+
+      - {width: 17}
+      - {click: 7, height: 50}
+      - {click: 8, height: 50}
+      - {click: 9, height: 50}
+      - {click: commit_halfat, width: 17, height: 50, name: halfat}
+
+      # - {width: 1}
+      - {click: eisu_toggle_符_dotsymbols, width: 17, height: 44, name: default}
+      - {click: eisu_toggle_返回_default, width: 22, height: 44}
+      - {click: commit_0, height: 44, name: number_zero}
+      - {click: space, name: space, height: 44}
+      - {click: return, name: return, width: 17, height: 44, composing: confirm}
+
+  symbols:
+    #。？！…（））；、～:[]ï`#：+*/×
+    menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
+    ascii_mode: 0
+    keys:
+    #1
+      - {click: 1, long_click: ["1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠"]}
+      - {click: 2, long_click: ["2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡"]}
+      - {click: 3, long_click: ["3", "三", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣"]}
+      - {click: 4, long_click: ["4", "四", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢"]}
+      - {click: 5, long_click: ["5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤"]}
+      - {click: 6, long_click: ["6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥"]}
+      - {click: 7, long_click: ["7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦"]}
+      - {click: 8, long_click: ["8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧"]}
+      - {click: 9, long_click: ["9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨"]}
+      - {click: 0, long_click: ["0", "零", "０", "⓪", "°"]}
+      - {width: 5}
+      #2
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: ["～", "~"]}
+      - {click: "/", long_click: ["/", "／", "|", "｜", "＼", "\\"]}
+      - {click: ":", long_click: ["：'", ":"]}
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [text_halfsemicolon_default, text_fullsemicolon_default]}
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default]}
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default]}
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [text_halfat_default, text_halfcaret_default]}
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default]}
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default]}
+      - {width: 5}
+      #3
+      - {click: eisu_toggle_更多_dotSymbols, width: 14, name: symbol, long_click: [""]}
+      - {width: 1}
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: ["-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default]}
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [text_halfunderline_default, text_fullunderline_default]}
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default]}
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default]}
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default]}
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default]}
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default]}
+      - {width: 1}
+      - {click: backspace, width: 14, name: backspace}
+      #4
+      - {click: eisu_toggle_返回_default_schema_default, width: 14, name: default}
+      - {click: eisu_toggle_123_number, name: numberPeriodFull, width: 12}
+      - {click: space, width: 48, name: space}
+      - {click: commit_halfperiod, name: commit_halfperiod, width: 12, preview: false}
+      - {click: return, width: 14, name: return, composing: confirm}
+  half_symbols:
+    ascii_mode: 0
+    keys:
+    #1
+      - { click: text_fullsquarebracketleft_left_default }
+      - { click: text_fullsquarebracketright_default }
+      - { click: text_halfleftbrace_default }
+      - { click: text_halfrightbrace_default }
+      - { click: text_halfpoundsign_default }
+      - { click: text_halfpercent_default }
+      - { click: text_halfcaret_default }
+      - { click: text_halfasterisk_default }
+      - { click: text_halfplus_default }
+      - { click: text_halfequal_default }
+    #2
+      - { click: text_halfunderline_default }
+      - { click: text_halfminus_default }
+      - { click: text_halfbackslash_default }
+      - { click: text_halfpipe_default }
+      - { click: "{" }
+      - { click: text_fullleftchineseguillemet_default }
+      - { click: text_fullrightchineseguillemet_default }
+      - { click: "$" }
+      - { click: text_halfand_default }
+      - { click: text_halfdot_default }
+    #3
+      - { click: eisu_toggle_123_number, width: 13, name: number}
+      - { width: 1}
+      - { click: "…", width: 12 }
+      - { click: text_fulldot_default, width: 12 }
+      - { click: text_smile_default, width: 12 }
+      - { click: text_halfquestionmark_default, width: 12 }
+      - { click: text_halfexclamationpoint_default, width: 12 }
+      - { click: text_fullapostrophe_default, width: 12 }
+      - { width: 1}
+      - { click: backspace, width: 13, name: backspace}
+    #4
+      - { click: eisu_toggle_ABC_default, width: 14, name: default}
+      - {click: text_halfperiod_default, name: numberPeriodFull, width: 13}
+      - { click: space, width: 38, name: space}
+      - {click: text_halfcomma_default, name: numberPeriodFull, width: 11}
+      - { click: return, width: 23, name: return}
+
+preset_keys:
+
+  #建议命名规则:
+  #命令_label_**
+  #如：
+  #   eisu_toggle_123_number: 跳转到标题为123的number键盘
+  #   mode_switch_cn_or_en: 切换中方或者英文
+  #   text_delimiter: text组合命令
+  #   text_fullquotationmark_left_default: text 组合命令，上屏全解符号并移动后再跳转到黑夜键盘
+
+  #注：当然命令不是硬性规定。各位也可以自定义
+
+   #打开设置
+  #icon 目前只支持苹果内置的sf symbols,具体请搜索
+
+  #设置
+  eisu_toggle_setting: {icon: "r.joystick.tilt.down.fill", label: "设置", send: Eisu_toggle, select: _setting, option: [eisu_toggle_user_feedback, eisu_toggle_clip_board, eisu_toggle_phrases_board, eisu_toggle_search_clip_board, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_emoji, eisu_toggle_switcher, eisu_toggle_system_info_board]}
+  #开关设置
+  eisu_toggle_switch_setting: {icon: "switch.2", label: "开关", send: Eisu_toggle, select: _setting, option: [mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off]}
+  #方案的switch
+  eisu_toggle_schema_setting: {icon: "s.circle", label: "设置", send: Eisu_toggle, select: _schema_setting}
+  #剪切板
+  eisu_toggle_clip_board: {icon: "doc.plaintext", label: "剪切板", send: Eisu_toggle, select: _clip_board}
+  #剪切板搜索
+  eisu_toggle_search_clip_board: {icon: "doc.text.magnifyingglass", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board}
+  #常用语
+  eisu_toggle_phrases_board: {icon: "doc.text", label: " 常用语", send: Eisu_toggle, select: _phrases_board}
+  #声音
+  eisu_toggle_sound_board: {icon: "speaker.wave.3", label: " 声音", send: Eisu_toggle, select: _sound_board }
+  #触感
+  eisu_toggle_haptics_board: {icon: "iphone.gen2.radiowaves.left.and.right", label: " 触感", send: Eisu_toggle, select: _haptics_board }
+  #emoji
+  eisu_toggle_emoji: {icon: "face.smiling", label: "emoji表情", send: Eisu_toggle, select: .emoji, option: []}
+  #收起键盘
+  eisu_toggle_dismiss_keyboard: {icon: "chevron.down.square", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: []}
+  #收起当前菜单
+  eisu_toggle_dismiss_menu: {icon: "xmark.circle", label: "收起当前菜单", send: Eisu_toggle, select: _dismiss_menu, option: []}
+  #切换命令
+  eisu_toggle_switcher: {icon: "switch.2", label: "切换", send: F4}
+  #显示系统信息
+  eisu_toggle_system_info_board: {icon: "info.circle", label: "系统信息", send: Eisu_toggle, select: _system_info_board }
+  #用户与反馈
+  eisu_toggle_user_feedback: {icon: "ant.circle", label: "报Bug", send: Eisu_toggle, select: _user_feedback_board }
+
+  #Mode_switch
+  #开关
+  #中英切换
+  mode_switch_cn_or_en: {toggle: ascii_mode, send: Mode_switch, states: [ 中文, 西文 ], name: Mode_switch}
+  #剪切板监控
+  mode_switch_pasteboard_monitoring_on_or_off: {icon: "arrow.triangle.2.circlepath.doc.on.clipboard", toggle: app_setting/pasteboard_monitoring_switch, send: Mode_switch, states: [ 剪切板监控关, 剪切板监控开 ], select: bim, name: Mode_switch}
+  #启动显示系统信息
+  mode_switch_system_info_on_or_off: {icon: "info.circle", toggle: app_setting/show_system_info, send: Mode_switch, states: [  系统信息关, 系统信息开 ], select: bim, name: Mode_switch}
+
+
+  #mask
+  left: {label: " ", send: Left}
+  right: {label: " ", send: Right}
+  shift: {send: Shift_L}
+  shift_l: {send: Shift_L}
+  return: {send: Return}
+  confirm: {send: Return, label: "确认", name: confirm}
+  backspace: {send: BackSpace}
+  space: {label: " ", send: space}
+
+  send_3: {label: "", send: 3}
+  send_2: {label: "", send: 2}
+  send_dot: {label: ".", send: .}
+
+  #换行
+  next: {label: "换行", commit: "\n"}
+  semicolon_nx: {label: ";", send: ;}
+
+
+  #eisu_toggle_schem
+  eisu_toggle_schema_en: {label: "ABC", send: Eisu_toggle, select: easy_en, option: schema}
+  eisu_toggle_schema_default: {label: "ABC", send: Eisu_toggle, select: .default, option: schema}
+
+  #eisu_toggle
+  eisu_toggle_123_number: {label: 123, send: Eisu_toggle, select: number}
+#  eisu_toggle_ABC_english: {label: "ABC", send: Eisu_toggle, select: english}
+  eisu_toggle_ABC_english: {label: "英", send: Eisu_toggle, select: english}
+  eisu_toggle_ABC_english_schema_easy_en: {label: "ABC", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}"}
+  eisu_toggle_符_symbols: {label: "符", send: Eisu_toggle, select: symbols}
+  eisu_toggle_符_dotsymbols: {label: "符", send: Eisu_toggle, select: .symbols}
+  eisu_toggle_更多_dotSymbols: {label: "更多", send: Eisu_toggle, select: .symbols} #默认的符号键盘
+  eisu_toggle_more_Symbols_no_functional: {label: "更多", send: Eisu_toggle, select: .symbols, functional: false} #默认的符号键盘
+  eisu_toggle_更多_symbols: {label: "更多", send: Eisu_toggle, select: symbols} #默认的符号键盘
+  eisu_toggle_123_dotNumber: {label: 123, send: Eisu_toggle, select: .number} #默认的9宫格数据键盘
+  eisu_toggle_中_default: {label: 中, send: Eisu_toggle, select: default}
+  eisu_toggle_返回_default: {label: 返回, send: Eisu_toggle, select: default}
+#  eisu_toggle_返回_default_schema_default: {label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
+  eisu_toggle_返回_default_schema_default: {label: "中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
+  eisu_toggle_default: {send: Eisu_toggle, select: default}
+#  eisu_toggle_ABC_default: {label: "ABC", send: Eisu_toggle, select: default}
+  eisu_toggle_ABC_default: {label: "英", send: Eisu_toggle, select: default}
+
+  #text
+
+  text_delimiter: {label: "分隔", text: "{'}", name: delimiter}
+  # .
+  commit_halfperiod: {label: ".", commit: "."} #直接上屏半角句号
+  text_halfperiod_default: {label: ".", text: ".{eisu_toggle_default}"} #上屏全角句号再跳转到default键盘
+  text_fullperiod_default: {label: "。", text: "。{eisu_toggle_default}"} #上屏全角句号再跳转到default键盘
+  text_full_period_default_no_functional: {label: "。", text: "。{eisu_toggle_default}", functional: false} #上屏全角句号再跳转到default键盘
+  # ⋯
+  text_fullellipsis_default: {label: "⋯⋯", text: "⋯⋯{eisu_toggle_default}"}
+  text_halfellipsis_default: {label: "⋯", text: "⋯{eisu_toggle_default}"}
+  text_halfunderellipsis_default: {label: "…", text: "…{eisu_toggle_default}"}
+  # .
+  text_halfperiod: {label: ".", text: "{.}", name: white_back} #上屏全角句号再跳转到default键盘
+  # ,
+  text_halfcomma: {label: "，", text: "{,}", name: white_back}
+  text_halfcomma_default: {label: ",", text: ",{eisu_toggle_default}"}
+  text_fullcomma_default: {label: "，", text: "，{eisu_toggle_default}"}
+  text_full_comma_default_no_functional: {label: "，", text: "，{eisu_toggle_default}", functional: false}
+  #  、
+  text_fullcomma2_default: {label: "、", text: "、{eisu_toggle_default}"}
+  text_fulldun_default: {label: "、", text: "、{eisu_toggle_default}"}
+  # ?
+  text_fullquestionmark_default: {label: "？", text: "？{eisu_toggle_default}"}
+  text_full_question_mark_default_no_functional: {label: "？", text: "？{eisu_toggle_default}", functional: false}
+  text_halfquestionmark_default: {label: "?", text: "?{eisu_toggle_default}"}
+  text_halfdownquestionmark_default: {label: "¿", text: "¿{eisu_toggle_default}"}
+  # !
+  text_fullpoint_default: {label: "！", text: "！{eisu_toggle_default}"}
+  text_full_point_default_no_functional: {label: "！", text: "！{eisu_toggle_default}", functional: false}
+  text_halfpoint_default: {label: "!", text: "!{eisu_toggle_default}"}
+  text_halfdownpoint_default: {label: "¡", text: "¡{eisu_toggle_default}"}
+  # ;
+  text_halfsemicolon_default: {label: "；", text: ";{eisu_toggle_default}"} #先上屏；再跳转到default键盘
+  text_half_semicolon_default_no_functional: {label: "；", text: ";{eisu_toggle_default}", functional: false} #先上屏；再跳转到default键盘
+  text_fullsemicolon_default: {label: "；", text: "；{eisu_toggle_default}"} #先上屏；再跳转到default键盘
+  ##括号
+  # （）()［］【】｛｝〈〉《》
+  # ()
+  text_fullbracket_left_default: {label: "(", text: "（）{Left}{eisu_toggle_default}"} #先上屏()光标往左移动一格再跳转到default键盘
+  text_full_bracket_left_default_no_functional: {label: "(", text: "（）{Left}{eisu_toggle_default}", functional: false} #先上屏()光标往左移动一格再跳转到default键盘
+  text_fullbracketclose_left: {label: ")", text: "）{Left}"} #先上屏()光标往左移动一格
+  text_full_bracket_close_left_no_functional: {label: ")", text: "）{Left}", functional: false} #先上屏()光标往左移动一格
+  # ()
+  text_halfbracket_left_default: {label: "(", text: "(){Left}{eisu_toggle_default}"} #先上屏()光标往左移动一格再跳转到default键盘
+  text_haflbracket_left: {label: "(", text: "(){Left}"} #先上屏()光标往左移动一格
+  text_halfbracket_default: {label: ")", text: "){eisu_toggle_default}"} #先上屏)再跳转到default键盘
+  # ［］
+  text_fullsquarebracketleft2_left_default: {label: "［", text: "［］{Left}{eisu_toggle_default}"}
+  text_fullsquarebracketright2_default: {label: "］", text: "］{eisu_toggle_default}"}
+  # 【】
+  text_fullsquarebracketleft_left_default: {label: "【", text: "【】{Left}{eisu_toggle_default}"}
+  text_fullsquarebracketright_default: {label: "】", text: "】{eisu_toggle_default}"}
+  #｛｝
+  text_fullbrace_left_default: {label: "{", text: "｛｝{left}{eisu_toggle_default}"}
+  text_fullrightbrace_default: {label: "}", text: "｝{eisu_toggle_default}"}
+  text_halfleftbrace_default: {label: "{", text: "{{eisu_toggle_default}"}
+  text_halfrightbrace_default: {label: "}", text: "}{eisu_toggle_default}"}
+  # 〈〉
+  text_fullsinglechineseguillemet_left_default: {label: "<", text: "〈〉{Left}{eisu_toggle_default}"}
+  text_fullrightsinglechineseguillemet_default: {label: ">", text: "〉{eisu_toggle_default}"}
+  #《》
+  text_fullchineseguillemet_default: {label: "《", text: "《》{Left}{eisu_toggle_default}"}
+  text_fullleftchineseguillemet_default: {label: "《", text: "《{eisu_toggle_default}"}
+  text_fullrightchineseguillemet_default: {label: "》", text: "》{eisu_toggle_default}"}
+  ##
+  #引号 “”""＂＂「」『』
+  # “”
+  text_fullquotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
+  text_full_quotation_mark_left_default_no_functional: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}", functional: false}
+  text_fullquotationmarkright_default: {label: "〞", text: "〞{eisu_toggle_default}"}
+  text_full_quotation_mark_right_default_no_functional: {label: "〞", text: "〞{eisu_toggle_default}", functional: false}
+  text_quotationmark_left_default: {label: "〝", text: "〝〞{Left}{eisu_toggle_default}"}
+  text_fullquotationmark_left: {label: "\"", text: "“”{Left}"}
+  # ""
+  text_halfquotationmark_left_default: {label: "\"", text: "\"\"{Left}{eisu_toggle_default}"}
+  text_halfquotationmarkclose_default: {label: "\"", text: "\"{eisu_toggle_default}"}
+  # ＂＂
+  text_fullquotationmark2_left_default: {label: "〝", text: "＂＂{Left}{eisu_toggle_default}"}
+  text_fullquotationmarkright2_default: {label: "〞", text: "＂{eisu_toggle_default}"}
+  # 「」
+  text_fullcornerquotes_left_default: {label: "「", text: "「」{Left}{eisu_toggle_default}"}
+  text_fullcornerquotesdown_default: {label: "」", text: "」{eisu_toggle_default}"}
+  # 『』
+  text_fulldoublequote_left_default: {label: "『", text: "『』{Left}{eisu_toggle_default}"}
+  text_fulldoublequoteleft_default: {label: "』", text: "』{eisu_toggle_default}"}
+  ##
+  # \
+  text_halfquotationmark_default: {label: "\"", text: "\"{eisu_toggle_default}"}
+  # \
+  text_quotationMark_default: {label: "\"", text: "＂{eisu_toggle_default}"}
+  # @
+  text_halfat_default: {label: "@", text: "@{eisu_toggle_default}"}
+  text_halfat_default_no_functional: {label: "@", text: "@{eisu_toggle_default}", functional: false}
+  ##
+  text_halfpoundsign_default: {label: "#", text: "#{eisu_toggle_default}"}
+  text_half_pound_sign_default_no_functional: {label: "#", text: "#{eisu_toggle_default}", functional: false}
+  text_halfpoundsign_default_no_functional: {label: "#", text: "#{eisu_toggle_default}", functional: false}
+  # %
+  text_halfpercent_default: {label: "%", text: "%{eisu_toggle_default}"}
+  text_halfpercent_default_no_functional: {label: "%", text: "%{eisu_toggle_default}", functional: false}
+  #^
+  text_halfcaret_default: {label: "^", text: "^{eisu_toggle_default}"}
+  text_halfcaret_default_no_functional: {label: "^", text: "^{eisu_toggle_default}", functional: false}
+  # *
+  text_halfasterisk_default: {label: "*", text: "*{eisu_toggle_default}"}
+  text_fullasterisk_default: {label: "＊", text: "＊{eisu_toggle_default}"}
+  # §
+  text_halfsection_default: {label: "§", text: "§{eisu_toggle_default}"}
+  #  •
+  text_halfmiddledot_default: {label: "•", text: "•{eisu_toggle_default}"}
+  # +
+  text_halfplus_default: {label: "+", text: "+{eisu_toggle_default}"}
+  # ×
+  text_halfmultiplied_default: {label: "×", text: "×{eisu_toggle_default}"}
+  # =
+  text_halfequal_default: {label: "=", text: "={eisu_toggle_default}"}
+  # _
+  text_halfunderline_default: {label: "_", text: "_{eisu_toggle_default}"}
+  text_half_under_line_default_no_functional: {label: "_", text: "_{eisu_toggle_default}", functional: false}
+  # ＿
+  text_fullunderline_default: {label: "＿", text: "＿{eisu_toggle_default}"}
+  # -
+  text_halfminus_default: {label: "-", text: "-{eisu_toggle_default}"}
+  # \\
+  text_halfbackslash_default: {label: "\\", text: "\\{eisu_toggle_default}"}
+  # |
+  text_halfpipe_default: {label: "|", text: "|{eisu_toggle_default}"}
+  # &
+  text_halfand_default: {label: "&", text: "&{eisu_toggle_default}"}
+  # .
+  text_halfdot_default: {label: "·", text: "·{eisu_toggle_default}"}
+  # ,
+  text_fulldot_default: {label: "，", text: "，{eisu_toggle_default}"}
+  # ^_^
+  text_smile_default: {label: "^_^", text: "^_^{eisu_toggle_default}"}
+  # !
+  text_halfexclamationpoint_default: {label: "!", text: "!{eisu_toggle_default}"}
+  # ´
+  text_fullapostrophe_default: {label: "´", text: "´{eisu_toggle_default}"}
+  # ~
+  text_fulltilde_default: {label: "～", text: "～{eisu_toggle_default}"}
+  text_halftilde_default: {label: "~", text: "~{eisu_toggle_default}"}
+  # :
+  text_halfcolon_default: {label: "：", text: ":{eisu_toggle_default}"}
+  text_fullcolon_default: {label: "：", text: "：{eisu_toggle_default}"}
+#  ï
+  text_fullsmile_default: {label: "ï", text: "ï{eisu_toggle_default}"}
+
+
+
+  #commit
+  #commit ABC
+  commit_Q: {label: "Q", commit: "Q"}
+  commit_W: {label: "W", commit: "W"}
+  commit_E: {label: "E", commit: "E"}
+  commit_R: {label: "R", commit: "R"}
+  commit_T: {label: "T", commit: "T"}
+  commit_Y: {label: "Y", commit: "Y"}
+  commit_U: {label: "U", commit: "U"}
+  commit_I: {label: "I", commit: "I"}
+  commit_O: {label: "O", commit: "O"}
+  commit_P: {label: "P", commit: "P"}
+  commit_A: {label: "A", commit: "A"}
+  commit_S: {label: "S", commit: "S"}
+  commit_D: {label: "D", commit: "D"}
+  commit_F: {label: "F", commit: "F"}
+  commit_G: {label: "G", commit: "G"}
+  commit_H: {label: "H", commit: "H"}
+  commit_J: {label: "J", commit: "J"}
+  commit_K: {label: "K", commit: "K"}
+  commit_L: {label: "L", commit: "L"}
+  commit_Z: {label: "Z", commit: "Z"}
+  commit_X: {label: "X", commit: "X"}
+  commit_C: {label: "C", commit: "C"}
+  commit_V: {label: "V", commit: "V"}
+  commit_B: {label: "B", commit: "B"}
+  commit_N: {label: "N", commit: "N"}
+  commit_M: {label: "M", commit: "M"}
+
+
+
+#commit abc
+  commit_q: {label: "q", commit: "q"}
+  commit_w: {label: "w", commit: "w"}
+  commit_e: {label: "e", commit: "e"}
+  commit_r: {label: "r", commit: "r"}
+  commit_t: {label: "t", commit: "t"}
+  commit_y: {label: "y", commit: "y"}
+  commit_u: {label: "u", commit: "u"}
+  commit_i: {label: "i", commit: "i"}
+  commit_o: {label: "o", commit: "o"}
+  commit_p: {label: "p", commit: "p"}
+  commit_a: {label: "a", commit: "a"}
+  commit_s: {label: "s", commit: "s"}
+  commit_d: {label: "d", commit: "d"}
+  commit_f: {label: "f", commit: "f"}
+  commit_g: {label: "g", commit: "g"}
+  commit_h: {label: "h", commit: "h"}
+  commit_j: {label: "j", commit: "j"}
+  commit_k: {label: "k", commit: "k"}
+  commit_l: {label: "l", commit: "l"}
+  commit_z: {label: "z", commit: "z"}
+  commit_x: {label: "x", commit: "x"}
+  commit_c: {label: "c", commit: "c"}
+  commit_v: {label: "v", commit: "v"}
+  commit_b: {label: "b", commit: "b"}
+  commit_n: {label: "n", commit: "n"}
+  commit_m: {label: "m", commit: "m"}
+
+  #commit number
+  commit_1: {label: "1", commit: "1"}
+  commit_2: {label: "2", commit: "2"}
+  commit_3: {label: "3", commit: "3"}
+  commit_4: {label: "4", commit: "4"}
+  commit_5: {label: "5", commit: "5"}
+  commit_6: {label: "6", commit: "6"}
+  commit_7: {label: "7", commit: "7"}
+  commit_8: {label: "8", commit: "8"}
+  commit_9: {label: "9", commit: "9"}
+  commit_0: {label: "0", commit: "0"}
+
+  #commit symbol
+  commit_halfcomma: {label: ",", commit: ","}
+  commit_fulltilde: {label: "～", commit: "～"}
+  commit_half_tilde: {label: "~", commit: "~"}
+  commit_half_tilde_no_functional: {label: "~", commit: "~", functional: false}
+  commit_halfslash: {label: "/", commit: "/"}
+  commit_halfbackslash: {label: "\"", commit: "\""}
+  commit_fullcolon: {label: "：", commit: "："}
+  commit_fullsemicolon: {label: "；", commit: "；"}
+  commit_rightparen: {label: "）", commit: "）"}
+  commit_halfat: {label: "@", commit: "@"}
+  commit_halfminus: {label: "-", commit: "-"}
+  commit_halfunderline: {label: "_", commit: "_"}
+  commit_halfpoundsign: {label: "#", commit: "#"}
+  commit_fullquestionmark: {label: "？", commit: "？"}
+  commit_fullexclamationpoint: {label: "！", commit: "！"}
+  commit_fullcomma: {label: "，", commit: "，"}
+  commit_fulldot: {label: "。", commit: "。"}
+  commit_halfquote: {label: "”", commit: "”"}
+  commit_backtick: {label: "`", commit: "`"}
+

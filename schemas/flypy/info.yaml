@@ -1,0 +1,22 @@
+name: 小鹤音形
+author: 何海峰 <flypy@qq.com>
+version: 1.0.0
+description: 方案主体来源小鹤音形官网挂接方案
+url: https://github.com/Beyond-Input-Method/schemas/flypy
+createTime: 2025-04-05
+updateTime: 2023-04-05
+# supportPlatforms:
+# preview: ""
+# dirPath: ""
+
+# 方案使用主题
+use_theme:
+  # 如果没有自定义主题，则使用默认主题.
+  # 右边的值是主题的目录名，也可以是方案下的主题名。需要绝对路径。
+  #例如: 在方案目录下，rime_ice/themes/default 是默认主题。
+  # 在主题目录下，themes/default 是自定义主题。
+  default: "themes/default"
+  # 自定义主题
+  custom:
+    # 自定义主题的名称，路径同上。
+    "flypy": "themes/flpy"
