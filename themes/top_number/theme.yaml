@@ -1118,7 +1118,7 @@ preset_keys:
   commit_halfbackslash: {label: "\"", commit: "\""}
   commit_fullcolon: {label: "：", commit: "："}
   commit_fullsemicolon: {label: "；", commit: "；"}
-  commit_rightparen: {label: "）", commit: "）"}
+  commit_half_rightparen: {label: ")", commit: ")"}
   commit_halfat: {label: "@", commit: "@"}
   commit_halfminus: {label: "-", commit: "-"}
   commit_halfunderline: {label: "_", commit: "_"}
