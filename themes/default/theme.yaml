@@ -546,7 +546,7 @@ preset_keyboards:
       - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [commit_fullcolon, commit_D, commit_d]}
       - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [commit_fullsemicolon, commit_F, commit_f]}
       - {click: g, label: G, swipe_up: text_haflbracket_left, swipe_down: "(", long_click: [text_haflbracket_left, commit_G, commit_g]}
-      - {click: h, label: H, swipe_up: commit_rightparen, swipe_down: ")", long_click: [commit_rightparen, commit_H, commit_h]}
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [commit_half_rightparen, commit_H, commit_h]}
       - {click: j, label: J, swipe_up: commit_halfat,  swipe_down: "@", long_click: [commit_halfat, commit_J, commit_j]}
       - {click: k, label: K, swipe_up: text_fullquotationmark_left,  swipe_down: '"', long_click: [text_fullquotationmark_left, commit_K, commit_k]}
       - {click: l, label: L, swipe_up: commit_halfquote,  swipe_down: "'", long_click: [commit_halfquote, commit_L, commit_l]}
@@ -594,7 +594,7 @@ preset_keyboards:
       - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [commit_fullcolon, commit_D, commit_d]}
       - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [commit_fullsemicolon, commit_F, commit_f]}
       - {click: g, label: G, swipe_up: text_haflbracket_left, swipe_down: "(", long_click: [text_haflbracket_left, commit_G, commit_g]}
-      - {click: h, label: H, swipe_up: commit_rightparen, swipe_down: ")", long_click: [commit_rightparen, commit_H, commit_h]}
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [commit_half_rightparen, commit_H, commit_h]}
       - {click: j, label: J, swipe_up: commit_halfat,  swipe_down: "@", long_click: [commit_halfat, commit_J, commit_j]}
       - {click: k, label: K, swipe_up: text_fullquotationmark_left,  swipe_down: '"', long_click: [text_fullquotationmark_left, commit_K, commit_k]}
       - {click: l, label: L, swipe_up: commit_halfquote,  swipe_down: "'", long_click: [commit_halfquote, commit_L, commit_l]}
@@ -1314,7 +1314,7 @@ preset_keys:
   commit_halfbackslash: {label: "\"", commit: "\""}
   commit_fullcolon: {label: "：", commit: "："}
   commit_fullsemicolon: {label: "；", commit: "；"}
-  commit_hafl_rightparen: {label: ")", commit: ")"}
+  commit_half_rightparen: {label: ")", commit: ")"}
   commit_halfat: {label: "@", commit: "@"}
   commit_halfminus: {label: "-", commit: "-"}
   commit_halfunderline: {label: "_", commit: "_"}
