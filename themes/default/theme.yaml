@@ -574,7 +574,8 @@ preset_keyboards:
       - {click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false}
     width: 10
   default_sm_md:
-    height: 25
+    vertical_gap: 4
+    height: 31
     keys:
       # 1
       - {click: q, label: Q, swipe_up: commit_1,  swipe_down: "一", long_click: [。, commit_1, commit_Q]}
@@ -671,7 +672,8 @@ preset_keyboards:
   english_sm_md:
     ascii_mode: 1
     lock: true
-    height: 25
+    vertical_gap: 4
+    height: 31
     name: english
     keys:
       #1
@@ -758,12 +760,13 @@ preset_keyboards:
     ascii_mode: 1
     name: number
     preview: false
-    height: 25
+    vertical_gap: 4
+    height: 31
     width: 22
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 95, height_land: 111, row_height: 25, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1}
       - {click: 2}
       - {click: 3}
@@ -866,7 +869,8 @@ preset_keyboards:
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 0
     name: symbols_sm_md
-    height: 25
+    vertical_gap: 4
+    height: 31
     keys:
       #1
       - {click: 1, long_click: ["1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠"]}
