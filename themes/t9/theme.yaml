@@ -703,12 +703,13 @@ preset_keyboards:
 
 #sm_md
   default_sm_md:
-    height: 25
+    vertical_gap: 4
+    height: 31
     name: default_sm_md
     keys:
       #1
       # - {width: 1}
-      - {collection: ["，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'"], width: 17, height: 95, height_land: 111, row_height: 25, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'"], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, label: '分词', swipe_up: commit_1,  swipe_down: "一", long_click: [commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot]}
       - {click: a, label: 'ABC', swipe_up: commit_2,  swipe_down: "一", long_click: [commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C]}
       - {click: d, label: 'DEF', swipe_up: commit_3, long_click: [commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F]}
@@ -726,7 +727,7 @@ preset_keyboards:
       - {click: p, label: 'PQRS', swipe_up: commit_7, long_click: [commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S]}
       - {click: t, label: 'TUV', swipe_up: commit_8, long_click: [commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V]}
       - {click: w, label: 'WXYZ', swipe_up: commit_9, long_click: [commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z]}
-      - {click: return, name: return, width: 17, height: 60, height_land: 73, composing: confirm}
+      - {click: return, name: return, width: 17, height: 66, height_land: 73, composing: confirm}
       ## #4
       - {click: eisu_toggle_符_dotsymbols, width: 17, name: default}
       - {click: eisu_toggle_123_number_sm_md, width: 12}
@@ -736,7 +737,8 @@ preset_keyboards:
 
 
   english_sm_md:
-    height: 25
+    vertical_gap: 4
+    height: 31
     width: 10
     preview: true
     ascii_mode: 1
@@ -793,12 +795,13 @@ preset_keyboards:
     ascii_mode: 1
     name: number_sm_md_keyboard
     preview: false
-    height: 25
+    vertical_gap: 4
+    height: 31
     width: 22
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 95, height_land: 111, row_height: 25, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1}
       - {click: 2}
       - {click: 3}
@@ -828,7 +831,8 @@ preset_keyboards:
     menu: {events: [text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "="]}
     ascii_mode: 0
     preview: true
-    height: 25
+    vertical_gap: 4
+    height: 31
     width: 10
     name: symbols_sm_md_keyboard
     keys:
