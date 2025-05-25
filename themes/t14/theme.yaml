@@ -19,6 +19,11 @@ style:
     light_land: light_land #横屏
     dark: dark #竖屏
     dark_land: dark_land #横屏
+
+    # sd_md 小屏幕。如：pura X 外屏
+    light_sm_md: light_sm_md #竖屏
+    dark_sm_md: dark_sm_md #竖屏
+
     keyboards: [ default, english, number, symbols ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
     # keyboards_land: [ default_land, english, number_land, symbols ] #横屏
   iOS:
@@ -56,6 +61,17 @@ preset_styles:
     color_schema: dark
     candidate: default_land
     font: default
+  light_sm_md:
+    color_schema: default
+    candidate: default_sm_md
+    font: default
+    keyboards: [ default_sm_md, english_sm_md, number_sm_md, symbols_sm_md ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  dark_sm_md:
+    color_schema: default
+    candidate: default_sm_md
+    font: default
+    keyboards: [ default_sm_md, english_sm_md, number_sm_md, symbols_sm_md ] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+
 #预设的字体
 preset_fonts:
   default:
