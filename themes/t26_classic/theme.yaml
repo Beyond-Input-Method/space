@@ -545,7 +545,7 @@ preset_keyboards:
       #4
       - {click: eisu_toggle_符_symbols, width: 13, name: symbol, preview: false}
       - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 12, name: number, preview: false}
-      - {click: "，", swipe_up: "。", long_click: ["。", "?", "!", "@", text_halfellipsis_default], functional: false}
+      - {click: "，", swipe_up: "。", long_click: ["。", "?", "!", "@", text_halfellipsis_default], functional: true}
       - {click: space, width: 31, name: space, swipe_up: select_scecond, preview: false}
       - {click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 12, name: english, preview: false}
       #      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
