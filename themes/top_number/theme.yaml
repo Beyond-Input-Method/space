@@ -639,7 +639,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 208, height_land: 141, row_height: 50, row_height_land: 34, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 205, height_land: 153, row_height: 50, row_height_land: 34, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 64}
       - {click: 2, height: 64}
       - {click: 3, height: 64}
