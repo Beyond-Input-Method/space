@@ -598,7 +598,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 162, height_land: 158, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
+      - {collection: ["=", "%", "-", "+", "×" , "/", ",", "#", ",", "?", ":", "*"], width: 17, height: 162, height_land: 110, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table}
       - {click: 1, height: 50}
       - {click: 2, height: 50}
       - {click: 3, height: 50}
