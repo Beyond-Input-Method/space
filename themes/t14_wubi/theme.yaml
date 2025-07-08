@@ -58,7 +58,7 @@ preset_keyboards:
     - { click: z, width: 10, label: 'Z', swipe_up: commit_halfat, long_click: [ commit_z, commit_halfat, commit_Z ] }
     - { click: x, width: 19, label: 'XC', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_x, commit_X, commit_half_questionmark, commit_c, commit_C ] }
     - { click: v, width: 19, label: 'VB', swipe_up: commit_fullcomma, swipe_down: commit_halfcomma, long_click: [ commit_v, commit_B, commit_fullcomma, commit_b, commit_B ] }
-    - { click: n, width: 19, label: 'NM', swipe_up: commit_fulldot, swipe_down: commit_halfdot, ick: [ commit_n, commit_N, commit_fulldot, commit_m, commit_M ] }
+    - { click: n, width: 19, label: 'NM', swipe_up: commit_fulldot, swipe_down: commit_halfdot, long_click: [ commit_n, commit_N, commit_fulldot, commit_m, commit_M ] }
     - { width: 1 }
     - { click: backspace, width: 15 }
     #4
@@ -89,7 +89,7 @@ preset_keyboards:
     - { click: z, width: 10, label: 'Z', swipe_up: commit_halfat, long_click: [ commit_z, commit_halfat, commit_Z ] }
     - { click: x, width: 19, label: 'XC', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_x, commit_X, commit_half_questionmark, commit_c, commit_C ] }
     - { click: v, width: 19, label: 'VB', swipe_up: commit_fullcomma, swipe_down: commit_haflcomma, long_click: [ commit_v, commit_V, commit_fullcomma, commit_b, commit_B ] }
-    - { click: n, width: 19, label: 'NM', swipe_up: commit_fulldot, swipe_down: commit_halfdot, ick: [ commit_n, commit_N, commit_fulldot, commit_m, commit_M ] }
+    - { click: n, width: 19, label: 'NM', swipe_up: commit_fulldot, swipe_down: commit_halfdot, long_click: [ commit_n, commit_N, commit_fulldot, commit_m, commit_M ] }
     - { width: 1 }
     - { click: backspace, width: 15 }
     #4

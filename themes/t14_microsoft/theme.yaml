@@ -57,9 +57,9 @@ preset_keyboards:
     - { click: send_semicolon, width: 13 }
     - { width: 3 }
     - { click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [ commit_z, commit_Z, commit_halfat, commit_x, commit_X ] }
-    - { click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_c, commit_C, commit_half_questionmark, commit_v, commit_V ] }
-    - { click: b, width: 17, label: 'BN', swipe_up: commit_halfcomma, swipe_down: commit_fullcomma, long_click: [ commit_b, commit_Q, commit_fullcomma, commit_w, commit_W ] }
-    - { click: m, width: 17, label: 'M', swipe_up: commit_halfdot, swipe_down: commit_fulldot, ick: [ commit_m, commit_fulldot, commit_M ] }
+    - { click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_c, commit_C, commit_fullquestionmark, commit_v, commit_V ] }
+    - { click: b, width: 17, label: 'BN', swipe_up: commit_fullcomma, swipe_down: commit_halfcomma, long_click: [ commit_b, commit_Q, commit_fullcomma, commit_w, commit_W ] }
+    - { click: m, width: 17, label: 'M', swipe_up: commit_fulldot, swipe_down: commit_halfdot, long_click: [ commit_m, commit_fulldot, commit_M ] }
     - { width: 3 }
     - { click: backspace, width: 13 }
     #4
@@ -88,9 +88,9 @@ preset_keyboards:
     - { click: send_semicolon, width: 13 }
     - { width: 3 }
     - { click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [ commit_z, commit_Z, commit_halfat, commit_x, commit_X ] }
-    - { click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_c, commit_C, commit_half_questionmark, commit_v, commit_V ] }
-    - { click: b, width: 17, label: 'BN', swipe_up: commit_halfcomma, swipe_down: commit_fullcomma, long_click: [ commit_b, commit_Q, commit_fullcomma, commit_w, commit_W ] }
-    - { click: m, width: 17, label: 'M', swipe_up: commit_halfdot, swipe_down: commit_fulldot, ick: [ commit_m, commit_fulldot, commit_M ] }
+    - { click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_c, commit_C, commit_fullquestionmark, commit_v, commit_V ] }
+    - { click: b, width: 17, label: 'BN', swipe_up: commit_fullcomma, swipe_down: commit_halfcomma, long_click: [ commit_b, commit_Q, commit_fullcomma, commit_w, commit_W ] }
+    - { click: m, width: 17, label: 'M', swipe_up: commit_fulldot, swipe_down: commit_halfdot, long_click: [ commit_m, commit_fulldot, commit_M ] }
     - { width: 3 }
     - { click: backspace, width: 13 }
     #4
