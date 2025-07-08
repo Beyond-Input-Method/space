@@ -1,6 +1,5 @@
 # default settings
 # encoding: utf-8
-
 style:
   __include: ./public/style/default:/style
 preset_styles:
@@ -52,22 +51,22 @@ preset_keyboards:
     - { click: d, width: 20, label: 'DF', swipe_up: commit_7, long_click: [ commit_d, commit_D, commit_7, commit_f, commit_F ] }
     - { click: g, width: 20, label: 'GH', swipe_up: commit_8, long_click: [ commit_g, commit_G, commit_8, commit_h, commit_H ] }
     - { click: j, width: 20, label: 'JK', swipe_up: commit_9, long_click: [ commit_j, commit_J, commit_9, commit_k, commit_K ] }
-    - { click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [ commit_l, commit_L, commit_0, commit_l, commit_L ] }
+    - { click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [ commit_l, commit_L, commit_0 ] }
     #3
     - { click: participle, width: 15 }
     - { width: 1 }
-    - { click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [ commit_z, commit_Z, commit_halfat, commit_x, commit_X ] }
-    - { click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_c, commit_C, commit_half_questionmark, commit_v, commit_V ] }
-    - { click: b, width: 17, label: 'BN', swipe_up: commit_halfcomma, swipe_down: commit_fullcomma, long_click: [ commit_b, commit_Q, commit_fullcomma, commit_w, commit_W ] }
-    - { click: m, width: 17, label: 'M', swipe_up: commit_halfdot, swipe_down: commit_fulldot, ick: [ commit_m, commit_fulldot, commit_M ] }
+    - { click: z, width: 10, label: 'Z', swipe_up: commit_halfat, long_click: [ commit_z, commit_Z, commit_halfat ] }
+    - { click: x, width: 19, label: 'XC', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_x, commit_X, commit_half_questionmark, commit_c, commit_C ] }
+    - { click: v, width: 19, label: 'VB', swipe_up: commit_fullcomma, swipe_down: commit_halfcomma, long_click: [ commit_v, commit_B, commit_fullcomma, commit_b, commit_B ] }
+    - { click: n, width: 19, label: 'NM', swipe_up: commit_fulldot, swipe_down: commit_halfdot, ick: [ commit_n, commit_N, commit_fulldot, commit_m, commit_M ] }
     - { width: 1 }
     - { click: backspace, width: 15 }
     #4
-    - { click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false }
-    - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false }
-    - { click: space, width: 38, name: space, swipe_up: select_second, preview: false }
-    - { click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: eisu_toggle_符_symbols, width: 16, name: symbol, preview: false }
+    - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 16, name: number, preview: false }
+    - { click: space, width: 36, name: space, swipe_up: select_second, preview: false }
+    - { click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 12, name: english, preview: false }
+    - { click: return, width: 20, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
   default_sm_md:
     height: 31
     vertical_gap: 4
@@ -83,19 +82,19 @@ preset_keyboards:
     - { click: d, width: 20, label: 'DF', swipe_up: commit_7, long_click: [ commit_d, commit_D, commit_7, commit_f, commit_F ] }
     - { click: g, width: 20, label: 'GH', swipe_up: commit_8, long_click: [ commit_g, commit_G, commit_8, commit_h, commit_H ] }
     - { click: j, width: 20, label: 'JK', swipe_up: commit_9, long_click: [ commit_j, commit_J, commit_9, commit_k, commit_K ] }
-    - { click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [ commit_l, commit_L, commit_0, commit_l, commit_L ] }
+    - { click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [ commit_l, commit_L, commit_0 ] }
     #3
     - { click: participle, width: 15 }
     - { width: 1 }
-    - { click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [ commit_z, commit_Z, commit_halfat, commit_x, commit_X ] }
-    - { click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_c, commit_C, commit_half_questionmark, commit_v, commit_V ] }
-    - { click: b, width: 17, label: 'BN', swipe_up: commit_halfcomma, swipe_down: commit_fullcomma, long_click: [ commit_b, commit_Q, commit_fullcomma, commit_w, commit_W ] }
-    - { click: m, width: 17, label: 'M', swipe_up: commit_halfdot, swipe_down: commit_fulldot, ick: [ commit_m, commit_fulldot, commit_M ] }
+    - { click: z, width: 10, label: 'Z', swipe_up: commit_halfat, long_click: [ commit_z, commit_Z, commit_halfat ] }
+    - { click: x, width: 19, label: 'XC', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_x, commit_X, commit_half_questionmark, commit_c, commit_C ] }
+    - { click: v, width: 19, label: 'VB', swipe_up: commit_fullcomma, swipe_down: commit_haflcomma, long_click: [ commit_v, commit_V, commit_fullcomma, commit_b, commit_B ] }
+    - { click: n, width: 19, label: 'NM', swipe_up: commit_fulldot, swipe_down: commit_fulldot, ick: [ commit_n, commit_N, commit_fulldot, commit_m, commit_M ] }
     - { width: 1 }
     - { click: backspace, width: 15 }
     #4
-    - { click: eisu_toggle_符_symbols_sm_md, width: 14, name: symbol, preview: false }
-    - { click: eisu_toggle_123_number_sm_md, has_menu: text_halfperiod, width: 13, name: number, preview: false }
-    - { click: space, width: 38, name: space, swipe_up: select_second, preview: false }
-    - { click: eisu_toggle_ABC_english_sm_md, has_menu: text_halfcomma, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: eisu_toggle_符_symbols_sm_md, width: 16, name: symbol, preview: false }
+    - { click: eisu_toggle_123_number_sm_md, has_menu: text_halfperiod, width: 16, name: number, preview: false }
+    - { click: space, width: 36, name: space, swipe_up: select_second, preview: false }
+    - { click: eisu_toggle_ABC_english_sm_md, has_menu: text_halfcomma, width: 12, name: english, preview: false }
+    - { click: return, width: 20, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }

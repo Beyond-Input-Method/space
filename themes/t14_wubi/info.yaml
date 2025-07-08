@@ -1,0 +1,4 @@
+__include: ./public/info/default:/
+name: 五笔14键
+version: 1.0.0
+url: https://github.com/Beyond-Input-Method/themes/t14_wubi
