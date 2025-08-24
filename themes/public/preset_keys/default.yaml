@@ -152,7 +152,7 @@ preset_keys:
   text_full_bracket_close_left_no_functional: { label: ")", text: "）{Left}", functional: false } #先上屏()光标往左移动一格
   # ()
   text_halfbracket_left_default: { label: "(", text: "(){Left}{eisu_toggle_default}" } #先上屏()光标往左移动一格再跳转到default键盘
-  text_haflbracket_left: { label: "(", text: "(){Left}" } #先上屏()光标往左移动一格
+  text_halfbracket_left: { label: "(", text: "(){Left}" } #先上屏()光标往左移动一格
   text_halfbracket_default: { label: ")", text: "){eisu_toggle_default}" } #先上屏)再跳转到default键盘
   # ［］
   text_fullsquarebracketleft2_left_default: { label: "［", text: "［］{Left}{eisu_toggle_default}" }
@@ -326,8 +326,8 @@ preset_keys:
   commit_0: { label: "0", commit: "0" }
 
   #commit symbol
-  commit_halfcomma: { label: ",", commit: "," }
-  commit_halfdot: { label: ".", commit: "." }
+  commit_half_comma: { label: ",", commit: "," }
+  commit_half_dot: { label: ".", commit: "." }
   commit_fulltilde: { label: "～", commit: "～" }
   commit_half_tilde: { label: "~", commit: "~" }
   commit_half_tilde_no_functional: { label: "~", commit: "~", functional: false }
@@ -349,3 +349,10 @@ preset_keys:
 
   #清屏操作。option可带参数。0为上屏第一个候选；无参数为则不上屏。
   function_rime_clear: { label: "重输", send: function, command: candidate.clear, option: "" }
+  function_keyboard_clearAll: { label: "清空", send: function, command: keyboard.clearAll, option: "" }
+  function_keyboard_clearLeft: { label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
+  function_keyboard_clearRight: { label: "右清空", send: function, command: keyboard.clearRight, option: "" }
+  function_keyboard_selectAll: { label: "选择所有", send: function, command: keyboard.selectAll, option: "" }
+  function_keyboard_cut: { label: "剪切", send: function, command: keyboard.cut, option: "" }
+  function_keyboard_copy: { label: "复制", send: function, command: keyboard.copy, option: "" }
+  function_keyboard_paste: { label: "粘贴", send: function, command: keyboard.paste, option: "" }
