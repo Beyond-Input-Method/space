@@ -352,7 +352,7 @@ preset_keys:
   function_keyboard_clearAll: { label: "清空", send: function, command: keyboard.clearAll, option: "" }
   function_keyboard_clearLeft: { label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
   function_keyboard_clearRight: { label: "右清空", send: function, command: keyboard.clearRight, option: "" }
-  function_keyboard_selectAll: { label: "选择所有", send: function, command: keyboard.selectAll, option: "" }
+  function_keyboard_selectAll: { label: "全选", send: function, command: keyboard.selectAll, option: "" }
   function_keyboard_cut: { label: "剪切", send: function, command: keyboard.cut, option: "" }
   function_keyboard_copy: { label: "复制", send: function, command: keyboard.copy, option: "" }
   function_keyboard_paste: { label: "粘贴", send: function, command: keyboard.paste, option: "" }
