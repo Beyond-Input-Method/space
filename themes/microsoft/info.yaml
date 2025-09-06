@@ -1,3 +1,4 @@
+
 __include: ./public/info/default:/
 name: 微软件双拼键盘
 version: 1.0.1
