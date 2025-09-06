@@ -48,14 +48,14 @@ preset_keyboards:
     # 1
     - { click: q, label: Q, width: 14.3, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
     - { click: w, label: WE, width: 14.3, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_W, commit_w, commit_2, commit_e, commit_E ] }
-    - { click: r, label: RT, width: 14.3, swipe_up: commit_3, swipe_down: "", long_click: [ commit_R, commit_r, commit_3, commit_t, commit_T ] }
-    - { click: y, label: Y, width: 14.3, swipe_up: commit_4, swipe_down: "六", long_click: [ commit_y, commit_4, commit_Y ] }
-    - { click: u, label: U, width: 14.3, swipe_up: commit_5, swipe_down: "七", long_click: [ commit_u, commit_5, commit_U ] }
-    - { click: i, label: IO, width: 14.3, swipe_up: commit_6, swipe_down: "八", long_click: [ commit_I, commit_i, commit_6, commit_o, commit_O ] }
-    - { click: p, label: P, width: 14.3, swipe_up: commit_7, swipe_down: "〇", long_click: [ commit_p, commit_7, commit_P ] }
+    - { click: r, label: RT, width: 14.3, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_R, commit_r, commit_3, commit_t, commit_T ] }
+    - { click: y, label: Y, width: 14.3, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_y, commit_4, commit_Y ] }
+    - { click: u, label: U, width: 14.3, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_u, commit_5, commit_U ] }
+    - { click: i, label: IO, width: 14.3, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_I, commit_i, commit_6, commit_o, commit_O ] }
+    - { click: p, label: P, width: 14.3, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_p, commit_7, commit_P ] }
     #2
-    - { click: a, label: A, width: 16.6, swipe_up: commit_8, swipe_down: "~", long_click: [ commit_a, commit_8, commit_A ] }
-    - { click: s, label: SD, width: 16.6, swipe_up: commit_9, swipe_down: "/", long_click: [ commit_S, commit_s, commit_9, commit_d, commit_D ] }
+    - { click: a, label: A, width: 16.6, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_a, commit_8, commit_A ] }
+    - { click: s, label: SD, width: 16.6, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_S, commit_s, commit_9, commit_d, commit_D ] }
     - { click: f, label: FG, width: 16.6, swipe_up: commit_0, swipe_down: ";", long_click: [ commit_F, commit_f, commit_0, commit_g, commit_G ] }
     - { click: h, label: H, width: 16.6, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_h, commit_halfpoundsign, commit_H ] }
     - { click: j, label: JK, width: 16.6, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_J, commit_j, commit_halfat, commit_k, commit_K ] }
@@ -82,14 +82,14 @@ preset_keyboards:
     # 1
     - { click: q, label: Q, width: 14.3, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
     - { click: w, label: WE, width: 14.3, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_W, commit_w, commit_2, commit_e, commit_E ] }
-    - { click: r, label: RT, width: 14.3, swipe_up: commit_3, swipe_down: "", long_click: [ commit_R, commit_r, commit_3, commit_t, commit_T ] }
-    - { click: y, label: Y, width: 14.3, swipe_up: commit_4, swipe_down: "六", long_click: [ commit_y, commit_4, commit_Y ] }
-    - { click: u, label: U, width: 14.3, swipe_up: commit_5, swipe_down: "七", long_click: [ commit_u, commit_5, commit_U ] }
-    - { click: i, label: IO, width: 14.3, swipe_up: commit_6, swipe_down: "八", long_click: [ commit_I, commit_i, commit_6, commit_o, commit_O ] }
-    - { click: p, label: P, width: 14.3, swipe_up: commit_7, swipe_down: "〇", long_click: [ commit_p, commit_7, commit_P ] }
+    - { click: r, label: RT, width: 14.3, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_R, commit_r, commit_3, commit_t, commit_T ] }
+    - { click: y, label: Y, width: 14.3, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_y, commit_4, commit_Y ] }
+    - { click: u, label: U, width: 14.3, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_u, commit_5, commit_U ] }
+    - { click: i, label: IO, width: 14.3, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_I, commit_i, commit_6, commit_o, commit_O ] }
+    - { click: p, label: P, width: 14.3, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_p, commit_7, commit_P ] }
     #2
-    - { click: a, label: A, width: 16.6, swipe_up: commit_8, swipe_down: "~", long_click: [ commit_a, commit_8, commit_A ] }
-    - { click: s, label: SD, width: 16.6, swipe_up: commit_9, swipe_down: "/", long_click: [ commit_S, commit_s, commit_9, commit_d, commit_D ] }
+    - { click: a, label: A, width: 16.6, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_a, commit_8, commit_A ] }
+    - { click: s, label: SD, width: 16.6, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_S, commit_s, commit_9, commit_d, commit_D ] }
     - { click: f, label: FG, width: 16.6, swipe_up: commit_0, swipe_down: ";", long_click: [ commit_F, commit_f, commit_0, commit_g, commit_G ] }
     - { click: h, label: H, width: 16.6, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_h, commit_halfpoundsign, commit_H ] }
     - { click: j, label: JK, width: 16.6, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_J, commit_j, commit_halfat, commit_k, commit_K ] }
