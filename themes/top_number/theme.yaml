@@ -319,12 +319,12 @@ preset_keyboards:
     - { click: text_halfcomma_default, name: numberPeriodFull, width: 11 }
     - { click: return, width: 23, name: return }
   default_sm_md:
-    __include: ./public/preset_keyboards/default:/preset_keyboards/default_sm_md
+    __include: ./../public/preset_keyboards/default:/preset_keyboards/default_sm_md
   english_sm_md:
-    __include: ./public/preset_keyboards/default:/preset_keyboards/english_sm_md
+    __include: ./../public/preset_keyboards/default:/preset_keyboards/english_sm_md
   number_sm_md:
-    __include: ./public/preset_keyboards/default:/preset_keyboards/number_sm_md
+    __include: ./../public/preset_keyboards/default:/preset_keyboards/number_sm_md
   symbols_sm_md:
-    __include: ./public/preset_keyboards/default:/preset_keyboards/symbols_sm_md
+    __include: ./../public/preset_keyboards/default:/preset_keyboards/symbols_sm_md
   # half_symbols_sm_md:
   #   __include: ./public/preset_keyboards/default:/preset_keyboards/half_symbols_sm_md

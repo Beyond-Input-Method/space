@@ -1,4 +1,4 @@
-__include: ./public/info/default:/
+__include: ./../public/info/default:/
 name: 微软双拼18键
 version: 1.0.0
 url: https://github.com/Beyond-Input-Method/themes/t18

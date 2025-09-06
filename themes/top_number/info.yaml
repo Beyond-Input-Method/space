@@ -1,4 +1,4 @@
-__include: ./public/info/default:/
+__include: ./../public/info/default:/
 name: 中文26键(带数字)
 version: 1.0.0
 url: https://github.com/Beyond-Input-Method/themes/top_number
