@@ -1,0 +1,136 @@
+# 模糊拼音配置映射
+# resources:
+#   #复制文件到指定文件,支持目录和文件
+#       #源文件
+#     - source: "res/resfile/SharedSupport/pinyin.yaml"
+#       #目标文件
+#       target: "res/resfile/space/patches/fuzzy_pinyin/patch.yaml"
+patch_to: "{$current_schema}"
+patch:
+  - title: "ch = c"
+    key: "ch = c"
+    description: ""
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/ch/c/"
+        - "derive/c/ch/"
+  - title: "sh = s"
+    key: "sh = s"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/sh/s/"
+        - "derive/s/sh/"
+  - title: "zh = z"
+    key: "zh = z"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/zh/z/"
+        - "derive/z/zh/"
+  - title: "k = g"
+    key: "k = g"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/k/g/"
+        - "derive/g/k/"
+  - title: "f = h"
+    key: "f = h"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/f/h/"
+        - "derive/h/f/"
+  - title: "n = l"
+    key: "n = l"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/n/l/"
+        - "derive/l/n/"
+  - title: "r = l"
+    key: "r = l"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/r/l/"
+        - "derive/l/r/"
+  - title: "ang = an"
+    key: "ang = an"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/ang/an/"
+        - "derive/an/ang/"
+  - title: "eng = en"
+    key: "eng = en"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/eng/en/"
+        - "derive/en/eng/"
+  - title: "ing = in"
+    key: "ing = in"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/ing/in/"
+        - "derive/in/ing/"
+  - title: "iang = ian"
+    key: "iang = ian"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/iang/ian/"
+        - "derive/ian/iang/"
+  - title: "uang = uan"
+    key: "uang = uan"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/uang/uan/"
+        - "derive/uan/uang/"
+  - title: "an = ai"
+    key: "an = ai"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/an/ai/"
+        - "derive/ai/an/"
+  - title: "un = ong"
+    key: "un = ong"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/un/ong/"
+        - "derive/ong/un/"
+  - title: "hui = fei"
+    key: "hui = fei"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/hui/fei/"
+        - "derive/fei/hui/"
+  - title: "huang = wang"
+    key: "huang = wang"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/huang/wang/"
+        - "derive/wang/huang/"
+  - title: "feng = fong"
+    key: "feng = fong"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/feng/fong/"
+        - "derive/fong/feng/"
+  - title: "fu = hu"
+    key: "fu = hu"
+    patch_to: "{$current_schema}"
+    patch:
+      "speller/algebra/+":
+        - "derive/fu/hu/"
+        - "derive/hu/fu/"

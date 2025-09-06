@@ -1,11 +1,5 @@
-name: 微软双拼键盘
-author: 筋斗云
-version: 1.0.0
-url: https://github.com/Beyond-Input-Method/themes/microsoft
-createTime: 2023-03-30
-updateTime: 2023-03-30
-# description: ""
-# supportPlatforms: ""
-# preview: ""
-# dirPath: ""
-# dirName: ""
+
+__include: ./public/info/default:/
+name: 微软件双拼键盘
+version: 1.0.1
+url: "https://github.com/Beyond-Input-Method/themes/microsoft"

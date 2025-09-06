@@ -1,11 +1,7 @@
+# default settings
+# encoding: utf-8
+
+__include: ./public/info/default:/
 name: 默认中文26键
-author: 筋斗云
 version: 1.0.0
-url: https://github.com/Beyond-Input-Method/themes/default
-createTime: 2023-03-30
-updateTime: 2023-03-30
-# description: ""
-# supportPlatforms: ""
-# preview: ""
-# dirPath: ""
-# dirName: ""
+

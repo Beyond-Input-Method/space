@@ -1,0 +1,343 @@
+  # default settings
+  # encoding: utf-8
+
+  #注意：
+  #1,图片拉伸参数，必须4个参数(top, left, bottom, right)都有，否则不生效.
+  #2,同时有back_color和back_image时，back_image生效.
+preset_color_schemes:
+  default:
+    primary-100: &primary-100 0x2E8B57
+    primary-200: &primary-200 0x61bc84
+    primary-300: &primary-300 0xc6ffe6
+    accent-100: &accent-100 0xDB3715
+    accent-200: &accent-200 0x345e37
+    text-100: &text-100 0xFFFFFF
+    text-200: &text-200 0xe0e0e0
+    bg-100: &bg-100 0x1E1E1E
+    bg-200: &bg-200 0x2d2d2d
+    bg-300: &bg-300 0x454545
+
+    #keyboard
+    keyboard_back_color: *bg-100
+    #key
+    key_back_color: *bg-200
+    hilited_key_back_color: *primary-100
+
+    key_text_color: *text-100
+    hilited_key_text_color: *bg-100
+
+    key_under_color: *bg-300
+    hilited_key_under_color: *bg-100
+
+    key_border_color: *bg-100
+    hilited_key_border_color: *bg-100
+
+    key_upper_text_color: *text-200
+    hilited_key_upper_text_color: *bg-200
+
+    off_key_back_color: *primary-100
+    hilited_off_key_back_color: *primary-100
+
+    off_key_text_color: *text-200
+    hilited_off_key_text_color: *text-100
+
+    on_key_back_color: *accent-100
+    hilited_on_key_back_color: *accent-100
+
+    on_key_text_color: *text-100
+    hilited_on_key_text_color: *text-100
+
+    #candidate
+    candidate_back_color: *bg-100
+    hilited_candidate_back_color: *primary-100
+
+    candidate_text_color: *text-100
+    hilited_candidate_text_color: *accent-100
+
+    comment_text_color: *text-200
+    hilited_comment_text_color: *text-100
+
+    text_color: *text-100 #编码
+    hilited_text_color: *text-100
+
+    #privew
+    preview_boarder_color: *primary-200
+    preview_back_color: *primary-100
+    preview_text_color: *bg-100
+
+    #long preview
+    long_preview_boarder_color: *bg-100
+
+    long_preview_back_color: *primary-100
+    hilited_long_preview_back_color: *bg-200
+
+    long_preview_text_color: *bg-100
+    hilited_long_preview_text_color: *text-100
+
+    candidate_separator_color: *text-200
+
+    back_color: *bg-100 #候选区背景
+    hilited_back_color: *bg-300 #标明编码背景
+
+    border_color: *text-100 #边框
+    hilited_border_color: *bg-100
+
+    text_back_color: *text-100 #编码区背景
+
+    #指定按键设置。指定键必须有name设置才能从预设中读取颜色
+    specified_name:
+      candidate_menu:
+        candidate_text_color: *primary-100
+      candidate_pasteboard:
+        candidate_text_color: *text-100
+      candidate_tools:
+        candidate_text_color: *text-100
+      default:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      shift:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      backspace:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      return:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+
+        off_key_back_color: *primary-100
+        off_key_text_color: *bg-200
+        on_key_back_color: *accent-100
+        on_key_text_color: *accent-200
+      confirm:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      number:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      symbol:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      english:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      numberPeriodFull:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      white_back:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      delimiter:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      dot:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      halfat:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      table:
+        key_border_color: *bg-100
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+
+  dark:
+    #Dark Sage Green
+    primary-100: &primary-100 0x2E8B57
+    primary-200: &primary-200 0x61bc84
+    primary-300: &primary-300 0xc6ffe6
+    accent-100: &accent-100 0x8FBC8F
+    accent-200: &accent-200 0x345e37
+    text-100: &text-100 0xFFFFFF
+    text-200: &text-200 0xe0e0e0
+    bg-100: &bg-100 0x1E1E1E
+    bg-200: &bg-200 0x2d2d2d
+    bg-300: &bg-300 0x454545
+
+    #keyboard
+    keyboard_back_color: *bg-100
+    #key
+    key_back_color: *bg-200
+    hilited_key_back_color: *primary-100
+
+    key_text_color: *text-100
+    hilited_key_text_color: *bg-100
+
+    key_under_color: *bg-300
+    hilited_key_under_color: *bg-100
+
+    key_border_color: *bg-100
+    hilited_key_border_color: *bg-100
+
+    key_upper_text_color: *text-200
+    hilited_key_upper_text_color: *bg-200
+
+    off_key_back_color: *primary-100
+    hilited_off_key_back_color: *primary-100
+
+    off_key_text_color: *text-200
+    hilited_off_key_text_color: *text-100
+
+    on_key_back_color: *accent-100
+    hilited_on_key_back_color: *accent-100
+
+    on_key_text_color: *text-100
+    hilited_on_key_text_color: *text-100
+
+    #candidate
+    candidate_back_color: *bg-100
+    hilited_candidate_back_color: *accent-100
+
+    candidate_text_color: *text-100
+    hilited_candidate_text_color: *accent-200
+
+    comment_text_color: *text-200
+    hilited_comment_text_color: *text-100
+
+    text_color: *text-100 #编码
+    hilited_text_color: *text-100
+
+    #privew
+    preview_boarder_color: *primary-200
+    preview_back_color: *primary-100
+    preview_text_color: *primary-300
+
+    #long preview
+    long_preview_boarder_color: *bg-100
+
+    long_preview_back_color: *primary-100
+    hilited_long_preview_back_color: *bg-200
+
+    long_preview_text_color: *bg-100
+    hilited_long_preview_text_color: *text-100
+
+    candidate_separator_color: *text-200
+
+    back_color: *bg-100 #候选区背景
+    hilited_back_color: *bg-300 #标明编码背景
+
+    border_color: *text-100 #边框
+    hilited_border_color: *bg-100
+
+    text_back_color: *text-100 #编码区背景
+
+    #指定按键设置。指定键必须有name设置才能从预设中读取颜色
+    specified_name:
+      candidate_menu:
+        candidate_text_color: *primary-100
+        # candidate_symbol_right:
+        # candidate_back_color: *accent-100
+      candidate_symbol_left:
+        candidate_back_color: *primary-100
+        hilited_candidate_back_color: *primary-200
+      candidate_symbol_bottom:
+        candidate_back_color: *primary-200
+      candidate_pasteboard:
+        candidate_text_color: *text-100
+      candidate_tools:
+        candidate_text_color: *text-100
+      default:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      shift:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      backspace:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      return:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+
+        off_key_back_color: *primary-100
+        off_key_text_color: *bg-200
+        on_key_back_color: *accent-100
+        on_key_text_color: *accent-200
+
+      confirm:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      number:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      symbol:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      english:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      numberPeriodFull:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      white_back:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      delimiter:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      dot:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      halfat:
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100
+      table:
+        key_border_color: *bg-100
+        key_back_color: *primary-100
+        hilited_key_back_color: *bg-200
+        key_text_color: *primary-300
+        hilited_key_text_color: *text-100

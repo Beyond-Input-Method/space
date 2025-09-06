@@ -1,0 +1,31 @@
+# default settings
+# encoding: utf-8
+
+#预设候选栏
+preset_candidates:
+  default:
+    margin: 5 #候选项外边距
+    padding: 5 #候选项内边距
+    spacing: 8 #候选间距
+    use_cursor: true #高亮候选项
+    candidate_view_height: 51 #候选区高度
+    comment_height: 12 #编码提示区高度
+    comment_on_top: true #编码提示在上方或右侧
+    text_height: 20 #编码区高度
+    more_button_width: 44 #更多按钮宽度
+    corner_radius: 6 #圆角半径
+    hilited_corner_radius: 6 #高亮圆角半径
+    view_height: 28 #候选区高度
+    specified_name:
+      candidate_text_collection_view:
+        candidate_view_height: 44 #候选区高度
+      candidate_tools:
+        more_button_width: 64
+      candidate_menu:
+        spacing: 28
+  default_land:
+    candidate_view_height: 44 #候选区高度
+    text_height: 0 #编码区高度
+  default_sm_md:
+    candidate_view_height: 44 #候选区高度
+    text_height: 0 #编码区高度
