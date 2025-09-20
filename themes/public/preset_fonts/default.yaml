@@ -7,7 +7,7 @@ preset_fonts:
     candidate_text_size: 22
     text_size: 10
     comment_text_size: 12
-    key_text_size: 20 #键字号
+    key_text_size: 18 #键字号
     key_upper_text_size: 8 #符号字号
     key_long_text_size: 14 #长标籤字号
     preview_text_size: 34 #按键提示字号

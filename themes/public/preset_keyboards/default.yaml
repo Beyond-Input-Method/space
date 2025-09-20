@@ -238,7 +238,7 @@ preset_keyboards:
     - { click: 7, height: 50 }
     - { click: 8, height: 50 }
     - { click: 9, height: 50 }
-    - { click: commit_halfat, width: 17, height: 50, name: halfat }
+    - { click: send_equal, width: 17, height: 50, name: send_equal }
 
     # - {width: 1}
     - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
@@ -258,7 +258,7 @@ preset_keyboards:
     keys:
     #1
     # - {width: 1}
-    - { collection: [ "=", "%", "-", "+", "×", "/", ",", "#", ".", "?", ":", "*" ], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
+    - { collection: [ "+", "-", "*", "/", "@", "%","×", ",", "#", ".", "?", ":" ], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
     - { click: 1 }
     - { click: 2 }
     - { click: 3 }

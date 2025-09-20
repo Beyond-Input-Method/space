@@ -66,6 +66,7 @@ preset_keys:
   send_3: { label: "", send: 3 }
   send_2: { label: "", send: 2 }
   send_dot: { label: ".", send: . }
+  send_equal: {label: "=", send: "="}
   #分词
   participle: { label: 分词, send: "'" }
   #分号
