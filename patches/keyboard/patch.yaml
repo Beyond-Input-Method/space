@@ -38,7 +38,7 @@
 # 其它也类似
 
 #全局
-patch_to: "{$current_schema}"
+patch_to: "{$current_theme}"
 patch:
   # 这里可以打多个补丁，每个补丁是一个对象.
   # title是补丁的标题，
@@ -47,20 +47,39 @@ patch:
   # patch是补丁的配置。
   # resource是补丁的资源。
   # patch_to是补丁的目标文件。比如/xxx/wubi86.custom.yaml, 当然也可以是方案目录或者主题目录。
-  - title: "农历"
-    key: "lunar"
-    description: "当输入nl会输出当前农历"
-    patch_to: "{$current_schema}"
-    #复制文件到指定文件,支持目录和文件
-    resources:
-        #源文件
-        - source: "res/lua/lunar.lua"
-          #目标文件,{}里面是变量,指方案目录或者主题目录
-          target: "{$current_schema_dir}/lua/lunar.lua"
+  - title: "键盘"
+    key: "keyboard_font"
+    description: "修改键盘字体"
+    bind_control: "keyboard_font"
     # 这里最好在pc上测试过了，再放到进来
     patch:
-        # 时间、日期、星期
-        "engine/translators/+":
-          - "lua_translator@*lunar"
-        # Lua 配置：农历的触发关键字
-        lunar: nl  # 农历： 二〇二三年冬月二十 癸卯年（兔）冬月二十
+        "preset_fonts/default/key_text_size": "{$key_text_size}"
+        "preset_fonts/default/key_upper_text_size": "{$key_upper_text_size}"
+# 配置项列表，包含所有的设置选项
+controls:
+  preferences:
+    - type: group                    # 控件类型：分组标题
+      title: 键盘设置             # 显示标题：在界面上显示的文字
+      footer_text: 配置键盘字体大小  # 底部说明：显示在分组下方的解释文字
+    # 开关控件，用于开启或关闭功能
+    - type: toggle_switch            # 控件类型：开关按钮
+      title: 启用键盘字体                # 显示标题：在界面上显示的文字
+      key: keyboard_font                # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: false            # 默认值：首次使用时的初始设置
+      toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
+    # 滑块控件，用于选择数值范围
+    - type: slider                   # 控件类型：滑块
+      title: 按键字体大小                # 显示标题：在界面上显示的文字
+      key: key_text_size            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 18               # 默认值：滑块的初始位置值
+      minimum_value: 8               # 最小值：滑块左端的数值
+      maximum_value: 38              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    # 滑块控件，用于选择数值范围
+    - type: slider                   # 控件类型：滑块
+      title: 上下滑符字体大小                # 显示标题：在界面上显示的文字
+      key: key_upper_text_size            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 8               # 默认值：滑块的初始位置值
+      minimum_value: 4               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量

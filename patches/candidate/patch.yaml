@@ -38,7 +38,7 @@
 # 其它也类似
 
 #全局
-patch_to: "{$current_schema}"
+patch_to: "{$current_theme}"
 patch:
   # 这里可以打多个补丁，每个补丁是一个对象.
   # title是补丁的标题，
@@ -47,41 +47,15 @@ patch:
   # patch是补丁的配置。
   # resource是补丁的资源。
   # patch_to是补丁的目标文件。比如/xxx/wubi86.custom.yaml, 当然也可以是方案目录或者主题目录。
-  - title: "联想"
-    key: "prediction"
-    description: "给方案添加联想的"
-    patch_to: "{$current_schema}"
-    bind_control: "prediction"
-    #复制文件到指定文件,支持目录和文件
-    resources:
-        #源文件
-        - source: "res/predict.db"
-          #目标文件,{}里面是变量,指方案目录或者主题目录
-          target: "{$current_schema_dir}/predict.db"
+  - title: "字体"
+    key: "candidate_font"
+    description: "修改候选栏字体"
+    bind_control: "candidate_font"
     # 这里最好在pc上测试过了，再放到进来
     patch:
-        "engine/processors/@before 0": "predictor"
-        "engine/translators/@before 0": "predict_translator"
-        "switches/+":
-          - name: prediction
-            states: [联想开, 联想关]
-            reset: 1
-        "predictor":
-          # predict db file in user directory/shared directory
-          # default to 'predict.db'
-          db: predict.db
-          # max prediction candidates every time
-          # default to 0, which means showing all candidates
-          # you may set it the same with page_size so that period doesn't trigger next page
-          max_candidates: "{$max_candidates}"
-          # max continuous prediction times
-          # default to 0, which means no limitation
-          max_iterations: "{$max_iterations}"
-
-
-# 应用配置文件 - 新用户友好版本
-# 所有配置项使用小写字母和下划线命名，便于理解和记忆
-
+        "preset_fonts/default/candidate_text_size": "{$candidate_text_size}"
+        "preset_fonts/default/comment_text_size": "{$comment_text_size}"
+        "preset_candidates/default/candidate_view_height": "{$candidate_view_height}"
 # 配置项列表，包含所有的设置选项
 controls:
   stringsTable: "Root"
@@ -89,28 +63,38 @@ controls:
   # 分组标题，用于将相关设置归类显示
   preferences:
     - type: group                    # 控件类型：分组标题
-      title: 基本设置                # 显示标题：在界面上显示的文字
-      footer_text: 这些是应用的基本配置选项  # 底部说明：显示在分组下方的解释文字
-
+      title: 字体设置             # 显示标题：在界面上显示的文字
+      footer_text: 配置字体大小  # 底部说明：显示在分组下方的解释文字
     # 开关控件，用于开启或关闭功能
     - type: toggle_switch            # 控件类型：开关按钮
-      title: 启用联想                # 显示标题：在界面上显示的文字
-      key: prediction                # 配置键名：用于保存和读取设置值的唯一标识
-      default_value: true            # 默认值：首次使用时的初始设置
+      title: 启用候选字体                # 显示标题：在界面上显示的文字
+      key: candidate_font                # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: false            # 默认值：首次使用时的初始设置
       toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
     # 滑块控件，用于选择数值范围
     - type: slider                   # 控件类型：滑块
-      title: 最大候选                # 显示标题：在界面上显示的文字
-      key: max_candidates            # 配置键名：用于保存和读取设置值的唯一标识
-      default_value: 5               # 默认值：滑块的初始位置值
-      minimum_value: 5               # 最小值：滑块左端的数值
-      maximum_value: 10              # 最大值：滑块右端的数值
+      title: 候选字体                # 显示标题：在界面上显示的文字
+      key: candidate_text_size            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 22               # 默认值：滑块的初始位置值
+      minimum_value: 8               # 最小值：滑块左端的数值
+      maximum_value: 38              # 最大值：滑块右端的数值
       step: 1                        # 步长：每次滑动的最小增减量
     # 滑块控件，用于选择数值范围
     - type: slider                   # 控件类型：滑块
-      title: 候选次数                # 显示标题：在界面上显示的文字
-      key: max_iterations            # 配置键名：用于保存和读取设置值的唯一标识
-      default_value: 1               # 默认值：滑块的初始位置值
-      minimum_value: 0               # 最小值：滑块左端的数值
-      maximum_value: 10              # 最大值：滑块右端的数值
+      title: 逐码提示字体                # 显示标题：在界面上显示的文字
+      key: comment_text_size            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 12               # 默认值：滑块的初始位置值
+      minimum_value: 4               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    - type: group                    # 控件类型：分组标题
+      title: 候选栏设置             # 显示标题：在界面上显示的文字
+      footer_text: 配置候选栏高度  # 底部说明：显示在分组下方的解释文字
+    # 滑块控件，用于选择数值范围
+    - type: slider                   # 控件类型：滑块
+      title: 候选栏高度                # 显示标题：在界面上显示的文字
+      key: candidate_view_height            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 51              # 默认值：滑块的初始位置值
+      minimum_value: 30               # 最小值：滑块左端的数值
+      maximum_value: 84             # 最大值：滑块右端的数值
       step: 1                        # 步长：每次滑动的最小增减量

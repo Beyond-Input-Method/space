@@ -20,6 +20,21 @@
 # 5,当前选择字体目录：{$current_font_dir}, 当前选择的字体: {$current_font}
 # 例如：{$current_font_dir} = /xx/space/fonts/default
 # 例如：{$current_font} = /xx/space/fonts/default/font.yaml
+# 6,当前选择空间目录：{$current_space_dir}, 当前选择的空间: {$current_space}
+# 例如：{$current_space_dir} = /xx/space
+# 例如：{$current_space} = /xx/space/space.yaml
+# 7,当前选择插件目录：{$current_plugin_dir}, 当前选择的插件: {$current_plugin}
+# 例如：{$current_plugin_dir} = /xx/space/plugins
+# 例如：{$current_plugin} = /xx/space/plugins/plugin.yaml
+# 8,当前选择词库目录：{$current_dict_dir}, 当前选择的词库: {$current_dict}
+# 例如：{$current_dict_dir} = /xx/space/dicts
+# 例如：{$current_dict} = /xx/space/dicts/dict.yaml
+# 9,当前选择语音目录：{$current_speech_dir}, 当前选择的语音: {$current_speech}
+# 例如：{$current_speech_dir} = /xx/space/speeches
+# 例如：{$current_speech} = /xx/space/speeches/speech.yaml
+# 10, 当前选择补丁目录：{$current_patch_dir}, 当前选择的补丁: {$current_patch}
+# 例如：{$current_patch_dir} = /xx/space/patches
+# 例如：{$current_patch} = /xx/space/patches/patch.yaml
 
 
 # 这里全局资源的.
@@ -46,11 +61,13 @@ patch:
   # description是补丁的描述。
   # patch是补丁的配置。
   # resource是补丁的资源。
-  # patch_to是补丁的目标文件。比如/xxx/wubi86.custom.yaml, 当然也可以是方案目录或者主题目录。
   - title: "日期"
-    key: "date"
-    description: "给方案添加联想的"
+    key: "turn_on_date"
+    description: "给方案添加日期的"
+    # patch_to是补丁的目标文件。比如/xxx/wubi86.custom.yaml, 当然也可以是方案目录或者主题目录。
     patch_to: "{$current_schema}"
+    # bind_control是绑定的控件, 值为key，必须绑定一个开关控件，不绑定则无法生效。如果没有的话，会自动创建一个。
+    bind_control: "turn_on_date"
     #复制文件到指定文件,支持目录和文件
     resources:
         #源文件
@@ -64,8 +81,101 @@ patch:
           - "lua_translator@*date_translator"
         # Lua 配置: 日期、时间、星期、ISO 8601、时间戳的触发关键字
         date_translator:
-          date: rq       # 日期： 2022-11-29
-          time: aj       # 时间： 18:13
-          week: zq       # 星期： 星期二
-          datetime: dy   # ISO 8601： 2022-11-29T18:13:11+08:00
-          timestamp: ta  # 时间戳： 1669716794
+          date: "{$date_trigger_key}"      # 日期： 2022-11-29
+          time: "{$time_trigger_key}"       # 时间： 18:13
+          week: "{$week_trigger_key}"       # 星期： 星期二
+          datetime: "{$datetime_trigger_key}"   # ISO 8601： 2022-11-29T18:13:11+08:00
+          timestamp: "{$timestamp_trigger_key}"  # 时间戳： 1669716794
+  - title: "农历"
+    key: "turn_on_lunar"
+    description: "当输入nl会输出当前农历"
+    patch_to: "{$current_schema}"
+    bind_control: "turn_on_lunar"
+    #复制文件到指定文件,支持目录和文件
+    resources:
+      #源文件
+      - source: "res/lua/lunar.lua"
+        #目标文件,{}里面是变量,指方案目录或者主题目录
+        target: "{$current_schema_dir}/lua/lunar.lua"
+    # 这里最好在pc上测试过了，再放到进来
+    patch:
+      # 时间、日期、星期
+      "engine/translators/+":
+        - "lua_translator@*lunar"
+      # Lua 配置：农历的触发关键字
+      lunar: "{$ln_trigger_key}"  # 农历： 二〇二三年冬月二十 癸卯年（兔）冬月二十
+
+# 应用配置文件 - 新用户友好版本
+# 所有配置项使用小写字母和下划线命名，便于理解和记忆
+
+# 配置项列表，包含所有的设置选项
+controls:
+  stringsTable: "Root"
+  # ==================== 基本设置 ====================
+  # 分组标题，用于将相关设置归类显示
+  preferences:
+    - type: group                    # 控件类型：分组标题
+      title: 日期时间设置             # 显示标题：在界面上显示的文字
+      footer_text: 配置日期时间翻译的触发键  # 底部说明：显示在分组下方的解释文字
+    # 开关控件，用于开启或关闭功能
+    - type: toggle_switch            # 控件类型：开关按钮
+      title: 启用日期                # 显示标题：在界面上显示的文字
+      key: turn_on_date              # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: false            # 默认值：首次使用时的初始设置
+      toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
+    # 日期触发键输入框
+    - type: text_field               # 控件类型：文本输入框
+      title: 日期触发键                # 显示标题：在界面上显示的文字
+      key: date_trigger_key          # 配置键名：用于保存设置值
+      default_value: "eq"            # 模板变量：引用date_translator.date的值
+      placeholder: 请输入日期触发键     # 占位符：输入框为空时显示的提示文字
+      keyboard_type: alphabet        # 键盘类型：字母键盘
+
+    # 时间触发键输入框
+    - type: text_field               # 控件类型：文本输入框
+      title: 时间触发键                # 显示标题：在界面上显示的文字
+      key: time_trigger_key          # 配置键名：用于保存设置值
+      default_value: "aj"            # 模板变量：引用date_translator.time的值
+      placeholder: 请输入时间触发键     # 占位符：输入框为空时显示的提示文字
+      keyboard_type: alphabet        # 键盘类型：字母键盘
+
+    # 星期触发键输入框
+    - type: text_field               # 控件类型：文本输入框
+      title: 星期触发键               # 显示标题：在界面上显示的文字
+      key: week_trigger_key          # 配置键名：用于保存设置值
+      default_value: "zq"     # 模板变量：引用date_translator.week的值
+      placeholder: 请输入星期触发键   # 占位符：输入框为空时显示的提示文字
+      keyboard_type: alphabet        # 键盘类型：字母键盘
+
+    # 日期时间触发键输入框
+    - type: text_field               # 控件类型：文本输入框
+      title: 日期时间触发键           # 显示标题：在界面上显示的文字
+      key: datetime_trigger_key      # 配置键名：用于保存设置值
+      default_value: "dt" # 模板变量：引用date_translator.datetime的值
+      placeholder: 请输入日期时间触发键 # 占位符：输入框为空时显示的提示文字
+      keyboard_type: alphabet        # 键盘类型：字母键盘
+
+    # 时间戳触发键输入框
+    - type: text_field               # 控件类型：文本输入框
+      title: 时间戳触发键             # 显示标题：在界面上显示的文字
+      key: timestamp_trigger_key     # 配置键名：用于保存设置值
+      default_value: "ta" # 模板变量：引用date_translator.timestamp的值
+      placeholder: 请输入时间戳触发键 # 占位符：输入框为空时显示的提示文字
+      keyboard_type: alphabet        # 键盘类型：字母键盘
+
+    - type: group                    # 控件类型：分组标题
+      title: 农历设置             # 显示标题：在界面上显示的文字
+      footer_text: 配置农历翻译的触发键  # 底部说明：显示在分组下方的解释文字
+    # 开关控件，用于开启或关闭功能
+    - type: toggle_switch            # 控件类型：开关按钮
+      title: 启用农历                # 显示标题：在界面上显示的文字
+      key: turn_on_lunar              # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: false            # 默认值：首次使用时的初始设置
+      toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
+    # 时间戳触发键输入框
+    - type: text_field               # 控件类型：文本输入框
+      title: 农历             # 显示标题：在界面上显示的文字
+      key: ln_trigger_key     # 配置键名：用于保存设置值
+      default_value: "bl" # 模板变量：引用date_translator.timestamp的值
+      placeholder: 请输入农历戳触发键 # 占位符：输入框为空时显示的提示文字
+      keyboard_type: alphabet        # 键盘类型：字母键盘
