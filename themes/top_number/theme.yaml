@@ -152,7 +152,7 @@ preset_keyboards:
     - { click: space, width: 31, name: space }
     #- {click: eisu_toggle_返回_default, width: 11, name: english}
     - { click: eisu_toggle_返回_default_schema_default, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, composing: confirm }
+    - { click: return, width: 24, name: return, composing: confirm, long_click: next }
 
   number:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -191,7 +191,7 @@ preset_keyboards:
     - { click: eisu_toggle_返回_default, width: 22, height: 60 }
     - { click: commit_0, height: 60 }
     - { click: space, name: space, height: 60 }
-    - { click: return, name: return, width: 17, height: 60, composing: confirm }
+    - { click: return, name: return, width: 17, height: 60, composing: confirm, long_click: next }
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -275,7 +275,7 @@ preset_keyboards:
     - { click: eisu_toggle_123_number, name: numberPeriodFull, width: 13 }
     - { click: space, width: 41, name: space }
     - { click: text_fullcomma2_default, name: text_fullcomma2_default, width: 13, preview: false }
-    - { click: return, width: 20, name: return, composing: confirm }
+    - { click: return, width: 20, name: return, composing: confirm, long_click: next }
   half_symbols:
     ascii_mode: 0
     keys:
@@ -317,7 +317,7 @@ preset_keyboards:
     - { click: text_halfperiod_default, name: numberPeriodFull, width: 13 }
     - { click: space, width: 38, name: space }
     - { click: text_halfcomma_default, name: numberPeriodFull, width: 11 }
-    - { click: return, width: 23, name: return }
+    - { click: return, width: 23, name: return, long_click: next }
   default_sm_md:
     __include: ./../public/preset_keyboards/default:/preset_keyboards/default_sm_md
   english_sm_md:

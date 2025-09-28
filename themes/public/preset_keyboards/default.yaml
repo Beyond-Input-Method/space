@@ -158,8 +158,7 @@ preset_keyboards:
     - { click: eisu_toggle_123_number, width: 10, name: number }
     - { click: send_dot, width: 10 }
     - { click: space, width: 31, name: space }
-    #- {click: eisu_toggle_返回_default, width: 11, name: english}
-    - { click: eisu_toggle_返回_default_schema_default, width: 11, name: english, preview: false }
+    - { click: eisu_toggle_en_zh_default_schema_default, width: 11, name: english, preview: false }
     - { click: return, width: 24, name: return, composing: confirm }
   english_sm_md:
     ascii_mode: 1
@@ -208,7 +207,7 @@ preset_keyboards:
     - { click: eisu_toggle_123_number_sm_md, width: 10, name: number }
     - { click: send_dot, width: 10 }
     - { click: space, width: 31, name: space }
-    - { click: eisu_toggle_返回_default_sm_md_schema_default, width: 11, name: english, preview: false }
+    - { click: eisu_toggle_en_zh_default_schema_default, width: 11, name: english, preview: false }
     - { click: return, width: 24, name: return, composing: confirm }
   number:
     #。？！…（））；、～:[]ï`#：+*/×

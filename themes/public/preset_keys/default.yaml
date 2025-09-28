@@ -75,7 +75,7 @@ preset_keys:
   select_second: { label: "次选", send: 2 }
   select_third: { label: "三选", send: 3 }
   #换行
-  next: { label: "换行", commit: "\n" }
+  next: { label: "换行", commit: "\\n" }
 
   #eisu_toggle_schem
   eisu_toggle_schema_en: { label: "ABC", send: Eisu_toggle, select: easy_en, option: schema }
@@ -86,9 +86,10 @@ preset_keys:
   eisu_toggle_123_number_sm_md: { label: 123, send: Eisu_toggle, select: number_sm_md }
 
   #  eisu_toggle_ABC_english: {label: "ABC", send: Eisu_toggle, select: english}
-  eisu_toggle_ABC_english: { label: "英", send: Eisu_toggle, select: english }
-  eisu_toggle_ABC_english_sm_md: { label: "英", send: Eisu_toggle, select: english_sm_md }
-  eisu_toggle_ABC_english_schema_easy_en: { label: "ABC", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
+#  eisu_toggle_ABC_english: { label: "英", send: Eisu_toggle, select: english }
+  eisu_toggle_ABC_english: { label: "中/英", send: Eisu_toggle, select: english}
+  eisu_toggle_ABC_english_sm_md: { label: "中/英", send: Eisu_toggle, select: english_sm_md }
+  eisu_toggle_ABC_english_schema_easy_en: { label: "中/英", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
 
   eisu_toggle_符_symbols: { label: "符", send: Eisu_toggle, select: symbols }
   eisu_toggle_符_symbols_sm_md: { label: "符", send: Eisu_toggle, select: symbols_sm_md }
@@ -101,9 +102,9 @@ preset_keys:
   eisu_toggle_中_default: { label: 中, send: Eisu_toggle, select: default }
   eisu_toggle_返回_default: { label: 返回, send: Eisu_toggle, select: default }
   eisu_toggle_返回_default_sm_md: { label: 返回, send: Eisu_toggle, select: default_sm_md }
-  #  eisu_toggle_返回_default_schema_default: {label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
-  eisu_toggle_返回_default_schema_default: { label: "中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}" }
-  eisu_toggle_返回_default_sm_md_schema_default: { label: "中", text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
+  eisu_toggle_返回_default_schema_default: {label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
+  eisu_toggle_en_zh_default_schema_default: { label: "英/中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}" }
+  eisu_toggle_返回_default_sm_md_schema_default: { label: 返回, text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
   eisu_toggle_default: { send: Eisu_toggle, select: default }
   #  eisu_toggle_ABC_default: {label: "ABC", send: Eisu_toggle, select: default}
   eisu_toggle_ABC_default: { label: "英", send: Eisu_toggle, select: default }
@@ -357,3 +358,4 @@ preset_keys:
   function_keyboard_cut: { label: "剪切", send: function, command: keyboard.cut, option: "" }
   function_keyboard_copy: { label: "复制", send: function, command: keyboard.copy, option: "" }
   function_keyboard_paste: { label: "粘贴", send: function, command: keyboard.paste, option: "" }
+  function_keyboard_newline: { label: "换行", send: function, command: keyboard.newline, option: "" }

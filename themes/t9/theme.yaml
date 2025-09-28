@@ -63,7 +63,7 @@ preset_keyboards:
     - { click: p, label: 'PQRS', swipe_up: commit_7, height: 50, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
     - { click: t, label: 'TUV', swipe_up: commit_8, height: 50, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
     - { click: w, label: 'WXYZ', swipe_up: commit_9, height: 50, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
-    - { click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm }
+    - { click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm, long_click: next }
     ## #4
     - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
     - { click: eisu_toggle_123_number, width: 12, height: 46 }
@@ -120,9 +120,8 @@ preset_keyboards:
     - { click: eisu_toggle_123_number, width: 12, name: number }
     - { click: send_dot, width: 12 }
     - { click: space, width: 33, name: space }
-    #- {click: eisu_toggle_返回_default, width: 11, name: english}
-    - { click: eisu_toggle_返回_default_schema_default, width: 12, name: english, preview: false }
-    - { click: return, width: 17, name: return, composing: confirm }
+    - { click: eisu_toggle_en_zh_default_schema_default, width: 12, name: english, preview: false }
+    - { click: return, width: 17, name: return, composing: confirm, long, long_click: next }
   number:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
@@ -157,7 +156,7 @@ preset_keyboards:
     - { click: eisu_toggle_返回_default, width: 22, height: 46 }
     - { click: commit_0, height: 46 }
     - { click: space, name: space, height: 46, width: 22 }
-    - { click: return, name: return, width: 17, height: 46, composing: confirm }
+    - { click: return, name: return, width: 17, height: 46, composing: confirm ,long_click: next }
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -232,8 +231,7 @@ preset_keyboards:
     - { click: eisu_toggle_123_number, name: numberPeriodFull, width: 13 }
     - { click: space, width: 41, name: space }
     - { click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false }
-    # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
-    - { click: return, width: 20, name: return, composing: confirm }
+    - { click: return, width: 20, name: return, composing: confirm ,long_click: next }
 
   #sm_md
   default_sm_md:
@@ -261,7 +259,7 @@ preset_keyboards:
     - { click: p, label: 'PQRS', swipe_up: commit_7, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
     - { click: t, label: 'TUV', swipe_up: commit_8, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
     - { click: w, label: 'WXYZ', swipe_up: commit_9, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
-    - { click: return, name: return, width: 17, height: 66, height_land: 73, composing: confirm }
+    - { click: return, name: return, width: 17, height: 66, height_land: 73, composing: confirm, long_click: next }
     ## #4
     - { click: eisu_toggle_符_dotsymbols, width: 17, name: default }
     - { click: eisu_toggle_123_number_sm_md, width: 12 }
@@ -321,7 +319,7 @@ preset_keyboards:
     - { click: space, width: 33, name: space }
     #- {click: eisu_toggle_返回_default, width: 11, name: english}
     - { click: eisu_toggle_返回_default_sm_md_schema_default, width: 12, name: english, preview: false }
-    - { click: return, width: 17, name: return, composing: confirm }
+    - { click: return, width: 17, name: return, composing: confirm, long_click: next}
 
   number_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -358,7 +356,7 @@ preset_keyboards:
     - { click: eisu_toggle_返回_default_sm_md, width: 22 }
     - { click: commit_0 }
     - { click: space, name: space, width: 22 }
-    - { click: return, name: return, width: 17, composing: confirm }
+    - { click: return, name: return, width: 17, composing: confirm, long_click: next }
 
   symbols_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -436,4 +434,4 @@ preset_keyboards:
     - { click: space, width: 41, name: space }
     - { click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false }
     # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
-    - { click: return, width: 20, name: return, composing: confirm }
+    - { click: return, width: 20, name: return, composing: confirm, long_click: next }
