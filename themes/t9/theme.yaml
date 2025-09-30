@@ -21,13 +21,17 @@ preset_keyboards:
     height_land: 34
     round_corner: 6
     key_text_offset_x: 0
-    key_text_offset_y: 0
+    key_text_offset_y: 5
     key_press_text_offset_x: 0
     key_press_text_offset_y: 0
     key_upper_press_text_offset_x: 0
     key_upper_press_text_offset_y: 0
     key_upper_text_offset_x: 0
     key_upper_text_offset_y: 3
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     preview_round_corner: 9
     long_preview_round_corner: 9
     long_preview_padding: 0
@@ -238,6 +242,18 @@ preset_keyboards:
     vertical_gap: 4
     height: 31
     name: default_sm_md
+    key_text_offset_x: 0
+    key_text_offset_y: 3
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 0
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     keys:
     #1
     # - {width: 1}
@@ -276,6 +292,18 @@ preset_keyboards:
     ascii_mode: 1
     lock: true
     name: english_sd_md_keyboard
+    key_text_offset_x: 0
+    key_text_offset_y: 3
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 0
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     keys:
     #1
     - { click: q, swipe_up: commit_1, long_click: [ 1, Q, q ] }
@@ -330,6 +358,18 @@ preset_keyboards:
     vertical_gap: 4
     height: 31
     width: 22
+    key_text_offset_x: 0
+    key_text_offset_y: 3
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 0
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     keys:
     #1
     # - {width: 1}
@@ -367,6 +407,18 @@ preset_keyboards:
     height: 31
     width: 10
     name: symbols_sm_md_keyboard
+    key_text_offset_x: 0
+    key_text_offset_y: 3
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 0
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     keys:
     #1
     - { click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }

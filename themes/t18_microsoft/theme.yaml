@@ -37,6 +37,10 @@ preset_keyboards:
     key_upper_press_text_offset_y: 0
     key_upper_text_offset_x: 0
     key_upper_text_offset_y: 3
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     preview_round_corner: 9
     long_preview_round_corner: 9
     long_preview_padding: 0
@@ -78,6 +82,18 @@ preset_keyboards:
   default_sm_md:
     height: 31
     vertical_gap: 4
+    key_text_offset_x: 0
+    key_text_offset_y: 0
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 1
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     keys:
     # 1
     - { click: q, label: Q, width: 14.3, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
