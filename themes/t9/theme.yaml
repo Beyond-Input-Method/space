@@ -92,7 +92,7 @@ preset_keyboards:
     - { click: t, swipe_up: commit_5, long_click: [ 5, T, t ] }
     - { click: y, swipe_up: commit_6, long_click: [ 6, Y, y ] }
     - { click: u, swipe_up: commit_7, long_click: [ 7, U, u ] }
-    - { click: i, swipe_up: commit_8, long_click: [ 9, I, I ] }
+    - { click: i, swipe_up: commit_8, long_click: [ 8, I, I ] }
     - { click: o, swipe_up: commit_9, long_click: [ 9, O, o ] }
     - { click: p, swipe_up: commit_0, long_click: [ 0, P, p ] }
     - { width: 5 }
