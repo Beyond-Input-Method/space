@@ -54,7 +54,14 @@ patch:
     # 这里最好在pc上测试过了，再放到进来
     patch:
         "preset_fonts/default/key_text_size": "{$key_text_size}"
+        "preset_keyboards/default/key_text_offset_x": "{$key_text_offset_x}"
+        "preset_keyboards/default/key_text_offset_y": "{$key_text_offset_y}"
         "preset_fonts/default/key_upper_text_size": "{$key_upper_text_size}"
+        "preset_keyboards/default/key_upper_text_offset_x": "{$key_upper_text_offset_x}"
+        "preset_keyboards/default/key_upper_text_offset_y": "{$key_upper_text_offset_y}"
+        "preset_fonts/default/key_down_text_size": "{$key_down_text_size}"
+        "preset_keyboards/default/key_down_text_offset_x": "{$key_down_text_offset_x}"
+        "preset_keyboards/default/key_down_text_offset_y": "{$key_down_text_offset_y}"
 # 配置项列表，包含所有的设置选项
 controls:
   preferences:
@@ -69,17 +76,68 @@ controls:
       toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
     # 滑块控件，用于选择数值范围
     - type: slider                   # 控件类型：滑块
-      title: 按键字体大小                # 显示标题：在界面上显示的文字
+      title: 键符字体大小                # 显示标题：在界面上显示的文字
       key: key_text_size            # 配置键名：用于保存和读取设置值的唯一标识
       default_value: 18               # 默认值：滑块的初始位置值
       minimum_value: 8               # 最小值：滑块左端的数值
       maximum_value: 38              # 最大值：滑块右端的数值
       step: 1                        # 步长：每次滑动的最小增减量
+    - type: slider                   # 控件类型：滑块
+      title: 键符X轴偏移                # 显示标题：在界面上显示的文字
+      key: key_text_offset_x            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 0               # 默认值：滑块的初始位置值
+      minimum_value: -18               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    - type: slider                   # 控件类型：滑块
+      title: 键符Y轴偏移                # 显示标题：在界面上显示的文字
+      key: key_text_offset_y            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 0               # 默认值：滑块的初始位置值
+      minimum_value: -18               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
     # 滑块控件，用于选择数值范围
     - type: slider                   # 控件类型：滑块
-      title: 上下滑符字体大小                # 显示标题：在界面上显示的文字
+      title: 上划符字体大小                # 显示标题：在界面上显示的文字
       key: key_upper_text_size            # 配置键名：用于保存和读取设置值的唯一标识
       default_value: 8               # 默认值：滑块的初始位置值
       minimum_value: 4               # 最小值：滑块左端的数值
       maximum_value: 18              # 最大值：滑块右端的数值
       step: 1                        # 步长：每次滑动的最小增减量
+    - type: slider                   # 控件类型：滑块
+      title: 上划符X轴偏移                # 显示标题：在界面上显示的文字
+      key: key_upper_text_offset_x            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 0               # 默认值：滑块的初始位置值
+      minimum_value: -18               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    - type: slider                   # 控件类型：滑块
+      title: 上划符Y轴偏移                # 显示标题：在界面上显示的文字
+      key: key_upper_text_offset_y            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 3               # 默认值：滑块的初始位置值
+      minimum_value: -18               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    # 滑块控件，用于选择数值范围
+    - type: slider                   # 控件类型：滑块
+      title: 下划符字体大小                # 显示标题：在界面上显示的文字
+      key: key_down_text_size            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 8               # 默认值：滑块的初始位置值
+      minimum_value: 4               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    - type: slider                   # 控件类型：滑块
+      title: 下划符X轴偏移                # 显示标题：在界面上显示的文字
+      key: key_down_text_offset_x            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 0               # 默认值：滑块的初始位置值
+      minimum_value: -18               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    - type: slider                   # 控件类型：滑块
+      title: 下划符Y轴偏移                # 显示标题：在界面上显示的文字
+      key: key_down_text_offset_y            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: -1               # 默认值：滑块的初始位置值
+      minimum_value: -18               # 最小值：滑块左端的数值
+      maximum_value: 18              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    
