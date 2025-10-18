@@ -468,6 +468,175 @@ patchManager.deactivate("your_patch_key", variable);
 - 路径解析失败的回退处理
 - 资源文件操作的异常捕获
 
+## 12. 添加控件UI配置
+
+### 为什么需要控件UI？
+
+控件UI让用户可以通过友好的图形界面调整补丁参数，而不需要手动编辑YAML文件。这大大提升了用户体验。
+
+### 控件配置结构
+
+在 `patch.yaml` 中添加 `controls` 部分：
+
+```yaml
+controls:
+  stringsTable: "Root"              # 字符串表名称
+  preferences:                      # 控件列表
+    - type: group                   # 分组标题
+      title: 设置分组
+      footer_text: 分组说明文字
+    
+    - type: toggle_switch           # 开关控件
+      title: 功能开关
+      key: feature_enabled          # 控件键名(用于变量绑定)
+      default_value: false
+      toggle_style: switch          # switch 或 checkmark
+    
+    - type: slider                  # 滑块控件
+      title: 数值设置
+      key: value_setting
+      default_value: 10
+      minimum_value: 1
+      maximum_value: 20
+      step: 1
+```
+
+### 支持的控件类型
+
+#### 1. 分组标题 (group)
+用于将相关设置归类显示：
+```yaml
+- type: group
+  title: 分组标题
+  footer_text: 分组说明文字(可选)
+```
+
+#### 2. 开关控件 (toggle_switch)
+用于开启或关闭功能：
+```yaml
+- type: toggle_switch
+  title: 功能名称
+  key: feature_key              # 必需：唯一标识
+  default_value: false          # 必需：默认值
+  toggle_style: switch          # 可选：switch(滑动开关) 或 checkmark(勾选框)
+```
+
+#### 3. 滑块控件 (slider)
+用于选择数值范围：
+```yaml
+- type: slider
+  title: 参数名称
+  key: param_key                # 必需：唯一标识
+  default_value: 10             # 必需：默认值
+  minimum_value: 1              # 必需：最小值
+  maximum_value: 20             # 必需：最大值
+  step: 1                       # 必需：步长
+```
+
+#### 4. 文本输入 (text_field)
+用于输入文本内容：
+```yaml
+- type: text_field
+  title: 文本设置
+  key: text_key
+  default_value: "默认文本"
+  placeholder: "请输入内容"    # 可选：占位符
+```
+
+#### 5. 多值选择 (multi_value)
+用于从多个选项中选择：
+```yaml
+- type: multi_value
+  title: 选项设置
+  key: option_key
+  default_value: "option1"
+  values:                       # 可选值列表
+    - "option1"
+    - "option2"
+    - "option3"
+  titles:                       # 对应的显示标题
+    - "选项一"
+    - "选项二"
+    - "选项三"
+```
+
+### 变量绑定
+
+在 `patch` 配置中使用 `{$key}` 来引用控件的值：
+
+```yaml
+patch:
+  - title: "功能补丁"
+    key: "feature_patch"
+    bind_control: "feature_enabled"    # 绑定主开关
+    patch:
+      some_config: "{$value_setting}"  # 使用滑块的值
+      another_config: "{$text_key}"    # 使用文本输入的值
+```
+
+### 完整示例：语言模型补丁
+
+```yaml
+patch_to: "{$current_schema}"
+patch:
+  - title: "语言模型"
+    key: "turn_on_grammar"
+    bind_control: "turn_on_grammar"
+    patch:
+      grammar:
+        collocation_max_length: "{$collocation_max_length}"
+        collocation_penalty: "{$collocation_penalty}"
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    # 基本开关
+    - type: group
+      title: 基本设置
+    
+    - type: toggle_switch
+      title: 启用语言模型
+      key: turn_on_grammar
+      default_value: false
+      toggle_style: switch
+    
+    # 参数调整
+    - type: group
+      title: 词组长度配置
+    
+    - type: slider
+      title: 最长词组长度
+      key: collocation_max_length
+      default_value: 8
+      minimum_value: 2
+      maximum_value: 15
+      step: 1
+    
+    - type: slider
+      title: 常见搭配惩罚
+      key: collocation_penalty
+      default_value: -6
+      minimum_value: -30
+      maximum_value: 0
+      step: 1
+```
+
+### 最佳实践
+
+1. **合理分组**：使用 group 将相关设置归类，提升界面清晰度
+2. **清晰命名**：title 使用易懂的中文描述，key 使用英文标识
+3. **合理默认值**：设置合适的默认值，让大多数用户无需调整
+4. **添加说明**：使用 footer_text 解释设置的作用和影响
+5. **控制范围**：为滑块设置合理的最小值、最大值和步长
+6. **主开关绑定**：使用 bind_control 将补丁与主开关关联
+
+### 控件UI的优势
+
+- ✅ **用户友好**：图形界面比编辑YAML文件更直观
+- ✅ **防止错误**：控件限制输入范围，避免配置错误
+- ✅ **实时预览**：修改后立即生效，方便调试
+- ✅ **降低门槛**：普通用户也能轻松使用高级功能
+
 ## 总结
 
 编写 patch 的关键点：
@@ -478,5 +647,6 @@ patchManager.deactivate("your_patch_key", variable);
 5. 遵循命名和文档规范
 6. 了解智能合并和移除机制
 7. 掌握toggle状态检查原理
+8. **善用控件UI提升用户体验**
 
 通过这个教程，你应该能够创建自己的输入法补丁了。如果遇到问题，可以参考现有的补丁示例或寻求帮助。
