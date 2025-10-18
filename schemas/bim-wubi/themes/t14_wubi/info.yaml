@@ -1,0 +1,13 @@
+__build_info:
+  rime_version: 1.13.1
+  timestamps:
+    "./public/info/default": 1754815711
+    "./public/info/default.custom": 0
+    "t14_wubi/info": 1750148233
+    "t14_wubi/info.custom": 0
+author: "筋斗云"
+create_time: "2023-03-30"
+name: "五笔14键"
+update_time: "2023-03-30"
+url: "https://github.com/Beyond-Input-Method/themes/t14_wubi"
+version: 1.0.0
