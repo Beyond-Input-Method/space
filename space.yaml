@@ -4,8 +4,8 @@ theme: t9
 theme_dir: themes/
 symbol: default
 symbol_dir: symbols/
-emotion: default
-emotion_dir: emotions/
+emoticon: default
+emoticon_dir: emoticons/
 config_version: 1.0
 sound_on: false
 sound_volume: 0
