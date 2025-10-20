@@ -48,9 +48,10 @@ patch:
   # resource是补丁的资源。
   # patch_to是补丁的目标文件。比如/xxx/wubi86.custom.yaml, 当然也可以是方案目录或者主题目录。
   - title: "联想"
-    key: "predict"
+    key: "prediction"
     description: "给方案添加联想的"
     patch_to: "{$current_schema}"
+    bind_control: "prediction"
     #复制文件到指定文件,支持目录和文件
     resources:
         #源文件
@@ -63,7 +64,7 @@ patch:
         "engine/translators/@before 0": "predict_translator"
         "switches/+":
           - name: prediction
-            states: [關閉預測, 開啓預測]
+            states: [联想开, 联想关]
             reset: 1
         "predictor":
           # predict db file in user directory/shared directory
@@ -72,7 +73,44 @@ patch:
           # max prediction candidates every time
           # default to 0, which means showing all candidates
           # you may set it the same with page_size so that period doesn't trigger next page
-          max_candidates: 5
+          max_candidates: "{$max_candidates}"
           # max continuous prediction times
           # default to 0, which means no limitation
-          max_iterations: 1
+          max_iterations: "{$max_iterations}"
+
+
+# 应用配置文件 - 新用户友好版本
+# 所有配置项使用小写字母和下划线命名，便于理解和记忆
+
+# 配置项列表，包含所有的设置选项
+controls:
+  stringsTable: "Root"
+  # ==================== 基本设置 ====================
+  # 分组标题，用于将相关设置归类显示
+  preferences:
+    - type: group                    # 控件类型：分组标题
+      title: 基本设置                # 显示标题：在界面上显示的文字
+      footer_text: 这些是应用的基本配置选项  # 底部说明：显示在分组下方的解释文字
+
+    # 开关控件，用于开启或关闭功能
+    - type: toggle_switch            # 控件类型：开关按钮
+      title: 启用联想                # 显示标题：在界面上显示的文字
+      key: prediction                # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: true            # 默认值：首次使用时的初始设置
+      toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
+    # 滑块控件，用于选择数值范围
+    - type: slider                   # 控件类型：滑块
+      title: 最大候选                # 显示标题：在界面上显示的文字
+      key: max_candidates            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 5               # 默认值：滑块的初始位置值
+      minimum_value: 5               # 最小值：滑块左端的数值
+      maximum_value: 10              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
+    # 滑块控件，用于选择数值范围
+    - type: slider                   # 控件类型：滑块
+      title: 候选次数                # 显示标题：在界面上显示的文字
+      key: max_iterations            # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 1               # 默认值：滑块的初始位置值
+      minimum_value: 0               # 最小值：滑块左端的数值
+      maximum_value: 10              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量

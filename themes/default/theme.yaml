@@ -2,16 +2,16 @@
 # encoding: utf-8
 
 style:
-  __include: ./public/style/default:/style
+  __include: ./../public/style/default:/style
 preset_styles:
-  __include: ./public/preset_styles/default:/preset_styles
+  __include: ./../public/preset_styles/default:/preset_styles
 preset_candidates:
-  __include: ./public/preset_candidates/default:/preset_candidates
+  __include: ./../public/preset_candidates/default:/preset_candidates
 preset_fonts:
-  __include: ./public/preset_fonts/default:/preset_fonts
+  __include: ./../public/preset_fonts/default:/preset_fonts
 preset_color_schemes:
-  __include: ./public/preset_color_schemes/default:/preset_color_schemes
+  __include: ./../public/preset_color_schemes/default:/preset_color_schemes
 preset_keys: 
-  __include: ./public/preset_keys/default:/preset_keys
+  __include: ./../public/preset_keys/default:/preset_keys
 preset_keyboards:
-  __include: ./public/preset_keyboards/default:/preset_keyboards
+  __include: ./../public/preset_keyboards/default:/preset_keyboards

@@ -1,6 +1,0 @@
-[submodule "schemas/rime-ice"]
-	path = schemas/rime-ice
-	url = https://github.com/Beyond-Input-Method/rime-ice
-[submodule "schemas/rime-wubi86-jidian"]
-	path = schemas/rime-wubi86-jidian
-	url = https://github.com/Beyond-Input-Method/rime-wubi86-jidian

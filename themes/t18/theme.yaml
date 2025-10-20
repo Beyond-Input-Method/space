@@ -37,6 +37,10 @@ preset_keyboards:
     key_upper_press_text_offset_y: 0
     key_upper_text_offset_x: 0
     key_upper_text_offset_y: 3
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     preview_round_corner: 9
     long_preview_round_corner: 9
     long_preview_padding: 0
@@ -64,7 +68,7 @@ preset_keyboards:
     - { click: participle, width: 14.3 }
     - { click: z, label: Z, width: 14.3, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
     - { click: x, label: XC, width: 14.3, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_X, commit_x, commit_fullexclamationpoint, commit_c, commit_C ] }
-    - { click: v, label: V, width: 14.3, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_halfpoundsign, commit_V ] }
+    - { click: v, label: V, width: 14.3, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
     - { click: b, label: BN, width: 14.3, swipe_up: commit_fullcomma, swipe_down: ",", long_click: [ commit_B, commit_b, commit_fullcomma, commit_n, commit_N ] }
     - { click: m, label: M, width: 14.3, swipe_up: "commit_fulldot", swipe_down: ".", long_click: [ commit_m, commit_fulldot, commit_M ] }
     - { click: backspace, width: 14.3, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
@@ -78,6 +82,18 @@ preset_keyboards:
   default_sm_md:
     height: 31
     vertical_gap: 4
+    key_text_offset_x: 0
+    key_text_offset_y: 0
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 1
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     keys:
     # 1
     - { click: q, label: Q, width: 14.3, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }

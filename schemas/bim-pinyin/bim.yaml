@@ -1,0 +1,20 @@
+#
+#
+#
+#自定义配置请用iRime.custom.yaml文件。不然如果iRime.yaml文件有更新的话配置会被覆盖；
+#
+#
+#
+#
+config_version: 5.0 #配置文件版本
+app_setting:
+    theme_name: "cherry" #当前主题
+    theme_color_schema: "default" #当前主题配色
+    schema_name: "default" #默认Rime
+    sound_on: false #声音形状
+    volume: 0.0 #音量 0.0 到 1
+    sound_effect: "default" #音效  目录/sounds/
+    haptics_On: true #震动
+    haptics_value: 0.5 #震动值
+    show_system_info: true #启动显示系统信息
+    pasteboard_monitoring_switch: true #剪贴板监控开关

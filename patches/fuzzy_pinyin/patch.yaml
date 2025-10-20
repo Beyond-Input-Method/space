@@ -12,125 +12,125 @@ patch:
     description: ""
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/ch/c/"
-        - "derive/c/ch/"
+      "speller/algebra/0+":
+        - "derive/^([c])([^h])/$1h$2/"
+        - "derive/^([c])h/$1/"
   - title: "sh = s"
     key: "sh = s"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/sh/s/"
-        - "derive/s/sh/"
+      "speller/algebra/0+":
+        - "derive/^([s])h/$1/"
+        - "derive/^([s])([^h])/$1h$2/"
   - title: "zh = z"
     key: "zh = z"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/zh/z/"
-        - "derive/z/zh/"
+      "speller/algebra/0+":
+        - "derive/^([z])h/$1/"
+        - "derive/^([z])([^g])/$1h$2/"
   - title: "k = g"
     key: "k = g"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/k/g/"
-        - "derive/g/k/"
+      "speller/algebra/0+":
+        - "derive/^k/g/"
+        - "derive/^g/k/"
   - title: "f = h"
     key: "f = h"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/f/h/"
-        - "derive/h/f/"
+      "speller/algebra/0+":
+        - "derive/^f/h/"
+        - "derive/^h/f/"
   - title: "n = l"
     key: "n = l"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/n/l/"
-        - "derive/l/n/"
+      "speller/algebra/0+":
+        - "derive/^n/l/"
+        - "derive/^l/n/"
   - title: "r = l"
     key: "r = l"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/r/l/"
-        - "derive/l/r/"
+      "speller/algebra/0+":
+        - "derive/^r/l/"
+        - "derive/^l/r/"
   - title: "ang = an"
     key: "ang = an"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/ang/an/"
-        - "derive/an/ang/"
+      "speller/algebra/0+":
+        - "derive/([a])n$/$1ng/"
+        - "derive/([a])ng$/$1n/"
   - title: "eng = en"
     key: "eng = en"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/eng/en/"
-        - "derive/en/eng/"
+      "speller/algebra/0+":
+        - "derive/([e])n$/$1ng/"
+        - "derive/([e])ng$/$1n/"
   - title: "ing = in"
     key: "ing = in"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/ing/in/"
-        - "derive/in/ing/"
+      "speller/algebra/0+":
+        - "derive/([i])n$/$1ng/"
+        - "derive/([i])ng$/$1n/"
   - title: "iang = ian"
     key: "iang = ian"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/iang/ian/"
-        - "derive/ian/iang/"
+      "speller/algebra/0+":
+        - "derive/([i])ang$/$1an/"
+        - "derive/([i])an$/$1ang/"
   - title: "uang = uan"
     key: "uang = uan"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/uang/uan/"
-        - "derive/uan/uang/"
+      "speller/algebra/0+":
+        - "derive/([u])ang$/$1an/"
+        - "derive/([u])an$/$1ang/"
   - title: "an = ai"
     key: "an = ai"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/an/ai/"
-        - "derive/ai/an/"
+      "speller/algebra/0+":
+        - "derive/ai$/an/"
+        - "derive/an$/ai/"
   - title: "un = ong"
     key: "un = ong"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/un/ong/"
-        - "derive/ong/un/"
+      "speller/algebra/0+":
+        - "derive/un$/ong/"
+        - "derive/ong$/un/"
   - title: "hui = fei"
     key: "hui = fei"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/hui/fei/"
-        - "derive/fei/hui/"
+      "speller/algebra/0+":
+        - "derive/^fe([i])$/hu$1/"
+        - "derive/^hu([i])$/fe$1/"
   - title: "huang = wang"
     key: "huang = wang"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/huang/wang/"
-        - "derive/wang/huang/"
+      "speller/algebra/0+":
+        - "derive/^huang$/wang/"
+        - "derive/^wang$/huang/"
   - title: "feng = fong"
     key: "feng = fong"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/feng/fong/"
-        - "derive/fong/feng/"
+      "speller/algebra/0+":
+        - "derive/^feng$/fong/"
+        - "derive/^fong$/feng/"
   - title: "fu = hu"
     key: "fu = hu"
     patch_to: "{$current_schema}"
     patch:
-      "speller/algebra/+":
-        - "derive/fu/hu/"
-        - "derive/hu/fu/"
+      "speller/algebra/0+":
+        - "derive/^fu$/hu/"
+        - "derive/^hu$/fu/"

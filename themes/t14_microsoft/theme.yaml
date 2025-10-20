@@ -31,13 +31,17 @@ preset_keyboards:
     vertical_gap_land: 4
     round_corner: 6
     key_text_offset_x: 0
-    key_text_offset_y: 0
+    key_text_offset_y: 5
     key_press_text_offset_x: 0
     key_press_text_offset_y: 0
     key_upper_press_text_offset_x: 0
-    key_upper_press_text_offset_y: 0
+    key_upper_press_text_offset_y: 5
     key_upper_text_offset_x: 0
     key_upper_text_offset_y: 3
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     preview_round_corner: 9
     long_preview_round_corner: 9
     long_preview_padding: 0
@@ -78,6 +82,18 @@ preset_keyboards:
   default_sm_md:
     height: 31
     vertical_gap: 4
+    key_text_offset_x: 0
+    key_text_offset_y: 2
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 1
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
     keys:
     #1
     - { click: q, width: 20, label: 'QW', swipe_up: commit_1, long_click: [ commit_Q, commit_q, commit_1, commit_w, commit_W ] }

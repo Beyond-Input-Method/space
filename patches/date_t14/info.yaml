@@ -1,6 +1,18 @@
 author: "筋斗云"
 create_time: "2023-03-30"
-name: "14键快速输出日期"
+name: "快速输出日期"
 update_time: "2023-03-30"
 url: ""
 version: 1.0.0
+support_schemas:
+  - bim_t14
+  - double_pinyin_14
+  - double_pinyin_abc_14
+  - double_pinyin_flypy_14
+  - double_pinyin_mspy_14
+  - double_pinyin_mspy_14
+  - double_pinyin_ziguang_14
+  - wubi86_14
+  - wubi86_jidian_14
+  - wubi86_jidian_pinyin_14
+  - wubi_pinyin_14
