@@ -354,4 +354,3 @@ speller:
     - derive/x/z/
     - derive/v/c/
     - derive/n/b/
-  rear_penalty: -18 #默认-18 对词组中后续词语的位置施加的惩罚值。较高的负值会降低某些词语在句子后部出现的概率，防止句子结构不自然。

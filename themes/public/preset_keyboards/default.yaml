@@ -228,7 +228,7 @@ preset_keyboards:
   number:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
-    ascii_mode: 1
+    ascii_mode: 0
     name: number
     preview: false
     height: 46
@@ -236,7 +236,7 @@ preset_keyboards:
     keys:
     #1
     # - {width: 1}
-    - { collection: [ "=", "%", "-", "+", "×", "/", ",", "#", ".", "?", ":", "*" ], width: 17, height: 162, height_land: 110, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
+    - { collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], width: 17, height: 162, height_land: 110, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
     - { click: 1, height: 50 }
     - { click: 2, height: 50 }
     - { click: 3, height: 50 }
@@ -264,7 +264,7 @@ preset_keyboards:
   number_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
-    ascii_mode: 1
+    ascii_mode: 0
     name: number
     preview: false
     vertical_gap: 4
@@ -273,7 +273,7 @@ preset_keyboards:
     keys:
     #1
     # - {width: 1}
-    - { collection: [ "+", "-", "*", "/", "@", "%","×", ",", "#", ".", "?", ":" ], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
+    - { collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
     - { click: 1 }
     - { click: 2 }
     - { click: 3 }
