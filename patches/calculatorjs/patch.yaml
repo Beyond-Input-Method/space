@@ -1,0 +1,18 @@
+# 计算器
+
+patch_to: "{$current_schema}"
+patch:
+  - title: "计算器"
+    key: "calculator"
+    description: "通过导入对应lua，以及对方案进行补充，配合重写的数字键盘，实现无引导的计算器"
+    patch_to: "{$current_schema}"
+    resources:
+      - source: "res/js/arithmetic_filter.js"
+        target: "{$current_schema_dir}/js/arithmetic_filter.js"
+    patch:
+      # 添加计算器translator
+      engine/filters/+:
+        - qjs_filter@arithmetic_filter  # 添加算术过滤器
+      # 添加计算器recognizer模式
+      recognizer/patterns/+:
+        calculator: "^([0-9]+|sin|cos|tan|log|exp|sqrt|fact|avg|var|rdm).*"

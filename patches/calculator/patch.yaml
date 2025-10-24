@@ -1,0 +1,18 @@
+# 计算器
+
+patch_to: "{$current_schema}"
+patch:
+  - title: "计算器"
+    key: "calculator"
+    description: "通过导入对应lua，以及对方案进行补充，配合重写的数字键盘，实现无引导的计算器"
+    patch_to: "{$current_schema}"
+    resources:
+      - source: "res/lua/calculator.lua"
+        target: "{$current_schema_dir}/lua/calculator.lua"
+    patch:
+      # 添加计算器translator
+      engine/translators/+:
+        - lua_translator@*calculator
+      # 添加计算器recognizer模式
+      recognizer/patterns/+:
+        calculator: "^([0-9]+|sin|cos|tan|log|exp|sqrt|fact|avg|var|rdm).*"

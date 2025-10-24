@@ -1,0 +1,6 @@
+name: "计算器"
+version: 1.0.2
+author: "无"
+description: 为了配合计算器，重写数字键盘,新增样式选择
+create_time: 2025-10-09
+update_time: 2025-10-13
