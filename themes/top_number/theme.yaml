@@ -161,7 +161,7 @@ preset_keyboards:
   number:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
-    ascii_mode: 1
+    ascii_mode: 0
     name: number_keyboard
     preview: false
     height: 60
@@ -171,7 +171,7 @@ preset_keyboards:
     keys:
     #1
     # - {width: 1}
-    - { collection: [ "=", "%", "-", "+", "×", "/", ",", "#", ",", "?", ":", "*" ], width: 17, height: 205, height_land: 140, row_height: 50, row_height_land: 34, row_vertical_gap: 3, show_row_back_image: false, name: table }
+    - { collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], width: 17, height: 205, height_land: 140, row_height: 50, row_height_land: 34, row_vertical_gap: 3, show_row_back_image: false, name: table }
     - { click: 1, height: 64 }
     - { click: 2, height: 64 }
     - { click: 3, height: 64 }
