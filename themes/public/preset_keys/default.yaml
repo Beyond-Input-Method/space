@@ -353,6 +353,7 @@ preset_keys:
   #清屏操作。option可带参数。0为上屏第一个候选；无参数为则不上屏。
   function_rime_clear: { label: "重输", send: function, command: candidate.clear, option: "" }
   function_keyboard_clearAll: { label: "清空", send: function, command: keyboard.clearAll, option: "" }
+  function_keyboard_undo: { label: "撤销", send: function, command: keyboard.undo, option: "" }
   function_keyboard_clearLeft: { label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
   function_keyboard_clearRight: { label: "右清空", send: function, command: keyboard.clearRight, option: "" }
   function_keyboard_selectAll: { label: "全选", send: function, command: keyboard.selectAll, option: "" }

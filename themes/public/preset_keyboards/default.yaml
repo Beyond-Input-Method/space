@@ -64,7 +64,7 @@ preset_keyboards:
     - { click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, commit_half_comma, commit_N ] }
     - { click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, commit_halfperiod, commit_M ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false }
     - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false }
