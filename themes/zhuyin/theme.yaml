@@ -247,16 +247,16 @@ preset_keyboards:
     ascii_mode: 0
     keys:
       #1
-      - {click: commit_1, functional: false, long_click: [commit_"1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠"]}
-      - {click: commit_2, functional: false, long_click: [commit_"2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡"]}
-      - {click: commit_3, functional: false, long_click: [commit_"3", "三", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣"]}
-      - {click: commit_4, functional: false, long_click: [commit_"4", "四", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢"]}
-      - {click: commit_5, functional: false, long_click: [commit_"5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤"]}
-      - {click: commit_6, functional: false, long_click: [commit_"6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥"]}
-      - {click: commit_7, functional: false, long_click: [commit_"7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦"]}
-      - {click: commit_8, functional: false, long_click: [commit_"8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧"]}
-      - {click: commit_9, functional: false, long_click: [commit_"9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨"]}
-      - {click: commit_0, functional: false, long_click: [commit_"0", "零", "０", "⓪", "°"]}
+      - {click: commit_1, functional: false, long_click: [commit_1, "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠"]}
+      - {click: commit_2, functional: false, long_click: [commit_2, "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡"]}
+      - {click: commit_3, functional: false, long_click: [commit_4, "三", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢"]}
+      - {click: commit_4, functional: false, long_click: [commit_3, "四", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣"]}
+      - {click: commit_5, functional: false, long_click: [commit_5, "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤"]}
+      - {click: commit_6, functional: false, long_click: [commit_6, "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥"]}
+      - {click: commit_7, functional: false, long_click: [commit_7, "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦"]}
+      - {click: commit_8, functional: false, long_click: [commit_8, "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧"]}
+      - {click: commit_9, functional: false, long_click: [commit_9, "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨"]}
+      - {click: commit_0, functional: false, long_click: [commit_0, "零", "０", "⓪", "°"]}
       #0
       - {click: '%', label: '%'}
       - {click: '&', label: '&'}
@@ -547,16 +547,16 @@ preset_keyboards:
     ascii_mode: 0
     keys:
       #1
-      - {click: commit_1, functional: false, long_click: [commit_"1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠"]}
-      - {click: commit_2, functional: false, long_click: [commit_"2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡"]}
-      - {click: commit_3, functional: false, long_click: [commit_"3", "三", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣"]}
-      - {click: commit_4, functional: false, long_click: [commit_"4", "四", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢"]}
-      - {click: commit_5, functional: false, long_click: [commit_"5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤"]}
-      - {click: commit_6, functional: false, long_click: [commit_"6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥"]}
-      - {click: commit_7, functional: false, long_click: [commit_"7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦"]}
-      - {click: commit_8, functional: false, long_click: [commit_"8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧"]}
-      - {click: commit_9, functional: false, long_click: [commit_"9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨"]}
-      - {click: commit_0, functional: false, long_click: [commit_"0", "零", "０", "⓪", "°"]}
+      - {click: commit_1, functional: false, long_click: [commit_1, "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠"]}
+      - {click: commit_2, functional: false, long_click: [commit_2, "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡"]}
+      - {click: commit_3, functional: false, long_click: [commit_4, "三", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢"]}
+      - {click: commit_4, functional: false, long_click: [commit_3, "四", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣"]}
+      - {click: commit_5, functional: false, long_click: [commit_5, "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤"]}
+      - {click: commit_6, functional: false, long_click: [commit_6, "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥"]}
+      - {click: commit_7, functional: false, long_click: [commit_7, "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦"]}
+      - {click: commit_8, functional: false, long_click: [commit_8, "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧"]}
+      - {click: commit_9, functional: false, long_click: [commit_9, "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨"]}
+      - {click: commit_0, functional: false, long_click: [commit_0, "零", "０", "⓪", "°"]}
       #0
       - {click: '%', label: '%'}
       - {click: '&', label: '&'}
