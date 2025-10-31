@@ -53,7 +53,7 @@ preset_keyboards:
     - { click: 1, label: '分词', height: 50, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
     - { click: a, label: 'ABC', height: 50, swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
     - { click: d, label: 'DEF', swipe_up: commit_3, height: 50, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
-    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo, long_click: [function_keyboard_undo, function_keyboard_clearLeft, function_keyboard_clearRight, function_keyboard_clearAll, function_keyboard_redo]}
+    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
 
     # # #2
     - { width: 17 }
@@ -118,7 +118,7 @@ preset_keyboards:
     - { click: n, swipe_up: ",", long_click: [ ",", N, n ] }
     - { click: m, swipe_up: ".", long_click: [ ".", M, m ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo, long_click: [function_keyboard_undo, function_keyboard_clearLeft, function_keyboard_clearRight, function_keyboard_clearAll, function_keyboard_redo] }
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol }
     - { click: eisu_toggle_123_number, width: 12, name: number }
@@ -141,7 +141,7 @@ preset_keyboards:
     - { click: 1, height: 50 }
     - { click: 2, height: 50 }
     - { click: 3, height: 50 }
-    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo, long_click: [function_keyboard_undo, function_keyboard_clearLeft, function_keyboard_clearRight, function_keyboard_clearAll, function_keyboard_redo]}
+    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
 
     # # #2
     - { width: 17 }

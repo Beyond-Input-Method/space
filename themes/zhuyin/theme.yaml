@@ -130,7 +130,7 @@ preset_keyboards:
       - {label: 'ㄝ', click: 'text_ie', long_click: 'text_dh'} #, long_click: 'text_do' #, key_back_color: blue1
       - {label: 'ㄡ', click: 'text_ou', long_click: '<'} #, long_click: 'text_gi' #, key_back_color: blue1
       - {label: 'ㄥ', click: 'text_eng', long_click: '>'} #, key_back_color: blue1
-      - {click: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo, long_click: [function_keyboard_undo, function_keyboard_clearLeft, function_keyboard_clearRight, function_keyboard_clearAll, function_keyboard_redo]} #, composing: BackToPreviousSyllable2, swipe_up: BackSpace #, swipe_up: "Escape"
+      - {click: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo} #, composing: BackToPreviousSyllable2, swipe_up: BackSpace #, swipe_up: "Escape"
       #4
       - {click: eisu_toggle_符_symbols, width: 14} #, composing: Escape #composing: Tab_3 # composing: delimiter_2
       - {click: eisu_toggle_123_number, width: 10}
@@ -191,7 +191,7 @@ preset_keyboards:
       - {click: n, swipe_up: commit_half_comma,  long_click: [commit_half_comma, N, n]}
       - {click: m, swipe_up: commit_half_dot,  long_click: [commit_half_dot, M, m]}
       - {width: 2}
-      - {click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo, long_click: [function_keyboard_undo, function_keyboard_clearLeft, function_keyboard_clearRight, function_keyboard_clearAll, function_keyboard_redo]}
+      - {click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
       #4
       - {click: eisu_toggle_符_symbols, width: 14, name: symbol}
       - {click: eisu_toggle_123_number, width: 10, name: number}
@@ -219,7 +219,7 @@ preset_keyboards:
       - {click: commit_1, functional: false, height: 64}
       - {click: commit_2, functional: false, height: 64}
       - {click: commit_3, functional: false, height: 64}
-      - {click: backspace, width: 17, height: 64, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo, long_click: [function_keyboard_undo, function_keyboard_clearLeft, function_keyboard_clearRight, function_keyboard_clearAll, function_keyboard_redo]}
+      - {click: backspace, width: 17, height: 64, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
 
       # # #2
       - {width: 17}
