@@ -70,7 +70,7 @@ preset_keyboards:
     - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false }
     - { click: space, width: 38, name: space, swipe_up: select_second, preview: false }
     - { click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
     width: 10
   default_sm_md:
     vertical_gap: 4
@@ -128,7 +128,7 @@ preset_keyboards:
     - { click: eisu_toggle_123_number_sm_md, has_menu: text_halfperiod, width: 13, name: number, preview: false }
     - { click: space, width: 38, name: space, swipe_up: select_second, preview: false }
     - { click: eisu_toggle_ABC_english_sm_md, has_menu: text_halfcomma, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
   english:
     ascii_mode: 1
     lock: true
@@ -175,7 +175,7 @@ preset_keyboards:
     - { click: send_dot, width: 10 }
     - { click: space, width: 31, name: space }
     - { click: eisu_toggle_en_zh_default_schema_default, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, composing: confirm }
+    - { click: return, width: 24, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
   english_sm_md:
     ascii_mode: 1
     lock: true
@@ -224,7 +224,7 @@ preset_keyboards:
     - { click: send_dot, width: 10 }
     - { click: space, width: 31, name: space }
     - { click: eisu_toggle_en_zh_default_sm_md_schema_default, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, composing: confirm }
+    - { click: return, width: 24, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
   number:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
@@ -260,7 +260,7 @@ preset_keyboards:
     - { click: eisu_toggle_返回_default, width: 22, height: 46 }
     - { click: commit_0, height: 46 }
     - { click: space, name: space, height: 46 }
-    - { click: return, name: return, width: 17, height: 46, composing: confirm }
+    - { click: return, name: return, width: 17, height: 46, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
   number_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
@@ -297,7 +297,7 @@ preset_keyboards:
     - { click: eisu_toggle_返回_default_sm_md, width: 22 }
     - { click: commit_0 }
     - { click: space, name: space }
-    - { click: return, name: return, width: 17, composing: confirm }
+    - { click: return, name: return, width: 17, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
@@ -370,7 +370,7 @@ preset_keyboards:
     - { click: space, width: 41, name: space }
     - { click: text_fullcomma2_default, name: text_fullcomma2_default, width: 13, preview: false }
     # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
-    - { click: return, width: 20, name: return, composing: confirm }
+    - { click: return, width: 20, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
   symbols_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
@@ -445,7 +445,7 @@ preset_keyboards:
     - { click: space, width: 41, name: space }
     - { click: text_fullcomma2_default, name: text_fullcomma2_default, width: 13, preview: false }
     # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
-    - { click: return, width: 20, name: return, composing: confirm }
+    - { click: return, width: 20, name: return, composing: confirm, , long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
   half_symbols:
     name: half_symbols
     ascii_mode: 0
@@ -488,4 +488,4 @@ preset_keyboards:
     - { click: text_halfperiod_default, name: numberPeriodFull, width: 13 }
     - { click: space, width: 38, name: space }
     - { click: text_halfcomma_default, name: numberPeriodFull, width: 11 }
-    - { click: return, width: 23, name: return }
+    - { click: return, width: 23, name: return, , long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
