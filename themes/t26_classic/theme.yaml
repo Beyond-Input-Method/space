@@ -79,14 +79,14 @@ preset_keyboards:
     - { click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
     - { click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_符_symbols, width: 13, name: symbol, preview: false }
     - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 12, name: number, preview: false }
     - { click: "，", swipe_up: "。", long_click: [ "。", "?", "!", "@", text_halfellipsis_default ], functional: true }
     - { click: space, width: 31, name: space, swipe_up: select_second, preview: false }
     - { click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 12, name: english, preview: false }
-    - { click: return, width: 22, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 22, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
     width: 10
   default_sm_md:
     name: default_sm_md
@@ -139,11 +139,11 @@ preset_keyboards:
     - { click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
     - { click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_符_symbols_sm_md, width: 13, name: symbol, preview: false }
     - { click: eisu_toggle_123_number_sm_md, has_menu: text_halfperiod, width: 12, name: number, preview: false }
     - { click: "，", swipe_up: "。", long_click: [ "。", "?", "!", "@", text_halfellipsis_default ], functional: true }
     - { click: space, width: 31, name: space, swipe_up: select_second, preview: false }
     - { click: eisu_toggle_ABC_english_sm_md, has_menu: text_halfcomma, width: 12, name: english, preview: false }
-    - { click: return, width: 22, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 22, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }

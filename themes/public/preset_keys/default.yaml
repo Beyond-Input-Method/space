@@ -356,6 +356,8 @@ preset_keys:
   function_keyboard_undo: { label: "撤销", send: function, command: keyboard.undo, option: "" }
   function_keyboard_clearLeft: { label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
   function_keyboard_clearRight: { label: "右清空", send: function, command: keyboard.clearRight, option: "" }
+  function_keyboard_undo: { label: "撤销", send: function, command: keyboard.undo, option: "" }
+  function_keyboard_redo: { label: "重做", send: function, command: keyboard.redo, option: "" }
   function_keyboard_selectAll: { label: "全选", send: function, command: keyboard.selectAll, option: "" }
   function_keyboard_cut: { label: "剪切", send: function, command: keyboard.cut, option: "" }
   function_keyboard_copy: { label: "复制", send: function, command: keyboard.copy, option: "" }

@@ -80,7 +80,7 @@ preset_keyboards:
     - { click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false }
     #      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
     # - {click: mode_switch_cn_or_en, has_menu: text_halfcomma, width: 11, name: mode_switch_cn_or_en, preview: false}
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
     width: 10
   default_sm_md:
     vertical_gap: 4
@@ -128,4 +128,4 @@ preset_keyboards:
     - { click: eisu_toggle_ABC_english_sm_md, has_menu: text_halfcomma, width: 11, name: english, preview: false }
     #      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false}
     # - {click: mode_switch_cn_or_en, has_menu: text_halfcomma, width: 11, name: mode_switch_cn_or_en, preview: false}
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }

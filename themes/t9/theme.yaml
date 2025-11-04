@@ -53,7 +53,7 @@ preset_keyboards:
     - { click: 1, label: '分词', height: 50, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
     - { click: 2, label: 'ABC', height: 50, swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
     - { click: 3, label: 'DEF', swipe_up: commit_3, height: 50, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
-    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
 
     # # #2
     - { width: 17 }
@@ -67,7 +67,7 @@ preset_keyboards:
     - { click: 7, label: 'PQRS', swipe_up: commit_7, height: 50, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
     - { click: 8, label: 'TUV', swipe_up: commit_8, height: 50, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
     - { click: 9, label: 'WXYZ', swipe_up: commit_9, height: 50, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
-    - { click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm, long_click: next }
+    - { click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
     ## #4
     - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
     - { click: eisu_toggle_123_number, width: 12, height: 46 }
@@ -118,14 +118,14 @@ preset_keyboards:
     - { click: n, swipe_up: ",", long_click: [ ",", N, n ] }
     - { click: m, swipe_up: ".", long_click: [ ".", M, m ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol }
     - { click: eisu_toggle_123_number, width: 12, name: number }
     - { click: send_dot, width: 12 }
     - { click: space, width: 33, name: space }
     - { click: eisu_toggle_en_zh_default_schema_default, width: 12, name: english, preview: false }
-    - { click: return, width: 17, name: return, composing: confirm, long, long_click: next }
+    - { click: return, width: 17, name: return, composing: confirm, long, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
   number:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
@@ -141,7 +141,7 @@ preset_keyboards:
     - { click: 1, height: 50 }
     - { click: 2, height: 50 }
     - { click: 3, height: 50 }
-    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
 
     # # #2
     - { width: 17 }
@@ -160,7 +160,7 @@ preset_keyboards:
     - { click: eisu_toggle_返回_default, width: 22, height: 46 }
     - { click: commit_0, height: 46 }
     - { click: space, name: space, height: 46, width: 22 }
-    - { click: return, name: return, width: 17, height: 46, composing: confirm ,long_click: next }
+    - { click: return, name: return, width: 17, height: 46, composing: confirm ,long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -173,8 +173,8 @@ preset_keyboards:
     #1
     - { click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
     - { click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
-    - { click: 3, long_click: [ "3", "三", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
-    - { click: 4, long_click: [ "4", "四", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+    - { click: 3, long_click: [ "3", "三", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+    - { click: 4, long_click: [ "4", "四", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
     - { click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
     - { click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
     - { click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
@@ -229,13 +229,13 @@ preset_keyboards:
     #l: 。⋯…⋯⋯
     - { click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_返回_default_schema_default, width: 13, name: default }
     - { click: eisu_toggle_123_number, name: numberPeriodFull, width: 13 }
     - { click: space, width: 41, name: space }
     - { click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false }
-    - { click: return, width: 20, name: return, composing: confirm ,long_click: next }
+    - { click: return, width: 20, name: return, composing: confirm ,long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
 
   #sm_md
   default_sm_md:
@@ -275,7 +275,7 @@ preset_keyboards:
     - { click: 7, label: 'PQRS', swipe_up: commit_7, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
     - { click: 8, label: 'TUV', swipe_up: commit_8, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
     - { click: 9, label: 'WXYZ', swipe_up: commit_9, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
-    - { click: return, name: return, width: 17, height: 66, height_land: 73, composing: confirm, long_click: next }
+    - { click: return, name: return, width: 17, height: 66, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
     ## #4
     - { click: eisu_toggle_符_dotsymbols, width: 17, name: default }
     - { click: eisu_toggle_123_number_sm_md, width: 12 }
@@ -339,7 +339,7 @@ preset_keyboards:
     - { click: n, swipe_up: ",", long_click: [ ",", N, n ] }
     - { click: m, swipe_up: ".", long_click: [ ".", M, m ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
     #4
     - { click: eisu_toggle_符_symbols_sm_md, width: 14, name: symbol }
     - { click: eisu_toggle_123_number_sm_md, width: 12, name: number }
@@ -347,12 +347,12 @@ preset_keyboards:
     - { click: space, width: 33, name: space }
     #- {click: eisu_toggle_返回_default, width: 11, name: english}
     - { click: eisu_toggle_返回_default_sm_md_schema_default, width: 12, name: english, preview: false }
-    - { click: return, width: 17, name: return, composing: confirm, long_click: next}
+    - { click: return, width: 17, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
 
   number_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
     menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
-    ascii_mode: 0
+    ascii_mode: 1
     name: number_sm_md_keyboard
     preview: false
     vertical_gap: 4
@@ -377,7 +377,7 @@ preset_keyboards:
     - { click: 1 }
     - { click: 2 }
     - { click: 3 }
-    - { click: backspace, width: 17, name: backspace, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 17, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
 
     # # #2
     - { width: 17 }
@@ -396,7 +396,7 @@ preset_keyboards:
     - { click: eisu_toggle_返回_default_sm_md, width: 22 }
     - { click: commit_0 }
     - { click: space, name: space, width: 22 }
-    - { click: return, name: return, width: 17, composing: confirm, long_click: next }
+    - { click: return, name: return, width: 17, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
 
   symbols_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
@@ -423,8 +423,8 @@ preset_keyboards:
     #1
     - { click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
     - { click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
-    - { click: 3, long_click: [ "3", "三", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
-    - { click: 4, long_click: [ "4", "四", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+    - { click: 3, long_click: [ "3", "三", "叁", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+    - { click: 4, long_click: [ "4", "四", "肆", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
     - { click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
     - { click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
     - { click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
@@ -479,11 +479,11 @@ preset_keyboards:
     #l: 。⋯…⋯⋯
     - { click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_返回_default_sm_md_schema_default, width: 13, name: default }
     - { click: eisu_toggle_123_number_sm_md, name: numberPeriodFull, width: 13 }
     - { click: space, width: 41, name: space }
     - { click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false }
     # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
-    - { click: return, width: 20, name: return, composing: confirm, long_click: next }
+    - { click: return, width: 20, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
