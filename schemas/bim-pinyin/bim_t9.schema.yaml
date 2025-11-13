@@ -41,6 +41,7 @@ engine:
     - simplifier@emoji # Emoji
     - simplifier@traditionalize # 简繁切换
     - uniquifier # 去重
+    - stroke_filter
 
 translator:
   prism: bim_t9
