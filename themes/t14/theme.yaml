@@ -53,23 +53,23 @@ preset_keyboards:
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
     #1
-    - { click: q, width: 20, label: 'QW', swipe_up: commit_1, long_click: [ commit_Q, commit_q, commit_1, commit_w, commit_W ] }
-    - { click: e, width: 20, label: 'ER', swipe_up: commit_2, long_click: [ commit_E, commit_e, commit_2, commit_r, commit_R ] }
-    - { click: t, width: 20, label: 'TY', swipe_up: commit_3, long_click: [ commit_T, commit_t, commit_3, commit_y, commit_Y ] }
-    - { click: u, width: 20, label: 'UI', swipe_up: commit_4, long_click: [ commit_U, commit_u, commit_4, commit_i, commit_I ] }
-    - { click: o, width: 20, label: 'OP', swipe_up: commit_5, long_click: [ commit_O, commit_o, commit_5, commit_p, commit_P ] }
+    - { click: 1, width: 20, label: 'QW', swipe_up: commit_1, long_click: [ commit_Q, commit_q, commit_1, commit_w, commit_W ] }
+    - { click: 2, width: 20, label: 'ER', swipe_up: commit_2, long_click: [ commit_E, commit_e, commit_2, commit_r, commit_R ] }
+    - { click: 3, width: 20, label: 'TY', swipe_up: commit_3, long_click: [ commit_T, commit_t, commit_3, commit_y, commit_Y ] }
+    - { click: 4, width: 20, label: 'UI', swipe_up: commit_4, long_click: [ commit_U, commit_u, commit_4, commit_i, commit_I ] }
+    - { click: 5, width: 20, label: 'OP', swipe_up: commit_5, long_click: [ commit_O, commit_o, commit_5, commit_p, commit_P ] }
     #2
-    - { click: a, width: 20, label: 'AS', swipe_up: commit_6, long_click: [ commit_A, commit_a, commit_6, commit_s, commit_S ] }
-    - { click: d, width: 20, label: 'DF', swipe_up: commit_7, long_click: [ commit_D, commit_d, commit_7, commit_f, commit_F ] }
-    - { click: g, width: 20, label: 'GH', swipe_up: commit_8, long_click: [ commit_G, commit_g, commit_8, commit_h, commit_H ] }
-    - { click: j, width: 20, label: 'JK', swipe_up: commit_9, long_click: [ commit_J, commit_j, commit_9, commit_k, commit_K ] }
+    - { click: 6, width: 20, label: 'AS', swipe_up: commit_6, long_click: [ commit_A, commit_a, commit_6, commit_s, commit_S ] }
+    - { click: 7, width: 20, label: 'DF', swipe_up: commit_7, long_click: [ commit_D, commit_d, commit_7, commit_f, commit_F ] }
+    - { click: 8, width: 20, label: 'GH', swipe_up: commit_8, long_click: [ commit_G, commit_g, commit_8, commit_h, commit_H ] }
+    - { click: 9, width: 20, label: 'JK', swipe_up: commit_9, long_click: [ commit_J, commit_j, commit_9, commit_k, commit_K ] }
     - { click: l, width: 20, label: 'L', swipe_up: commit_0, long_click: [ commit_l, commit_0, commit_L ] }
     #3
     - { click: participle, width: 15 }
     - { width: 1 }
-    - { click: z, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [ commit_Z, commit_z, commit_halfat, commit_x, commit_X ] }
-    - { click: c, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_C, commit_c, commit_fullquestionmark, commit_v, commit_V ] }
-    - { click: b, width: 17, label: 'BN', swipe_up: commit_fullcomma, swipe_down: commit_half_comma, long_click: [ commit_B, commit_b, commit_fullcomma, commit_n, commit_N ] }
+    - { click: 0, width: 17, label: 'ZX', swipe_up: commit_halfat, long_click: [ commit_Z, commit_z, commit_halfat, commit_x, commit_X ] }
+    - { click: -, width: 17, label: 'CV', swipe_up: commit_fullquestionmark, swipe_down: commit_half_questionmark, long_click: [ commit_C, commit_c, commit_fullquestionmark, commit_v, commit_V ] }
+    - { click: =, width: 17, label: 'BN', swipe_up: commit_fullcomma, swipe_down: commit_half_comma, long_click: [ commit_B, commit_b, commit_fullcomma, commit_n, commit_N ] }
     - { click: m, width: 17, label: 'M', swipe_up: commit_fulldot, swipe_down: commit_half_dot, long_click: [ commit_m, commit_fulldot, commit_M ] }
     - { width: 1 }
     - { click: backspace, width: 15, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}

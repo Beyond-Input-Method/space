@@ -41,6 +41,7 @@ switches:
 # 输入引擎
 engine:
   processors:
+    - TxProcessor
     - lua_processor@*select_character  # 以词定字
     - ascii_composer
     - recognizer
@@ -549,4 +550,6 @@ speller:
     - derive/([rtsdghkzc])o(u|ng)$/$1o/ # do → dou|dong
     - derive/(.+)ong$/$1on/ # lon → long
     - derive/([tl])eng$/$1en/ # ten → teng
-    - derive/([qwrtypsdfghjklzxcbnm])([aeio])ng$/$1ng/ # lng → lang、leng、ling、long
+    - derive/([qwrtypsdfghjklzxcbnm])([aeio])ng$/$1ng/ # lng → lang、leng、ling、longtx:
+  tx:
+    db: t26.db

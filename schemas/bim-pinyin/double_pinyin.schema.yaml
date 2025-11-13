@@ -52,6 +52,7 @@ switches:
 # 输入引擎
 engine:
   processors:
+    - TxProcessor
     - lua_processor@*select_character  # 以词定字
     - ascii_composer
     - recognizer
@@ -356,3 +357,8 @@ speller:
     - xform/in$/Ⓝ/
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
     # - abbrev/^(.).+$/$1/  # 首字母简拼，开启后会导致 3 个字母时 kj'x 变成 k'jx 的问题
+
+
+tx:
+  db: t26.db
+  reverse_db: t26_natural_double_pinyin_reverse_lookup.db

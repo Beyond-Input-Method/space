@@ -86,15 +86,6 @@ speller:
     - derive/ao$/oa/
     - derive/([iu])a(o|ng?)$/a$1$2/
     # ### 九宫格数字映射
-    #    - derive/[bc]/a/
-    #    - derive/[ef]/d/
-    #    - derive/[hi]/g/
-    #    - derive/[kl]/j/
-    #    - derive/[on]/m/
-    #    - derive/[qrs]/p/
-    #    - derive/[uv]/t/
-    #    - derive/[xyz]/w/
-    # ### 九宫格数字映射
     - derive/[abc]/2/
     - derive/[def]/3/
     - derive/[hgi]/4/
@@ -105,5 +96,4 @@ speller:
     - derive/[wxyz]/9/
 
 tx:
-  #  db: bim_t9.db
-  db: t9_number.db
+  db: t9.db

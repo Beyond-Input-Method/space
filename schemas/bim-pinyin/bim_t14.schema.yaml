@@ -644,16 +644,39 @@ recognizer:
 
 # 从 default 继承快捷键
 key_binder:
-  import_preset: default # 从 default.yaml 继承通用的
+  bindings:
+    - { accept: "Shift+Tab", send: "Shift+Left", when: composing }
+    - { accept: Tab, send: "Shift+Right", when: composing }
+    - { accept: "Alt+Left", send: "Shift+Left", when: composing }
+    - { accept: "Alt+Right", send: "Shift+Right", when: composing }
+    - { accept: "Control+Shift+3", toggle: ascii_punct, when: always }
+    - { accept: "Control+Shift+numbersign", toggle: ascii_punct, when: always }
+    - { accept: "Control+Shift+4", toggle: traditionalization, when: always }
+    - { accept: "Control+Shift+dollar", toggle: traditionalization, when: always }
+    - { accept: KP_0, send: 0, when: composing }
+    - { accept: KP_1, send: 1, when: composing }
+    - { accept: KP_2, send: 2, when: composing }
+    - { accept: KP_3, send: 3, when: composing }
+    - { accept: KP_4, send: 4, when: composing }
+    - { accept: KP_5, send: 5, when: composing }
+    - { accept: KP_6, send: 6, when: composing }
+    - { accept: KP_7, send: 7, when: composing }
+    - { accept: KP_8, send: 8, when: composing }
+    - { accept: KP_9, send: 9, when: composing }
+    - { accept: KP_Decimal, send: period, when: composing }
+    - { accept: KP_Multiply, send: asterisk, when: composing }
+    - { accept: KP_Add, send: plus, when: composing }
+    - { accept: KP_Subtract, send: minus, when: composing }
+    - { accept: KP_Divide, send: slash, when: composing }
   search: "`" # 辅码引导符，要添加到 speller/alphabet
   # bindings:             # 也可以再增加方案专有的快捷键
 
 # 拼写设定
 speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`1234567890-=
   # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
-  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1234567890-=
   delimiter: " '" # 第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
   algebra:
     # ### 超级简拼
@@ -669,18 +692,31 @@ speller:
     - derive/ong$/on/
     - derive/ao$/oa/
     - derive/([iu])a(o|ng?)$/a$1$2/
+#    # 14键
+#    - derive/[wq]/q/
+#    - derive/[re]/e/
+#    - derive/[yt]/t/
+#    - derive/[iu]/u/
+#    - derive/[po]/o/
+#    - derive/[sa]/a/
+#    - derive/[fd]/d/
+#    - derive/[hg]/g/
+#    - derive/[kj]/j/
+#    - derive/[xz]/z/
+#    - derive/[vc]/c/
+#    - derive/[nb]/b/
     # 14键
-    - derive/[wq]/q/
-    - derive/[re]/e/
-    - derive/[yt]/t/
-    - derive/[iu]/u/
-    - derive/[po]/o/
-    - derive/[sa]/a/
-    - derive/[fd]/d/
-    - derive/[hg]/g/
-    - derive/[kj]/j/
-    - derive/[xz]/z/
-    - derive/[vc]/c/
-    - derive/[nb]/b/
+    - derive/[wq]/1/
+    - derive/[re]/2/
+    - derive/[yt]/3/
+    - derive/[iu]/4/
+    - derive/[po]/5/
+    - derive/[sa]/6/
+    - derive/[fd]/7/
+    - derive/[hg]/8/
+    - derive/[kj]/9/
+    - derive/[xz]/0/
+    - derive/[vc]/-/
+    - derive/[nb]/=/
 tx:
   db: t14.db
