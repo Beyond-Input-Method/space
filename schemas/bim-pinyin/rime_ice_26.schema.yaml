@@ -84,6 +84,7 @@ engine:
     - simplifier@traditionalize                     # 简繁切换
     - lua_filter@*search@radical_pinyin             # 部件拆字辅码
     - uniquifier # 去重
+    - stroke_filter
 
 
 
@@ -551,5 +552,5 @@ speller:
     - derive/(.+)ong$/$1on/ # lon → long
     - derive/([tl])eng$/$1en/ # ten → teng
     - derive/([qwrtypsdfghjklzxcbnm])([aeio])ng$/$1ng/ # lng → lang、leng、ling、longtx:
-  tx:
-    db: t26.db
+tx:
+  db: t26.db
