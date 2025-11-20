@@ -1,0 +1,55 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "弹性触感 - 删除键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 45,
+                        "Parameters": {
+                            "Frequency": 53,
+                            "Intensity": 55,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0.65
+                                },
+                                {
+                                    "Time": 9,
+                                    "Frequency": 11,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 22,
+                                    "Frequency": -7,
+                                    "Intensity": 0.5
+                                },
+                                {
+                                    "Time": 35,
+                                    "Frequency": 4,
+                                    "Intensity": 0.25
+                                },
+                                {
+                                    "Time": 45,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

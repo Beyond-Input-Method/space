@@ -1,0 +1,47 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "机械键盘触感 - 回车键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 0,
+                        "Parameters": {
+                            "Frequency": 55,
+                            "Intensity": 85
+                        }
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 20,
+                        "Parameters": {
+                            "Frequency": 52,
+                            "Intensity": 50
+                        }
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 40,
+                        "Parameters": {
+                            "Frequency": 48,
+                            "Intensity": 30
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

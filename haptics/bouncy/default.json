@@ -1,0 +1,55 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "弹性触感 - 默认按键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 40,
+                        "Parameters": {
+                            "Frequency": 55,
+                            "Intensity": 50,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0.6
+                                },
+                                {
+                                    "Time": 8,
+                                    "Frequency": 10,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 18,
+                                    "Frequency": -5,
+                                    "Intensity": 0.7
+                                },
+                                {
+                                    "Time": 28,
+                                    "Frequency": 5,
+                                    "Intensity": 0.4
+                                },
+                                {
+                                    "Time": 40,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
