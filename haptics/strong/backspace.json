@@ -1,0 +1,50 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "强劲有力触感 - 删除键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 45,
+                        "Parameters": {
+                            "Frequency": 53,
+                            "Intensity": 85,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 15,
+                                    "Frequency": 7,
+                                    "Intensity": 0.9
+                                },
+                                {
+                                    "Time": 35,
+                                    "Frequency": -10,
+                                    "Intensity": 0.3
+                                },
+                                {
+                                    "Time": 45,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

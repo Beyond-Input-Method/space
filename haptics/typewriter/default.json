@@ -1,0 +1,50 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "打字机触感 - 默认按键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 25,
+                        "Parameters": {
+                            "Frequency": 45,
+                            "Intensity": 60,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0.3
+                                },
+                                {
+                                    "Time": 5,
+                                    "Frequency": 10,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 18,
+                                    "Frequency": -5,
+                                    "Intensity": 0.5
+                                },
+                                {
+                                    "Time": 25,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

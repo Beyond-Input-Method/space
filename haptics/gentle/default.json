@@ -1,0 +1,27 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "轻柔触感 - 默认按键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 0,
+                        "Parameters": {
+                            "Frequency": 50,
+                            "Intensity": 25
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

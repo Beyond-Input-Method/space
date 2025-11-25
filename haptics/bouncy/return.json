@@ -1,0 +1,60 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "弹性触感 - 回车键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 60,
+                        "Parameters": {
+                            "Frequency": 55,
+                            "Intensity": 70,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0.7
+                                },
+                                {
+                                    "Time": 10,
+                                    "Frequency": 12,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 25,
+                                    "Frequency": -8,
+                                    "Intensity": 0.6
+                                },
+                                {
+                                    "Time": 40,
+                                    "Frequency": 6,
+                                    "Intensity": 0.35
+                                },
+                                {
+                                    "Time": 52,
+                                    "Frequency": -3,
+                                    "Intensity": 0.15
+                                },
+                                {
+                                    "Time": 60,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

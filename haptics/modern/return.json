@@ -1,0 +1,50 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "现代简约触感 - 回车键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 35,
+                        "Parameters": {
+                            "Frequency": 60,
+                            "Intensity": 65,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 10,
+                                    "Frequency": 5,
+                                    "Intensity": 0.8
+                                },
+                                {
+                                    "Time": 25,
+                                    "Frequency": -5,
+                                    "Intensity": 0.3
+                                },
+                                {
+                                    "Time": 35,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
