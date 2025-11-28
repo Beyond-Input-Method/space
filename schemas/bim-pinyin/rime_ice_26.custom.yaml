@@ -14,3 +14,6 @@ patch:
   translator/contextual_group_by_type: true
   translator/max_homophones: 5
   translator/max_homographs: 5
+  "engine/filters/+":
+    - "tx_filter" #综合过滤
+    - "stroke_filter" #笔画过滤
