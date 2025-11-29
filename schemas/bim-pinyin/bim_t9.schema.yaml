@@ -12,7 +12,7 @@ schema:
   description: |
     超越拼音九键
   dependencies:
-    - melt_eng # 英文输入，作为次翻译器挂载到拼音方案
+    - melt_eng_t9 # 英文输入，作为次翻译器挂载到拼音方案
 
 engine:
   processors:
@@ -36,11 +36,13 @@ engine:
     - script_translator
     - lua_translator@*date_translator # 时间、日期、星期
     - table_translator@custom_phrase # 自定义短语 custom_phrase_t9.txt
-#    - table_translator@melt_eng     # 英文输入
+    - table_translator@melt_eng_t9     # 英文输入
   filters:
     - simplifier@emoji # Emoji
     - simplifier@traditionalize # 简繁切换
     - uniquifier # 去重
+    - tx_filter
+    - stroke_filter
 
 # 主翻译器，拼音
 translator:
@@ -53,6 +55,17 @@ translator:
   comment_format: [ ]
   preedit_format:              # preedit_format 影响到输入框的显示和“Shift+回车”上屏的字符
     - xlit/23456789/adgjmptw/     # 显示为 nve lve
+
+# 次翻译器，英文
+melt_eng_t9:
+  dictionary: melt_eng     # 挂载词库 melt_eng.dict.yaml
+  prism: melt_eng_t9
+  enable_sentence: false   # 禁止造句
+  enable_user_dict: false  # 禁用用户词典
+  initial_quality: 1.1     # 初始权重
+  comment_format:          # 自定义提示码
+    - xform/.*//           # 清空提示码
+
 
 
 # 自定义短语：custom_phrase_t9.txt
