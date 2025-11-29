@@ -11,7 +11,7 @@ schema:
     五筆字型86版＋漢語拼音混合輸入。
     碼表源自 ibus-table
   dependencies:
-    - pinyin_simp
+    - pinyin_simp_t14
 
 switches:
   - name: ascii_mode
@@ -44,6 +44,7 @@ engine:
     - punct_translator
     - reverse_lookup_translator
     - table_translator
+    - script_translator@pinyin_simp_t14
 
 speller:
   delimiter: " ;'"
@@ -62,9 +63,19 @@ speller:
     - derive/b/v/
     - derive/m/n/
 
+pinyin_simp_t14:
+  dictionary: pinyin_simp
+  prism: pinyin_simp_t14
+  initial_quality: 1.1     # 初始权重
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
 translator:
   dictionary: wubi86
   prism: wubi_pinyin_14
+  initial_quality: 1.2     # 初始权重
   enable_charset_filter: true
   enable_sentence: true
   enable_encoder: true
@@ -97,5 +108,3 @@ recognizer:
   import_preset: default
   patterns:
     reverse_lookup: "`[a-z]*'?$"
-
-
