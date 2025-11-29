@@ -41,8 +41,6 @@ engine:
     - simplifier@emoji # Emoji
     - simplifier@traditionalize # 简繁切换
     - uniquifier # 去重
-    - tx_filter
-    - stroke_filter
 
 # 主翻译器，拼音
 translator:
