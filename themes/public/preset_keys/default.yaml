@@ -16,53 +16,75 @@ preset_keys:
   #icon 目前只支持苹果内置的sf _sound_board,具体请搜索
 
   # 设置
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_setting: { icon: "gearshape_fill.svg", label: "设置", send: Eisu_toggle, select: _setting_board, option: [eisu_toggle_schema_board, eisu_toggle_sound_board, function_rime_deploy, eisu_toggle_clip_board, eisu_toggle_edit_keyboard_board, eisu_toggle_common_setting_board, eisu_toggle_fuzzy_pinyin, eisu_toggle_patch_board, function_common_open_host] }
   # 键盘选择
+  # 支持系统：鸿蒙
   eisu_toggle_schema_board: { icon: "keyboard_badge_handwritten.svg", label: "键盘选择", send: Eisu_toggle, select: _schema_dir_board }
   # 声音与触感
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音与触感", send: Eisu_toggle, select: _sound_board }
   # 剪切板
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_clip_board: { icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
   # 键盘调节
+  # 支持系统：鸿蒙
   eisu_toggle_edit_keyboard_board: { icon: "mobiledata.svg", label: "键盘调节", send: Eisu_toggle, select: _edit_keyboard_board }
   # 设置
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
   # 模糊拼音
+  # 支持系统：鸿蒙
   eisu_toggle_fuzzy_pinyin: { icon: "flashlight_on_fill.svg", label: "模糊拼音", send: Eisu_toggle, select: _patch_setting, option: ["fuzzy_pinyin"]}
   # 补丁
+  # 支持系统：鸿蒙
   eisu_toggle_patch_board: { icon: "key_horizontal.svg", label: "补丁", send: Eisu_toggle, select: _patch_board }
   
   #开关设置
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_switch_setting: { icon: "switch_square_lefthalf_filled.svg", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
   #方案的switch
+  # 支持系统：iOS
   eisu_toggle_schema_setting: { icon: "slider_horizontal_2_square.svg", label: "设置", send: Eisu_toggle, select: _schema_setting }
   #剪切板搜索
+  # 支持系统：iOS
   eisu_toggle_search_clip_board: { icon: "doc_text_magnifyingglass_fill.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
   #常用语
+  # 支持系统：iOS
   eisu_toggle_phrases_board: { icon: "doc_text.svg", label: " 常用语", send: Eisu_toggle, select: _phrases_board }
 
   #触感
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_haptics_board: { icon: "a_4d_vibration.svg", label: " 触感", send: Eisu_toggle, select: _haptics_board }
   #emoji
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_emoji: { icon: "emoji.svg", label: "emoji表情", send: Eisu_toggle, select: .emoji, option: [] }
   #收起键盘
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_dismiss_keyboard: { icon: "arrow_down_square.svg", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: [] }
   #收起当前菜单
+  # 支持系统：iOS
   eisu_toggle_dismiss_menu: { icon: "xmark_circle.svg", label: "收起当前菜单", send: Eisu_toggle, select: _dismiss_menu, option: [] }
   #切换命令
+  # 支持系统：鸿蒙，iOS
   eisu_toggle_switcher: { icon: "arrow_2_circlepath.svg", label: "切换", send: F4 }
   #显示系统信息
+  # 支持系统：iOS
   eisu_toggle_system_info_board: { icon: "info_circle.svg", label: "系统信息", send: Eisu_toggle, select: _system_info_board }
   #用户与反馈
+  # 支持系统：iOS
   eisu_toggle_user_feedback: { icon: "exclamationmark_circle.svg", label: "报Bug", send: Eisu_toggle, select: _user_feedback_board }
 
   #Mode_switch
   #开关
   #中英切换
+  # 支持系统：iOS
   mode_switch_cn_or_en: { icon: "keyboard_badge_globe.svg", toggle: ascii_mode, send: Mode_switch, states: [ 中文, 西文 ], name: Mode_switch }
   #剪切板监控
+  # 支持系统：iOS
   mode_switch_pasteboard_monitoring_on_or_off: { icon: "text_clipboard.svg", toggle: app_setting/pasteboard_monitoring_switch, send: Mode_switch, states: [ 剪切板监控关, 剪切板监控开 ], select: bim, name: Mode_switch }
   #启动显示系统信息
+  # 支持系统：iOS
   mode_switch_system_info_on_or_off: { icon: "info_circle.svg", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
 
   #mask
@@ -363,23 +385,47 @@ preset_keys:
   commit_fulldot: { label: "。", commit: "。" }
   commit_halfquote: { label: "”", commit: "”" }
 
+  #函数
   #清屏操作。option可带参数。0为上屏第一个候选；无参数为则不上屏。
+  # 支持系统：鸿蒙
   function_keyboard_clearAll: { icon: "clean.svg", label: "清空", send: function, command: keyboard.clearAll, option: "" }
+  #撤销
+  # 支持系统：鸿蒙
   function_keyboard_undo: { icon: "undo.svg", label: "撤销", send: function, command: keyboard.undo, option: "" }
+  #左清空
+  # 支持系统：鸿蒙
   function_keyboard_clearLeft: { icon: "delete_left.svg", label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
+  #右清空
+  # 支持系统：鸿蒙
   function_keyboard_clearRight: { icon: "delete_left.svg", label: "右清空", send: function, command: keyboard.clearRight, option: "" }
+  #重做
+  # 支持系统：鸿蒙
   function_keyboard_redo: { icon: "redo.svg", label: "重做", send: function, command: keyboard.redo, option: "" }
+  #全选
+  # 支持系统：鸿蒙
   function_keyboard_selectAll: { icon: "smart_selection_area.svg", label: "全选", send: function, command: keyboard.selectAll, option: "" }
+  #剪切
+  # 支持系统：鸿蒙
   function_keyboard_cut: { icon: "cut.svg", label: "剪切", send: function, command: keyboard.cut, option: "" }
+  #复制
+  # 支持系统：鸿蒙
   function_keyboard_copy: { icon: "doc_plaintext_2.svg", label: "复制", send: function, command: keyboard.copy, option: "" }
+  #粘贴
+  # 支持系统：鸿蒙
   function_keyboard_paste: { icon: "text_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
+  #换行
+  # 支持系统：鸿蒙
   function_keyboard_newline: { icon: "return_down_left.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
   #方案开关
+  # 支持系统：鸿蒙
   function_rime_switcher: { icon: "more.svg", label: "方案开关", send: function, command: rime.switcher, option: "" }
   #部署
+  # 支持系统：鸿蒙
   function_rime_deploy: { icon: "arrow_clockwise.svg", label: "部署", send: function, command: rime.deploy, option: "" }
-  # 重输
+  #重输
+  # 支持系统：鸿蒙
   function_rime_clear: { icon: "clean.svg", label: "重输", send: function, command: candidate.clear, option: "" }
   #更多设置
+  # 支持系统：鸿蒙
   function_common_open_host: { icon: "arrow_clockwise.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
 
