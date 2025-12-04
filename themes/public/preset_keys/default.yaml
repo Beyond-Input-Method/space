@@ -22,7 +22,7 @@ preset_keys:
   #方案的switch
   eisu_toggle_schema_setting: { icon: "s.circle", label: "设置", send: Eisu_toggle, select: _schema_setting }
   #剪切板
-  eisu_toggle_clip_board: { icon: "doc.plaintext", label: "剪切板", send: Eisu_toggle, select: _clip_board }
+  eisu_toggle_clip_board: { icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
   #剪切板搜索
   eisu_toggle_search_clip_board: { icon: "doc.text.magnifyingglass", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
   #常用语
@@ -356,10 +356,10 @@ preset_keys:
   function_keyboard_undo: { label: "撤销", send: function, command: keyboard.undo, option: "" }
   function_keyboard_clearLeft: { label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
   function_keyboard_clearRight: { label: "右清空", send: function, command: keyboard.clearRight, option: "" }
-  function_keyboard_undo: { label: "撤销", send: function, command: keyboard.undo, option: "" }
   function_keyboard_redo: { label: "重做", send: function, command: keyboard.redo, option: "" }
   function_keyboard_selectAll: { label: "全选", send: function, command: keyboard.selectAll, option: "" }
   function_keyboard_cut: { label: "剪切", send: function, command: keyboard.cut, option: "" }
   function_keyboard_copy: { label: "复制", send: function, command: keyboard.copy, option: "" }
   function_keyboard_paste: { label: "粘贴", send: function, command: keyboard.paste, option: "" }
   function_keyboard_newline: { label: "换行", send: function, command: keyboard.newline, option: "" }
+  function_rime_switcher: {icon: 'more.svg', label: "Switcher", send: function, command: rime.switcher, option: "" }
