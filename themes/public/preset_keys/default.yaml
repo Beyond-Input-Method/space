@@ -103,6 +103,7 @@ preset_keys:
   eisu_toggle_ABC_english_sm_md: { icon: "keyboard_badge_globe.svg", label: "中/英", send: Eisu_toggle, select: english_sm_md }
   eisu_toggle_ABC_english_schema_easy_en: { icon: "keyboard_badge_globe.svg", label: "中/英", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
 
+  eisu_toggle_符_symbols: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols }
   eisu_toggle_符__sound_board: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols }
   eisu_toggle_符_symbols_sm_md: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols_sm_md }
   eisu_toggle_符_dotsymbols: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: .symbols }
