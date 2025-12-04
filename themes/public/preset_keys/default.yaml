@@ -10,109 +10,122 @@ preset_keys:
   #   text_delimiter: text组合命令
   #   text_fullquotationmark_left_default: text 组合命令，上屏全解符号并移动后再跳转到黑夜键盘
 
-  #注：当然命令不是硬性规定。各位也可以自定义
+  #注：当然命令不是硬性规定。各位也可以自定义sw
 
   #打开设置
-  #icon 目前只支持苹果内置的sf symbols,具体请搜索
+  #icon 目前只支持苹果内置的sf _sound_board,具体请搜索
 
-  #设置
-  eisu_toggle_setting: { icon: "r.joystick.tilt.down.fill", label: "设置", send: Eisu_toggle, select: _setting, option: [ eisu_toggle_user_feedback, eisu_toggle_clip_board, eisu_toggle_phrases_board, eisu_toggle_search_clip_board, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_emoji, eisu_toggle_switcher, eisu_toggle_system_info_board ] }
+  # 设置
+  eisu_toggle_setting: { icon: "gearshape_fill.svg", label: "设置", send: Eisu_toggle, select: _setting_board, option: [eisu_toggle_schema_board, eisu_toggle_sound_board, function_rime_deploy, eisu_toggle_clip_board, eisu_toggle_edit_keyboard_board, eisu_toggle_common_setting_board, eisu_toggle_fuzzy_pinyin, eisu_toggle_patch_board, function_common_open_host] }
+  # 键盘选择
+  eisu_toggle_schema_board: { icon: "keyboard_badge_handwritten.svg", label: "键盘选择", send: Eisu_toggle, select: _schema_dir_board }
+  # 声音与触感
+  eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音与触感", send: Eisu_toggle, select: _sound_board }
+  # 剪切板
+  eisu_toggle_clip_board: { icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
+  # 键盘调节
+  eisu_toggle_edit_keyboard_board: { icon: "mobiledata.svg", label: "键盘调节", send: Eisu_toggle, select: _edit_keyboard_board }
+  # 设置
+  eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
+  # 模糊拼音
+  eisu_toggle_fuzzy_pinyin: { icon: "flashlight_on_fill.svg", label: "模糊拼音", send: Eisu_toggle, select: _patch_setting, option: ["fuzzy_pinyin"]}
+  # 补丁
+  eisu_toggle_patch_board: { icon: "key_horizontal.svg", label: "补丁", send: Eisu_toggle, select: _patch_board }
+  
   #开关设置
-  eisu_toggle_switch_setting: { icon: "switch.2", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
+  eisu_toggle_switch_setting: { icon: "switch_square_lefthalf_filled.svg", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
   #方案的switch
-  eisu_toggle_schema_setting: { icon: "s.circle", label: "设置", send: Eisu_toggle, select: _schema_setting }
-  #剪切板
-  eisu_toggle_clip_board: { icon: "doc.plaintext", label: "剪切板", send: Eisu_toggle, select: _clip_board }
+  eisu_toggle_schema_setting: { icon: "slider_horizontal_2_square.svg", label: "设置", send: Eisu_toggle, select: _schema_setting }
+
   #剪切板搜索
-  eisu_toggle_search_clip_board: { icon: "doc.text.magnifyingglass", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
+  eisu_toggle_search_clip_board: { icon: "doc_text_magnifyingglass_fill.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
   #常用语
-  eisu_toggle_phrases_board: { icon: "doc.text", label: " 常用语", send: Eisu_toggle, select: _phrases_board }
-  #声音
-  eisu_toggle_sound_board: { icon: "speaker.wave.3", label: " 声音", send: Eisu_toggle, select: _sound_board }
+  eisu_toggle_phrases_board: { icon: "doc_text.svg", label: " 常用语", send: Eisu_toggle, select: _phrases_board }
+
   #触感
-  eisu_toggle_haptics_board: { icon: "iphone.gen2.radiowaves.left.and.right", label: " 触感", send: Eisu_toggle, select: _haptics_board }
+  eisu_toggle_haptics_board: { icon: "a_4d_vibration.svg", label: " 触感", send: Eisu_toggle, select: _haptics_board }
   #emoji
-  eisu_toggle_emoji: { icon: "emoji.svg", label: "emoji表情", send: Eisu_toggle, select: .emoji, option: [] }
+  eisu_toggle_emoji: { icon: "face_smiling_fill.svg", label: "emoji表情", send: Eisu_toggle, select: .emoji, option: [] }
   #收起键盘
-  eisu_toggle_dismiss_keyboard: { icon: "chevron.down.square", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: [] }
+  eisu_toggle_dismiss_keyboard: { icon: "arrow_down_square.svg", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: [] }
   #收起当前菜单
-  eisu_toggle_dismiss_menu: { icon: "xmark.circle", label: "收起当前菜单", send: Eisu_toggle, select: _dismiss_menu, option: [] }
+  eisu_toggle_dismiss_menu: { icon: "xmark_circle.svg", label: "收起当前菜单", send: Eisu_toggle, select: _dismiss_menu, option: [] }
   #切换命令
-  eisu_toggle_switcher: { icon: "switch.2", label: "切换", send: F4 }
+  eisu_toggle_switcher: { icon: "arrow_2_circlepath.svg", label: "切换", send: F4 }
   #显示系统信息
-  eisu_toggle_system_info_board: { icon: "info.circle", label: "系统信息", send: Eisu_toggle, select: _system_info_board }
+  eisu_toggle_system_info_board: { icon: "info_circle.svg", label: "系统信息", send: Eisu_toggle, select: _system_info_board }
   #用户与反馈
-  eisu_toggle_user_feedback: { icon: "ant.circle", label: "报Bug", send: Eisu_toggle, select: _user_feedback_board }
+  eisu_toggle_user_feedback: { icon: "exclamationmark_circle.svg", label: "报Bug", send: Eisu_toggle, select: _user_feedback_board }
 
   #Mode_switch
   #开关
   #中英切换
-  mode_switch_cn_or_en: { toggle: ascii_mode, send: Mode_switch, states: [ 中文, 西文 ], name: Mode_switch }
+  mode_switch_cn_or_en: { icon: "keyboard_badge_globe.svg", toggle: ascii_mode, send: Mode_switch, states: [ 中文, 西文 ], name: Mode_switch }
   #剪切板监控
-  mode_switch_pasteboard_monitoring_on_or_off: { icon: "arrow.triangle.2.circlepath.doc.on.clipboard", toggle: app_setting/pasteboard_monitoring_switch, send: Mode_switch, states: [ 剪切板监控关, 剪切板监控开 ], select: bim, name: Mode_switch }
+  mode_switch_pasteboard_monitoring_on_or_off: { icon: "text_clipboard.svg", toggle: app_setting/pasteboard_monitoring_switch, send: Mode_switch, states: [ 剪切板监控关, 剪切板监控开 ], select: bim, name: Mode_switch }
   #启动显示系统信息
-  mode_switch_system_info_on_or_off: { icon: "info.circle", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
+  mode_switch_system_info_on_or_off: { icon: "info_circle.svg", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
 
   #mask
-  left: { label: " ", send: Left }
-  right: { label: " ", send: Right }
-  shift: { send: Shift_L }
-  shift_l: { send: Shift_L }
-  return: { send: Return }
-  confirm: { send: Return, label: "确认", name: confirm }
-  backspace: { send: BackSpace }
-  space: { label: " ", send: space }
+  left: { icon: "arrow_left.svg", label: " ", send: Left }
+  right: { icon: "arrow_right.svg", label: " ", send: Right }
+  shift: { icon: "arrow_up.svg", send: Shift_L }
+  shift_l: { icon: "arrow_up.svg", send: Shift_L }
+  return: { icon: "return_down_left.svg", send: Return }
+  confirm: { icon: "checkmark.svg", send: Return, label: "确认", name: confirm }
+  backspace: { icon: "delete_left.svg", send: BackSpace }
+  space: { icon: "space_1.svg", label: " ", send: space }
 
   send_3: { label: "", send: 3 }
   send_2: { label: "", send: 2 }
-  send_dot: { label: ".", send: . }
-  send_equal: {label: "=", send: "="}
+  send_dot: { icon: "textformat.svg", label: ".", send: . }
+  send_equal: { icon: "textformat.svg",label: "=", send: "="}
   #分词
-  participle: { label: 分词, send: "'" }
+  participle: { icon: "textformat.svg", label: 分词, send: "'" }
   #分号
-  send_semicolon: { label: ";", send: ";" }
+  send_semicolon: { icon: "textformat.svg", label: ";", send: ";" }
 
   select_second: { label: "次选", send: 2 }
   select_third: { label: "三选", send: 3 }
   #换行
-  next: { label: "换行", commit: "\\n" }
+  next: { icon: "return_down_left.svg", label: "换行", commit: "\\n" }
 
   #eisu_toggle_schem
-  eisu_toggle_schema_en: { label: "ABC", send: Eisu_toggle, select: easy_en, option: schema }
-  eisu_toggle_schema_default: { label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_en: { icon: "textformat.svg", label: "ABC", send: Eisu_toggle, select: easy_en, option: schema }
+  eisu_toggle_schema_default: { icon: "textformat.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
 
   #eisu_toggle
-  eisu_toggle_123_number: { label: 123, send: Eisu_toggle, select: number }
-  eisu_toggle_123_number_sm_md: { label: 123, send: Eisu_toggle, select: number_sm_md }
+  eisu_toggle_123_number: { icon: "list_number.svg", label: 123, send: Eisu_toggle, select: number }
+  eisu_toggle_123_number_sm_md: { icon: "list_number.svg", label: 123, send: Eisu_toggle, select: number_sm_md }
 
   #  eisu_toggle_ABC_english: {label: "ABC", send: Eisu_toggle, select: english}
 #  eisu_toggle_ABC_english: { label: "英", send: Eisu_toggle, select: english }
-  eisu_toggle_ABC_english: { label: "中/英", send: Eisu_toggle, select: english}
-  eisu_toggle_ABC_english_sm_md: { label: "中/英", send: Eisu_toggle, select: english_sm_md }
-  eisu_toggle_ABC_english_schema_easy_en: { label: "中/英", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english: { icon: "keyboard_badge_globe.svg", label: "中/英", send: Eisu_toggle, select: english}
+  eisu_toggle_ABC_english_sm_md: { icon: "keyboard_badge_globe.svg", label: "中/英", send: Eisu_toggle, select: english_sm_md }
+  eisu_toggle_ABC_english_schema_easy_en: { icon: "keyboard_badge_globe.svg", label: "中/英", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
 
-  eisu_toggle_符_symbols: { label: "符", send: Eisu_toggle, select: symbols }
-  eisu_toggle_符_symbols_sm_md: { label: "符", send: Eisu_toggle, select: symbols_sm_md }
-  eisu_toggle_符_dotsymbols: { label: "符", send: Eisu_toggle, select: .symbols }
+  eisu_toggle_符__sound_board: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols }
+  eisu_toggle_符_symbols_sm_md: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols_sm_md }
+  eisu_toggle_符_dotsymbols: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: .symbols }
 
-  eisu_toggle_更多_dotSymbols: { label: "更多", send: Eisu_toggle, select: .symbols } #默认的符号键盘
-  eisu_toggle_more_Symbols_no_functional: { label: "更多", send: Eisu_toggle, select: .symbols, functional: false } #默认的符号键盘
-  eisu_toggle_更多_symbols: { label: "更多", send: Eisu_toggle, select: symbols } #默认的符号键盘
-  eisu_toggle_123_dotNumber: { label: 123, send: Eisu_toggle, select: .number } #默认的9宫格数据键盘
-  eisu_toggle_中_default: { label: 中, send: Eisu_toggle, select: default }
-  eisu_toggle_返回_default: { label: 返回, send: Eisu_toggle, select: default }
-  eisu_toggle_返回_default_sm_md: { label: 返回, send: Eisu_toggle, select: default_sm_md }
-  eisu_toggle_返回_default_schema_default: {label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
-  eisu_toggle_en_zh_default_schema_default: { label: "英/中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}" }
-  eisu_toggle_en_zh_default_sm_md_schema_default: { label: "英/中", text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
-  eisu_toggle_返回_default_sm_md_schema_default: { label: 返回, text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
-  eisu_toggle_default: { send: Eisu_toggle, select: default }
+  eisu_toggle_更多_dotSymbols: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: .symbols } #默认的符号键盘
+  eisu_toggle_more_Symbols_no_functional: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: .symbols, functional: false } #默认的符号键盘
+  eisu_toggle_更多_symbols: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: symbols } #默认的符号键盘
+  eisu_toggle_123_dotNumber: { icon: "list_number.svg", label: 123, send: Eisu_toggle, select: .number } #默认的9宫格数据键盘
+  eisu_toggle_中_default: { icon: "keyboard_badge_globe.svg", label: 中, send: Eisu_toggle, select: default }
+  eisu_toggle_返回_default: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default }
+  eisu_toggle_返回_default_sm_md: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_sm_md }
+  eisu_toggle_返回_default_schema_default: { icon: "return_left_up.svg",label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
+  eisu_toggle_en_zh_default_schema_default: { icon: "keyboard_badge_globe.svg", label: "英/中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_sm_md_schema_default: { icon: "keyboard_badge_globe.svg", label: "英/中", text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
+  eisu_toggle_返回_default_sm_md_schema_default: { icon: "return_left_up.svg", label: 返回, text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
+  eisu_toggle_default: { icon: "keyboard_badge_globe.svg", send: Eisu_toggle, select: default }
   #  eisu_toggle_ABC_default: {label: "ABC", send: Eisu_toggle, select: default}
-  eisu_toggle_ABC_default: { label: "英", send: Eisu_toggle, select: default }
+  eisu_toggle_ABC_default: { icon: "textformat.svg", label: "英", send: Eisu_toggle, select: default }
 
   #text
 
-  text_delimiter: { label: "分隔", text: "{'}", name: delimiter }
+  text_delimiter: { icon: "textformat.svg", label: "分隔", text: "{'}", name: delimiter }
   # .
   commit_halfperiod: { label: ".", commit: "." } #直接上屏半角句号
   text_halfperiod_default: { label: ".", text: ".{eisu_toggle_default}" } #上屏全角句号再跳转到default键盘
@@ -351,15 +364,19 @@ preset_keys:
   commit_halfquote: { label: "”", commit: "”" }
 
   #清屏操作。option可带参数。0为上屏第一个候选；无参数为则不上屏。
-  function_rime_clear: { label: "重输", send: function, command: candidate.clear, option: "" }
-  function_keyboard_clearAll: { label: "清空", send: function, command: keyboard.clearAll, option: "" }
-  function_keyboard_undo: { label: "撤销", send: function, command: keyboard.undo, option: "" }
-  function_keyboard_clearLeft: { label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
-  function_keyboard_clearRight: { label: "右清空", send: function, command: keyboard.clearRight, option: "" }
-  function_keyboard_undo: { label: "撤销", send: function, command: keyboard.undo, option: "" }
-  function_keyboard_redo: { label: "重做", send: function, command: keyboard.redo, option: "" }
-  function_keyboard_selectAll: { label: "全选", send: function, command: keyboard.selectAll, option: "" }
-  function_keyboard_cut: { label: "剪切", send: function, command: keyboard.cut, option: "" }
-  function_keyboard_copy: { label: "复制", send: function, command: keyboard.copy, option: "" }
-  function_keyboard_paste: { label: "粘贴", send: function, command: keyboard.paste, option: "" }
-  function_keyboard_newline: { label: "换行", send: function, command: keyboard.newline, option: "" }
+  function_keyboard_clearAll: { icon: "clean.svg", label: "清空", send: function, command: keyboard.clearAll, option: "" }
+  function_keyboard_undo: { icon: "undo.svg", label: "撤销", send: function, command: keyboard.undo, option: "" }
+  function_keyboard_clearLeft: { icon: "delete_left.svg", label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
+  function_keyboard_clearRight: { icon: "delete_left.svg", label: "右清空", send: function, command: keyboard.clearRight, option: "" }
+  function_keyboard_redo: { icon: "redo.svg", label: "重做", send: function, command: keyboard.redo, option: "" }
+  function_keyboard_selectAll: { icon: "smart_selection_area.svg", label: "全选", send: function, command: keyboard.selectAll, option: "" }
+  function_keyboard_cut: { icon: "cut.svg", label: "剪切", send: function, command: keyboard.cut, option: "" }
+  function_keyboard_copy: { icon: "doc_plaintext_2.svg", label: "复制", send: function, command: keyboard.copy, option: "" }
+  function_keyboard_paste: { icon: "text_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
+  function_keyboard_newline: { icon: "return_down_left.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
+  #部署
+  function_rime_deploy: { icon: "arrow_clockwise.svg", label: "部署", send: function, command: rime.deploy, option: "" }
+  # 重输
+  function_rime_clear: { icon: "clean.svg", label: "重输", send: function, command: candidate.clear, option: "" }
+  #更多设置
+  function_common_open_host: { icon: "arrow_clockwise.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
