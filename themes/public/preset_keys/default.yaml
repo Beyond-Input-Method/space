@@ -32,7 +32,7 @@ preset_keys:
   #触感
   eisu_toggle_haptics_board: { icon: "iphone.gen2.radiowaves.left.and.right", label: " 触感", send: Eisu_toggle, select: _haptics_board }
   #emoji
-  eisu_toggle_emoji: { icon: "face.smiling", label: "emoji表情", send: Eisu_toggle, select: .emoji, option: [] }
+  eisu_toggle_emoji: { icon: "emoji.svg", label: "emoji表情", send: Eisu_toggle, select: .emoji, option: [] }
   #收起键盘
   eisu_toggle_dismiss_keyboard: { icon: "chevron.down.square", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: [] }
   #收起当前菜单
