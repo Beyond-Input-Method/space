@@ -24,9 +24,7 @@ preset_keys:
   # 声音与触感
   # 支持系统：鸿蒙，iOS
   eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音与触感", send: Eisu_toggle, select: _sound_board }
-  # 剪切板
-  # 支持系统：鸿蒙，iOS
-  eisu_toggle_clip_board: { icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
+
   # 键盘调节
   # 支持系统：鸿蒙
   eisu_toggle_edit_keyboard_board: { icon: "mobiledata.svg", label: "键盘调节", send: Eisu_toggle, select: _edit_keyboard_board }
@@ -39,16 +37,34 @@ preset_keys:
   # 补丁
   # 支持系统：鸿蒙
   eisu_toggle_patch_board: { icon: "key_horizontal.svg", label: "补丁", send: Eisu_toggle, select: _patch_board }
-  
+
+  # 剪切板
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_clip_board: { icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
+  #剪切板搜索
+  # 支持系统：iOS
+  eisu_toggle_search_clip_board: { icon: "doc_text_magnifyingglass_fill.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
+  #
+  # 剪切板设置
+  # 支持系统：鸿蒙
+  eisu_toggle_pasteboard_setting_board: { icon: "text_clipboard_fill.svg", label: "剪切板设置", send: Eisu_toggle, select: _pasteboard_setting_board }
+  # 剪切板收藏
+  # 支持系统：鸿蒙
+  eisu_toggle_pasteboard_favorite_board: { icon: "star_fill.svg", label: "剪切板收藏", send: Eisu_toggle, select: _pasteboard_favorite_board }
+  # 文件管理器
+  # 支持系统：鸿蒙
+  eisu_toggle_file_manager: { icon: "folder_fill.svg", label: "文件管理", send: Eisu_toggle, select: _file_manager }
+  # 浏览器
+  # 支持系统：鸿蒙
+  eisu_toggle_open_web_browser: { icon: "compass.svg", label: "浏览器", send: Eisu_toggle, select: _open_web_browser, option: ["https://www.bing.com"] }
+
   #开关设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_switch_setting: { icon: "switch_square_lefthalf_filled.svg", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
   #方案的switch
   # 支持系统：iOS
   eisu_toggle_schema_setting: { icon: "slider_horizontal_2_square.svg", label: "设置", send: Eisu_toggle, select: _schema_setting }
-  #剪切板搜索
-  # 支持系统：iOS
-  eisu_toggle_search_clip_board: { icon: "doc_text_magnifyingglass_fill.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
+
   #常用语
   # 支持系统：iOS
   eisu_toggle_phrases_board: { icon: "doc_text.svg", label: " 常用语", send: Eisu_toggle, select: _phrases_board }
