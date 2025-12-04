@@ -36,7 +36,6 @@ preset_keys:
   eisu_toggle_switch_setting: { icon: "switch_square_lefthalf_filled.svg", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
   #方案的switch
   eisu_toggle_schema_setting: { icon: "slider_horizontal_2_square.svg", label: "设置", send: Eisu_toggle, select: _schema_setting }
-
   #剪切板搜索
   eisu_toggle_search_clip_board: { icon: "doc_text_magnifyingglass_fill.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
   #常用语
@@ -380,3 +379,4 @@ preset_keys:
   function_rime_clear: { icon: "clean.svg", label: "重输", send: function, command: candidate.clear, option: "" }
   #更多设置
   function_common_open_host: { icon: "arrow_clockwise.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
+
