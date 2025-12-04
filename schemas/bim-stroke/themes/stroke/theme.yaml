@@ -37,8 +37,7 @@ preset_keyboards:
     long_preview_padding: 0
     long_preview_margin: 4
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-
-    menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
+    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     horizontal_gap: 6
     vertical_gap: 10
     vertical_gap_land: 4
@@ -164,7 +163,7 @@ preset_keyboards:
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
-    menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
     ascii_mode: 0
     preview: true
     height: 46
@@ -351,7 +350,7 @@ preset_keyboards:
 
   number_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
-    menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
     ascii_mode: 1
     name: number_sm_md_keyboard
     preview: false
@@ -400,7 +399,7 @@ preset_keyboards:
 
   symbols_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
-    menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
     ascii_mode: 0
     preview: true
     vertical_gap: 4

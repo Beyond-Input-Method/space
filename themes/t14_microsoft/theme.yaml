@@ -48,7 +48,7 @@ preset_keyboards:
     long_preview_margin: 4
     preview: false
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-    menu: { spacing: 28, first_scrollable: false, last_scrollable: false, events: [ eisu_toggle_setting, eisu_toggle_user_feedback, eisu_toggle_switch_setting, eisu_toggle_schema_setting, eisu_toggle_clip_board, eisu_toggle_search_clip_board, eisu_toggle_emoji, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_dismiss_keyboard ] }
+    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
     #1

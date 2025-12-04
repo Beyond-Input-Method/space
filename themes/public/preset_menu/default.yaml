@@ -1,0 +1,5 @@
+preset_menu:
+  default_menu:
+    menu: { events: [eisu_toggle_emoji, eisu_toggle_clip_board, function_rime_switcher] }
+  symbol_menu:
+    menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }

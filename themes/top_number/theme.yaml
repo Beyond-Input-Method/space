@@ -41,7 +41,7 @@ preset_keyboards:
     long_preview_margin: 4
     preview: true
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-    menu: { spacing: 28, first_scrollable: false, last_scrollable: false, events: [ eisu_toggle_setting, eisu_toggle_user_feedback, eisu_toggle_switch_setting, eisu_toggle_schema_setting, eisu_toggle_clip_board, eisu_toggle_search_clip_board, eisu_toggle_emoji, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_dismiss_keyboard ] }
+    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
     #0
@@ -160,7 +160,7 @@ preset_keyboards:
 
   number:
     #。？！…（））；、～:[]ï`#：+*/×
-    menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
     ascii_mode: 1
     name: number_keyboard
     preview: false
@@ -199,7 +199,7 @@ preset_keyboards:
 
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
-    menu: { events: [ text_fullperiod_default, text_fullquestionmark_default, text_fullpoint_default, text_halfellipsis_default, text_halfbracket_left_default, text_halfbracket_default, text_fullsemicolon_default, text_fulldun_default, text_fulltilde_default, text_fullcolon_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketright2_default, text_fullsmile_default, text_fullcomma2_default, text_halfpoundsign_default, text_halfcolon_default, "%", "-", "+", "×", "=" ] }
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
     ascii_mode: 0
     keys:
     #1
@@ -281,6 +281,7 @@ preset_keyboards:
     - { click: text_fullcomma2_default, name: text_fullcomma2_default, width: 13, preview: false }
     - { click: return, width: 20, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
   half_symbols:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
     ascii_mode: 0
     keys:
     #1
