@@ -1,8 +1,11 @@
 preset_menu:
   default_menu:
-    menu: { events: [eisu_toggle_emoji,
+    menu: { events: [
+     eisu_toggle_emoji,
      eisu_toggle_clip_board,
-     function_rime_switcher] }
+     eisu_toggle_clear_setting,
+     function_rime_switcher
+    ] }
   symbol_menu:
     menu: { events: [ text_fullperiod_default,
      text_fullquestionmark_default,
@@ -26,7 +29,7 @@ preset_menu:
      "×",
      "=" ] }
   all_menu:
-    menu: { events: [eisu_toggle_setting,
+    menu: { events: [
      eisu_toggle_schema_board,
      eisu_toggle_sound_board,
      eisu_toggle_edit_keyboard_board,
@@ -39,16 +42,16 @@ preset_menu:
      eisu_toggle_pasteboard_favorite_board,
      eisu_toggle_file_manager,
      eisu_toggle_open_web_browser,
-     eisu_toggle_switch_setting,
-     eisu_toggle_schema_setting,
-     eisu_toggle_phrases_board,
+#     eisu_toggle_switch_setting,
+#     eisu_toggle_schema_setting,
+#     eisu_toggle_phrases_board,
      eisu_toggle_haptics_board,
      eisu_toggle_emoji,
      eisu_toggle_dismiss_keyboard,
-     eisu_toggle_dismiss_menu,
-     eisu_toggle_switcher,
-     eisu_toggle_system_info_board,
-     eisu_toggle_user_feedback,
+#     eisu_toggle_dismiss_menu,
+#     eisu_toggle_switcher,
+#     eisu_toggle_system_info_board,
+#     eisu_toggle_user_feedback,
      function_keyboard_clearAll,
      function_keyboard_undo,
      function_keyboard_clearLeft,
@@ -62,4 +65,5 @@ preset_menu:
      function_rime_switcher,
      function_rime_deploy,
      function_rime_clear,
-     function_common_open_host] }
+     function_common_open_host
+    ] }
