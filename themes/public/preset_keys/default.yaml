@@ -92,7 +92,7 @@ preset_keys:
       function_keyboard_selectAll,
       function_keyboard_cut,
       function_keyboard_copy,
-      # function_keyboard_paste,
+      function_keyboard_paste,
       function_keyboard_newline,
     ]
   }
