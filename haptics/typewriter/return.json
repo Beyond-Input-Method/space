@@ -1,0 +1,60 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "打字机触感 - 回车键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 45,
+                        "Parameters": {
+                            "Frequency": 42,
+                            "Intensity": 80,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0.4
+                                },
+                                {
+                                    "Time": 8,
+                                    "Frequency": 13,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 30,
+                                    "Frequency": -10,
+                                    "Intensity": 0.6
+                                },
+                                {
+                                    "Time": 45,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 50,
+                        "Parameters": {
+                            "Frequency": 40,
+                            "Intensity": 45
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

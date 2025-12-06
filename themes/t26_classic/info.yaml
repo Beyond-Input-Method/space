@@ -1,0 +1,4 @@
+__include: ./../public/info/default:/
+name: 中文经典26键
+version: 1.0.0
+url: https://github.com/Beyond-Input-Method/themes/default

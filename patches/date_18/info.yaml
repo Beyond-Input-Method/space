@@ -1,0 +1,14 @@
+author: "筋斗云"
+create_time: "2023-03-30"
+name: "快速输出日期"
+update_time: "2023-03-30"
+url: ""
+version: 1.0.0
+support_schemas:
+  - double_pinyin_18
+  - double_pinyin_abc_18
+  - double_pinyin_flypy_18
+  - double_pinyin_mspy_18
+  - double_pinyin_mspy_18
+  - double_pinyin_ziguang_18
+  - rime_ice_18

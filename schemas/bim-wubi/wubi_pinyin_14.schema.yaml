@@ -1,0 +1,110 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: wubi_pinyin_14
+  name: "五笔86拼音混输 14键"
+  version: "0.9"
+  author:
+    - 發明人 王永民先生
+  description: |
+    五筆字型86版＋漢語拼音混合輸入。
+    碼表源自 ibus-table
+  dependencies:
+    - pinyin_simp_t14
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [中文, 西文]
+  - name: full_shape
+    states: [半角, 全角]
+  - name: extended_charset
+    states: [常用, 增廣]
+  - name: ascii_punct
+    states: [。，, ．，]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - table_translator
+    - script_translator@pinyin_simp_t14
+
+speller:
+  delimiter: " ;'"
+  #max_code_length: 4  # 四碼頂字上屏
+  algebra:
+    - derive/w/q/
+    - derive/r/e/
+    - derive/y/t/
+    - derive/i/u/
+    - derive/p/o/
+    - derive/s/a/
+    - derive/f/d/
+    - derive/h/g/
+    - derive/k/j/
+    - derive/c/x/
+    - derive/b/v/
+    - derive/m/n/
+
+pinyin_simp_t14:
+  dictionary: pinyin_simp
+  prism: pinyin_simp_t14
+  initial_quality: 1.1     # 初始权重
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+translator:
+  dictionary: wubi86
+  prism: wubi_pinyin_14
+  initial_quality: 1.2     # 初始权重
+  enable_charset_filter: true
+  enable_sentence: true
+  enable_encoder: true
+  encode_commit_history: true
+  max_phrase_length: 4
+  disable_user_dict_for_patterns:
+    - "^z.*$"
+
+abc_segmentor:
+  extra_tags:
+    - reverse_lookup
+
+reverse_lookup:
+  dictionary: pinyin_simp
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"

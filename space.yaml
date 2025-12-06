@@ -1,0 +1,14 @@
+schema: bim-pinyin
+schema_dir: schemas/
+theme: t9
+theme_dir: themes/
+symbol: default
+symbol_dir: symbols/
+emoticon: default
+emoticon_dir: emoticons/
+config_version: 1.0
+sound_on: false
+sound_volume: 0
+sound_effect: default
+haptics_on: true
+haptics_volume: 1

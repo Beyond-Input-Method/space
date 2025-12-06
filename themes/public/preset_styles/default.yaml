@@ -1,0 +1,35 @@
+# default settings
+# encoding: utf-8
+
+#预设style
+preset_styles:
+  default:
+    color_schema: default
+    candidate: default
+    font: default
+  light:
+    color_schema: default
+    candidate: default
+    font: default
+  light_land:
+    color_schema: default
+    candidate: default_land
+    font: default
+  light_sm_md:
+    color_schema: default
+    candidate: default_sm_md
+    font: default_sm_md
+    keyboards: [default_sm_md, english_sm_md, number_sm_md, symbols_sm_md] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  dark_sm_md:
+    color_schema: default
+    candidate: default_sm_md
+    font: default_sm_md
+    keyboards: [default_sm_md, english_sm_md, number_sm_md, symbols_sm_md] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  dark:
+    color_schema: dark
+    candidate: default
+    font: default
+  dark_land:
+    color_schema: dark
+    candidate: default_land
+    font: default

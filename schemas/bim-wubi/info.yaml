@@ -1,0 +1,24 @@
+name: 中文五笔
+author: KyleBing
+version: 1.0.0
+description: 方案主题来自 极点五笔
+url: https://github.com/Beyond-Input-Method/rime-wubi86-jidian/tree/master
+create_time: 2023-04-27
+update_time: 2023-04-27
+# 支持的设备。有指定的只取指定的，没指定的取全部
+supported_devices:
+  pc: ["wubi86_jidian", "wubi86_jidian_pinyin", "wubi86_pinyin", "wubi86"]
+# 方案使用主题
+use_theme:
+  # 如果没有自定义主题，则使用默认主题.
+  # 右边的值是主题的目录名，也可以是方案下的主题名。需要绝对路径。
+  #例如: 在方案目录下，rime_ice/themes/default 是默认主题。
+  # 在主题目录下，themes/default 是自定义主题。
+  default: "themes/default"
+  # 自定义主题
+  custom:
+    # 自定义主题的名称，路径同上。
+    "wubi86_jidian_14": "bim-wubi/themes/t14_wubi"
+    "wubi86_jidian_pinyin_14": "bim-wubi/themes/t14_wubi"
+    "wubi_pinyin_14": "bim-wubi/themes/t14_wubi"
+    "wubi86_14": "bim-wubi/themes/t14_wubi"

@@ -1,0 +1,50 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "游戏触感 - 删除键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 32,
+                        "Parameters": {
+                            "Frequency": 66,
+                            "Intensity": 78,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 8,
+                                    "Frequency": 8,
+                                    "Intensity": 0.95
+                                },
+                                {
+                                    "Time": 22,
+                                    "Frequency": -12,
+                                    "Intensity": 0.25
+                                },
+                                {
+                                    "Time": 32,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

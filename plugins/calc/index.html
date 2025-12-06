@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <!-- 显示屏 -->
+        <div class="display">
+            <div class="expression" id="expression"></div>
+            <div class="result" id="result">0</div>
+        </div>
+        
+        <!-- 按键区域 -->
+        <div class="buttons">
+            <!-- 第一行：清除按键 -->
+            <button class="btn btn-clear" data-action="clear">C</button>
+            <button class="btn btn-clear" data-action="clear-entry">CE</button>
+            <button class="btn btn-clear" data-action="backspace">⌫</button>
+            <button class="btn btn-operator" data-action="operator" data-value="/">÷</button>
+            
+            <!-- 第二行：数字7-9和乘法 -->
+            <button class="btn btn-number" data-action="number" data-value="7">7</button>
+            <button class="btn btn-number" data-action="number" data-value="8">8</button>
+            <button class="btn btn-number" data-action="number" data-value="9">9</button>
+            <button class="btn btn-operator" data-action="operator" data-value="*">×</button>
+            
+            <!-- 第三行：数字4-6和减法 -->
+            <button class="btn btn-number" data-action="number" data-value="4">4</button>
+            <button class="btn btn-number" data-action="number" data-value="5">5</button>
+            <button class="btn btn-number" data-action="number" data-value="6">6</button>
+            <button class="btn btn-operator" data-action="operator" data-value="-">-</button>
+            
+            <!-- 第四行：数字1-3和加法 -->
+            <button class="btn btn-number" data-action="number" data-value="1">1</button>
+            <button class="btn btn-number" data-action="number" data-value="2">2</button>
+            <button class="btn btn-number" data-action="number" data-value="3">3</button>
+            <button class="btn btn-operator" data-action="operator" data-value="+">+</button>
+            
+            <!-- 第五行：特殊按键 -->
+            <button class="btn btn-number" data-action="number" data-value="0">0</button>
+            <button class="btn btn-number" data-action="decimal">.</button>
+            <button class="btn btn-operator" data-action="operator" data-value="%">%</button>
+            <button class="btn btn-equals" data-action="calculate">=</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

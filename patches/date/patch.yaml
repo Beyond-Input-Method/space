@@ -1,0 +1,160 @@
+# 📅 日期时间补丁配置
+# 
+# 这个补丁为输入法添加日期时间功能，让你可以快速输入当前日期、时间、星期和农历
+# 
+# 🔧 系统变量说明
+# 系统提供以下内置变量，用于指向当前选择的配置目录：
+# 
+# 📁 方案相关：
+#   {$current_schema_dir}  - 当前输入方案目录（如：/space/schemas/五笔86）
+#   {$current_schema}      - 当前输入方案文件（如：/space/schemas/五笔86/wubi86.yaml）
+# 
+# 🎨 主题相关：
+#   {$current_theme_dir}   - 当前主题目录（如：/space/themes/默认主题）
+#   {$current_theme}       - 当前主题文件（如：/space/themes/默认主题/theme.yaml）
+# 
+# 🔊 音效相关：
+#   {$current_sound_dir}   - 当前音效目录（如：/space/sounds/默认音效）
+#   {$current_sound}       - 当前音效文件（如：/space/sounds/默认音效/sound.yaml）
+# 
+# 📳 触感相关：
+#   {$current_haptic_dir}  - 当前触感目录（如：/space/haptics/默认触感）
+#   {$current_haptic}      - 当前触感文件（如：/space/haptics/默认触感/haptic.yaml）
+# 
+# 🔤 字体相关：
+#   {$current_font_dir}    - 当前字体目录（如：/space/fonts/默认字体）
+#   {$current_font}        - 当前字体文件（如：/space/fonts/默认字体/font.yaml）
+# 
+# 🌐 其他配置：
+#   {$current_space_dir}   - 空间根目录（如：/space）
+#   {$current_plugin_dir}  - 插件目录（如：/space/plugins）
+#   {$current_dict_dir}    - 词库目录（如：/space/dicts）
+#   {$current_speech_dir}  - 语音目录（如：/space/speeches）
+#   {$current_patch_dir}   - 补丁目录（如：/space/patches）
+
+# 🎯 补丁应用目标
+patch_to: "{$current_schema}"
+
+# 📦 补丁功能列表
+patch:
+  # 📅 日期时间功能
+  - title: "日期时间"
+    key: "turn_on_date"
+    description: "快速输入当前日期、时间、星期等信息"
+    patch_to: "{$current_schema}"
+    bind_control: "turn_on_date"
+    
+    # 📁 需要复制的文件资源
+    resources:
+      - source: "res/lua/date_translator.lua"
+        target: "{$current_schema_dir}/lua/date_translator.lua"
+    
+    # ⚙️ 方案配置修改
+    patch:
+      # 添加日期时间翻译器到引擎
+      "engine/translators/+":
+        - "lua_translator@*date_translator"
+      
+      # 日期时间翻译器配置
+      date_translator:
+        date: "{$date_trigger_key}"          # 📅 日期格式：2024-03-15
+        time: "{$time_trigger_key}"          # 🕐 时间格式：14:30
+        week: "{$week_trigger_key}"          # 📆 星期格式：星期五
+        datetime: "{$datetime_trigger_key}"  # 🗓️ 完整日期时间：2024-03-15T14:30:00+08:00
+        timestamp: "{$timestamp_trigger_key}" # ⏰ 时间戳：1710484200
+
+  # 🌙 农历功能
+  - title: "农历日期"
+    key: "turn_on_lunar"
+    description: "快速输入当前农历日期信息"
+    patch_to: "{$current_schema}"
+    bind_control: "turn_on_lunar"
+    
+    # 📁 需要复制的文件资源
+    resources:
+      - source: "res/lua/lunar.lua"
+        target: "{$current_schema_dir}/lua/lunar.lua"
+    
+    # ⚙️ 方案配置修改
+    patch:
+      # 添加农历翻译器到引擎
+      "engine/translators/+":
+        - "lua_translator@*lunar"
+      
+      # 农历翻译器配置
+      lunar: "{$ln_trigger_key}"  # 🌙 农历格式：甲辰年二月初七
+
+# 🎛️ 用户界面配置
+# 为用户提供友好的设置界面，所有配置项都有清晰的说明
+
+controls:
+  stringsTable: "Root"
+  
+  preferences:
+    # 日期时间功能设置区域
+    - type: group
+      title: "日期时间设置"
+      footer_text: "配置快速输入日期时间的触发键，让您轻松插入当前日期、时间信息"
+    
+    # 日期时间功能总开关
+    - type: toggle_switch
+      title: "启用日期时间功能"
+      key: turn_on_date
+      default_value: false
+      toggle_style: switch
+    
+    # 各种触发键设置
+    - type: text_field
+      title: "日期触发键"
+      key: date_trigger_key
+      default_value: "rq"
+      placeholder: "请输入日期触发键"
+      keyboard_type: alphabet
+    
+    - type: text_field
+      title: "时间触发键"
+      key: time_trigger_key
+      default_value: "sj"
+      placeholder: "请输入时间触发键"
+      keyboard_type: alphabet
+    
+    - type: text_field
+      title: "星期触发键"
+      key: week_trigger_key
+      default_value: "xq"
+      placeholder: "请输入星期触发键"
+      keyboard_type: alphabet
+    
+    - type: text_field
+      title: "日期时间触发键"
+      key: datetime_trigger_key
+      default_value: "dt"
+      placeholder: "请输入日期时间触发键"
+      keyboard_type: alphabet
+    
+    - type: text_field
+      title: "时间戳触发键"
+      key: timestamp_trigger_key
+      default_value: "ts"
+      placeholder: "请输入时间戳触发键"
+      keyboard_type: alphabet
+
+    # 农历功能设置区域
+    - type: group
+      title: "农历设置"
+      footer_text: "配置农历翻译的触发键"
+    
+    # 农历功能总开关
+    - type: toggle_switch
+      title: "启用农历"
+      key: turn_on_lunar
+      default_value: false
+      toggle_style: switch
+    
+    # 农历触发键设置
+    - type: text_field
+      title: "农历触发键"
+      key: ln_trigger_key
+      default_value: "nl"
+      placeholder: "请输入农历触发键"
+      keyboard_type: alphabet

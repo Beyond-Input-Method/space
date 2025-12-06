@@ -1,0 +1,38 @@
+# default settings
+# encoding: utf-8
+
+#style，preset_styles，preset_font，preset_candidates，preset_color_schemas，preset_keyboards 下的default键名是个公共的配置，没有填的话都从default里面取。
+style:
+  default:
+    light: light #竖屏
+    light_land: light_land #横屏
+    dark: dark #竖屏
+    dark_land: dark_land #横屏
+    keyboards: [default, english, number, symbols] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  hmos:
+    # default
+    light: light #竖屏
+    dark: dark #竖屏
+
+    # land
+    light_land: light_land #横屏
+    dark_land: dark_land #横屏
+
+    # sd_md 小屏幕。如：pura X 外屏
+    light_sm_md: light_sm_md #竖屏
+    dark_sm_md: dark_sm_md #竖屏
+
+    keyboards: [default, english, number, symbols] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  #    keyboards_land: [ default_land, english, number_land, symbols ] #横屏
+  iOS:
+    light: light #竖屏
+    light_land: light_land #横屏
+    dark: dark #竖屏
+    dark_land: dark_land #横屏
+    keyboards: [default, english, number, symbols] #手机和pad需要配置。键盘配置：自动键盘、字母、数字、符号
+  iPadOS:
+    light: default
+    dark: default
+  macOS:
+    light: default
+    dark: default

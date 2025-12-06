@@ -1,0 +1,30 @@
+author: "筋斗云"
+create_time: "2023-03-30"
+name: "模糊拼音"
+update_time: "2023-03-30"
+url: ""
+version: 1.0.0
+#支持的方案
+support_schemas:
+  - bim_t9
+  - bim_t14 # 超越14键（全拼）
+  - rime_ice_18 # 雾凇拼音（全拼）
+  - rime_ice_26 # 雾凇拼音（全拼）
+  - double_pinyin # 自然码双拼
+  - double_pinyin_14 # 自然码双拼
+  - double_pinyin_18 # 自然码双拼
+  - double_pinyin_abc # 智能 ABC 双拼
+  - double_pinyin_abc_14 # 智能 ABC 双拼
+  - double_pinyin_abc_18 # 智能 ABC 双拼
+  - double_pinyin_mspy # 微软双拼
+  - double_pinyin_mspy_14 # 微软双拼
+  - double_pinyin_mspy_18 # 微软双拼
+  - double_pinyin_sogou # 搜狗双拼
+  - double_pinyin_sogou_14 # 搜狗双拼
+  - double_pinyin_sogou_18 # 搜狗双拼
+  - double_pinyin_flypy # 小鹤双拼
+  - double_pinyin_flypy_14 # 小鹤双拼
+  - double_pinyin_flypy_18 # 小鹤双拼
+  - double_pinyin_ziguang # 紫光双拼
+  - double_pinyin_ziguang_14 # 紫光双拼
+  - double_pinyin_ziguang_18 # 紫光双拼

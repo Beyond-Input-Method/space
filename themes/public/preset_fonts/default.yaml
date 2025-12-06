@@ -1,0 +1,73 @@
+# default settings
+# encoding: utf-8
+
+#预设的字体
+preset_fonts:
+  default:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 18 #键字号
+    key_upper_text_size: 8 #符号字号
+    key_long_text_size: 14 #长标籤字号
+    preview_text_size: 34 #按键提示字号
+    long_preview_text_size: 20 #长按键提示字号
+    key_text_offset_x: 0 #键文本x轴偏移
+    key_text_offset_y: 0 #键文本y轴偏移
+    key_upper_text_offset_x: 0 #上标符号文本x轴偏移
+    key_upper_text_offset_y: 0 #上标符号文本y轴偏移
+    key_upper_press_text_offset_x: 0 #上标符号按压文本x轴偏移
+    key_upper_press_text_offset_y: 0 #上标符号按压文本y轴偏移
+    key_down_text_offset_x: 0 #下标符号文本x轴偏移
+    key_down_text_offset_y: 0 #下标符号文本y轴偏移
+    key_down_press_text_offset_x: 0 #下标符号按压文本x轴偏移
+    key_down_press_text_offset_y: 0 #下标符号按压文本y轴偏移
+    key_press_text_offset_x: 0 #按压文本x轴偏移
+    key_press_text_offset_y: 0 #按压文本y轴偏移
+    preview_text_offset_x: 0 #按键提示文本x轴偏移
+    preview_text_offset_y: 0 #按键提示文本y轴偏移
+    #指定按键的字型。需要指定键有name属性，如：name: "a"。
+    specified_name:
+      candidate_pasteboard_banner:
+        candidate_text_size: 26
+      candidate_symbol_left:
+        candidate_text_size: 16
+      candidate_symbol_bottom:
+        candidate_text_size: 18
+      candidate_pasteboard:
+        candidate_text_size: 24 #候选区高度
+      candidate_tools:
+        candidate_text_size: 24 #候选区高度
+      candidate_composition_text_list:
+        candidate_text_size: 24 #候选区高度
+      candidate_text_collection_view:
+        candidate_text_size: 20 #候选区高度
+      backspace:
+        key_text_size: 16 #键字号
+      number:
+        key_text_size: 16 #键字号
+      return:
+        key_text_size: 16 #键字号
+      confirm:
+        key_text_size: 16 #键字号
+      shift:
+        key_text_size: 16 #键字号
+      symbol:
+        key_text_size: 16 #键字号
+      english:
+        key_text_size: 16 #键字号
+      english_keyboard:
+        key_text_size: 24 #键字号
+      mode_switch_cn_or_en:
+        key_text_size: 5 #键字号
+      delimiter:
+        key_text_size: 15 #键字号
+  default_sm_md:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 14 #键字号
+    key_upper_text_size: 6 #符号字号
+    key_long_text_size: 14 #长标籤字号
+    preview_text_size: 34 #按键提示字号
+    long_preview_text_size: 20 #长按键提示字号

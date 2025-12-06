@@ -1,0 +1,37 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "精准触感 - 回车键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 0,
+                        "Parameters": {
+                            "Frequency": 65,
+                            "Intensity": 80
+                        }
+                    }
+                },
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 22,
+                        "Parameters": {
+                            "Frequency": 62,
+                            "Intensity": 50
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
