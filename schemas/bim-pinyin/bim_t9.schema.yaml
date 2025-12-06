@@ -12,7 +12,7 @@ schema:
   description: |
     超越拼音九键
   dependencies:
-    - melt_eng # 英文输入，作为次翻译器挂载到拼音方案
+    - melt_eng_t9 # 英文输入，作为次翻译器挂载到拼音方案
 
 engine:
   processors:
@@ -36,16 +36,35 @@ engine:
     - script_translator
     - lua_translator@*date_translator # 时间、日期、星期
     - table_translator@custom_phrase # 自定义短语 custom_phrase_t9.txt
-      #- table_translator@melt_eng     # 英文输入
+    - table_translator@melt_eng_t9     # 英文输入
   filters:
     - simplifier@emoji # Emoji
     - simplifier@traditionalize # 简繁切换
     - uniquifier # 去重
 
+# 主翻译器，拼音
 translator:
+  dictionary: rime_ice         # 挂载词库 rime_ice.dict.yaml
+  enable_word_completion: true # 大于 4 音节的词条自动补全，librime > 1.11.2
+  spelling_hints: 100            # corrector.lua ：为了让错音错字提示的 Lua 同时适配全拼双拼，将拼音显示在 comment 中
+  always_show_comments: true   # corrector.lua ：Rime 默认在 preedit 等于 comment 时取消显示 comment，这里强制一直显示，供 corrector.lua 做判断用。
+  initial_quality: 1.2         # 拼音的权重应该比英文大
   prism: bim_t9
-  spelling_hints: 100
-  comment_format: []
+  comment_format: [ ]
+  preedit_format:              # preedit_format 影响到输入框的显示和“Shift+回车”上屏的字符
+    - xlit/23456789/adgjmptw/     # 显示为 nve lve
+
+# 次翻译器，英文
+melt_eng_t9:
+  dictionary: melt_eng     # 挂载词库 melt_eng.dict.yaml
+  prism: melt_eng_t9
+  enable_sentence: false   # 禁止造句
+  enable_user_dict: false  # 禁用用户词典
+  initial_quality: 1.1     # 初始权重
+  comment_format:          # 自定义提示码
+    - xform/.*//           # 清空提示码
+
+
 
 # 自定义短语：custom_phrase_t9.txt
 # ⚠️ 编码要用数字
@@ -69,8 +88,8 @@ key_binder:
     - { when: has_menu, accept: 1, send: apostrophe }
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
-  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA987654321
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA987654321
   algebra:
     # ### 超级简拼
     - abbrev/^([a-z]).+$/$1/ # 超级简拼
@@ -86,29 +105,14 @@ speller:
     - derive/ao$/oa/
     - derive/([iu])a(o|ng?)$/a$1$2/
     # ### 九宫格数字映射
-    - derive/[bc]/a/
-    - derive/[ef]/d/
-    - derive/[hi]/g/
-    - derive/[kl]/j/
-    - derive/[on]/m/
-    - derive/[qrs]/p/
-    - derive/[uv]/t/
-    - derive/[xyz]/w/
+    - derive/[abc]/2/
+    - derive/[def]/3/
+    - derive/[hgi]/4/
+    - derive/[jkl]/5/
+    - derive/[omn]/6/
+    - derive/[pqrs]/7/
+    - derive/[tuv]/8/
+    - derive/[wxyz]/9/
 
 tx:
-  db: bim_t9.db
-
-#patch
-__patch:
-  grammar:
-    language: wanxiang-lts-zh-hans
-    collocation_max_length: 8 #命中的最长词组
-    collocation_min_length: 2 #命中的最短词组，搭配词频健全的词库时候应当最小值设为3避开2字高频词
-    collocation_penalty: -6 #默认-12 对常见搭配词组施加的惩罚值。较高的负值会降低这些搭配被选中的概率，防止过于频繁地出现某些固定搭配。
-    non_collocation_penalty: -18 #默认-12 对非搭配词组施加的惩罚值。较高的负值会降低非搭配词组被选中的概率，避免不合逻辑或不常见的词组组合。
-    weak_collocation_penalty: -24 #默认-24 对弱搭配词组施加的惩罚值。保持默认值通常是为了有效过滤掉不太常见但仍然合理的词组组合。
-    rear_penalty: -18 #默认-18 对词组中后续词语的位置施加的惩罚值。较高的负值会降低某些词语在句子后部出现的概率，防止句子结构不自然。
-  translator/contextual_suggestions: true #模型预测，假设模型里面有的四个字的词汇 现在智能 而首选组合 现在只能 当你输入 现在 上屏后下一次输入zhi neng就会输出，智能前提是没有权重更高的了，很明显这与你的预期“现在只能”不符。很明显实际上又要预测又要连续句子，放一起是很难优雅的。
-  translator/contextual_group_by_type: false
-  translator/max_homophones: 5
-  translator/max_homographs: 5
+  db: t9.db

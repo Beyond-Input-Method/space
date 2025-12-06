@@ -20,5 +20,5 @@ use_theme:
     # 自定义主题的名称，路径同上。
     "wubi86_jidian_14": "bim-wubi/themes/t14_wubi"
     "wubi86_jidian_pinyin_14": "bim-wubi/themes/t14_wubi"
-    "wubi86_pinyin_14": "bim-wubi/themes/t14_wubi"
+    "wubi_pinyin_14": "bim-wubi/themes/t14_wubi"
     "wubi86_14": "bim-wubi/themes/t14_wubi"

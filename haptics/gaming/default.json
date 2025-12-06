@@ -1,0 +1,27 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "游戏触感 - 默认按键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "transient",
+                        "StartTime": 0,
+                        "Parameters": {
+                            "Frequency": 68,
+                            "Intensity": 72
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

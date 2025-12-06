@@ -1,0 +1,85 @@
+# 预定义菜单配置文件
+# 本文件定义了输入法中的各种菜单项及其行为
+
+preset_menu:
+  # 默认菜单 - 显示在输入法底部的快捷工具栏
+  default_menu:
+    menu: { events: [
+     eisu_toggle_emoji,           # 显示emoji表情选择器
+     eisu_toggle_clip_board,      # 打开剪切板
+     eisu_toggle_cut_setting,      # 剪切操作
+     eisu_toggle_clear_setting,   # 清除文本相关操作
+     function_rime_switcher       # Rime输入法切换器
+    ] }
+  
+  # 符号菜单 - 特殊符号选择器
+  symbol_menu:
+    menu: { events: [ 
+     # 各种标点符号和特殊字符
+     text_full_period,              # 句号
+     text_full_question_mark,       # 问号
+     text_full_point,               # 点
+     text_half_ellipsis,            # 省略号
+     text_half_bracket_left,        # 左括号
+     text_half_bracket_right,       # 右括号
+     text_full_semicolon,           # 分号
+     text_full_dun,                 # 顿号
+     text_full_tilde,               # 波浪号
+     text_full_colon,               # 冒号
+     text_full_square_bracket_left, # 左方括号
+     text_full_square_bracket_right, # 右方括号
+     text_full_smile,               # 笑脸表情
+     text_full_comma,               # 逗号
+     text_half_pound_sign,          # 井号
+     text_half_colon,               # 半角冒号
+     "%",                                  # 百分号
+     "-",                                  # 连字符
+     "+",                                  # 加号
+     "×",                                  # 乘号
+     "=" ] }                               # 等号
+  
+  # 完整功能菜单 - 包含所有可用功能
+  all_menu:
+    menu: { events: [
+     eisu_toggle_schema_board,             # 键盘方案选择
+     eisu_toggle_sound_board,              # 声音与触感设置
+     eisu_toggle_edit_keyboard_board,      # 键盘布局调整
+     eisu_toggle_common_setting_board,     # 通用设置
+     eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
+     eisu_toggle_patch_board,              # 补丁管理
+     eisu_toggle_clip_board,               # 剪切板
+     eisu_toggle_search_clip_board,        # 剪切板搜索
+     eisu_toggle_pasteboard_setting_board, # 剪切板设置
+     eisu_toggle_pasteboard_favorite_board,# 收藏的剪切板项目
+     eisu_toggle_file_manager,             # 文件管理器
+     eisu_toggle_open_web_browser,         # 打开网页浏览器
+     # 已注释的菜单项（功能可能已弃用或正在开发中）
+     # eisu_toggle_switch_setting,         
+     # eisu_toggle_schema_setting,         
+     # eisu_toggle_phrases_board,          
+     eisu_toggle_haptics_board,            # 触觉反馈设置
+     eisu_toggle_emoji,                    # 表情符号选择器
+     eisu_toggle_dismiss_keyboard,         # 收起键盘
+     # eisu_toggle_dismiss_menu,           
+     # eisu_toggle_switcher,               
+     # eisu_toggle_system_info_board,      
+     # eisu_toggle_user_feedback,          
+     
+     # 文本编辑功能
+     function_keyboard_clearAll,           # 清空输入
+     function_keyboard_undo,               # 撤销
+     function_keyboard_clearLeft,          # 清除左侧
+     function_keyboard_clearRight,         # 清除右侧
+     function_keyboard_redo,               # 重做
+     function_keyboard_selectAll,          # 全选
+     function_keyboard_cut,                # 剪切
+     function_keyboard_copy,               # 复制
+     function_keyboard_paste,              # 粘贴
+     function_keyboard_newline,            # 换行
+     
+     # Rime输入法相关功能
+     function_rime_switcher,               # 切换
+     function_rime_deploy,                 # 重新部署Rime
+     function_rime_clear,                  # 重新输入
+     function_common_open_host             # 打开主机应用
+    ] }

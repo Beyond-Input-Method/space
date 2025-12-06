@@ -1,0 +1,50 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "舒适触感 - 空格键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 35,
+                        "Parameters": {
+                            "Frequency": 51,
+                            "Intensity": 40,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0.8
+                                },
+                                {
+                                    "Time": 9,
+                                    "Frequency": 4,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 24,
+                                    "Frequency": -4,
+                                    "Intensity": 0.45
+                                },
+                                {
+                                    "Time": 35,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -23,8 +23,8 @@ schema:
     雾凇拼音 - 小鹤双拼
     https://github.com/iDvel/rime-ice
   dependencies:
-    - melt_eng # 英文输入，作为次翻译器挂载到拼音方案
-    - radical_pinyin # 部件拆字，反查及辅码
+    - melt_eng_t18    # 英文输入，作为次翻译器挂载到拼音方案
+    - radical_pinyin  # 部件拆字，反查及辅码
 
 # 开关
 # reset: 默认状态。注释掉后，切换窗口时不会重置到默认状态。
@@ -71,7 +71,7 @@ engine:
     - lua_translator@*date_translator # 时间、日期、星期
     - lua_translator@*lunar # 农历
     - table_translator@custom_phrase # 自定义短语 custom_phrase_double.txt
-    - table_translator@melt_eng # 英文输入
+    - table_translator@melt_eng_t18          # 英文输入
     - table_translator@cn_en # 中英混合词汇
     - table_translator@radical_lookup # 部件拆字反查
     - lua_translator@*unicode # Unicode
@@ -437,13 +437,14 @@ translator:
     - xform/ü/v/ # ü 显示为 v
 
 # 次翻译器，英文
-melt_eng:
-  dictionary: melt_eng # 挂载词库 melt_eng.dict.yaml
-  enable_sentence: false # 禁止造句
-  enable_user_dict: false # 禁用用户词典
-  initial_quality: 1.1 # 初始权重
-  comment_format: # 自定义提示码
-    - xform/.*// # 清空提示码
+melt_eng_t18:
+  dictionary: melt_eng     # 挂载词库 melt_eng.dict.yaml
+  prism: melt_eng_t18
+  enable_sentence: false   # 禁止造句
+  enable_user_dict: false  # 禁用用户词典
+  initial_quality: 1.1     # 初始权重
+  comment_format:          # 自定义提示码
+    - xform/.*//           # 清空提示码
 
 # 中英混合词汇
 cn_en:
@@ -575,19 +576,3 @@ speller:
     - derive/k/j/
     - derive/c/x/
     - derive/n/b/
-
-
-#patch
-__patch:
-  grammar:
-    language: wanxiang-lts-zh-hans
-    collocation_max_length: 8 #命中的最长词组
-    collocation_min_length: 2 #命中的最短词组，搭配词频健全的词库时候应当最小值设为3避开2字高频词
-    collocation_penalty: -6 #默认-12 对常见搭配词组施加的惩罚值。较高的负值会降低这些搭配被选中的概率，防止过于频繁地出现某些固定搭配。
-    non_collocation_penalty: -18 #默认-12 对非搭配词组施加的惩罚值。较高的负值会降低非搭配词组被选中的概率，避免不合逻辑或不常见的词组组合。
-    weak_collocation_penalty: -24 #默认-24 对弱搭配词组施加的惩罚值。保持默认值通常是为了有效过滤掉不太常见但仍然合理的词组组合。
-    rear_penalty: -18 #默认-18 对词组中后续词语的位置施加的惩罚值。较高的负值会降低某些词语在句子后部出现的概率，防止句子结构不自然。
-  translator/contextual_suggestions: true
-  translator/contextual_group_by_type: false
-  translator/max_homophones: 5
-  translator/max_homographs: 5

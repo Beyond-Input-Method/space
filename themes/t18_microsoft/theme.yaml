@@ -47,7 +47,7 @@ preset_keyboards:
     long_preview_margin: 4
     preview: true
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-    menu: { spacing: 28, first_scrollable: false, last_scrollable: false, events: [ eisu_toggle_setting, eisu_toggle_user_feedback, eisu_toggle_switch_setting, eisu_toggle_schema_setting, eisu_toggle_clip_board, eisu_toggle_search_clip_board, eisu_toggle_emoji, eisu_toggle_sound_board, eisu_toggle_haptics_board, eisu_toggle_dismiss_keyboard ] }
+    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     keys:
     # 1
     - { click: q, label: Q, width: 14.3, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
@@ -71,13 +71,13 @@ preset_keyboards:
     - { click: v, label: V, width: 14.3, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_halfpoundsign, commit_V ] }
     - { click: b, label: BN, width: 14.3, swipe_up: commit_fullcomma, swipe_down: ",", long_click: [ commit_B, commit_b, commit_fullcomma, commit_n, commit_N ] }
     - { click: m, label: M, width: 14.3, swipe_up: "commit_fulldot", swipe_down: ".", long_click: [ commit_m, commit_fulldot, commit_M ] }
-    - { click: backspace, width: 14.3, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 14.3, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false }
     - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false }
     - { click: space, width: 38, name: space, swipe_up: select_second, preview: false }
     - { click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
     width: 10
   default_sm_md:
     height: 31
@@ -117,10 +117,10 @@ preset_keyboards:
     - { click: v, label: V, width: 14.3, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_halfpoundsign, commit_V ] }
     - { click: b, label: BN, width: 14.3, swipe_up: commit_fullcomma, swipe_down: ",", long_click: [ commit_B, commit_b, commit_fullcomma, commit_n, bommit_N ] }
     - { click: m, label: M, width: 14.3, swipe_up: "commit_fulldot", swipe_down: ".", long_click: [ commit_m, commit_fulldot, commit_M ] }
-    - { click: backspace, width: 14.3, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 14.3, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_符_symbols_sm_md, width: 14, name: symbol, preview: false }
     - { click: eisu_toggle_123_number_sm_md, has_menu: text_halfperiod, width: 13, name: number, preview: false }
     - { click: space, width: 38, name: space, swipe_up: select_second, preview: false }
     - { click: eisu_toggle_ABC_english_sm_md, has_menu: text_halfcomma, width: 11, name: english, preview: false }
-    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: next, rect_preview: true, preview: false }
+    - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }

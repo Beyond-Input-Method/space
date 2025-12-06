@@ -1,0 +1,50 @@
+{
+    "MetaData": {
+        "Create": "2025-11-19",
+        "Description": "打字机触感 - 空格键",
+        "Version": 1.0,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 30,
+                        "Parameters": {
+                            "Frequency": 44,
+                            "Intensity": 70,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0.4
+                                },
+                                {
+                                    "Time": 6,
+                                    "Frequency": 11,
+                                    "Intensity": 1.0
+                                },
+                                {
+                                    "Time": 22,
+                                    "Frequency": -7,
+                                    "Intensity": 0.4
+                                },
+                                {
+                                    "Time": 30,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
