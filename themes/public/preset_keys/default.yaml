@@ -18,7 +18,7 @@ preset_keys:
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_setting: {
-    icon: "gearshape_fill.svg",
+    icon: "gearshape.svg",
     label: "设置",
     send: Eisu_toggle,
     select: _setting_board,
@@ -29,18 +29,19 @@ preset_keys:
       eisu_toggle_common_setting_board,     # 通用设置
       eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
       eisu_toggle_patch_board,              # 补丁管理
-      eisu_toggle_cut_setting,              # 剪切板
+#      eisu_toggle_cut_setting,              # 剪切板
       eisu_toggle_clip_board,               # 剪切板
 #      eisu_toggle_search_clip_board,        # 剪切板搜索
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
-        eisu_toggle_file_manager,             # 文件管理器
+      eisu_toggle_file_manager,             # 文件管理器
 #      eisu_toggle_open_web_browser,         # 打开网页浏览器
       # eisu_toggle_switch_setting,
       # eisu_toggle_schema_setting,
       # eisu_toggle_phrases_board,
 #      eisu_toggle_haptics_board,            # 触觉反馈设置
       eisu_toggle_emoji,                    # 表情符号选择器
+      eisu_toggle_patch_predict,            # 联想
 #      eisu_toggle_dismiss_keyboard,         # 收起键盘
       # eisu_toggle_dismiss_menu,
       # eisu_toggle_switcher,
@@ -108,35 +109,76 @@ preset_keys:
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
-  # 模糊拼音
-  # 支持系统：鸿蒙
-  eisu_toggle_fuzzy_pinyin: { icon: "flashlight_on_fill.svg", label: "模糊拼音", send: Eisu_toggle, select: _patch_setting, option: ["fuzzy_pinyin"]}
+
   # 补丁
   # 支持系统：鸿蒙
   eisu_toggle_patch_board: { icon: "key_horizontal.svg", label: "补丁", send: Eisu_toggle, select: _patch_board }
+  # 模糊拼音
+  # 支持系统：鸿蒙
+  eisu_toggle_fuzzy_pinyin: { icon: "flashlight_on.svg", label: "模糊拼音", send: Eisu_toggle, select: _patch_setting, option: ["fuzzy_pinyin"]}
+  # 联想
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_predict: { icon: "flashlight_on.svg", label: "联想", send: Eisu_toggle, select: _patch_setting, option: [ "predict" ] }
+  # 候选栏配置
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_candidate: { icon: "list_square.svg", label: "候选栏配置", send: Eisu_toggle, select: _patch_setting, option: [ "candidate" ] }
+  # 字符过滤
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_character_filter: { icon: "filter_color.svg", label: "字符过滤", send: Eisu_toggle, select: _patch_setting, option: [ "character_filter" ] }
+  # 快速输出日期
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_date: { icon: "calendar.svg", label: "快速输出日期", send: Eisu_toggle, select: _patch_setting, option: [ "date" ] }
+  # 快速输出日期18键专用
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_date_18: { icon: "calendar.svg", label: "快速输出日期18键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_18" ] }
+  # 快速输出日期14键专用
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_date_t14: { icon: "calendar.svg", label: "快速输出日期14键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_t14" ] }
+  # 快速输出日期9键专用
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_date_t9: { icon: "calendar.svg", label: "快速输出日期9键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_t9" ] }
+  # 日期js版
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_datejs: { icon: "calendar.svg", label: "日期js版", send: Eisu_toggle, select: _patch_setting, option: [ "datejs" ] }
+  # 键盘配置
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_keyboard: { icon: "keyboard_badge_gearshape.svg", label: "键盘配置", send: Eisu_toggle, select: _patch_setting, option: [ "keyboard" ] }
+  # 大语言模型
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_octagram: { icon: "AI.svg", label: "大语言模型", send: Eisu_toggle, select: _patch_setting, option: [ "octagram" ] }
+  # 计算器
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_calculator: { icon: "calculator.svg", label: "计算器", send: Eisu_toggle, select: _patch_setting, option: [ "calculator" ] }
+  # 计算器JS版
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_calculatorjs: { icon: "calculator.svg", label: "计算器js版", send: Eisu_toggle, select: _patch_setting, option: [ "calculatorjs" ] }
+  # 笔画过滤
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_stroke_filter: { icon: "keyboard_badge_bihua.svg", label: "笔画过滤", send: Eisu_toggle, select: _patch_setting, option: [ "stroke_filter" ] }
+
 
   # 剪切板
   # 支持系统：鸿蒙，iOS
   eisu_toggle_clip_board: { icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
   #剪切板搜索
   # 支持系统：iOS
-  eisu_toggle_search_clip_board: { icon: "doc_text_magnifyingglass_fill.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
-  #
+  eisu_toggle_search_clip_board: { icon: "doc_text_badge_magnifyingglass_mirroring.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
   # 剪切板设置
   # 支持系统：鸿蒙
-  eisu_toggle_pasteboard_setting_board: { icon: "text_clipboard_fill.svg", label: "剪切板设置", send: Eisu_toggle, select: _pasteboard_setting_board }
+  eisu_toggle_pasteboard_setting_board: { icon: "doc_plaintext_and_pencil.svg", label: "剪切板设置", send: Eisu_toggle, select: _pasteboard_setting_board }
   # 剪切板收藏
   # 支持系统：鸿蒙
-  eisu_toggle_pasteboard_favorite_board: { icon: "star_fill.svg", label: "剪切板收藏", send: Eisu_toggle, select: _pasteboard_favorite_board }
+  eisu_toggle_pasteboard_favorite_board: { icon: "star.svg", label: "剪切板收藏", send: Eisu_toggle, select: _pasteboard_favorite_board }
+
   # 文件管理器
   # 支持系统：鸿蒙
-  eisu_toggle_file_manager: { icon: "folder_fill.svg", label: "文件管理", send: Eisu_toggle, select: _file_manager }
+  eisu_toggle_file_manager: { icon: "folder.svg", label: "文件管理", send: Eisu_toggle, select: _file_manager }
   # 浏览器
   # 支持系统：鸿蒙
   eisu_toggle_open_web_browser: { icon: "compass.svg", label: "浏览器", send: Eisu_toggle, select: _open_web_browser, option: ["https://www.bing.com"] }
 
   #开关设置
-  # 支持系统：鸿蒙，iOS
+  # 支持系统：iOS
   eisu_toggle_switch_setting: { icon: "switch_square_lefthalf_filled.svg", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
   #方案的switch
   # 支持系统：iOS
@@ -235,7 +277,6 @@ preset_keys:
   eisu_toggle_en_zh_default_sm_md_schema_default: { icon: "keyboard_badge_globe.svg", label: "英/中", text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
   eisu_toggle_返回_default_sm_md_schema_default: { icon: "return_left_up.svg", label: 返回, text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
   eisu_toggle_default: { icon: "keyboard_badge_globe.svg", send: Eisu_toggle, select: default }
-  #  eisu_toggle_ABC_default: {label: "ABC", send: Eisu_toggle, select: default}
   eisu_toggle_ABC_default: { icon: "textformat.svg", label: "英", send: Eisu_toggle, select: default }
 
 
