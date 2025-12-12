@@ -25,23 +25,27 @@ preset_keys:
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
       eisu_toggle_sound_board,              # 声音与触感设置
-      eisu_toggle_edit_keyboard_board,      # 键盘布局调整
+#      eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
       eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
-      eisu_toggle_patch_board,              # 补丁管理
+#      eisu_toggle_patch_board,              # 补丁管理
 #      eisu_toggle_cut_setting,              # 剪切板
       eisu_toggle_clip_board,               # 剪切板
 #      eisu_toggle_search_clip_board,        # 剪切板搜索
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
-      eisu_toggle_file_manager,             # 文件管理器
+#      eisu_toggle_file_manager,             # 文件管理器
+      eisu_toggle_theme_list_board,         # 主题
+      eisu_toggle_sound_list_board,         # 音效
+      eisu_toggle_haptic_list_board,        # 触感
+#      eisu_toggle_schema_dir_list_board,    # 方案目录
 #      eisu_toggle_open_web_browser,         # 打开网页浏览器
       # eisu_toggle_switch_setting,
       # eisu_toggle_schema_setting,
       # eisu_toggle_phrases_board,
 #      eisu_toggle_haptics_board,            # 触觉反馈设置
       eisu_toggle_emoji,                    # 表情符号选择器
-      eisu_toggle_patch_predict,            # 联想
+#      eisu_toggle_patch_predict,            # 联想
 #      eisu_toggle_dismiss_keyboard,         # 收起键盘
       # eisu_toggle_dismiss_menu,
       # eisu_toggle_switcher,
@@ -61,9 +65,9 @@ preset_keys:
 
       # Rime输入法相关功能
 #      function_rime_switcher,               # 切换
-      function_rime_deploy,                 # 重新部署Rime
+#      function_rime_deploy,                 # 重新部署Rime
 #      function_rime_clear,                  # 重新输入
-      function_common_open_host             # 打开主机应用
+#      function_common_open_host             # 打开主机应用
     ]
   }
   # 清除设置
@@ -209,6 +213,22 @@ preset_keys:
   #用户与反馈
   # 支持系统：iOS
   eisu_toggle_user_feedback: { icon: "reports.svg", label: "报Bug", send: Eisu_toggle, select: _user_feedback_board }
+
+  # 主题
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_theme_list_board: { icon: "paintpalette.svg", label: "主题", send: Eisu_toggle, select: _theme_list_board }
+
+  # 音效
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_sound_list_board: { icon: "sound.svg", label: "音效", send: Eisu_toggle, select: _sound_list_board }
+
+  # 触感
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_haptic_list_board: { icon: "a_4d_vibration.svg", label: "触感", send: Eisu_toggle, select: _haptic_list_board }
+
+  # 方案目录
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_schema_dir_list_board: { icon: "keyboard_badge_handwritten.svg", label: " 方案", send: Eisu_toggle, select: _schema_dir_list_board }
 
   #Mode_switch
   #开关
