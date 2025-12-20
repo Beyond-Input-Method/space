@@ -1,8 +1,8 @@
 {
     "MetaData": {
-        "Create": "2025-11-19",
-        "Description": "现代简约触感 - 回车键",
-        "Version": 1.0,
+        "Create": "2025-12-18",
+        "Description": "强力触感",
+        "Version": 1,
         "ChannelNumber": 1
     },
     "Channels": [
@@ -17,23 +17,23 @@
                         "StartTime": 0,
                         "Duration": 30,
                         "Parameters": {
-                            "Frequency": 60,
-                            "Intensity": 65,
+                            "Frequency": 50,
+                            "Intensity": 100,
                             "Curve": [
                                 {
                                     "Time": 0,
                                     "Frequency": 0,
-                                    "Intensity": 1.0
+                                    "Intensity": 0
                                 },
                                 {
                                     "Time": 8,
-                                    "Frequency": 5,
+                                    "Frequency": 15,
                                     "Intensity": 0.8
                                 },
                                 {
                                     "Time": 19,
-                                    "Frequency": -5,
-                                    "Intensity": 0.3
+                                    "Frequency": -8,
+                                    "Intensity": 1
                                 },
                                 {
                                     "Time": 30,

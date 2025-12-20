@@ -24,7 +24,7 @@
                 {
                     "Event": {
                         "Type": "transient",
-                        "StartTime": 25,
+                        "StartTime": 15,
                         "Parameters": {
                             "Frequency": 60,
                             "Intensity": 45
