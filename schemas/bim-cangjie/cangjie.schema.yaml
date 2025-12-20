@@ -1,0 +1,73 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: cangjie
+  name: 倉頡
+  version: "0.10"
+  author:
+    - 朱邦復
+  description: |
+    倉頡輸入法修訂版
+    以三代倉頡為基準
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中", "A"]
+  - name: full_shape
+    states: ["半", "全"]
+  - name: extended_charset
+    states: ["通", "增"]
+  - name: simplification
+    states: ["漢", "汉"]
+  - name: ascii_punct
+    states: ["。", "符"]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " ;"
+  # max_code_length: 5
+
+translator:
+  dictionary: cangjie
+  enable_charset_filter: false
+  enable_completion: true
+  enable_sentence: false
+  enable_encoder: false
+  encode_commit_history: false
+  enable_user_dict: false
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符～|"
+
+punctuator:
+  import_preset: symbols
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default

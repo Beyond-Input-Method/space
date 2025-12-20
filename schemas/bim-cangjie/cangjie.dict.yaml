@@ -1,0 +1,20 @@
+# encoding: utf-8
+#
+# 整合的倉頡詞典
+#
+# 可依需求調整引用的編碼表及其先後順序
+#
+
+---
+name: "cangjie"
+version: "0.10"
+sort: original
+use_preset_vocabulary: false
+import_tables:
+- cangjie.3-base
+- cangjie.3-baseT
+# - cangjieS.my
+# - cangjieT.my
+# - en_ext
+- en-base
+...
