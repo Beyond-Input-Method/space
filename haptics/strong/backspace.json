@@ -15,7 +15,7 @@
                     "Event": {
                         "Type": "continuous",
                         "StartTime": 0,
-                        "Duration": 45,
+                        "Duration": 30,
                         "Parameters": {
                             "Frequency": 53,
                             "Intensity": 85,
@@ -26,17 +26,17 @@
                                     "Intensity": 1.0
                                 },
                                 {
-                                    "Time": 15,
+                                    "Time": 8,
                                     "Frequency": 7,
                                     "Intensity": 0.9
                                 },
                                 {
-                                    "Time": 35,
+                                    "Time": 19,
                                     "Frequency": -10,
                                     "Intensity": 0.3
                                 },
                                 {
-                                    "Time": 45,
+                                    "Time": 30,
                                     "Frequency": 0,
                                     "Intensity": 0
                                 }
