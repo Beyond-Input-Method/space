@@ -71,7 +71,7 @@ preset_keyboards:
     - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
     - { click: eisu_toggle_123_number, width: 12, height: 46 }
     - { click: space, name: space, swipe_up: commit_0, width: 42, height: 46 }
-    - { click: eisu_toggle_ABC_english, width: 12, height: 46 }
+    - { click: eisu_toggle_ABC_english_schema_easy_en, width: 12, height: 46 }
     # - {click: return, name: return, width: 17, height: 44, composing: confirm}
 
 
@@ -279,7 +279,7 @@ preset_keyboards:
     - { click: eisu_toggle_符_dotsymbols, width: 17, name: default }
     - { click: eisu_toggle_123_number_sm_md, width: 12 }
     - { click: space, name: space, swipe_up: commit_0, width: 42 }
-    - { click: eisu_toggle_ABC_english_sm_md, width: 12 }
+    - { click: eisu_toggle_ABC_english_sm_md_schema_easy_en, width: 12 }
     # - {click: return, name: return, width: 17, height: 44, composing: confirm}
 
 
