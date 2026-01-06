@@ -1,3 +1,4 @@
+schema_id: bim_t9
 schema: bim-pinyin
 schema_dir: schemas/
 theme: t9
