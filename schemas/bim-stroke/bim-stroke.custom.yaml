@@ -17,4 +17,3 @@ patch:
 
   "engine/filters/+":
     - "tx_filter" #综合过滤
-    - "stroke_filter" #笔画过滤
