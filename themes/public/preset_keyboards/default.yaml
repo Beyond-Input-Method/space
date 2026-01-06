@@ -130,7 +130,7 @@ preset_keyboards:
     - { click: eisu_toggle_ABC_english_sm_md_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false }
     - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
   english:
-    ascii_mode: 0
+    ascii_mode: 1
     lock: true
     name: english
     keys:
@@ -301,7 +301,7 @@ preset_keyboards:
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
     __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
-    ascii_mode: 0
+    ascii_mode: 1
     name: symbols
     keys:
     #1
@@ -374,7 +374,7 @@ preset_keyboards:
   symbols_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
     __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
-    ascii_mode: 0
+    ascii_mode: 1
     name: symbols_sm_md
     vertical_gap: 4
     height: 31
@@ -449,7 +449,7 @@ preset_keyboards:
   half_symbols:
     name: half_symbols
     __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
-    ascii_mode: 0
+    ascii_mode: 1
     keys:
     #1
     - { click: text_fullsquarebracketleft_left_default }
