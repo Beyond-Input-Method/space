@@ -32,7 +32,6 @@ schema_list:
   - schema: double_pinyin_ziguang # 紫光双拼
   - schema: double_pinyin_ziguang_14 # 紫光双拼
   - schema: double_pinyin_ziguang_18 # 紫光双拼
-  - schema: easy_en #英文
 
 # 菜单
 menu:
