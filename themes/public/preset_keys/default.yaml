@@ -27,6 +27,7 @@ preset_keys:
       eisu_toggle_sound_board,              # 声音与触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
+      function_rime_deploy_schema,                 # 重新部署当前方案
       eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
       eisu_toggle_patch_board,              # 补丁管理
 #      eisu_toggle_cut_setting,              # 剪切板
@@ -171,7 +172,7 @@ preset_keys:
   eisu_toggle_pasteboard_favorite_board: { icon: "star.svg", label: "剪切板收藏", send: Eisu_toggle, select: _pasteboard_favorite_board }
 
   # 文件管理器
-  # 支持系统：鸿蒙
+  # 支持系统：鸿蒙Rime
   eisu_toggle_file_manager: { icon: "folder.svg", label: "文件管理", send: Eisu_toggle, select: _file_manager }
   # 浏览器
   # 支持系统：鸿蒙
@@ -571,9 +572,12 @@ preset_keys:
   #方案开关
   # 支持系统：鸿蒙
   function_rime_switcher: { icon: "more.svg", label: "方案开关", send: function, command: rime.switcher, option: "" }
-  #部署
+  #部署（所有方案，速度慢）
   # 支持系统：鸿蒙
   function_rime_deploy: { icon: "arrow_clockwise.svg", label: "部署", send: function, command: rime.deploy, option: "" }
+  #部署当前方案（当前使用的方案，速度快）
+  # 支持系统：鸿蒙
+  function_rime_deploy_schema: { icon: "arrow_clockwise.svg", label: "部署方案", send: function, command: rime.deploySchema, option: "" }
   #重输
   # 支持系统：鸿蒙
   function_rime_clear: { icon: "clean.svg", label: "重输", send: function, command: candidate.clear, option: "" }
