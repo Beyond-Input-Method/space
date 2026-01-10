@@ -2,4 +2,3 @@ patch:
     # 菜单中可选的方案列表，可根据喜好自行调整顺序，第一位为默认方案
     schema_list:
         - schema: bim-stroke # 五笔
-        - schema: easy_en #英文

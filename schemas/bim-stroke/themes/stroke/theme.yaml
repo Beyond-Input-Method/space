@@ -49,7 +49,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - { collection: [ "，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 214, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
+      - { collection: ["？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 214, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
       - { click: h, label: '一', height: 50, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
       - { click: s, label: '丨', height: 50, swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
       - { click: p, label: '丿', swipe_up: commit_3, height: 50, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
@@ -65,8 +65,8 @@ preset_keyboards:
       ## #3
       - { width: 17 }
       - { click: eisu_toggle_符_dotsymbols, label: '符号', functional: false, swipe_up: commit_6, height: 50, long_click: [ commit_m, commit_n, commit_o, commit_6, commit_M, commit_N, commit_O ] }
-      - { click: ":", label: ':', swipe_up: commit_8, height: 50, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
-      - { click: ";", label: ';', swipe_up: commit_9, height: 50, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
+      - { click: ",", label: '，', swipe_up: commit_8, height: 50, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
+      - { click: ".", label: '。', swipe_up: commit_9, height: 50, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
       - { click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
       ## #4
       - { width: 17 }
