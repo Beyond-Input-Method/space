@@ -1,0 +1,59 @@
+# 🔤 英文输入增强补丁配置
+# 
+# 这个补丁为输入法添加智能英文输入功能，支持英文单词联想和自动补全
+# 
+# 🔧 系统变量说明
+# 系统提供以下内置变量，用于指向当前选择的配置目录：
+# 
+# 📁 方案相关：
+#   {$current_schema_dir}  - 当前输入方案目录（如：/space/schemas/五笔86）
+#   {$current_schema}      - 当前输入方案文件（如：/space/schemas/五笔86/wubi86.yaml）
+# 
+# 🎨 主题相关：
+#   {$current_theme_dir}   - 当前主题目录（如：/space/themes/默认主题）
+#   {$current_theme}       - 当前主题文件（如：/space/themes/默认主题/theme.yaml）
+# 
+# 🔊 音效相关：
+#   {$current_sound_dir}   - 当前音效目录（如：/space/sounds/默认音效）
+#   {$current_sound}       - 当前音效文件（如：/space/sounds/默认音效/sound.yaml）
+# 
+# 📳 触感相关：
+#   {$current_haptic_dir}  - 当前触感目录（如：/space/haptics/默认触感）
+#   {$current_haptic}      - 当前触感文件（如：/space/haptics/默认触感/haptic.yaml）
+# 
+# 🔤 字体相关：
+#   {$current_font_dir}    - 当前字体目录（如：/space/fonts/默认字体）
+#   {$current_font}        - 当前字体文件（如：/space/fonts/默认字体/font.yaml）
+# 
+# 🌐 其他配置：
+#   {$current_space_dir}   - 空间根目录（如：/space）
+#   {$current_plugin_dir}  - 插件目录（如：/space/plugins）
+#   {$current_dict_dir}    - 词库目录（如：/space/dicts）
+#   {$current_speech_dir}  - 语音目录（如：/space/speeches）
+#   {$current_patch_dir}   - 补丁目录（如：/space/patches）
+
+# 🎯 补丁应用目标
+patch_to: "{$current_schema}"
+
+# 📦 补丁功能列表
+patch:
+  - title: "英文输入增强"
+    key: "turn_on_grammar"
+    description: "启用智能英文输入，支持英文单词联想和自动补全"
+    bind_control: "turn_on_grammar"
+    patch_to: "{$current_schema}"
+    # ⚙️ 方案配置修改
+    patch:
+      "schema/dependencies/+":
+        - melt_eng_t9
+      "engine/translators/+":
+        - table_translator@melt_eng_t9
+      # 次翻译器，英文
+      melt_eng_t9:
+        dictionary: melt_eng     # 挂载词库 melt_eng.dict.yaml
+        prism: melt_eng_t9
+        enable_sentence: false   # 禁止造句
+        enable_user_dict: false  # 禁用用户词典
+        initial_quality: 1.1     # 初始权重
+        comment_format: # 自定义提示码
+          - xform/.*//           # 清空提示码
