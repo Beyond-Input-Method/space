@@ -13,34 +13,12 @@
             "Pattern": [
                 {
                     "Event": {
-                        "Type": "continuous",
+                        "Type": "transient",
                         "StartTime": 0,
                         "Duration": 30,
                         "Parameters": {
                             "Frequency": 50,
-                            "Intensity": 100,
-                            "Curve": [
-                                {
-                                    "Time": 0,
-                                    "Frequency": 0,
-                                    "Intensity": 0
-                                },
-                                {
-                                    "Time": 8,
-                                    "Frequency": 15,
-                                    "Intensity": 0.8
-                                },
-                                {
-                                    "Time": 19,
-                                    "Frequency": -8,
-                                    "Intensity": 1.0
-                                },
-                                {
-                                    "Time": 30,
-                                    "Frequency": 0,
-                                    "Intensity": 0
-                                }
-                            ]
+                            "Intensity": 100
                         }
                     }
                 }
