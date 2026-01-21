@@ -24,7 +24,8 @@ preset_keys:
     select: _setting_board,
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
-      eisu_toggle_sound_board,              # 声音与触感设置
+      eisu_toggle_sound_board,              # 声音设置
+      eisu_toggle_haptic_board,              # 触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
       function_rime_deploy_schema,                 # 重新部署当前方案
@@ -100,9 +101,13 @@ preset_keys:
   # 键盘选择
   # 支持系统：鸿蒙
   eisu_toggle_schema_board: { icon: "keyboard_badge_handwritten.svg", label: "键盘选择", send: Eisu_toggle, select: _schema_dir_board }
-  # 声音与触感
+  # 声音
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音与触感", send: Eisu_toggle, select: _sound_board }
+  eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音", send: Eisu_toggle, select: _sound_board }
+
+  # 触感
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_haptic_board: { icon: "a_4d_vibration.svg", label: "触感", send: Eisu_toggle, select: _haptic_board }
 
   # 键盘调节
   # 支持系统：鸿蒙
