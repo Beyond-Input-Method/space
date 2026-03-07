@@ -590,3 +590,7 @@ preset_keys:
   # 支持系统：鸿蒙
   function_common_open_host: { icon: "more.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
 
+  #vip
+  # 支持系统：鸿蒙
+  function_common_open_vip: { icon: "vip_rectangle.svg", label: "vip", send: function, command: common.open_vip, option: "" }
+
