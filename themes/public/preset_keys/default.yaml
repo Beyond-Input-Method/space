@@ -81,6 +81,8 @@ preset_keys:
       function_keyboard_clearRight,
       function_keyboard_undo,
       function_keyboard_redo,
+      function_keyboard_deleteLeft,
+      function_keyboard_deleteRight,
     ]
   }
   # 剪切设置
@@ -550,6 +552,14 @@ preset_keys:
   #撤销
   # 支持系统：鸿蒙
   function_keyboard_undo: { icon: "undo.svg", label: "撤销", send: function, command: keyboard.undo, option: "" }
+  #左删除
+  # 支持系统：鸿蒙
+  # option可带参数为删除字数，默认为 1
+  function_keyboard_deleteLeft: { icon: "delete_left.svg", label: "左删除", send: function, command: keyboard.deleteLeft, option: "1" }
+  #右删除
+  # 支持系统：鸿蒙
+  # option可带参数。为删除字数，默认为 1
+  function_keyboard_deleteRight: { icon: "delete_left.svg", label: "右删除", send: function, command: keyboard.deleteRight, option: "1" }
   #左清空
   # 支持系统：鸿蒙
   function_keyboard_clearLeft: { icon: "delete_left.svg", label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
