@@ -29,21 +29,17 @@ preset_keys:
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
       function_rime_deploy_schema,                 # 重新部署当前方案
-      eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
-      eisu_toggle_patch_board,              # 补丁管理
 #      eisu_toggle_cut_setting,              # 剪切板
       eisu_toggle_clip_board,               # 剪切板
 #      eisu_toggle_search_clip_board,        # 剪切板搜索
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
-      eisu_toggle_file_manager,             # 文件管理器
 #      eisu_toggle_open_web_browser,         # 打开网页浏览器
       # eisu_toggle_switch_setting,
       # eisu_toggle_schema_setting,
       # eisu_toggle_phrases_board,
 #      eisu_toggle_haptics_board,            # 触觉反馈设置
       eisu_toggle_emoji,                    # 表情符号选择器
-      eisu_toggle_patch_predict,            # 联想
 #      eisu_toggle_dismiss_keyboard,         # 收起键盘
       # eisu_toggle_dismiss_menu,
       # eisu_toggle_switcher,
@@ -117,6 +113,9 @@ preset_keys:
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
+  # 自定义短语
+  # 支持系统：鸿蒙
+  eisu_toggle_custom_phrase_board: { icon: "doc_text.svg", label: "自定义短语", send: Eisu_toggle, select: _custom_phrase_board }
 
   # 补丁
   # 支持系统：鸿蒙
@@ -559,13 +558,13 @@ preset_keys:
   #右删除
   # 支持系统：鸿蒙
   # option可带参数。为删除字数，默认为 1
-  function_keyboard_deleteRight: { icon: "delete_left.svg", label: "右删除", send: function, command: keyboard.deleteRight, option: "1" }
+  function_keyboard_deleteRight: { icon: "delete_right.svg", label: "右删除", send: function, command: keyboard.deleteRight, option: "1" }
   #左清空
   # 支持系统：鸿蒙
-  function_keyboard_clearLeft: { icon: "delete_left.svg", label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
+  function_keyboard_clearLeft: { icon: "clear_left.svg", label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
   #右清空
   # 支持系统：鸿蒙
-  function_keyboard_clearRight: { icon: "delete_left.svg", label: "右清空", send: function, command: keyboard.clearRight, option: "" }
+  function_keyboard_clearRight: { icon: "clear_right.svg", label: "右清空", send: function, command: keyboard.clearRight, option: "" }
   #重做
   # 支持系统：鸿蒙
   function_keyboard_redo: { icon: "redo.svg", label: "重做", send: function, command: keyboard.redo, option: "" }
@@ -603,4 +602,3 @@ preset_keys:
   #vip
   # 支持系统：鸿蒙
   function_common_open_vip: { icon: "vip_rectangle.svg", label: "vip", send: function, command: common.open_vip, option: "" }
-
