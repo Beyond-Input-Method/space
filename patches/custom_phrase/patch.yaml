@@ -1,0 +1,25 @@
+# 自定义短语词库
+# 将 custom_phrase.txt 导入到当前方案目录，用于置顶自定义编码候选词
+# 词库格式：词汇<Tab>编码<Tab>权重（由百度 cphrase.ini 转换而来）
+
+patch_to_file: "{$current_schema}"
+
+patch:
+  - title: "自定义短语词库"
+    key: "custom_phrase_dict"
+    description: "导入 custom_phrase.txt 到当前方案目录，支持自定义编码置顶候选"
+    patch_to: "{$current_schema}"
+    resources:
+      - source: "res/custom_phrase.txt"
+        target: "{$current_schema_dir}/custom_phrase.txt"
+    patch:
+      # 追加 custom_phrase 翻译器（若已存在则不会重复）
+      "engine/translators/+":
+        - "table_translator@custom_phrase"
+      # custom_phrase 配置（局部修改，不影响已有配置）
+      "custom_phrase/dictionary": ""
+      "custom_phrase/user_dict": custom_phrase
+      "custom_phrase/db_class": stabledb
+      "custom_phrase/enable_completion": false
+      "custom_phrase/enable_sentence": false
+      "custom_phrase/initial_quality": 99

@@ -1,0 +1,31 @@
+name: 火山引擎语音识别
+description: |
+  豆包同款的云端语音识别服务，识别准确度高，支持多种语言。
+  
+  ✨ 特点：
+  • 识别准确率行业领先
+  • 支持中文、英文等多种语言
+  • 智能断句和标点符号
+  • 支持方言和口音识别
+  • 云端处理，效果更佳
+  
+  🎯 适用场景：
+  • 专业文字录入
+  • 多语言混合输入
+  • 需要高准确率的场景
+  • 网络连接稳定的环境
+  
+  ⚠️ 注意事项：
+  • 需要网络连接才能使用
+  • 需要配置火山引擎账号
+  • 数据会在云端处理
+
+version: 1.0
+provider: volcengine
+create_date: 2025-3-19
+patch_dir_name: _speech_volcengine
+apply_url: https://www.volcengine.com/
+cancel_button_text: 稍后再说
+apply_button_text: 去官网申请
+config_button_text: 立即配置
+required_keys: [accessKey, appKey]
