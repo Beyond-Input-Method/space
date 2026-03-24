@@ -28,6 +28,7 @@ preset_keys:
       eisu_toggle_haptic_board,              # 触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
+      eisu_toggle_custom_phrase_board,      # 自定义短语
       function_rime_deploy_schema,                 # 重新部署当前方案
       eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
       eisu_toggle_patch_board,              # 补丁管理
@@ -117,6 +118,9 @@ preset_keys:
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
+  # 自定义短语
+  # 支持系统：鸿蒙
+  eisu_toggle_custom_phrase_board: { icon: "doc_text.svg", label: "自定义短语", send: Eisu_toggle, select: _custom_phrase_board }
 
   # 补丁
   # 支持系统：鸿蒙
