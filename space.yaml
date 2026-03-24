@@ -1,8 +1,8 @@
-schema_id: bim_t9
-schema: bim-pinyin
+schema_id: bpmfmobile
+schema: zhuyin
 schema_dir: schemas/
-theme: t9
-theme_dir: themes/
+theme: zhuyin
+theme_dir: schemas/zhuyin/themes/
 symbol: default
 symbol_dir: symbols/
 emoticon: default
