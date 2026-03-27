@@ -6,11 +6,11 @@ provider: volcengine
 
 # 火山引擎应用密钥
 # Application Key for VolcEngine
-appKey: '2270577147'
+appKey: ''
 
 # 火山引擎访问密钥
 # Access Key for VolcEngine API
-accessKey: 't6yhNzntcmsXoFWQo2F4CNYS4vL8fIsL'
+accessKey: ''
 
 # 是否启用自动标点符号
 # Enable automatic punctuation

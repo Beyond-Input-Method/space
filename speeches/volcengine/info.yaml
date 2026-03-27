@@ -28,4 +28,5 @@ apply_url: https://www.volcengine.com/
 cancel_button_text: 稍后再说
 apply_button_text: 去官网申请
 config_button_text: 立即配置
+trial_days: 3
 required_keys: [accessKey, appKey]

@@ -27,14 +27,14 @@ controls:
     - type: text_field
       title: "App Key"
       key: speech_app_key
-      default_value: "2270577147"
+      default_value: ""
       placeholder: "请输入 App Key"
       keyboardType: "password"
 
     - type: text_field
       title: "Access Key"
       key: speech_access_key
-      default_value: "t6yhNzntcmsXoFWQo2F4CNYS4vL8fIsL"
+      default_value: ""
       placeholder: "请输入 Access Key"
       keyboardType: "password"
 
