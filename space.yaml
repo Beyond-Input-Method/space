@@ -7,6 +7,8 @@ symbol: default
 symbol_dir: symbols/
 emoticon: default
 emoticon_dir: emoticons/
+speech: volcengine
+speech_dir: speeches/
 config_version: 1.0
 sound_on: false
 sound_volume: 0

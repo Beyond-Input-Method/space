@@ -6,9 +6,10 @@ patch_to_file: "{$current_schema}"
 
 patch:
   - title: "自定义短语词库"
-    key: "custom_phrase_dict"
+    key: "custom_phrase_enabled"
     description: "导入 custom_phrase.txt 到当前方案目录，支持自定义编码置顶候选"
     patch_to: "{$current_schema}"
+    bind_control: "custom_phrase_enabled"
     resources:
       - source: "res/custom_phrase.txt"
         target: "{$current_schema_dir}/custom_phrase.txt"
@@ -22,4 +23,25 @@ patch:
       "custom_phrase/db_class": stabledb
       "custom_phrase/enable_completion": false
       "custom_phrase/enable_sentence": false
-      "custom_phrase/initial_quality": 99
+      "custom_phrase/initial_quality": "{$initial_quality}"
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    - type: group
+      title: 自定义短语
+      footer_text: 调整自定义短语候选的初始权重，数值越大越容易靠前显示
+
+    - type: toggle_switch
+      title: 启用自定义短语词库
+      key: custom_phrase_enabled
+      default_value: true
+      toggle_style: switch
+
+    - type: slider
+      title: 初始权重
+      key: initial_quality
+      default_value: 99.0
+      minimum_value: 0.0
+      maximum_value: 99.0
+      step: 0.1
