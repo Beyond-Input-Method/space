@@ -1,11 +1,11 @@
-# 自定义短语词库
+# 常用语词库
 # 将 custom_phrase.txt 导入到当前方案目录，用于置顶自定义编码候选词
 # 词库格式：词汇<Tab>编码<Tab>权重（由百度 cphrase.ini 转换而来）
 
 patch_to_file: "{$current_schema}"
 
 patch:
-  - title: "自定义短语词库"
+  - title: "常用语词库"
     key: "custom_phrase_enabled"
     description: "导入 custom_phrase.txt 到当前方案目录，支持自定义编码置顶候选"
     patch_to: "{$current_schema}"
@@ -29,11 +29,11 @@ controls:
   stringsTable: "Root"
   preferences:
     - type: group
-      title: 自定义短语
-      footer_text: 调整自定义短语候选的初始权重，数值越大越容易靠前显示
+      title: 常用语
+      footer_text: 调整常用语候选的初始权重，数值越大越容易靠前显示
 
     - type: toggle_switch
-      title: 启用自定义短语词库
+      title: 启用常用语词库
       key: custom_phrase_enabled
       default_value: true
       toggle_style: switch
@@ -41,7 +41,7 @@ controls:
     - type: slider
       title: 初始权重
       key: initial_quality
-      default_value: 99.0
+      default_value: 1.2
       minimum_value: 0.0
       maximum_value: 99.0
       step: 0.1

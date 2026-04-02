@@ -24,18 +24,19 @@ preset_keys:
     select: _setting_board,
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
+      eisu_toggle_theme_list_board,         # 主题
+      eisu_toggle_custom_phrase_board,      # 常用语
+      eisu_toggle_patch_board,              # 补丁管理
+      eisu_toggle_clip_board,               # 剪切板
+      function_rime_deploy,                 # 重新部署Rime
       eisu_toggle_speech_list_board,        # 语音引擎列表
       eisu_toggle_sound_board,              # 声音设置
-      eisu_toggle_haptic_board,              # 触感设置
+      eisu_toggle_haptic_board,             # 触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
-      eisu_toggle_custom_phrase_board,      # 自定义短语
-      function_rime_deploy_schema,                 # 重新部署当前方案
       eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
-      eisu_toggle_patch_board,              # 补丁管理
-#      eisu_toggle_cut_setting,              # 剪切板
-      eisu_toggle_clip_board,               # 剪切板
-#      eisu_toggle_search_clip_board,        # 剪切板搜索
+#      eisu_toggle_cut_setting,             # 剪切板
+#      eisu_toggle_search_clip_board,       # 剪切板搜索
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
       eisu_toggle_file_manager,             # 文件管理器
@@ -64,8 +65,8 @@ preset_keys:
 #      function_keyboard_newline,            # 换行
 
       # Rime输入法相关功能
+      function_rime_deploy_schema,          # 重新部署当前方案
 #      function_rime_switcher,               # 切换
-      function_rime_deploy,                 # 重新部署Rime
 #      function_rime_clear,                  # 重新输入
       function_common_open_host             # 打开主机应用
     ]
@@ -113,15 +114,19 @@ preset_keys:
   # 支持系统：鸿蒙，iOS
   eisu_toggle_haptic_board: { icon: "a_4d_vibration.svg", label: "触感", send: Eisu_toggle, select: _haptic_board }
 
+  # 主题
+  # 支持系统：鸿蒙
+  eisu_toggle_theme_list_board: { icon: "paintpalette.svg", label: "主题", send: Eisu_toggle, select: _theme_list_board }
+
   # 键盘调节
   # 支持系统：鸿蒙
   eisu_toggle_edit_keyboard_board: { icon: "mobiledata.svg", label: "键盘调节", send: Eisu_toggle, select: _edit_keyboard_board }
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
-  # 自定义短语
+  # 常用语
   # 支持系统：鸿蒙
-  eisu_toggle_custom_phrase_board: { icon: "doc_text.svg", label: "自定义短语", send: Eisu_toggle, select: _custom_phrase_board }
+  eisu_toggle_custom_phrase_board: { icon: "doc_text.svg", label: "常用语", send: Eisu_toggle, select: _custom_phrase_board }
 
   # 补丁
   # 支持系统：鸿蒙
