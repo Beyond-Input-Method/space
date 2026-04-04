@@ -211,7 +211,7 @@ preset_keys:
   eisu_toggle_haptics_board: { icon: "a_4d_vibration.svg", label: " 触感", send: Eisu_toggle, select: _haptics_board }
   #emoji
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_emoji: { icon: "emoji.svg", label: "emoji", send: Eisu_toggle, select: .emoji, option: [] }
+  eisu_toggle_emoji: { icon: "face_laughing.svg", label: "emoji", send: Eisu_toggle, select: .emoji, option: [] }
   #收起键盘
   # 支持系统：鸿蒙，iOS
   eisu_toggle_dismiss_keyboard: { icon: "arrow_down_square.svg", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: [] }
