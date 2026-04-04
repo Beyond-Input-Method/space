@@ -1,8 +1,8 @@
 patch_to: "{$file:speech:volcengine}"
 patch:
-  - title: "火山语音配置"
+  - title: "豆包语音配置"
     key: "speech_volcengine_config"
-    description: "为当前语音配置火山引擎的 appKey 和 accessKey"
+    description: "为当前语音配置豆包语音的 appKey 和 accessKey"
     patch_to: "{$file:speech:volcengine}"
     bind_control: "speech_volcengine_config"
     patch:
@@ -14,12 +14,12 @@ controls:
   stringsTable: "Root"
   preferences:
     - type: group
-      title: "火山语音配置"
-      footer_text: "配置火山引擎语音识别所需的 appKey、accessKey 和标点符号设置"
+      title: "豆包语音配置"
+      footer_text: "配置豆包语音识别所需的 appKey、accessKey 和标点符号设置"
 
     # 总开关
     - type: toggle_switch
-      title: "启用火山语音配置"
+      title: "启用豆包语音配置"
       key: speech_volcengine_config
       default_value: false
       toggle_style: switch

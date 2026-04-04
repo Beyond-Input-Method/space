@@ -7,7 +7,7 @@
 比如：
 
 - `default`：系统默认语音
-- `volcengine`：火山引擎语音
+- `volcengine`：豆包语音
 
 如果你要新增一种语音服务，或者修改某个语音服务在页面上的显示方式，通常就是改这里面的配置文件。
 
@@ -72,8 +72,8 @@ resources/space/speeches/volcengine/info.yaml
 它长这样：
 
 ```yaml
-name: 火山引擎
-description: 豆包同款，火山引擎
+name: 豆包语音
+description: 豆包同款在线语音识别
 version: 1.0
 create_date: 2025-11-19
 patch_dir_name: _speech_volcengine
@@ -91,8 +91,8 @@ required_keys: [accessKey, appKey]
 
 例如：
 
-- `name: 火山引擎`
-  - 意思是：页面上显示的名字叫“火山引擎”
+- `name: 豆包语音`
+  - 意思是：页面上显示的名字叫“豆包语音”
 
 ---
 
@@ -107,7 +107,7 @@ required_keys: [accessKey, appKey]
 示例：
 
 ```yaml
-name: 火山引擎
+name: 豆包语音
 ```
 
 通俗理解：
@@ -123,7 +123,7 @@ name: 火山引擎
 示例：
 
 ```yaml
-description: 豆包同款，火山引擎
+description: 豆包同款在线语音识别
 ```
 
 通俗理解：
@@ -398,7 +398,7 @@ required_keys: [token]
 
 ### 第一步：找到要修改的语音目录
 
-例如你要改火山引擎，就打开：
+例如你要改豆包语音，就打开：
 
 ```text
 resources/space/speeches/volcengine/
@@ -492,13 +492,13 @@ YAML 对格式比较敏感。
 正确：
 
 ```yaml
-name: 火山引擎
+name: 豆包语音
 ```
 
 错误：
 
 ```yaml
-name：火山引擎
+name：豆包语音
 ```
 
 ---
@@ -608,8 +608,8 @@ required_keys: [accessKey, appKey]
 ## 十、推荐你直接抄的完整示例
 
 ```yaml
-name: 火山引擎
-description: 豆包同款，火山引擎
+name: 豆包语音
+description: 豆包同款在线语音识别
 version: 1.0
 create_date: 2025-11-19
 patch_dir_name: _speech_volcengine
