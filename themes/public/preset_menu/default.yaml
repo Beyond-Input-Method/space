@@ -40,48 +40,55 @@ preset_menu:
      "×",                                  # 乘号
      "=" ] }                               # 等号
   
-  # 完整功能菜单 - 包含所有可用功能
+  # 完整功能菜单 - preset_keys L107-L628 中注释含「鸿蒙」支持的键（仅 iOS 已排除）
   all_menu:
     menu: { events: [
-     eisu_toggle_schema_board,             # 键盘方案选择
-     eisu_toggle_sound_board,              # 声音与触感设置
-     eisu_toggle_edit_keyboard_board,      # 键盘布局调整
-     eisu_toggle_common_setting_board,     # 通用设置
-     eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
-     eisu_toggle_patch_board,              # 补丁管理
-     eisu_toggle_clip_board,               # 剪切板
-     eisu_toggle_search_clip_board,        # 剪切板搜索
-     eisu_toggle_pasteboard_setting_board, # 剪切板设置
-     eisu_toggle_pasteboard_favorite_board,# 收藏的剪切板项目
-     eisu_toggle_file_manager,             # 文件管理器
-     eisu_toggle_open_web_browser,         # 打开网页浏览器
-     # 已注释的菜单项（功能可能已弃用或正在开发中）
-     # eisu_toggle_switch_setting,         
-     # eisu_toggle_schema_setting,         
-     # eisu_toggle_phrases_board,          
-     eisu_toggle_haptics_board,            # 触觉反馈设置
-     eisu_toggle_emoji,                    # 表情符号选择器
-     eisu_toggle_dismiss_keyboard,         # 收起键盘
-     # eisu_toggle_dismiss_menu,           
-     # eisu_toggle_switcher,               
-     # eisu_toggle_system_info_board,      
-     # eisu_toggle_user_feedback,          
-     
-     # 文本编辑功能
-     function_keyboard_clearAll,           # 清空输入
-     function_keyboard_undo,               # 撤销
-     function_keyboard_clearLeft,          # 清除左侧
-     function_keyboard_clearRight,         # 清除右侧
-     function_keyboard_redo,               # 重做
-     function_keyboard_selectAll,          # 全选
-     function_keyboard_cut,                # 剪切
-     function_keyboard_copy,               # 复制
-     function_keyboard_paste,              # 粘贴
-     function_keyboard_newline,            # 换行
-     
-     # Rime输入法相关功能
-     function_rime_switcher,               # 切换
-     function_rime_deploy,                 # 重新部署Rime
-     function_rime_clear,                  # 重新输入
-     function_common_open_host             # 打开主机应用
+     function_common_speech_recognition,            # 语音识别
+     eisu_toggle_schema_board,                      # 键盘方案选择
+     eisu_toggle_theme_list_board,                  # 主题
+     eisu_toggle_edit_keyboard_board,               # 键盘调节
+     eisu_toggle_sound_board,                       # 声音设置
+     eisu_toggle_common_setting_board,              # 通用设置
+     eisu_toggle_toolbar_customize,                 # 定制工具栏
+     eisu_toggle_haptic_board,                      # 触感（设置页）
+     eisu_toggle_custom_phrase_board,               # 常用语
+     eisu_toggle_patch_board,                       # 补丁管理
+     #下面是补丁
+     eisu_toggle_fuzzy_pinyin,                      # 模糊拼音设置
+     eisu_toggle_patch_predict,                     # 联想补丁
+     eisu_toggle_patch_candidate,                   # 候选栏配置
+     eisu_toggle_patch_keyboard,                    # 键盘配置补丁
+    #下面是剪切板
+     eisu_toggle_clip_board,                        # 剪切板
+    #  eisu_toggle_search_clip_board,               # 剪切板搜索
+     eisu_toggle_pasteboard_setting_board,          # 剪切板设置
+     eisu_toggle_pasteboard_favorite_board,         # 剪切板收藏
+     eisu_toggle_file_manager,                      # 文件管理
+     eisu_toggle_haptics_board,                     # 触感（独立面板）
+     eisu_toggle_emoji,                             # 表情符号选择器
+     eisu_toggle_switcher,                          # 切换（F4）
+     function_keyboard_clearAll,                    # 清空输入
+     function_keyboard_undo,                        # 撤销
+     function_keyboard_deleteLeft,                  # 左删除
+     function_keyboard_deleteRight,                 # 右删除
+     function_keyboard_clearLeft,                   # 左清空
+     function_keyboard_clearRight,                  # 右清空
+     function_keyboard_redo,                        # 重做
+     function_keyboard_selectAll,                   # 全选
+     function_keyboard_cut,                         # 剪切
+     function_keyboard_copy,                        # 复制
+     function_keyboard_paste,                       # 粘贴
+     function_keyboard_newline,                     # 换行
+     function_rime_switcher,                        # Rime 方案开关
+     function_rime_deploy,                          # 重新部署 Rime（全方案）
+     function_rime_deploy_schema,                   # 部署当前方案
+     function_rime_clear,                           # 重输 / 清空候选
+     function_common_open_host,                     # 打开主机应用（更多设置）
+     left_arrow,                                    # 光标左移
+     right_arrow,                                   # 光标右移
+     select_second,                                 # 次选（上屏 2）
+     select_third,                                  # 三选（上屏 3）
+     eisu_toggle_number,                            # 数字键盘 number
+     eisu_toggle_ABC_english,                       # 中/英 → english
+     eisu_toggle_符_dotsymbols                      # 符号键盘
     ] }
