@@ -49,7 +49,7 @@ patch:
       "engine/translators/+":
         - table_translator@melt_eng
       # 次翻译器，英文
-      melt_eng_t14:
+      melt_eng:
         dictionary: melt_eng     # 挂载词库 melt_eng.dict.yaml
         prism: melt_eng
         enable_sentence: false   # 禁止造句
