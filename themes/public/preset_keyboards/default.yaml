@@ -27,7 +27,6 @@ preset_keyboards:
     long_preview_margin: 4
     preview: true
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
     # 1

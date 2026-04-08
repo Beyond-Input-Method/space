@@ -37,7 +37,6 @@ preset_keyboards:
     long_preview_padding: 0
     long_preview_margin: 4
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     horizontal_gap: 6
     vertical_gap: 10
     vertical_gap_land: 4
