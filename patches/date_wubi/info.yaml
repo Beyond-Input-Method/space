@@ -1,0 +1,15 @@
+author: "筋斗云"
+create_time: "2023-03-30"
+name: "快速输出日期"
+update_time: "2023-03-30"
+url: ""
+version: 1.0.0
+support_schemas:
+  - wubi86 # 五笔86
+  - wubi86_jidian_14 # 五笔
+  - wubi86_jidian # 五笔
+  - wubi86_jidian_pinyin # 五笔拼音混输
+  - wubi86_jidian_pinyin_14 # 五笔拼音混输
+  - wubi86_14 # 五笔86-14
+  - wubi_pinyin # 五笔拼音混输
+  - wubi_pinyin_14 # 五笔拼音混输-14

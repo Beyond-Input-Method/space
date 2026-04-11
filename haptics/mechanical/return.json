@@ -24,20 +24,10 @@
                 {
                     "Event": {
                         "Type": "transient",
-                        "StartTime": 20,
+                        "StartTime": 15,
                         "Parameters": {
                             "Frequency": 52,
-                            "Intensity": 50
-                        }
-                    }
-                },
-                {
-                    "Event": {
-                        "Type": "transient",
-                        "StartTime": 40,
-                        "Parameters": {
-                            "Frequency": 48,
-                            "Intensity": 30
+                            "Intensity": 45
                         }
                     }
                 }
