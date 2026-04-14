@@ -7,14 +7,14 @@
 patch:
   # 菜单中可选的方案列表，可根据喜好自行调整顺序，第一位为默认方案
   schema_list:
+    - schema: wubi86 # 五笔86
     - schema: wubi86_jidian_14 # 五笔
     - schema: wubi86_jidian # 五笔
     - schema: wubi86_jidian_pinyin # 五笔拼音混输
     - schema: wubi86_jidian_pinyin_14 # 五笔拼音混输
-    - schema: wubi86 # 五笔拼音混输
-    - schema: wubi86_14 # 五笔拼音混输
+    - schema: wubi86_14 # 五笔86-14
     - schema: wubi_pinyin # 五笔拼音混输
-    - schema: wubi_pinyin_14 # 五笔拼音混输
+    - schema: wubi_pinyin_14 # 五笔拼音混输-14
 
   # Menu
   menu:

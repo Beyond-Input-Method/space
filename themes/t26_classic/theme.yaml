@@ -42,7 +42,6 @@ preset_keyboards:
     long_preview_margin: 4
     preview: true
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
     # 1
@@ -85,7 +84,7 @@ preset_keyboards:
     - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 12, name: number, preview: false }
     - { click: "，", swipe_up: "。", long_click: [ "。", "?", "!", "@", text_halfellipsis_default ], functional: true }
     - { click: space, width: 31, name: space, swipe_up: select_second, preview: false }
-    - { click: eisu_toggle_ABC_english, has_menu: text_halfcomma, width: 12, name: english, preview: false }
+    - { click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 12, name: english, preview: false }
     - { click: return, width: 22, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
     width: 10
   default_sm_md:

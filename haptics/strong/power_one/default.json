@@ -1,0 +1,50 @@
+{
+    "MetaData": {
+        "Create": "2025-12-18",
+        "Description": "强力触感",
+        "Version": 1,
+        "ChannelNumber": 1
+    },
+    "Channels": [
+        {
+            "Parameters": {
+                "Index": 0
+            },
+            "Pattern": [
+                {
+                    "Event": {
+                        "Type": "continuous",
+                        "StartTime": 0,
+                        "Duration": 30,
+                        "Parameters": {
+                            "Frequency": 50,
+                            "Intensity": 100,
+                            "Curve": [
+                                {
+                                    "Time": 0,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                },
+                                {
+                                    "Time": 8,
+                                    "Frequency": 15,
+                                    "Intensity": 0.8
+                                },
+                                {
+                                    "Time": 19,
+                                    "Frequency": -8,
+                                    "Intensity": 1
+                                },
+                                {
+                                    "Time": 30,
+                                    "Frequency": 0,
+                                    "Intensity": 0
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

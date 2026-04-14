@@ -1,3 +1,4 @@
+
 # default settings
 # encoding: utf-8
 
@@ -37,7 +38,6 @@ preset_keyboards:
     long_preview_padding: 0
     long_preview_margin: 4
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
-    __include: ./../public/preset_menu/default:/preset_menu/default_menu
     horizontal_gap: 6
     vertical_gap: 10
     vertical_gap_land: 4
@@ -48,7 +48,7 @@ preset_keyboards:
     keys:
       #1
       # - {width: 1}
-      - { collection: [ "，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
+      - { collection: ["？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 214, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
       - { click: h, label: '一', height: 50, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
       - { click: s, label: '丨', height: 50, swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
       - { click: p, label: '丿', swipe_up: commit_3, height: 50, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
@@ -57,21 +57,22 @@ preset_keyboards:
       # # #2
       - { width: 17 }
       - { click: n, label: '丶', swipe_up: commit_4, height: 50, long_click: [ commit_g, commit_h, commit_i, commit_4, commit_G, commit_H, commit_I ] }
-      - { click: z, label: '⼄', swipe_up: commit_5, height: 50, long_click: [ commit_j, commit_k, commit_l, commit_5, commit_J, commit_K, commit_L ] }
-      - { click: m, label: '*', swipe_up: commit_6, height: 50, long_click: [ commit_m, commit_n, commit_o, commit_6, commit_M, commit_N, commit_O ] }
+      - { click: z, label: 'ㄥ', swipe_up: commit_5, height: 50, long_click: [ commit_j, commit_k, commit_l, commit_5, commit_J, commit_K, commit_L ] }
+      - { click: "'", label: '分词', swipe_up: commit_7, height: 50, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
       - { click: function_rime_clear, width: 17, height: 50, name: dot }
 
       ## #3
       - { width: 17 }
-      - { click: "'", label: '分词', swipe_up: commit_7, height: 50, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
+      - { click: eisu_toggle_符_dotsymbols, label: '符号', functional: false, swipe_up: commit_6, height: 50, long_click: [ commit_m, commit_n, commit_o, commit_6, commit_M, commit_N, commit_O ] }
       - { click: ",", label: '，', swipe_up: commit_8, height: 50, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
       - { click: ".", label: '。', swipe_up: commit_9, height: 50, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
       - { click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
       ## #4
-      - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
+      - { width: 17 }
+      # - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
       - { click: eisu_toggle_123_number, width: 12, height: 46 }
       - { click: space, name: space, swipe_up: commit_0, width: 42, height: 46 }
-      - { click: eisu_toggle_ABC_english, width: 12, height: 46 }
+      - { click: eisu_toggle_ABC_english_schema_easy_en, width: 12, height: 46 }
     # - {click: return, name: return, width: 17, height: 44, composing: confirm}
 
 
@@ -164,7 +165,7 @@ preset_keyboards:
   symbols:
     #。？！…（））；、～:[]ï`#：+*/×
     __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
-    ascii_mode: 0
+    ascii_mode: 1
     preview: true
     height: 46
     width: 10
@@ -400,7 +401,7 @@ preset_keyboards:
   symbols_sm_md:
     #。？！…（））；、～:[]ï`#：+*/×
     __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
-    ascii_mode: 0
+    ascii_mode: 1
     preview: true
     vertical_gap: 4
     height: 31
