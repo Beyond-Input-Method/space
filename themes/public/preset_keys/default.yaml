@@ -24,14 +24,20 @@ preset_keys:
     select: _setting_board,
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
-      eisu_toggle_sound_board,              # 声音与触感设置
+      eisu_toggle_theme_list_board,         # 主题
+      eisu_toggle_custom_phrase_board,      # 常用语
+      eisu_toggle_patch_board,              # 补丁管理
+      eisu_toggle_toolbar_customize,        # 定制工具栏
+      eisu_toggle_clip_board,               # 剪切板
+      function_rime_deploy,                 # 重新部署Rime
+      eisu_toggle_speech_list_board,        # 语音引擎列表
+      eisu_toggle_sound_board,              # 声音设置
+      eisu_toggle_haptic_board,             # 触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
       eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
-      eisu_toggle_patch_board,              # 补丁管理
-#      eisu_toggle_cut_setting,              # 剪切板
-      eisu_toggle_clip_board,               # 剪切板
-#      eisu_toggle_search_clip_board,        # 剪切板搜索
+#      eisu_toggle_cut_setting,             # 剪切板
+#      eisu_toggle_search_clip_board,       # 剪切板搜索
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
       eisu_toggle_file_manager,             # 文件管理器
@@ -60,8 +66,8 @@ preset_keys:
 #      function_keyboard_newline,            # 换行
 
       # Rime输入法相关功能
+      function_rime_deploy_schema,          # 重新部署当前方案
 #      function_rime_switcher,               # 切换
-      function_rime_deploy,                 # 重新部署Rime
 #      function_rime_clear,                  # 重新输入
       function_common_open_host             # 打开主机应用
     ]
@@ -79,6 +85,8 @@ preset_keys:
       function_keyboard_clearRight,
       function_keyboard_undo,
       function_keyboard_redo,
+      function_keyboard_deleteLeft,
+      function_keyboard_deleteRight,
     ]
   }
   # 剪切设置
@@ -92,16 +100,24 @@ preset_keys:
       function_keyboard_selectAll,
       function_keyboard_cut,
       function_keyboard_copy,
-      # function_keyboard_paste,
+      function_keyboard_paste,
       function_keyboard_newline,
     ]
   }
   # 键盘选择
   # 支持系统：鸿蒙
   eisu_toggle_schema_board: { icon: "keyboard_badge_handwritten.svg", label: "键盘选择", send: Eisu_toggle, select: _schema_dir_board }
-  # 声音与触感
+  # 声音
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音与触感", send: Eisu_toggle, select: _sound_board }
+  eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音", send: Eisu_toggle, select: _sound_board }
+
+  # 触感
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_haptic_board: { icon: "a_4d_vibration.svg", label: "触感", send: Eisu_toggle, select: _haptic_board }
+
+  # 主题
+  # 支持系统：鸿蒙
+  eisu_toggle_theme_list_board: { icon: "paintpalette.svg", label: "主题", send: Eisu_toggle, select: _theme_list_board }
 
   # 键盘调节
   # 支持系统：鸿蒙
@@ -109,6 +125,10 @@ preset_keys:
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
+  eisu_toggle_toolbar_customize: { icon: "list_square.svg", label: "定制工具栏", send: Eisu_toggle, select: _toolbar_customize }
+  # 常用语
+  # 支持系统：鸿蒙
+  eisu_toggle_custom_phrase_board: { icon: "doc_text.svg", label: "常用语", send: Eisu_toggle, select: _custom_phrase_board }
 
   # 补丁
   # 支持系统：鸿蒙
@@ -171,7 +191,7 @@ preset_keys:
   eisu_toggle_pasteboard_favorite_board: { icon: "star.svg", label: "剪切板收藏", send: Eisu_toggle, select: _pasteboard_favorite_board }
 
   # 文件管理器
-  # 支持系统：鸿蒙
+  # 支持系统：鸿蒙Rime
   eisu_toggle_file_manager: { icon: "folder.svg", label: "文件管理", send: Eisu_toggle, select: _file_manager }
   # 浏览器
   # 支持系统：鸿蒙
@@ -193,7 +213,7 @@ preset_keys:
   eisu_toggle_haptics_board: { icon: "a_4d_vibration.svg", label: " 触感", send: Eisu_toggle, select: _haptics_board }
   #emoji
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_emoji: { icon: "emoji.svg", label: "emoji", send: Eisu_toggle, select: .emoji, option: [] }
+  eisu_toggle_emoji: { icon: "face_laughing.svg", label: "emoji", send: Eisu_toggle, select: .emoji, option: [] }
   #收起键盘
   # 支持系统：鸿蒙，iOS
   eisu_toggle_dismiss_keyboard: { icon: "arrow_down_square.svg", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: [] }
@@ -210,6 +230,12 @@ preset_keys:
   # 支持系统：iOS
   eisu_toggle_user_feedback: { icon: "reports.svg", label: "报Bug", send: Eisu_toggle, select: _user_feedback_board }
 
+  #语音引擎
+  # 支持系统：iOS
+  eisu_toggle_speech_list_board: { icon: "mic_badge_gearshape.svg", label: "语音识别", send: Eisu_toggle, select: _speech_list_board }
+
+
+
   #Mode_switch
   #开关
   #中英切换
@@ -221,63 +247,180 @@ preset_keys:
   #启动显示系统信息
   # 支持系统：iOS
   mode_switch_system_info_on_or_off: { icon: "info_circle.svg", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
-
-  #mask
+  # （空行语义：与下方「基础导航 / Eisu_toggle」预设键分组分隔）
+  # 基础编辑与导航（光标、修饰、回车、空格等）
+  # 光标左移（Left）
   left: { icon: "arrow_left.svg", label: " ", send: Left }
+  # 光标右移（Right）
   right: { icon: "arrow_right.svg", label: " ", send: Right }
+# 光标左移（Left）
+  left_arrow: { icon: "arrow_left.svg", label: "左", send: Left }
+  # 光标右移（Right）
+  right_arrow: { icon: "arrow_right.svg", label: "右", send: Right }
+
+  # 左 Shift（Shift_L）
   shift: { icon: "arrow_up.svg", send: Shift_L }
+  # 左 Shift 别名（Shift_L）
   shift_l: { icon: "arrow_up.svg", send: Shift_L }
+  # 回车（Return）
   return: { icon: "return_down_left.svg", send: Return }
+  # 确认（Return，展示「确认」）
   confirm: { icon: "checkmark.svg", send: Return, label: "确认", name: confirm }
+  # 退格（BackSpace）
   backspace: { icon: "delete_left.svg", send: BackSpace }
+  # 空格键（space）
   space: { icon: "space_1.svg", label: " ", send: space }
-
+  # （分组间隔：基础导航 → 直接发送字符）
+  # 直接发送键码/字符（数字、标点等，无图标或配合 textformat）
+  # 发送数字 3
   send_3: { label: "", send: 3 }
+  # 发送数字 2
   send_2: { label: "", send: 2 }
+  # 发送句点「.」
   send_dot: { icon: "textformat.svg", label: ".", send: . }
+  # 发送等号「=」
   send_equal: { icon: "textformat.svg",label: "=", send: "="}
-  #分词
+  # 分词键（发送单引号）
   participle: { icon: "textformat.svg", label: 分词, send: "'" }
-  #分号
+  # 发送分号「;」
   send_semicolon: { icon: "textformat.svg", label: ";", send: ";" }
-
+  # （分组间隔：直接发送 → 候选与换行）
+  # 候选栏：选择第 2 / 第 3 候选
+  # 选择第二候选（send 2）
   select_second: { label: "次选", send: 2 }
+  # 选择第三候选（send 3）
   select_third: { label: "三选", send: 3 }
-  #换行
+  # 换行（上屏换行符，非 Return 键事件）
+  # 上屏换行符 \n（commit）
   next: { icon: "return_down_left.svg", label: "换行", commit: "\\n" }
-
-  #eisu_toggle_schem
+  # （分组间隔：候选/换行 → Eisu 方案切换）
+  # Eisu_toggle + option:schema — 切换输入方案（如 easy_en / 恢复默认）
+  # 切到 easy_en 方案（schema）
   eisu_toggle_schema_en: { icon: "textformat.svg", label: "ABC", send: Eisu_toggle, select: easy_en, option: schema }
+  # 恢复默认方案（.default + schema）
   eisu_toggle_schema_default: { icon: "textformat.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
-
-  #eisu_toggle
-  eisu_toggle_123_number: { icon: "list_number.svg", label: 123, send: Eisu_toggle, select: number }
-  eisu_toggle_123_number_sm_md: { icon: "list_number.svg", label: 123, send: Eisu_toggle, select: number_sm_md }
-
+  # （分组间隔：schema → 键盘页切换）
+  # Eisu_toggle — 切换键盘页/布局（number / english / symbols / default 等；.前缀 表示主题内默认页）
+  # sm_md：小屏/中屏变体布局
+  # 切到数字键盘页 number
+  eisu_toggle_123_number: { label: 123, send: Eisu_toggle, select: number }
+  eisu_toggle_number: { label: "数", send: Eisu_toggle, select: number }
+  # 切到数字键盘页 number_sm_md（小/中屏）
+  eisu_toggle_123_number_sm_md: { label: 123, send: Eisu_toggle, select: number_sm_md }
+  # （分组间隔：数字页 → 英文页；下列两行为历史备选定义，已注释保留）
   #  eisu_toggle_ABC_english: {label: "ABC", send: Eisu_toggle, select: english}
-#  eisu_toggle_ABC_english: { label: "英", send: Eisu_toggle, select: english }
+  #  eisu_toggle_ABC_english: { label: "英", send: Eisu_toggle, select: english }
+  # 切到英文键盘页 english（中/英）
   eisu_toggle_ABC_english: { icon: "keyboard_badge_globe.svg", label: "中/英", send: Eisu_toggle, select: english}
+  # 切到英文页 english_sm_md（小/中屏）
   eisu_toggle_ABC_english_sm_md: { icon: "keyboard_badge_globe.svg", label: "中/英", send: Eisu_toggle, select: english_sm_md }
+  # text 组合：同一键位叠加「切英文页 + 切方案」
+  # 组合：english + easy_en 方案
   eisu_toggle_ABC_english_schema_easy_en: { icon: "keyboard_badge_globe.svg", label: "中/英", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
-
-  eisu_toggle_符_symbols: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols }
-  eisu_toggle_符__sound_board: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols }
-  eisu_toggle_符_symbols_sm_md: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: symbols_sm_md }
-  eisu_toggle_符_dotsymbols: { icon: "character_square.svg", label: "符", send: Eisu_toggle, select: .symbols }
-
-  eisu_toggle_更多_dotSymbols: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: .symbols } #默认的符号键盘
-  eisu_toggle_more_Symbols_no_functional: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: .symbols, functional: false } #默认的符号键盘
-  eisu_toggle_更多_symbols: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: symbols } #默认的符号键盘
-  eisu_toggle_123_dotNumber: { icon: "list_number.svg", label: 123, send: Eisu_toggle, select: .number } #默认的9宫格数据键盘
+  # 组合：english_sm_md + easy_en 方案
+  eisu_toggle_ABC_english_sm_md_schema_easy_en: { icon: "keyboard_badge_globe.svg", label: "中/英", text: "{eisu_toggle_ABC_english_sm_md}{eisu_toggle_schema_en}" }
+  # （分组间隔：英文组合键 → 符号页「符」）
+  # 切到符号页 symbols（符）
+  eisu_toggle_符_symbols: {label: "符", send: Eisu_toggle, select: symbols }
+  # 音效面板等场景复用 symbols（符）
+  eisu_toggle_符__sound_board: { label: "符", send: Eisu_toggle, select: symbols }
+  # 切到符号页 symbols_sm_md（小/中屏）
+  eisu_toggle_符_symbols_sm_md: { label: "符", send: Eisu_toggle, select: symbols_sm_md }
+  # 切到主题默认符号页（.symbols）
+  eisu_toggle_符_dotsymbols: { label: "符", send: Eisu_toggle, select: .symbols }
+  # （分组间隔：符类 → 更多/返回/默认组合）
+  # 「更多 / 123 / 返回 / 中」等：切到主题默认符号页、数字页或主键盘；functional:false 不参与功能键高亮逻辑
+  # 更多：主题默认符号键盘（.symbols）
+  eisu_toggle_更多_dotSymbols: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: .symbols }
+  # 同上 .symbols，functional 关闭（不高亮为功能键）
+  eisu_toggle_more_Symbols_no_functional: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: .symbols, functional: false }
+  # 更多：切到 symbols 符号页（非默认页）
+  eisu_toggle_更多_symbols: { icon: "character_square.svg", label: "更多", send: Eisu_toggle, select: symbols }
+  # 切到主题默认数字页（九宫格 .number）
+  eisu_toggle_123_dotNumber: { icon: "list_number.svg", label: 123, send: Eisu_toggle, select: .number }
+  # 切回主键盘 default（中）
   eisu_toggle_中_default: { icon: "keyboard_badge_globe.svg", label: 中, send: Eisu_toggle, select: default }
+  # 返回主键盘 default
   eisu_toggle_返回_default: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default }
+  # 返回主键盘 default_sm_md（小/中屏）
   eisu_toggle_返回_default_sm_md: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_sm_md }
+  # 组合：返回 default + 恢复默认方案
   eisu_toggle_返回_default_schema_default: { icon: "return_left_up.svg",label: 返回, text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}"}
+  # 组合：英/中展示，动作同返回+默认方案
   eisu_toggle_en_zh_default_schema_default: { icon: "keyboard_badge_globe.svg", label: "英/中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}" }
+  # 组合：sm_md 返回 + 默认方案
   eisu_toggle_en_zh_default_sm_md_schema_default: { icon: "keyboard_badge_globe.svg", label: "英/中", text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
+  # 组合：返回 sm_md + 默认方案
   eisu_toggle_返回_default_sm_md_schema_default: { icon: "return_left_up.svg", label: 返回, text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
+  # 切到主键盘 default（仅图标）
   eisu_toggle_default: { icon: "keyboard_badge_globe.svg", send: Eisu_toggle, select: default }
+  # 切到主键盘 default（展示「英」）
   eisu_toggle_ABC_default: { icon: "textformat.svg", label: "英", send: Eisu_toggle, select: default }
+  # （本节预设键结束；下接 function 类按键）
+  # （顶层：缩进映射块与下方「函数」小节之间的版式分隔，无配置项）
+  #函数
+  #清屏操作。option可带参数。0为上屏第一个候选；无参数为则不上屏。
+  # 支持系统：鸿蒙
+  function_keyboard_clearAll: { icon: "clean.svg", label: "清空", send: function, command: keyboard.clearAll, option: "" }
+  #撤销
+  # 支持系统：鸿蒙
+  function_keyboard_undo: { icon: "undo.svg", label: "撤销", send: function, command: keyboard.undo, option: "" }
+  #左删除
+  # 支持系统：鸿蒙
+  # option可带参数为删除字数，默认为 1
+  function_keyboard_deleteLeft: { icon: "delete_left.svg", label: "左删除", send: function, command: keyboard.deleteLeft, option: "1" }
+  #右删除
+  # 支持系统：鸿蒙
+  # option可带参数。为删除字数，默认为 1
+  function_keyboard_deleteRight: { icon: "delete_right.svg", label: "右删除", send: function, command: keyboard.deleteRight, option: "1" }
+  #左清空
+  # 支持系统：鸿蒙
+  function_keyboard_clearLeft: { icon: "clear_left.svg", label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
+  #右清空
+  # 支持系统：鸿蒙
+  function_keyboard_clearRight: { icon: "clear_right.svg", label: "右清空", send: function, command: keyboard.clearRight, option: "" }
+  #重做
+  # 支持系统：鸿蒙
+  function_keyboard_redo: { icon: "redo.svg", label: "重做", send: function, command: keyboard.redo, option: "" }
+  #全选
+  # 支持系统：鸿蒙6
+  function_keyboard_selectAll: { icon: "smart_selection_area.svg", label: "全选", send: function, command: keyboard.selectAll, option: "" }
+  #剪切
+  # 支持系统：鸿蒙6
+  function_keyboard_cut: { icon: "cut.svg", label: "剪切", send: function, command: keyboard.cut, option: "" }
+  #复制
+  # 支持系统：鸿蒙6
+  function_keyboard_copy: { icon: "doc_plaintext_2.svg", label: "复制", send: function, command: keyboard.copy, option: "" }
+  #粘贴
+  # 支持系统：鸿蒙6(现在有鸿蒙bug。暂时无效)
+  function_keyboard_paste: { icon: "text_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
+  #换行
+  # 支持系统：鸿蒙
+  function_keyboard_newline: { icon: "return_down_left.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
+  #方案开关
+  # 支持系统：鸿蒙
+  function_rime_switcher: { icon: "more.svg", label: "方案开关", send: function, command: rime.switcher, option: "" }
+  #部署（所有方案，速度慢）
+  # 支持系统：鸿蒙
+  function_rime_deploy: { icon: "arrow_clockwise.svg", label: "部署", send: function, command: rime.deploy, option: "" }
+  #部署当前方案（当前使用的方案，速度快）
+  # 支持系统：鸿蒙
+  function_rime_deploy_schema: { icon: "arrow_clockwise.svg", label: "部署方案", send: function, command: rime.deploySchema, option: "" }
+  #重输
+  # 支持系统：鸿蒙
+  function_rime_clear: { icon: "clean.svg", label: "重输", send: function, command: candidate.clear, option: "" }
+  #更多设置
+  # 支持系统：鸿蒙
+  function_common_open_host: { icon: "more.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
+
+  #vip
+  # 支持系统：鸿蒙
+  function_common_open_vip: { icon: "vip_rectangle.svg", label: "vip", send: function, command: common.open_vip, option: "" }
+
+  #语音识别
+  # 支持系统：鸿蒙
+  function_common_speech_recognition: { icon: "mic_circle.svg", label: "语音识别", send: function, command: speech.start, option: "" }
+
 
 
   #text
@@ -536,47 +679,4 @@ preset_keys:
   commit_fulldot: { label: "。", commit: "。" }
   commit_halfquote: { label: "”", commit: "”" }
 
-  #函数
-  #清屏操作。option可带参数。0为上屏第一个候选；无参数为则不上屏。
-  # 支持系统：鸿蒙
-  function_keyboard_clearAll: { icon: "clean.svg", label: "清空", send: function, command: keyboard.clearAll, option: "" }
-  #撤销
-  # 支持系统：鸿蒙
-  function_keyboard_undo: { icon: "undo.svg", label: "撤销", send: function, command: keyboard.undo, option: "" }
-  #左清空
-  # 支持系统：鸿蒙
-  function_keyboard_clearLeft: { icon: "delete_left.svg", label: "左清空", send: function, command: keyboard.clearLeft, option: "" }
-  #右清空
-  # 支持系统：鸿蒙
-  function_keyboard_clearRight: { icon: "delete_left.svg", label: "右清空", send: function, command: keyboard.clearRight, option: "" }
-  #重做
-  # 支持系统：鸿蒙
-  function_keyboard_redo: { icon: "redo.svg", label: "重做", send: function, command: keyboard.redo, option: "" }
-  #全选
-  # 支持系统：鸿蒙6
-  function_keyboard_selectAll: { icon: "smart_selection_area.svg", label: "全选", send: function, command: keyboard.selectAll, option: "" }
-  #剪切
-  # 支持系统：鸿蒙6
-  function_keyboard_cut: { icon: "cut.svg", label: "剪切", send: function, command: keyboard.cut, option: "" }
-  #复制
-  # 支持系统：鸿蒙6
-  function_keyboard_copy: { icon: "doc_plaintext_2.svg", label: "复制", send: function, command: keyboard.copy, option: "" }
-  #粘贴
-  # 支持系统：鸿蒙6(现在有鸿蒙bug。暂时无效)
-  function_keyboard_paste: { icon: "text_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
-  #换行
-  # 支持系统：鸿蒙
-  function_keyboard_newline: { icon: "return_down_left.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
-  #方案开关
-  # 支持系统：鸿蒙
-  function_rime_switcher: { icon: "more.svg", label: "方案开关", send: function, command: rime.switcher, option: "" }
-  #部署
-  # 支持系统：鸿蒙
-  function_rime_deploy: { icon: "arrow_clockwise.svg", label: "部署", send: function, command: rime.deploy, option: "" }
-  #重输
-  # 支持系统：鸿蒙
-  function_rime_clear: { icon: "clean.svg", label: "重输", send: function, command: candidate.clear, option: "" }
-  #更多设置
-  # 支持系统：鸿蒙
-  function_common_open_host: { icon: "more.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
-
+  

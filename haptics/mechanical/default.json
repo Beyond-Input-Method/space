@@ -20,16 +20,6 @@
                             "Intensity": 65
                         }
                     }
-                },
-                {
-                    "Event": {
-                        "Type": "transient",
-                        "StartTime": 15,
-                        "Parameters": {
-                            "Frequency": 50,
-                            "Intensity": 35
-                        }
-                    }
                 }
             ]
         }
