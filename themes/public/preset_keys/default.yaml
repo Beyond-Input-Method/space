@@ -25,6 +25,7 @@ preset_keys:
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
       eisu_toggle_theme_list_board,         # 主题
+      eisu_toggle_font_board,               # 字体
       eisu_toggle_custom_phrase_board,      # 常用语
       eisu_toggle_patch_board,              # 补丁管理
       eisu_toggle_toolbar_customize,        # 定制工具栏
@@ -118,6 +119,10 @@ preset_keys:
   # 主题
   # 支持系统：鸿蒙
   eisu_toggle_theme_list_board: { icon: "paintpalette.svg", label: "主题", send: Eisu_toggle, select: _theme_list_board }
+
+  # 字体
+  # 支持系统：鸿蒙
+  eisu_toggle_font_board: { icon: "textformat.svg", label: "字体", send: Eisu_toggle, select: _font_board }
 
   # 键盘调节
   # 支持系统：鸿蒙
