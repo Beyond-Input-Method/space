@@ -3,6 +3,8 @@ schema: bim-pinyin
 schema_dir: schemas/
 theme: t9
 theme_dir: themes/
+font: default
+font_dir: fonts/
 symbol: default
 symbol_dir: symbols/
 emoticon: default
@@ -16,6 +18,7 @@ sound_effect: default
 haptics_on: true
 haptics_volume: 1
 global_keyboard_menu: [
+  function_common_open_vip,
   function_common_speech_recognition, #
   eisu_toggle_emoji,           # 显示emoji表情选择器
   eisu_toggle_clip_board,      # 打开剪切板
