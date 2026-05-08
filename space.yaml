@@ -17,6 +17,8 @@ sound_volume: 0
 sound_effect: default
 haptics_on: true
 haptics_volume: 1
+haptic: system
+haptic_dir: haptics/
 global_keyboard_menu: [
   function_common_open_vip,
   function_common_speech_recognition, #
