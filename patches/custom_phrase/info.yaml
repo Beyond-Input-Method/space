@@ -1,8 +1,0 @@
-author: "BIM"
-create_time: "2025-03-19"
-name: "常用语词库"
-update_time: "2025-03-19"
-url: ""
-version: 1.0.0
-# 支持所有使用 table_translator 的方案
-support_schemas: []

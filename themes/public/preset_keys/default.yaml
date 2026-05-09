@@ -25,10 +25,6 @@ preset_keys:
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
       eisu_toggle_theme_list_board,         # 主题
-      eisu_toggle_font_board,               # 字体
-      eisu_toggle_custom_phrase_board,      # 常用语
-      eisu_toggle_patch_board,              # 补丁管理
-      eisu_toggle_toolbar_customize,        # 定制工具栏
       eisu_toggle_clip_board,               # 剪切板
       function_rime_deploy,                 # 重新部署Rime
       eisu_toggle_speech_list_board,        # 语音引擎列表
@@ -36,7 +32,6 @@ preset_keys:
       eisu_toggle_haptic_board,             # 触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
       eisu_toggle_common_setting_board,     # 通用设置
-      eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
 #      eisu_toggle_cut_setting,             # 剪切板
 #      eisu_toggle_search_clip_board,       # 剪切板搜索
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
@@ -48,7 +43,6 @@ preset_keys:
       # eisu_toggle_phrases_board,
 #      eisu_toggle_haptics_board,            # 触觉反馈设置
       eisu_toggle_emoji,                    # 表情符号选择器
-      eisu_toggle_patch_predict,            # 联想
 #      eisu_toggle_dismiss_keyboard,         # 收起键盘
       # eisu_toggle_dismiss_menu,
       # eisu_toggle_switcher,
