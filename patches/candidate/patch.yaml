@@ -56,6 +56,7 @@ patch:
         "preset_fonts/default/candidate_text_size": "{$candidate_text_size}"
         "preset_fonts/default/comment_text_size": "{$comment_text_size}"
         "preset_candidates/default/candidate_view_height": "{$candidate_view_height}"
+        "preset_candidates/default/use_cursor": "{$candidate_use_cursor}"
 # 配置项列表，包含所有的设置选项
 controls:
   stringsTable: "Root"
@@ -79,6 +80,11 @@ controls:
       minimum_value: 8               # 最小值：滑块左端的数值
       maximum_value: 38              # 最大值：滑块右端的数值
       step: 1                        # 步长：每次滑动的最小增减量
+    - type: toggle_switch            # 控件类型：开关按钮
+      title: 高亮候选项                # 显示标题：在界面上显示的文字
+      key: candidate_use_cursor                # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: true             # 默认值：首次使用时的初始设置
+      toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
     # 滑块控件，用于选择数值范围
     - type: slider                   # 控件类型：滑块
       title: 逐码提示字体                # 显示标题：在界面上显示的文字
