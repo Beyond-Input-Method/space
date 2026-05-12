@@ -106,6 +106,9 @@ preset_keys:
       function_keyboard_newline,
     ]
   }
+
+
+
   # 键盘选择
   # 支持系统：鸿蒙
   eisu_toggle_schema_board: { icon: "keyboard_badge_handwritten.svg", label: "键盘选择", send: Eisu_toggle, select: _schema_dir_board }
@@ -429,6 +432,21 @@ preset_keys:
   #语音识别
   # 支持系统：鸿蒙
   function_common_speech_recognition: { icon: "mic_circle.svg", label: "语音识别", send: function, command: speech.start, option: "" }
+
+
+
+  # 默认的方案状态
+  # commandl固定为：rime.switches option参数为方案switches的name
+  # 繁简转换
+  function_rime_switches_traditionalization: { send: function, command: rime.switches, option: "traditionalization" }
+  # emoji 开/关
+  function_rime_switches_emoji: { send: function, command: rime.switches, option: "emoji" }
+  # ascii_mode 中/英
+  function_rime_switches_ascii_mode: { send: function, command: rime.switches, option: "ascii_mode" }
+  # full_shape 全角/半角
+  function_rime_switches_full_shape: { send: function, command: rime.switches, option: "full_shape" }
+  # search_single_char 单字/词
+  function_rime_switches_search_single_char: { send: function, command: rime.switches, option: "search_single_char" }
 
 
 

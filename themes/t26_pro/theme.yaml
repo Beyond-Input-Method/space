@@ -202,8 +202,6 @@ preset_fonts:
     long_preview_text_size: 20
 preset_menu:
   __include: ./../public/preset_menu/default:/preset_menu
-__patch:
-  default/eisu_toggle_clear_setting/label: 清除
 preset_color_schemes:
   __include: ./../public/preset_color_schemes/default:/preset_color_schemes
 #各类键盘的宽度和高度定义
@@ -284,7 +282,6 @@ preset_height_width:
   lg_number_width: &lg_number_w 4.51
 preset_keys:
   __include: ./../public/preset_keys/default:/preset_keys
-
   eisu_toggle_clear_setting2: { icon: "folder.svg", label: "清除", text: "{eisu_toggle_clear_setting}" }
   # eisu_toggle_schema_default
   eisu_toggle_schema_default_land: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
@@ -482,7 +479,7 @@ preset_keyboards:
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
     menu: { events: [eisu_toggle_emoji, eisu_toggle_ABC_english_schema_easy_en, eisu_toggle_123_number, eisu_toggle_更多_dotSymbols] }
     keys:
-    #第1行
+   #第1行
       - {width: *sm_edge_w }
       - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [commit_1, commit_Q, commit_q] }
       - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [commit_2, commit_W, commit_w] }
