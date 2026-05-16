@@ -1,0 +1,2532 @@
+# default settings
+# encoding: utf-8
+style:
+  __include: ./../public/style/default:/style
+  default:
+    light: light #竖屏
+    light_land: light_land #横屏
+    dark: dark #竖屏
+    dark_land: dark_land #横屏
+    keyboards: [default, english, number, symbols] #键盘配置：自动键盘、字母、数字、符号
+    keyboards_land: [default_land, english, number_land, symbols_land] #横屏
+  hmos:
+    light: light #竖屏
+    dark: dark #竖屏
+    light_md_sm: light_md_sm #竖屏
+    light_sm_md: light_sm_md #横屏
+    light_md_md: light_md_md #横屏
+    light_land: light_land #横屏
+    light_md_lg: light_md_lg #横屏
+    light_lg_sm: light_lg_sm #大竖屏
+    dark_land: dark_land #横屏
+    dark_md_sm: dark_md_sm #竖屏
+    dark_sm_md: dark_sm_md #竖屏
+    dark_md_md: dark_md_md #竖屏
+    dark_md_lg: dark_md_lg #竖屏
+    dark_lg_sm: dark_lg_sm #竖屏
+    keyboards: [default, english, number, symbols] #键盘配置：自动键盘、字母、数字、符号
+    keyboards_land: [default_land, english, number_land, symbols_land] #横屏
+    keyboards_md_sm: [default_md_sm, english_md_sm, number_md_sm, symbols_md_sm]
+    keyboards_sm_md: [default_sm_md, english_sm_md, number_sm_md, symbols_sm_md]
+    keyboards_md_md: [default_md_md, english_md_md, number_md_md, symbols_md_md]
+    keyboards_md_lg: [default_md_lg, english_md_lg, number_md_lg, symbols_md_lg]
+    keyboards_lg_sm: [default_lg_sm, english_lg_sm, number_lg_sm, symbols_lg_sm]
+
+preset_styles:
+  default:
+    color_schema: default
+    candidate: default
+    font: default
+  light:
+    color_schema: default
+    candidate: default
+    font: default
+  light_land:
+    color_schema: default
+    candidate: default_land
+    font: default_land
+  light_md_sm:
+    color_schema: default
+    candidate: default_md_sm
+    keyboards: [default_md_sm, english_md_sm, number_md_sm, symbols_md_sm]
+    font: default_md_sm
+  light_sm_md:
+    color_schema: default
+    candidate: default_sm_md
+    keyboards: [default_sm_md, english_sm_md, number_sm_md, symbols_sm_md]
+    font: default_sm_md
+  light_md_md:
+    color_schema: default
+    candidate: default_md_md
+    keyboards: [default_md_md, english_md_md, number_md_md, symbols_md_md]
+    font: default_md_md
+  light_md_lg:
+    color_schema: default
+    candidate: default
+    font: default_md_lg
+    keyboards: [default_md_lg, english_md_lg, number_md_lg, symbols_md_lg]
+  light_lg_sm:
+    color_schema: default
+    candidate: default
+    font: default_lg_sm
+    keyboards: [default_lg_sm, english_lg_sm, number_lg_sm, symbols_lg_sm]
+  dark:
+    color_schema: dark
+    candidate: default
+    font: default
+  dark_land:
+    color_schema: dark
+    candidate: default_land
+    font: default
+  dark_md_sm:
+    color_schema: default
+    candidate: default
+    font: default_md_sm
+    keyboards: [default_md_sm, english_md_sm, number_md_sm, symbols_md_sm]
+  dark_sm_md:
+    color_schema: default
+    candidate: default_sm_md
+    keyboards: [default_sm_md, english_sm_md, number_sm_md, symbols_sm_md]
+    font: default_sm_md
+  dark_md_md:
+    color_schema: default
+    candidate: default
+    font: default_md_md
+    keyboards: [default_md_md, english_md_md, number_md_md, symbols_md_md]
+  dark_md_lg:
+    color_schema: default
+    candidate: default
+    font: default_md_lg
+    keyboards: [default_md_lg, english_md_lg, number_md_lg, symbols_md_lg]
+  dark_lg_sm:
+    color_schema: default
+    candidate: default
+    font: default_lg_sm
+    keyboards: [default_lg_sm, english_lg_sm, number_lg_sm, symbols_lg_sm]
+
+preset_candidates:
+  __include: ./../public/preset_candidates/default:/preset_candidates
+  default:
+    margin: 5 #候选项外边距
+    padding: 5 #候选项内边距
+    spacing: 8 #候选间距
+    use_cursor: true #高亮候选项
+    candidate_view_height: 48 #候选区高度
+    comment_height: 12 #编码提示区高度
+    comment_on_top: true #编码提示在上方或右侧
+    text_height: 20 #编码区高度
+    more_button_width: 44 #更多按钮宽度
+    corner_radius: 6 #圆角半径
+    hilited_corner_radius: 6 #高亮圆角半径
+    view_height: 28 #候选区高度
+    specified_name:
+      candidate_text_collection_view:
+        candidate_view_height: 48
+      candidate_tools:
+        more_button_width: 64
+      candidate_menu:
+        spacing: 28
+  default_land:
+    candidate_view_height: 48
+    text_height: 0
+  default_md_sm:
+    candidate_view_height: 48
+    text_height: 0
+  default_md_md:
+    candidate_view_height: 48
+    text_height: 0
+  default_md_lg:
+    candidate_view_height: 48
+  default_lg_sm:
+    candidate_view_height: 48
+    text_height: 0
+preset_fonts:
+  __include: ./../public/preset_fonts/default:/preset_fonts
+  __patch:
+    default/key_down_text_size: 8
+    default/key_text_size: 18
+    default/key_upper_text_size: 10
+  default_md_sm:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 14
+    key_upper_text_size: 9
+    key_long_text_size: 14
+    preview_text_size: 9
+    long_preview_text_size: 20
+  default_sm_md:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 14 #键字号
+    key_upper_text_size: 6 #符号字号
+    key_long_text_size: 14 #长标籤字号
+    preview_text_size: 34 #按键提示字号
+    long_preview_text_size: 20 #长按键提示字号
+  default_md_md:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 18
+    key_upper_text_size: 10
+    key_long_text_size: 14
+    preview_text_size: 9
+    long_preview_text_size: 20
+  default_lg_sm:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 18
+    key_upper_text_size: 10
+    key_long_text_size: 14
+    preview_text_size: 34
+    long_preview_text_size: 20
+  default_md_lg:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 18
+    key_upper_text_size: 10
+    key_long_text_size: 14
+    preview_text_size: 34
+    long_preview_text_size: 20
+  default_land:
+    candidate_text_size: 22
+    text_size: 10
+    comment_text_size: 12
+    key_text_size: 18
+    key_upper_text_size: 10
+    key_long_text_size: 14
+    preview_text_size: 34
+    long_preview_text_size: 20
+preset_menu:
+  __include: ./../public/preset_menu/default:/preset_menu
+preset_color_schemes:
+  __include: ./../public/preset_color_schemes/default:/preset_color_schemes
+#各类键盘的宽度和高度定义
+ # base_width：标准键宽,一般指字母键键宽
+ # func_left_width：指功能键的键宽
+ # line_blank_width：分体键盘中间留空宽度
+ # blank_left_width：键位数量不足，用空补足#
+ # edge_width：使键盘左右不紧贴屏边缘，留一定的空白
+ # space_width：空格宽度
+preset_height_width:
+  # 键盘行高度调整，除部分较矮的屏高外，均采用base高度
+  base_height: &base_h 46
+  number_collection_base_height: &number_collection_base_h 150  #数字键盘滚动列的高度（3个base+2个hgapheight的高度
+  number_row_height: &number_row_h 37.5
+  number_row_vertical_gap: &number_row_vertical_gap 3
+  horizontal_gap_base_height: &horizontal_gap_base_h 6  #按键横向距离
+  vertical_gap_base_height: &vertical_gap_base_h 6  #按键纵向距离
+  vertical_gap_land_base_height: &vertical_gap_land_base_h 6
+  sm_base_height: &sm_base_h 35  #小屏高的按键高度
+  sm_number_collection_base_height: &sm_number_collection_base_h 111
+  sm_number_row_height: &sm_number_row_h 37.5
+  sm_number_row_vertical_gap: &sm_number_row_vertical_gap 3
+  sm_horizontal_gap_base_height: &sm_horizontal_gap_base_h 3
+  sm_vertical_gap_base_height: &sm_vertical_gap_base_h 3
+  sm_vertical_gap_land_base_height: &sm_vertical_gap_land_base_h 3
+  # 三折叠下屏幕宽度为单屏时键宽宽度调整
+  sm_edge_width: &sm_edge_w 0.1
+  sm_number_width: &sm_number_w 20
+  md_sm_edge_width: &md_sm_edge_w 2
+  sm_base_width: &sm_base_w 10
+  sm_line2_blank_left_width: &sm_line2_blank_left_w 5
+  sm_line2_blank_right_width: &sm_line2_blank_right_w 5
+  sm_line3_func_left_width: &sm_line3_func_left_w 15
+  sm_line3_func_right_width: &sm_line3_func_right_w 15
+  sm_line4_func_left1_width: &sm_line4_func_left1_w 18
+  sm_line4_func_left2_width: &sm_line4_func_left2_w 10
+  sm_line4_func_left3_width: &sm_line4_func_left3_w 0
+  sm_line4_func_right1_width: &sm_line4_func_right1_w 18
+  sm_line4_func_right2_width: &sm_line4_func_right2_w 10
+  sm_line4_func_right3_width: &sm_line4_func_right3_w 0
+  sm_line4_space_1left_1right_width: &sm_line4_1left_1right_space_w 64
+  sm_line4_space_2left_1right_width: &sm_line4_2left_1right_space_w 54
+  sm_line4_space_3left_1right_width: &sm_line4_3left_1right_space_w 44
+  sm_line4_space_1left_2right_width: &sm_line4_1left_2right_space_w 54
+  sm_line4_space_2left_2right_width: &sm_line4_2left_2right_space_w 44
+  sm_line4_space_3left_2right_width: &sm_line4_3left_2right_space_w 34
+  sm_line4_space_1left_3right_width: &sm_line4_1left_3right_space_w 44
+  sm_line4_space_2left_3right_width: &sm_line4_2left_3right_space_w 34
+  sm_line4_space_3left_3right_width: &sm_line4_3left_3right_space_w 24
+  #三折叠下屏幕宽度为双屏时键宽宽度调整
+  md_edge_width: &md_edge_w 2
+  md_number_width: &md_number_w 6.6
+  md_base_width: &md_base_w 6
+  md_line1_blank_width: &md_line1_blank_w 36
+  md_line2_blank_left_width: &md_line2_blank_left_w 3
+  md_line2_blank_right_width: &md_line2_blank_right_w 3
+  md_line234_blank_width: &md_line234_blank_w 30
+  md_line3_fun_left_width: &md_line3_func_left_w 9
+  md_line3_func_right_width: &md_line3_func_right_w 9
+  md_line4_func_left1_width: &md_line4_func_left1_w 9
+  md_line4_func_left2_width: &md_line4_func_left2_w 6
+  md_line4_func_left3_width: &md_line4_func_left3_w 0
+  md_line4_func_right1_width: &md_line4_func_right1_w 9
+  md_line4_func_right2_width: &md_line4_func_right2_w 6
+  md_line4_func_right3_width: &md_line4_func_right3_w 0
+  md_line4_space_1left_left_width: &md_line4_space_1left_left_w 24
+  md_line4_space_2left_left_width: &md_line4_space_2left_left_w 18
+  md_line4_space_3left_left_width: &md_line4_space_3left_left_w 12
+  md_line4_space_1right_right_width: &md_line4_space_1right_right_w 24
+  md_line4_space_2right_right_width: &md_line4_space_2right_right_w 18
+  md_line4_space_3right_right_width: &md_line4_space_3right_right_w 12
+  #三折叠下屏幕宽度为三屏时键宽宽度调整
+  lg_edge_width: &lg_edge_w 2
+  lg_number_width: &lg_number_w 4.51
+  lg_base_width: &lg_base_w 4.1
+  lg_line1_blank_width: &lg_line1_blank_w 55
+  lg_line2_blank_left_width: &lg_line2_blank_left_w 2.05
+  lg_line2_blank_right_width: &lg_line2_blank_right_w 2.05
+  lg_line234_blank_width: &lg_line234_blank_w 50.9
+  lg_line3_func_left_width: &lg_line3_func_left_w 6.15
+  lg_line3_func_right_width: &lg_line3_func_right_w 6.15
+  lg_line4_func_left1_width: &lg_line4_func_left1_w 6.15
+  lg_line4_func_left2_width: &lg_line4_func_left2_w 4.1
+  lg_line4_func_left3_width: &lg_line4_func_left3_w 0
+  lg_line4_func_right1_width: &lg_line4_func_right1_w 6.15
+  lg_line4_func_right2_width: &lg_line4_func_right2_w 4.1
+  lg_line4_func_right3_width: &lg_line4_func_right3_w 0
+  lg_line4_space_1left_left_width: &lg_line4_space_1left_left_w 16.4
+  lg_line4_space_2left_left_width: &lg_line4_space_2left_left_w 12.3
+  lg_line4_space_3left_left_width: &lg_line4_space_3left_left_w 8.2
+  lg_line4_space_1right_right_width: &lg_line4_space_1right_right_w 16.4
+  lg_line4_space_2right_right_width: &lg_line4_space_2right_right_w 12.3
+  lg_line4_space_3right_right_width: &lg_line4_space_3right_right_w 8.2
+
+preset_keys:
+  __include: ./../public/preset_keys/default:/preset_keys
+  eisu_toggle_clear_setting2: { icon: "folder.svg", label: "清除", text: "{eisu_toggle_clear_setting}" }
+  # eisu_toggle_schema_default
+  eisu_toggle_schema_default_land: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_md_sm: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_sm_md: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_md_lg: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_lg_sm: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_md_md: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+
+  # eisu_toggle_ABC_english
+  eisu_toggle_ABC_english_land: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_land }
+  eisu_toggle_ABC_english_md_sm: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_md_sm }
+  eisu_toggle_ABC_english_sm_md: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_sm_md }
+  eisu_toggle_ABC_english_md_lg: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_md_lg }
+  eisu_toggle_ABC_english_lg_sm: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_lg_sm }
+  eisu_toggle_ABC_english_md_md: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_md_md }
+
+  # eisu_toggle_返回_default_land
+  eisu_toggle_返回_default_land: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_land }
+  eisu_toggle_返回_default_lg_sm: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_lg_sm }
+  eisu_toggle_返回_default_md_sm: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_md_sm }
+  eisu_toggle_返回_default_sm_md: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_sm_md }
+  eisu_toggle_返回_default_md_lg: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_md_lg }
+  eisu_toggle_返回_default_md_md: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_md_md }
+
+  # eisu_toggle_en_zh_default
+  eisu_toggle_en_zh_default_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_land_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_land}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_lg_sm_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_lg_sm}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_md_sm_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_md_sm}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_sm_md_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_md_lg_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_md_lg}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_md_md_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_md_md}{eisu_toggle_schema_default}" }
+
+  # eisu_toggle_ABC_english_schema_easy_en
+  eisu_toggle_ABC_english_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_land_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_land}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_md_sm_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_md_sm}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_sm_md_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_sm_md}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_md_lg_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_md_lg}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_lg_sm_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_lg_sm}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_md_md_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_md_md}{eisu_toggle_schema_en}" }
+  # eisu_toggle_更多_dotSymbols
+  eisu_toggle_更多_dotSymbols: { icon: "symbols.svg", label: "更多", send: Eisu_toggle, select: .symbols }
+
+  # eisu_toggle_符_symbols
+  eisu_toggle_符_symbols_land: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_land }
+  eisu_toggle_符_symbols_md_sm: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_md_sm }
+  eisu_toggle_符_symbols_sm_md: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_sm_md }
+  eisu_toggle_符_symbols_md_lg: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_md_lg }
+  eisu_toggle_符_symbols_lg_sm: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_lg_sm }
+  eisu_toggle_符_symbols_md_md: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_md_md }
+
+  # eisu_toggle_123_number
+  eisu_toggle_123_number: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number }
+  eisu_toggle_123_number_land: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_land }
+  eisu_toggle_123_number_md_sm: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_md_sm }
+  eisu_toggle_123_number_sm_md: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_sm_md }
+  eisu_toggle_123_number_md_lg: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_md_lg }
+  eisu_toggle_123_number_lg_sm: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_lg_sm }
+  eisu_toggle_123_number_md_md: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_md_md }
+
+  # 圆圈数字定义
+  text_full_circled_1_default_no_functional: { label: "①", text: "①{eisu_toggle_default}", functional: false }
+  text_full_circled_2_default_no_functional: { label: "②", text: "②{eisu_toggle_default}", functional: false }
+  text_full_circled_3_default_no_functional: { label: "③", text: "③{eisu_toggle_default}", functional: false }
+  text_full_circled_4_default_no_functional: { label: "④", text: "④{eisu_toggle_default}", functional: false }
+  text_full_circled_5_default_no_functional: { label: "⑤", text: "⑤{eisu_toggle_default}", functional: false }
+  text_full_circled_6_default_no_functional: { label: "⑥", text: "⑥{eisu_toggle_default}", functional: false }
+  text_full_circled_7_default_no_functional: { label: "⑦", text: "⑦{eisu_toggle_default}", functional: false }
+  text_full_circled_8_default_no_functional: { label: "⑧", text: "⑧{eisu_toggle_default}", functional: false }
+  text_full_circled_9_default_no_functional: { label: "⑨", text: "⑨{eisu_toggle_default}", functional: false }
+  text_full_circled_10_default_no_functional: { label: "⑩", text: "⑩{eisu_toggle_default}", functional: false }
+
+  # 货币名称定义
+  text_yuan_default: { label: "¥", text: "¥{eisu_toggle_default}", functional: false }
+  text_dollar_default: { label: "$", text: "${eisu_toggle_default}" }
+  text_euro_default: { label: "€", text: "€{eisu_toggle_default}" }
+  text_pound_default: { label: "£", text: "£{eisu_toggle_default}" }
+  text_ghanacedi_default: { label: "¢", text: "¢{eisu_toggle_default}" }
+  text_baht_default: { label: "฿", text: "฿{eisu_toggle_default}" }
+  text_rupee_default: { label: "₹", text: "₹{eisu_toggle_default}" }
+  text_peso_default: { label: "₱", text: "₱{eisu_toggle_default}" }
+
+  # 成组括号定义
+  text_halfbracket: { label: "（）", text: "(){Left}" }
+  text_halfguillemet: { label: "<>", text: "<>{Left}" }
+  text_halfquotationmark: { label: "\"\"", text: "\"\"{Left}" }
+  text_halfsquarebracketleft: { label: "［］", text: "［］{Left}" }
+  text_halfbrace: { label: "｛｝", text: "{}{Left}" }
+  text_fullbracket: { label: "（）", text: "（）{Left}" }
+  text_fullchineseguillemet: { label: "《》", text: "《》{Left}" }
+  text_fullquotationmark: { label: "“”", text: "“”{Left}" }
+  text_fullsemiquotationmark: { label: "‘’", text: "‘’{Left}" }
+  text_fullcornerquotes: { label: "「」", text: "「」{Left}" }
+  text_fullmdquote: { label: "『』", text: "『』{Left}" }
+  text_full_square_bracket_left: { label: "［］", text: "［］{Left}" }
+  text_fullsquarebracketleft2: { label: "［］", text: "［］{Left}" }
+  text_fullsquarebracketleft: { label: "【】", text: "【】{Left}" }
+  text_fullbrace: { label: "｛｝", text: "{}{Left}" }
+  text_fullbracket_right_default_no_functional: { label: ")", text: "）{eisu_toggle_default}", functional: false }
+  text_halfand_default_no_functional: { label: "&", text: "&{eisu_toggle_default}", functional: false }
+  text_half_question_mark_default_no_functional: { label: "?", text: "?{eisu_toggle_default}", functional: false }
+  text_half_point_default_no_functional: { label: "!", text: "!{eisu_toggle_default}", functional: false }
+  text_half_comma_default_no_functional: { label: ",", text: ",{eisu_toggle_default}", functional: false }
+  text_half_period_default_no_functional: { label: ".", text: ".{eisu_toggle_default}", functional: false }
+
+  # 标点符号定义
+  commit_fulldot: { label: "  。", commit: "。" }
+  commit_bjgth: { label: "!", commit: "!" }
+  commit_halfquestionmark: { label: "?", commit: "?" }
+  commit_halfcolon: { label: ":", commit: ":" }
+  commit_halfcomma: { label: ",", commit: "," }
+  commit_halfquoteL: { label: "“", commit: "“" }
+  commit_halfquoteR: { label: "”", commit: "”" }
+  commit_backquote: { label: "`", commit: "`" }
+  commit_tab: { label: "Tab", commit: "	" }
+  commit_fullspace: { label: "⏘", commit: "　" }
+  commit_dash: { label: "—", commit: "——" }
+  commit_halfdash: { label: "-", commit: "-" }
+  commit_halfplus: { label: "+", commit: "+" }
+  commit_asterisk: { label: "*", commit: "*" }
+  commit_dunhao: { label: "、", commit: "、" }
+  commit_solidus: { label: "/", commit: "/" }
+  commit_equal: { label: "=", commit: "=" }
+  commit_ellipsis: { label: "…", commit: "……" }
+  commit_greater: { label: ">", commit: ">" }
+  commit_less: { label: "<", commit: "<" }
+  commit_smhL: { label: "《", commit: "《" }
+  commit_smhR: { label: "》", commit: "》" }
+  commit_division: { label: "÷", commit: "÷" }
+  commit_halfleftparen: { label: "(", commit: "(" }
+  commit_halfrightparen: { label: ")", commit: ")" }
+  commit_fullleftparen: { label: "（", commit: "（" }
+  commit_fullrightparen: { label: "）", commit: "）" }
+  commit_halfsemiquoteL: { label: "‘", commit: "‘" }
+  commit_halfsemiquoteR: { label: "’", commit: "’" }
+  commit_percent: { label: "%", commit: "%" }
+  commit_halfsemicolon: { label: ";", commit: ";" }
+  halfpoundsign: { label: "#", commit: "#" }
+  commit_fullat: { label: "@", commit: "@" }
+
+  # send定义
+  send_percent: { label: "%", send: "%" }
+  send_fenhao: { label: ";", send: ";" }
+  select_scecond: { label: "次选", send: "2" }
+  select_third: { label: "三选", send: "3" }
+  send_halfcomma: { label: "  ，", send: "," }
+  send_dot: { label: ".", send: "." }
+  send_comma: { label: ",", send: "," }
+  send_dot2: { label: "  。", send: "." }
+  send_halfbracketL: { label: "(", send: "(" }
+  send_halfbracketR: { label: ")", send: ")" }
+  send_halfsquarebracketL: { label: "[", send: "[" }
+  send_halfsquarebracketR: { label: "]", send: "]" }
+  send_plus: { label: "+", send: "+" }
+  send_minus: { label: "-", send: "-" }
+  send_grave: { label: "`", send: grave }
+  send_times: { label: "×", send: "*" }
+  send_devided: { label: "÷", send: "/" }
+  left: { icon: "arrow_left.svg", label: "⤆", send: Left }
+  right: { icon: "arrow_right.svg", label: "⤇", send: Right }
+
+preset_keyboards:
+  default:
+    name: default
+    ascii_mode: 0
+    height: *base_h
+    width: *sm_base_w
+    height_land: *base_h
+    horizontal_gap: *horizontal_gap_base_h
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    round_corner: 6
+    key_text_size: 19
+    key_upper_text_size: 10
+    key_down_text_size: 8
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 3
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    preview_round_corner: 9
+    long_preview_round_corner: 9
+    long_preview_padding: 0
+    long_preview_margin: 4
+    preview: true
+    shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
+    keys:
+   #第1行
+      - {width: *sm_edge_w }
+      - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
+      - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
+      - {click: e, label: E, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_e, commit_3, commit_E ] }
+      - {click: r, label: R, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_r, commit_4, commit_R ] }
+      - {click: t, label: T, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_t, commit_5, commit_T ] }
+      - {click: y, label: Y, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_y, commit_6, commit_Y ] }
+      - {click: u, label: U, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_u, commit_7, commit_U ] }
+      - {click: i, label: I, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_i, commit_8, commit_I ] }
+      - {click: o, label: O, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_o, commit_9, commit_O ] }
+      - {click: p, label: P, swipe_up: commit_0, swipe_down: "〇", long_click: [ commit_p, commit_0, commit_P ] }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [ commit_a, commit_fulltilde, commit_A ] }
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [ commit_s, commit_halfslash, commit_S ] }
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [ commit_d, commit_fullcolon, commit_D ] }
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [ commit_f, commit_fullsemicolon, commit_F ] }
+      - {click: g, label: G, swipe_up: text_halfbracket_left, swipe_down: "(", long_click: [ commit_g, text_halfbracket_left, commit_G ] }
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [ commit_h, commit_half_rightparen, commit_H ] }
+      - {click: j, label: J, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_j, commit_halfat, commit_J ] }
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left, swipe_down: '"', long_click: [ commit_k, text_fullquotationmark_left, commit_K ] }
+      - {click: l, label: L, swipe_up: commit_halfquote, swipe_down: "'", long_click: [ commit_l, commit_halfquote, commit_L ] }
+      - {click: ; }
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {click: shift, has_menu: text_delimiter, width: *sm_line3_func_left_w, name: shift, preview: false }
+      - {click: z, label: Z, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
+      - {click: x, label: X, swipe_up: commit_halfunderline, swipe_down: "_", long_click: [ commit_x, commit_halfunderline, commit_X ] }
+      - {click: c, label: C, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_c, commit_halfpoundsign, commit_C ] }
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
+      - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
+      - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
+      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_符_symbols, width: *sm_line4_func_left1_w, name: symbol, preview: false }
+      - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: *sm_line4_func_left2_w, name: number, preview: false }
+      - {click: space, width: *sm_line4_2left_2right_space_w, name: space, swipe_up: select_second, preview: false }
+      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: *sm_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *sm_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
+      - {width: *sm_edge_w }
+
+  default_land:
+    name: default_land
+    ascii_mode: 0
+    width: *lg_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+   #第1行
+      - {width: *lg_edge_w }
+      - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
+      - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
+      - {click: e, label: E, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_e, commit_3, commit_E ] }
+      - {click: r, label: R, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_r, commit_4, commit_R ] }
+      - {click: t, label: T, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_t, commit_5, commit_T ] }
+      - {width: *lg_line1_blank_w}
+      - {click: y, label: Y, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_y, commit_6, commit_Y ] }
+      - {click: u, label: U, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_u, commit_7, commit_U ] }
+      - {click: i, label: I, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_i, commit_8, commit_I ] }
+      - {click: o, label: O, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_o, commit_9, commit_O ] }
+      - {click: p, label: P, swipe_up: commit_0, swipe_down: "〇", long_click: [ commit_p, commit_0, commit_P ] }
+      - {width: *lg_edge_w }
+    #第2行
+      - {width: *lg_edge_w }
+      - {width: *lg_line2_blank_left_w }
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [ commit_a, commit_fulltilde, commit_A ] }
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [ commit_s, commit_halfslash, commit_S ] }
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [ commit_d, commit_fullcolon, commit_D ] }
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [ commit_f, commit_fullsemicolon, commit_F ] }
+      - {click: g, label: G, swipe_up: text_halfbracket_left, swipe_down: "(", long_click: [ commit_g, text_halfbracket_left, commit_G ] }
+      - {width: *lg_line234_blank_w}
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [ commit_h, commit_half_rightparen, commit_H ] }
+      - {click: j, label: J, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_j, commit_halfat, commit_J ] }
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left, swipe_down: '"', long_click: [ commit_k, text_fullquotationmark_left, commit_K ] }
+      - {click: l, label: L, swipe_up: commit_halfquote, swipe_down: "'", long_click: [ commit_l, commit_halfquote, commit_L ] }
+      - {click: ; }
+      - {width: *lg_line2_blank_right_w }
+      - {width: *lg_edge_w }
+    #第3行
+      - {width: *lg_edge_w }
+      - {click: shift, has_menu: text_delimiter, width: *lg_line3_func_left_w, name: shift, preview: false }
+      - {click: z, label: Z, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
+      - {click: x, label: X, swipe_up: commit_halfunderline, swipe_down: "_", long_click: [ commit_x, commit_halfunderline, commit_X ] }
+      - {click: c, label: C, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_c, commit_halfpoundsign, commit_C ] }
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {width: *lg_line234_blank_w}
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
+      - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
+      - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {width: *lg_edge_w }
+    #第4行
+      - {width: *lg_edge_w }
+      - {click: eisu_toggle_符_symbols_land, width: *lg_line4_func_left1_w, name: symbol, preview: false }
+      - {click: eisu_toggle_123_number_land, has_menu: text_halfperiod, width: *lg_line4_func_left2_w, name: number, preview: false }
+      - {click: space, width: *lg_line4_space_2left_left_w, name: space, swipe_up: select_second, preview: false }
+      - {width: *lg_line234_blank_w}
+      - {click: space, width: *lg_line4_space_2right_right_w, name: space, swipe_up: select_second, preview: false }
+      - {click: eisu_toggle_ABC_english_land_schema_easy_en, has_menu: text_halfcomma, width: *lg_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *lg_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
+      - {width: *lg_edge_w }
+  default_md_sm:
+    name: default_md_sm
+    ascii_mode: 0
+    width: *md_base_w
+    height: *sm_base_h
+    height_land: *sm_base_h
+    horizontal_gap: *sm_horizontal_gap_base_h
+    vertical_gap: *sm_vertical_gap_base_h
+    vertical_gap_land: *sm_vertical_gap_base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+   #第1行
+      - {width: *md_edge_w }
+      - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
+      - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
+      - {click: e, label: E, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_e, commit_3, commit_E ] }
+      - {click: r, label: R, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_r, commit_4, commit_R ] }
+      - {click: t, label: T, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_t, commit_5, commit_T ] }
+      - {width: *md_line1_blank_w}
+      - {click: y, label: Y, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_y, commit_6, commit_Y ] }
+      - {click: u, label: U, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_u, commit_7, commit_U ] }
+      - {click: i, label: I, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_i, commit_8, commit_I ] }
+      - {click: o, label: O, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_o, commit_9, commit_O ] }
+      - {click: p, label: P, swipe_up: commit_0, swipe_down: "〇", long_click: [ commit_p, commit_0, commit_P ] }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_line2_blank_left_w }
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [ commit_a, commit_fulltilde, commit_A ] }
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [ commit_s, commit_halfslash, commit_S ] }
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [ commit_d, commit_fullcolon, commit_D ] }
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [ commit_f, commit_fullsemicolon, commit_F ] }
+      - {click: g, label: G, swipe_up: text_halfbracket_left, swipe_down: "(", long_click: [ commit_g, text_halfbracket_left, commit_G ] }
+      - {width: *md_line234_blank_w}
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [ commit_h, commit_half_rightparen, commit_H ] }
+      - {click: j, label: J, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_j, commit_halfat, commit_J ] }
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left, swipe_down: '"', long_click: [ commit_k, text_fullquotationmark_left, commit_K ] }
+      - {click: l, label: L, swipe_up: commit_halfquote, swipe_down: "'", long_click: [ commit_l, commit_halfquote, commit_L ] }
+      - {click: ; }
+      - {width: *md_line2_blank_right_w }
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {click: shift, has_menu: text_delimiter, width: *md_line3_func_left_w, name: shift, preview: false }
+      - {click: z, label: Z, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
+      - {click: x, label: X, swipe_up: commit_halfunderline, swipe_down: "_", long_click: [ commit_x, commit_halfunderline, commit_X ] }
+      - {click: c, label: C, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_c, commit_halfpoundsign, commit_C ] }
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {width: *md_line234_blank_w}
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
+      - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
+      - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_sm, width: *md_line4_func_left1_w, name: symbol, preview: false }
+      - {click: eisu_toggle_123_number_md_sm, has_menu: text_halfperiod, width: *md_line4_func_left2_w, name: number, preview: false }
+      - {click: space, width: *md_line4_space_2left_left_w, name: space, swipe_up: select_second, preview: false }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space, swipe_up: select_second, preview: false }
+      - {click: eisu_toggle_ABC_english_md_sm_schema_easy_en, has_menu: text_halfcomma, width: *md_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
+      - {width: *md_edge_w }
+  default_md_lg:
+    name: default_md_lg
+    ascii_mode: 0
+    width: *md_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+   #第1行
+      - {width: *md_edge_w }
+      - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
+      - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
+      - {click: e, label: E, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_e, commit_3, commit_E ] }
+      - {click: r, label: R, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_r, commit_4, commit_R ] }
+      - {click: t, label: T, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_t, commit_5, commit_T ] }
+      - {width: *md_line1_blank_w}
+      - {click: y, label: Y, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_y, commit_6, commit_Y ] }
+      - {click: u, label: U, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_u, commit_7, commit_U ] }
+      - {click: i, label: I, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_i, commit_8, commit_I ] }
+      - {click: o, label: O, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_o, commit_9, commit_O ] }
+      - {click: p, label: P, swipe_up: commit_0, swipe_down: "〇", long_click: [ commit_p, commit_0, commit_P ] }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_line2_blank_left_w }
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [ commit_a, commit_fulltilde, commit_A ] }
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [ commit_s, commit_halfslash, commit_S ] }
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [ commit_d, commit_fullcolon, commit_D ] }
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [ commit_f, commit_fullsemicolon, commit_F ] }
+      - {click: g, label: G, swipe_up: text_halfbracket_left, swipe_down: "(", long_click: [ commit_g, text_halfbracket_left, commit_G ] }
+      - {width: *md_line234_blank_w}
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [ commit_h, commit_half_rightparen, commit_H ] }
+      - {click: j, label: J, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_j, commit_halfat, commit_J ] }
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left, swipe_down: '"', long_click: [ commit_k, text_fullquotationmark_left, commit_K ] }
+      - {click: l, label: L, swipe_up: commit_halfquote, swipe_down: "'", long_click: [ commit_l, commit_halfquote, commit_L ] }
+      - {click: ; }
+      - {width: *md_line2_blank_right_w }
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {click: shift, has_menu: text_delimiter, width: *md_line3_func_left_w, name: shift, preview: false }
+      - {click: z, label: Z, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
+      - {click: x, label: X, swipe_up: commit_halfunderline, swipe_down: "_", long_click: [ commit_x, commit_halfunderline, commit_X ] }
+      - {click: c, label: C, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_c, commit_halfpoundsign, commit_C ] }
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {width: *md_line234_blank_w}
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
+      - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
+      - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_lg, width: *md_line4_func_left1_w, name: symbol, preview: false }
+      - {click: eisu_toggle_123_number_md_lg, has_menu: text_halfperiod, width: *md_line4_func_left2_w, name: number, preview: false }
+      - {click: space, width: *md_line4_space_2left_left_w, name: space, swipe_up: select_second, preview: false }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space, swipe_up: select_second, preview: false }
+      - {click: eisu_toggle_ABC_english_md_lg_schema_easy_en, has_menu: text_halfcomma, width: *md_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
+      - {width: *md_edge_w }
+  default_md_md:
+    name: default_md_md
+    ascii_mode: 0
+    width: *md_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+   #第1行
+      - {width: *md_edge_w }
+      - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
+      - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
+      - {click: e, label: E, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_e, commit_3, commit_E ] }
+      - {click: r, label: R, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_r, commit_4, commit_R ] }
+      - {click: t, label: T, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_t, commit_5, commit_T ] }
+      - {width: *md_line1_blank_w}
+      - {click: y, label: Y, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_y, commit_6, commit_Y ] }
+      - {click: u, label: U, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_u, commit_7, commit_U ] }
+      - {click: i, label: I, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_i, commit_8, commit_I ] }
+      - {click: o, label: O, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_o, commit_9, commit_O ] }
+      - {click: p, label: P, swipe_up: commit_0, swipe_down: "〇", long_click: [ commit_p, commit_0, commit_P ] }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_line2_blank_left_w }
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [ commit_a, commit_fulltilde, commit_A ] }
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [ commit_s, commit_halfslash, commit_S ] }
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [ commit_d, commit_fullcolon, commit_D ] }
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [ commit_f, commit_fullsemicolon, commit_F ] }
+      - {click: g, label: G, swipe_up: text_halfbracket_left, swipe_down: "(", long_click: [ commit_g, text_halfbracket_left, commit_G ] }
+      - {width: *md_line234_blank_w}
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [ commit_h, commit_half_rightparen, commit_H ] }
+      - {click: j, label: J, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_j, commit_halfat, commit_J ] }
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left, swipe_down: '"', long_click: [ commit_k, text_fullquotationmark_left, commit_K ] }
+      - {click: l, label: L, swipe_up: commit_halfquote, swipe_down: "'", long_click: [ commit_l, commit_halfquote, commit_L ] }
+      - {click: ; }
+      - {width: *md_line2_blank_right_w }
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {click: shift, has_menu: text_delimiter, width: *md_line3_func_left_w, name: shift, preview: false }
+      - {click: z, label: Z, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
+      - {click: x, label: X, swipe_up: commit_halfunderline, swipe_down: "_", long_click: [ commit_x, commit_halfunderline, commit_X ] }
+      - {click: c, label: C, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_c, commit_halfpoundsign, commit_C ] }
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {width: *md_line234_blank_w}
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
+      - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
+      - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_md, width: *md_line4_func_left1_w, name: symbol, preview: false }
+      - {click: eisu_toggle_123_number_md_md, has_menu: text_halfperiod, width: *md_line4_func_left2_w, name: number, preview: false }
+      - {click: space, width: *md_line4_space_2left_left_w, name: space, swipe_up: select_second, preview: false }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space, swipe_up: select_second, preview: false }
+      - {click: eisu_toggle_ABC_english_md_md_schema_easy_en, has_menu: text_halfcomma, width: *md_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
+      - {width: *md_edge_w }
+  default_lg_sm:
+    name: default_lg_sm
+    ascii_mode: 0
+    width: *lg_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+   #第1行
+      - {width: *lg_edge_w }
+      - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
+      - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
+      - {click: e, label: E, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_e, commit_3, commit_E ] }
+      - {click: r, label: R, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_r, commit_4, commit_R ] }
+      - {click: t, label: T, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_t, commit_5, commit_T ] }
+      - {width: *lg_line1_blank_w}
+      - {click: y, label: Y, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_y, commit_6, commit_Y ] }
+      - {click: u, label: U, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_u, commit_7, commit_U ] }
+      - {click: i, label: I, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_i, commit_8, commit_I ] }
+      - {click: o, label: O, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_o, commit_9, commit_O ] }
+      - {click: p, label: P, swipe_up: commit_0, swipe_down: "〇", long_click: [ commit_p, commit_0, commit_P ] }
+      - {width: *lg_edge_w }
+    #第2行
+      - {width: *lg_edge_w }
+      - {width: *lg_line2_blank_left_w }
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [ commit_a, commit_fulltilde, commit_A ] }
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [ commit_s, commit_halfslash, commit_S ] }
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [ commit_d, commit_fullcolon, commit_D ] }
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [ commit_f, commit_fullsemicolon, commit_F ] }
+      - {click: g, label: G, swipe_up: text_halfbracket_left, swipe_down: "(", long_click: [ commit_g, text_halfbracket_left, commit_G ] }
+      - {width: *lg_line234_blank_w}
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [ commit_h, commit_half_rightparen, commit_H ] }
+      - {click: j, label: J, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_j, commit_halfat, commit_J ] }
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left, swipe_down: '"', long_click: [ commit_k, text_fullquotationmark_left, commit_K ] }
+      - {click: l, label: L, swipe_up: commit_halfquote, swipe_down: "'", long_click: [ commit_l, commit_halfquote, commit_L ] }
+      - {click: ; }
+      - {width: *lg_line2_blank_right_w }
+      - {width: *lg_edge_w }
+    #第3行
+      - {width: *lg_edge_w }
+      - {click: shift, has_menu: text_delimiter, width: *lg_line3_func_left_w, name: shift, preview: false }
+      - {click: z, label: Z, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
+      - {click: x, label: X, swipe_up: commit_halfunderline, swipe_down: "_", long_click: [ commit_x, commit_halfunderline, commit_X ] }
+      - {click: c, label: C, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_c, commit_halfpoundsign, commit_C ] }
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {width: *lg_line234_blank_w}
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
+      - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
+      - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {width: *lg_edge_w }
+    #第4行
+      - {width: *lg_edge_w }
+      - {click: eisu_toggle_符_symbols_lg_sm, width: *lg_line4_func_left1_w, name: symbol, preview: false }
+      - {click: eisu_toggle_123_number_lg_sm, has_menu: text_halfperiod, width: *lg_line4_func_left2_w, name: number, preview: false }
+      - {click: space, width: *lg_line4_space_2left_left_w, name: space, swipe_up: select_second, preview: false }
+      - {width: *lg_line234_blank_w}
+      - {click: space, width: *lg_line4_space_2right_right_w, name: space, swipe_up: select_second, preview: false }
+      - {click: eisu_toggle_ABC_english_lg_sm_schema_easy_en, has_menu: text_halfcomma, width: *lg_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *lg_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
+      - {width: *lg_edge_w }
+  default_sm_md:
+    name: default
+    ascii_mode: 0
+    height: *sm_base_h
+    width: *sm_base_w
+    height_land: *sm_base_h
+    horizontal_gap: *sm_horizontal_gap_base_h
+    vertical_gap: *sm_vertical_gap_base_h
+    vertical_gap_land: *sm_vertical_gap_base_h
+    round_corner: 6
+    key_text_size: 19
+    key_upper_text_size: 10
+    key_down_text_size: 8
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 3
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: -1
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    preview_round_corner: 9
+    long_preview_round_corner: 9
+    long_preview_padding: 0
+    long_preview_margin: 4
+    preview: true
+    shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
+    keys:
+   #第1行
+      - {width: *sm_edge_w }
+      - {click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
+      - {click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
+      - {click: e, label: E, swipe_up: commit_3, swipe_down: "三", long_click: [ commit_e, commit_3, commit_E ] }
+      - {click: r, label: R, swipe_up: commit_4, swipe_down: "四", long_click: [ commit_r, commit_4, commit_R ] }
+      - {click: t, label: T, swipe_up: commit_5, swipe_down: "五", long_click: [ commit_t, commit_5, commit_T ] }
+      - {click: y, label: Y, swipe_up: commit_6, swipe_down: "六", long_click: [ commit_y, commit_6, commit_Y ] }
+      - {click: u, label: U, swipe_up: commit_7, swipe_down: "七", long_click: [ commit_u, commit_7, commit_U ] }
+      - {click: i, label: I, swipe_up: commit_8, swipe_down: "八", long_click: [ commit_i, commit_8, commit_I ] }
+      - {click: o, label: O, swipe_up: commit_9, swipe_down: "九", long_click: [ commit_o, commit_9, commit_O ] }
+      - {click: p, label: P, swipe_up: commit_0, swipe_down: "〇", long_click: [ commit_p, commit_0, commit_P ] }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {click: a, label: A, swipe_up: commit_fulltilde, swipe_down: "~", long_click: [ commit_a, commit_fulltilde, commit_A ] }
+      - {click: s, label: S, swipe_up: commit_halfslash, swipe_down: "/", long_click: [ commit_s, commit_halfslash, commit_S ] }
+      - {click: d, label: D, swipe_up: commit_fullcolon, swipe_down: ":", long_click: [ commit_d, commit_fullcolon, commit_D ] }
+      - {click: f, label: F, swipe_up: commit_fullsemicolon, swipe_down: ";", long_click: [ commit_f, commit_fullsemicolon, commit_F ] }
+      - {click: g, label: G, swipe_up: text_halfbracket_left, swipe_down: "(", long_click: [ commit_g, text_halfbracket_left, commit_G ] }
+      - {click: h, label: H, swipe_up: commit_half_rightparen, swipe_down: ")", long_click: [ commit_h, commit_half_rightparen, commit_H ] }
+      - {click: j, label: J, swipe_up: commit_halfat, swipe_down: "@", long_click: [ commit_j, commit_halfat, commit_J ] }
+      - {click: k, label: K, swipe_up: text_fullquotationmark_left, swipe_down: '"', long_click: [ commit_k, text_fullquotationmark_left, commit_K ] }
+      - {click: l, label: L, swipe_up: commit_halfquote, swipe_down: "'", long_click: [ commit_l, commit_halfquote, commit_L ] }
+      - {click: ; }
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {click: shift, has_menu: text_delimiter, width: *sm_line3_func_left_w, name: shift, preview: false }
+      - {click: z, label: Z, swipe_up: commit_halfminus, swipe_down: "-", long_click: [ commit_z, commit_halfminus, commit_Z ] }
+      - {click: x, label: X, swipe_up: commit_halfunderline, swipe_down: "_", long_click: [ commit_x, commit_halfunderline, commit_X ] }
+      - {click: c, label: C, swipe_up: commit_halfpoundsign, swipe_down: "#", long_click: [ commit_c, commit_halfpoundsign, commit_C ] }
+      - {click: v, label: V, swipe_up: commit_fullquestionmark, swipe_down: "?", long_click: [ commit_v, commit_fullquestionmark, commit_V ] }
+      - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
+      - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
+      - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
+      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_符_symbols, width: *sm_line4_func_left1_w, name: symbol, preview: false }
+      - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: *sm_line4_func_left2_w, name: number, preview: false }
+      - {click: space, width: *sm_line4_2left_2right_space_w, name: space, swipe_up: select_second, preview: false }
+      - {click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: *sm_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *sm_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
+      - {width: *sm_edge_w }
+
+  english:
+    ascii_mode: 1
+    lock: true
+    name: english
+    keys:
+    #第1行
+      - {width: *sm_edge_w }
+      - {click: q, swipe_up: commit_1, long_click: [ q, 1, Q ] }
+      - {click: w, swipe_up: commit_2, long_click: [ w, 2, W ] }
+      - {click: e, swipe_up: commit_3, long_click: [ e, 3, E ] }
+      - {click: r, swipe_up: commit_4, long_click: [ r, 4, R ] }
+      - {click: t, swipe_up: commit_5, long_click: [ t, 5, T ] }
+      - {click: y, swipe_up: commit_6, long_click: [ y, 6, Y ] }
+      - {click: u, swipe_up: commit_7, long_click: [ u, 7, U ] }
+      - {click: i, swipe_up: commit_8, long_click: [ i, 8, I ] }
+      - {click: o, swipe_up: commit_9, long_click: [ o, 9, O ] }
+      - {click: p, swipe_up: commit_0, long_click: [ p, 0, P ] }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {width: *sm_line2_blank_left_w}
+      - {click: a, swipe_up: "~", long_click: [ a, "~", A ] }
+      - {click: s, swipe_up: "/", long_click: [ s, "/", S ] }
+      - {click: d, swipe_up: ":", long_click: [ d, ":", D ] }
+      - {click: f, swipe_up: ";", long_click: [ f, ";", F ] }
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {click: h, swipe_up: ")", long_click: [ h, ")", H ] }
+      - {click: j, swipe_up: "@", long_click: [ j, "@", J ] }
+      - {click: k, swipe_up: commit_halfbackslash, long_click: [ k, "\"", K ] }
+      - {click: l, swipe_up: "”", long_click: [ l, "”", L ] }
+
+      - {width: *sm_line2_blank_right_w}
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {click: shift, width: *sm_line3_func_left_w, name: shift }
+      - {click: z, swipe_up: "-", long_click: [ z, "-", Z ] }
+      - {click: x, swipe_up: "_", long_click: [ x, "_", X ] }
+      - {click: c, swipe_up: "#", long_click: [ c, "#", C ] }
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
+      - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
+      - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
+      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_符_symbols, width: *sm_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_123_number, width: *sm_line4_func_left2_w, name: number }
+      - {click: send_dot, width: *sm_line4_func_left2_w }
+      - {click: space, width: *sm_line4_3left_2right_space_w, name: space }
+      - {click: eisu_toggle_en_zh_default_schema_default, width: *sm_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *sm_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+      - {width: *sm_edge_w }
+  english_land:
+    ascii_mode: 1
+    lock: true
+    name: english
+    width: *lg_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+    #第1行
+      - {width: *lg_edge_w }
+      - {click: q, swipe_up: commit_1, long_click: [ q, 1, Q ] }
+      - {click: w, swipe_up: commit_2, long_click: [ w, 2, W ] }
+      - {click: e, swipe_up: commit_3, long_click: [ e, 3, E ] }
+      - {click: r, swipe_up: commit_4, long_click: [ r, 4, R ] }
+      - {click: t, swipe_up: commit_5, long_click: [ t, 5, T ] }
+      - {width: *lg_line1_blank_w}
+      - {click: y, swipe_up: commit_6, long_click: [ y, 6, Y ] }
+      - {click: u, swipe_up: commit_7, long_click: [ u, 7, U ] }
+      - {click: i, swipe_up: commit_8, long_click: [ i, 8, I ] }
+      - {click: o, swipe_up: commit_9, long_click: [ o, 9, O ] }
+      - {click: p, swipe_up: commit_0, long_click: [ p, 0, P ] }
+      - {width: *lg_edge_w }
+    #第2行
+      - {width: *lg_edge_w }
+      - {width: *lg_line2_blank_left_w}
+      - {click: a, swipe_up: "~", long_click: [ a, "~", A ] }
+      - {click: s, swipe_up: "/", long_click: [ s, "/", S ] }
+      - {click: d, swipe_up: ":", long_click: [ d, ":", D ] }
+      - {click: f, swipe_up: ";", long_click: [ f, ";", F ] }
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {width: *lg_line234_blank_w}
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {click: h, swipe_up: ")", long_click: [ h, ")", H ] }
+      - {click: j, swipe_up: "@", long_click: [ j, "@", J ] }
+      - {click: k, swipe_up: commit_halfbackslash, long_click: [ k, "\"", K ] }
+      - {click: l, swipe_up: "”", long_click: [ l, "”", L ] }
+
+      - {width: *lg_line2_blank_right_w}
+      - {width: *lg_edge_w }
+    #第3行
+      - {width: *lg_edge_w }
+      - {click: shift, width: *lg_line3_func_left_w, name: shift }
+      - {click: z, swipe_up: "-", long_click: [ z, "-", Z ] }
+      - {click: x, swipe_up: "_", long_click: [ x, "_", X ] }
+      - {click: c, swipe_up: "#", long_click: [ c, "#", C ] }
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {width: *lg_line234_blank_w}
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
+      - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
+      - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_edge_w }
+    #第4行
+      - {width: *lg_edge_w }
+      - {click: eisu_toggle_符_symbols_land, width: *lg_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_123_number_land, width: *lg_line4_func_left2_w, name: number }
+      - {click: send_dot, width: *lg_line4_func_left3_w }
+      - {click: space, width: *lg_line4_space_3left_left_w, name: space }
+      - {width: *lg_line234_blank_w}
+      - {click: space, width: *lg_line4_space_2right_right_w, name: space }
+      - {click: eisu_toggle_en_zh_default_land_schema_default, width: *lg_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *lg_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+      - {width: *lg_edge_w }
+  english_md_sm:
+    ascii_mode: 1
+    lock: true
+    width: *md_base_w
+    height: *sm_base_h
+    height_land: *sm_base_h
+    horizontal_gap: *sm_horizontal_gap_base_h
+    vertical_gap: *sm_vertical_gap_base_h
+    vertical_gap_land: *sm_vertical_gap_base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+    #第1行
+      - {width: *md_edge_w }
+      - {click: q, swipe_up: commit_1, long_click: [ q, 1, Q ] }
+      - {click: w, swipe_up: commit_2, long_click: [ w, 2, W ] }
+      - {click: e, swipe_up: commit_3, long_click: [ e, 3, E ] }
+      - {click: r, swipe_up: commit_4, long_click: [ r, 4, R ] }
+      - {click: t, swipe_up: commit_5, long_click: [ t, 5, T ] }
+      - {width: *md_line1_blank_w}
+      - {click: y, swipe_up: commit_6, long_click: [ y, 6, Y ] }
+      - {click: u, swipe_up: commit_7, long_click: [ u, 7, U ] }
+      - {click: i, swipe_up: commit_8, long_click: [ i, 8, I ] }
+      - {click: o, swipe_up: commit_9, long_click: [ o, 9, O ] }
+      - {click: p, swipe_up: commit_0, long_click: [ p, 0, P ] }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_line2_blank_left_w}
+      - {click: a, swipe_up: "~", long_click: [ a, "~", A ] }
+      - {click: s, swipe_up: "/", long_click: [ s, "/", S ] }
+      - {click: d, swipe_up: ":", long_click: [ d, ":", D ] }
+      - {click: f, swipe_up: ";", long_click: [ f, ";", F ] }
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {width: *md_line234_blank_w}
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {click: h, swipe_up: ")", long_click: [ h, ")", H ] }
+      - {click: j, swipe_up: "@", long_click: [ j, "@", J ] }
+      - {click: k, swipe_up: commit_halfbackslash, long_click: [ k, "\"", K ] }
+      - {click: l, swipe_up: "”", long_click: [ l, "”", L ] }
+
+      - {width: *md_line2_blank_right_w}
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {click: shift, width: *md_line3_func_left_w, name: shift }
+      - {click: z, swipe_up: "-", long_click: [ z, "-", Z ] }
+      - {click: x, swipe_up: "_", long_click: [ x, "_", X ] }
+      - {click: c, swipe_up: "#", long_click: [ c, "#", C ] }
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {width: *md_line234_blank_w}
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
+      - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
+      - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_sm, width: *md_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_123_number_md_sm, width: *md_line4_func_left2_w, name: number }
+      - {click: send_dot, width: *md_line4_func_left3_w }
+      - {click: space, width: *md_line4_space_3left_left_w, name: space }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space }
+      - {click: eisu_toggle_en_zh_default_md_sm_schema_default, width: *md_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+      - {width: *md_edge_w }
+  english_md_lg:
+    ascii_mode: 1
+    lock: true
+    name: english
+    width: *md_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+    #第1行
+      - {width: *md_edge_w }
+      - {click: q, swipe_up: commit_1, long_click: [ q, 1, Q ] }
+      - {click: w, swipe_up: commit_2, long_click: [ w, 2, W ] }
+      - {click: e, swipe_up: commit_3, long_click: [ e, 3, E ] }
+      - {click: r, swipe_up: commit_4, long_click: [ r, 4, R ] }
+      - {click: t, swipe_up: commit_5, long_click: [ t, 5, T ] }
+      - {width: *md_line1_blank_w}
+      - {click: y, swipe_up: commit_6, long_click: [ y, 6, Y ] }
+      - {click: u, swipe_up: commit_7, long_click: [ u, 7, U ] }
+      - {click: i, swipe_up: commit_8, long_click: [ i, 8, I ] }
+      - {click: o, swipe_up: commit_9, long_click: [ o, 9, O ] }
+      - {click: p, swipe_up: commit_0, long_click: [ p, 0, P ] }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_line2_blank_left_w}
+      - {click: a, swipe_up: "~", long_click: [ a, "~", A ] }
+      - {click: s, swipe_up: "/", long_click: [ s, "/", S ] }
+      - {click: d, swipe_up: ":", long_click: [ d, ":", D ] }
+      - {click: f, swipe_up: ";", long_click: [ f, ";", F ] }
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {width: *md_line234_blank_w}
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {click: h, swipe_up: ")", long_click: [ h, ")", H ] }
+      - {click: j, swipe_up: "@", long_click: [ j, "@", J ] }
+      - {click: k, swipe_up: commit_halfbackslash, long_click: [ k, "\"", K ] }
+      - {click: l, swipe_up: "”", long_click: [ l, "”", L ] }
+
+      - {width: *md_line2_blank_right_w}
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {click: shift, width: *md_line3_func_left_w, name: shift }
+      - {click: z, swipe_up: "-", long_click: [ z, "-", Z ] }
+      - {click: x, swipe_up: "_", long_click: [ x, "_", X ] }
+      - {click: c, swipe_up: "#", long_click: [ c, "#", C ] }
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {width: *md_line234_blank_w}
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
+      - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
+      - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_lg, width: *md_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_123_number_md_lg, width: *md_line4_func_left2_w, name: number }
+      - {click: send_dot, width: *md_line4_func_left3_w }
+      - {click: space, width: *md_line4_space_3left_left_w, name: space }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space }
+      - {click: eisu_toggle_en_zh_default_md_lg_schema_default, width: *md_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+      - {width: *md_edge_w }
+  english_md_md:
+    ascii_mode: 1
+    lock: true
+    name: english
+    width: *md_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+    #第1行
+      - {width: *md_edge_w }
+      - {click: q, swipe_up: commit_1, long_click: [ q, 1, Q ] }
+      - {click: w, swipe_up: commit_2, long_click: [ w, 2, W ] }
+      - {click: e, swipe_up: commit_3, long_click: [ e, 3, E ] }
+      - {click: r, swipe_up: commit_4, long_click: [ r, 4, R ] }
+      - {click: t, swipe_up: commit_5, long_click: [ t, 5, T ] }
+      - {width: *md_line1_blank_w}
+      - {click: y, swipe_up: commit_6, long_click: [ y, 6, Y ] }
+      - {click: u, swipe_up: commit_7, long_click: [ u, 7, U ] }
+      - {click: i, swipe_up: commit_8, long_click: [ i, 8, I ] }
+      - {click: o, swipe_up: commit_9, long_click: [ o, 9, O ] }
+      - {click: p, swipe_up: commit_0, long_click: [ p, 0, P ] }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_line2_blank_left_w}
+      - {click: a, swipe_up: "~", long_click: [ a, "~", A ] }
+      - {click: s, swipe_up: "/", long_click: [ s, "/", S ] }
+      - {click: d, swipe_up: ":", long_click: [ d, ":", D ] }
+      - {click: f, swipe_up: ";", long_click: [ f, ";", F ] }
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {width: *md_line234_blank_w}
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {click: h, swipe_up: ")", long_click: [ h, ")", H ] }
+      - {click: j, swipe_up: "@", long_click: [ j, "@", J ] }
+      - {click: k, swipe_up: commit_halfbackslash, long_click: [ k, "\"", K ] }
+      - {click: l, swipe_up: "”", long_click: [ l, "”", L ] }
+
+      - {width: *md_line2_blank_right_w}
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {click: shift, width: *md_line3_func_left_w, name: shift }
+      - {click: z, swipe_up: "-", long_click: [ z, "-", Z ] }
+      - {click: x, swipe_up: "_", long_click: [ x, "_", X ] }
+      - {click: c, swipe_up: "#", long_click: [ c, "#", C ] }
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {width: *md_line234_blank_w}
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
+      - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
+      - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_md, width: *md_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_123_number_md_md, width: *md_line4_func_left2_w, name: number }
+      - {click: send_dot, width: *md_line4_func_left3_w }
+      - {click: space, width: *md_line4_space_3left_left_w, name: space }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space }
+      - {click: eisu_toggle_en_zh_default_md_md_schema_default, width: *md_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+      - {width: *md_edge_w }
+  english_lg_sm:
+    ascii_mode: 1
+    lock: true
+    name: english
+    width: *lg_base_w
+    height: *base_h
+    key_text_offset_x: 0
+    key_text_offset_y: 4
+    key_press_text_offset_x: 0
+    key_press_text_offset_y: 0
+    key_upper_press_text_offset_x: 0
+    key_upper_press_text_offset_y: 0
+    key_upper_text_offset_x: 0
+    key_upper_text_offset_y: 2
+    key_down_text_offset_x: 0
+    key_down_text_offset_y: 0
+    key_down_press_text_offset_x: 0
+    key_down_press_text_offset_y: 0
+    keys:
+    #第1行
+      - {width: *lg_edge_w }
+      - {click: q, swipe_up: commit_1, long_click: [ q, 1, Q ] }
+      - {click: w, swipe_up: commit_2, long_click: [ w, 2, W ] }
+      - {click: e, swipe_up: commit_3, long_click: [ e, 3, E ] }
+      - {click: r, swipe_up: commit_4, long_click: [ r, 4, R ] }
+      - {click: t, swipe_up: commit_5, long_click: [ t, 5, T ] }
+      - {width: *lg_line1_blank_w}
+      - {click: y, swipe_up: commit_6, long_click: [ y, 6, Y ] }
+      - {click: u, swipe_up: commit_7, long_click: [ u, 7, U ] }
+      - {click: i, swipe_up: commit_8, long_click: [ i, 8, I ] }
+      - {click: o, swipe_up: commit_9, long_click: [ o, 9, O ] }
+      - {click: p, swipe_up: commit_0, long_click: [ p, 0, P ] }
+      - {width: *lg_edge_w }
+    #第2行
+      - {width: *lg_edge_w }
+      - {width: *lg_line2_blank_left_w}
+      - {click: a, swipe_up: "~", long_click: [ a, "~", A ] }
+      - {click: s, swipe_up: "/", long_click: [ s, "/", S ] }
+      - {click: d, swipe_up: ":", long_click: [ d, ":", D ] }
+      - {click: f, swipe_up: ";", long_click: [ f, ";", F ] }
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {width: *lg_line234_blank_w}
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {click: h, swipe_up: ")", long_click: [ h, ")", H ] }
+      - {click: j, swipe_up: "@", long_click: [ j, "@", J ] }
+      - {click: k, swipe_up: commit_halfbackslash, long_click: [ k, "\"", K ] }
+      - {click: l, swipe_up: "”", long_click: [ l, "”", L ] }
+
+      - {width: *lg_line2_blank_right_w}
+      - {width: *lg_edge_w }
+    #第3行
+      - {width: *lg_edge_w }
+      - {click: shift, width: *lg_line3_func_left_w, name: shift }
+      - {click: z, swipe_up: "-", long_click: [ z, "-", Z ] }
+      - {click: x, swipe_up: "_", long_click: [ x, "_", X ] }
+      - {click: c, swipe_up: "#", long_click: [ c, "#", C ] }
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {width: *lg_line234_blank_w}
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
+      - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
+      - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_edge_w }
+    #第4行
+      - {width: *lg_edge_w }
+      - {click: eisu_toggle_符_symbols_lg_sm, width: *lg_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_123_number_lg_sm, width: *lg_line4_func_left2_w, name: number }
+      - {click: send_dot, width: *lg_line4_func_left3_w }
+      - {click: space, width: *lg_line4_space_3left_left_w, name: space }
+      - {width: *lg_line234_blank_w}
+      - {click: space, width: *lg_line4_space_2right_right_w, name: space }
+      - {click: eisu_toggle_en_zh_default_lg_sm_schema_default, width: *lg_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *lg_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+      - {width: *lg_edge_w }
+  english_sm_md:
+    ascii_mode: 1
+    lock: true
+    name: english
+    keys:
+    #第1行
+      - {width: *sm_edge_w }
+      - {click: q, swipe_up: commit_1, long_click: [ q, 1, Q ] }
+      - {click: w, swipe_up: commit_2, long_click: [ w, 2, W ] }
+      - {click: e, swipe_up: commit_3, long_click: [ e, 3, E ] }
+      - {click: r, swipe_up: commit_4, long_click: [ r, 4, R ] }
+      - {click: t, swipe_up: commit_5, long_click: [ t, 5, T ] }
+      - {click: y, swipe_up: commit_6, long_click: [ y, 6, Y ] }
+      - {click: u, swipe_up: commit_7, long_click: [ u, 7, U ] }
+      - {click: i, swipe_up: commit_8, long_click: [ i, 8, I ] }
+      - {click: o, swipe_up: commit_9, long_click: [ o, 9, O ] }
+      - {click: p, swipe_up: commit_0, long_click: [ p, 0, P ] }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {width: *sm_line2_blank_left_w}
+      - {click: a, swipe_up: "~", long_click: [ a, "~", A ] }
+      - {click: s, swipe_up: "/", long_click: [ s, "/", S ] }
+      - {click: d, swipe_up: ":", long_click: [ d, ":", D ] }
+      - {click: f, swipe_up: ";", long_click: [ f, ";", F ] }
+      - {click: g, swipe_up: text_halfbracket_left, long_click: [ g, "(", G ] }
+      - {click: h, swipe_up: ")", long_click: [ h, ")", H ] }
+      - {click: j, swipe_up: "@", long_click: [ j, "@", J ] }
+      - {click: k, swipe_up: commit_halfbackslash, long_click: [ k, "\"", K ] }
+      - {click: l, swipe_up: "”", long_click: [ l, "”", L ] }
+
+      - {width: *sm_line2_blank_right_w}
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {click: shift, width: *sm_line3_func_left_w, name: shift }
+      - {click: z, swipe_up: "-", long_click: [ z, "-", Z ] }
+      - {click: x, swipe_up: "_", long_click: [ x, "_", X ] }
+      - {click: c, swipe_up: "#", long_click: [ c, "#", C ] }
+      - {click: v, swipe_up: "?", long_click: [ v, "?", V ] }
+      - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
+      - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
+      - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
+      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_符_symbols, width: *sm_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_123_number, width: *sm_line4_func_left2_w, name: number }
+      - {click: send_dot, width: *sm_line4_func_left2_w }
+      - {click: space, width: *sm_line4_3left_2right_space_w, name: space }
+      - {click: eisu_toggle_en_zh_default_schema_default, width: *sm_line4_func_right2_w, name: english, preview: false }
+      - {click: return, width: *sm_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+      - {width: *sm_edge_w }
+  number:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: number_keyboard
+    preview: true
+    height: *base_h
+    width: *sm_number_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *sm_edge_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {width: *sm_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot }
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {width: *sm_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_符_symbols, name: default }
+      - {click: eisu_toggle_返回_default }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *sm_edge_w }
+  number_land:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: number_land
+    preview: true
+    height: *base_h
+    width: *lg_number_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *lg_edge_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_line234_blank_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_edge_w }
+    #第2行
+      - {width: *lg_edge_w }
+      - {width: *lg_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *lg_line234_blank_w }
+      - {width: *lg_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *lg_edge_w }
+    #第3行
+      - {width: *lg_edge_w }
+      - {width: *lg_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *lg_line234_blank_w }
+      - {width: *lg_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *lg_edge_w }
+    #第4行
+      - {width: *lg_edge_w }
+      - {click: eisu_toggle_符_symbols_land, name: default }
+      - {click: eisu_toggle_返回_default_land }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *lg_line234_blank_w }
+      - {click: eisu_toggle_符_symbols_land, name: default }
+      - {click: eisu_toggle_返回_default_land }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *lg_edge_w }
+  number_md_sm:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: number_md_sm
+    preview: true
+    height: *sm_base_h
+    width: *md_number_w
+    vertical_gap: *sm_vertical_gap_base_h
+    vertical_gap_land: *sm_vertical_gap_base_h
+    height_land: *sm_base_h
+    horizontal_gap: *sm_horizontal_gap_base_h
+    key_text_size: 14
+    key_upper_text_size: 9
+    key_down_text_size: 8
+    keys:
+    #第1行
+      - {width: *md_edge_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *sm_number_collection_base_h, height_land: *sm_number_collection_base_h, row_height: *sm_number_row_h, row_height_land: *sm_number_row_h, row_vertical_gap: *sm_number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_line234_blank_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *sm_number_collection_base_h, height_land: *sm_number_collection_base_h, row_height: *sm_number_row_h, row_height_land: *sm_number_row_h, row_vertical_gap: *sm_number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *md_line234_blank_w }
+      - {width: *md_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {width: *md_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *md_line234_blank_w }
+      - {width: *md_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_sm, name: default }
+      - {click: eisu_toggle_返回_default_md_sm }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_line234_blank_w }
+      - {click: eisu_toggle_符_symbols_md_sm, name: default }
+      - {click: eisu_toggle_返回_default_md_sm }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_edge_w }
+  number_md_lg:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: number_md_lg
+    preview: true
+    height: *base_h
+    width: *md_number_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *md_edge_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_line234_blank_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *md_line234_blank_w }
+      - {width: *md_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {width: *md_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *md_line234_blank_w }
+      - {width: *md_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_lg, name: default }
+      - {click: eisu_toggle_返回_default_md_lg }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_line234_blank_w }
+      - {click: eisu_toggle_符_symbols_md_lg, name: default }
+      - {click: eisu_toggle_返回_default_md_lg }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_edge_w }
+  number_md_md:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: number_md_md
+    preview: true
+    height: *base_h
+    width: *md_number_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *md_edge_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_line234_blank_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w }
+    #第2行
+      - {width: *md_edge_w }
+      - {width: *md_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *md_line234_blank_w }
+      - {width: *md_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *md_edge_w }
+    #第3行
+      - {width: *md_edge_w }
+      - {width: *md_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *md_line234_blank_w }
+      - {width: *md_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *md_edge_w }
+    #第4行
+      - {width: *md_edge_w }
+      - {click: eisu_toggle_符_symbols_md_md, name: default }
+      - {click: eisu_toggle_返回_default_md_md }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_line234_blank_w }
+      - {click: eisu_toggle_符_symbols_md_md, name: default }
+      - {click: eisu_toggle_返回_default_md_md }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_edge_w }
+  number_lg_sm:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: number_lg_sm
+    preview: true
+    height: *base_h
+    width: *lg_number_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *lg_edge_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_line234_blank_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_edge_w }
+    #第2行
+      - {width: *lg_edge_w }
+      - {width: *lg_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *lg_line234_blank_w }
+      - {width: *lg_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot}
+      - {width: *lg_edge_w }
+    #第3行
+      - {width: *lg_edge_w }
+      - {width: *lg_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *lg_line234_blank_w }
+      - {width: *lg_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *lg_edge_w }
+    #第4行
+      - {width: *lg_edge_w }
+      - {click: eisu_toggle_符_symbols_lg_sm, name: default }
+      - {click: eisu_toggle_返回_default_lg_sm }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *lg_line234_blank_w }
+      - {click: eisu_toggle_符_symbols_lg_sm, name: default }
+      - {click: eisu_toggle_返回_default_lg_sm }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *lg_edge_w }
+  number_sm_md:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: number_keyboard
+    preview: true
+    height: *sm_base_h
+    width: *sm_base_w
+    height_land: *sm_base_h
+    horizontal_gap: *sm_horizontal_gap_base_h
+    vertical_gap: *sm_vertical_gap_base_h
+    vertical_gap_land: *sm_vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *sm_edge_w }
+      - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *sm_number_collection_base_h, height_land: *sm_number_collection_base_h, row_height: *sm_number_row_h, row_height_land: *sm_number_row_h, row_vertical_gap: *sm_number_row_vertical_gap, show_row_back_image: false, name: table }
+      - {click: 1 }
+      - {click: 2 }
+      - {click: 3 }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {width: *sm_number_w}
+      - {click: 4 }
+      - {click: 5 }
+      - {click: 6 }
+      - {click: send_dot, name: dot }
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {width: *sm_number_w}
+      - {click: 7 }
+      - {click: 8 }
+      - {click: 9 }
+      - {click: send_equal, name: send_equal }
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_符_symbols_sm_md, name: default }
+      - {click: eisu_toggle_返回_default_sm_md }
+      - {click: "0", functional: false}
+      - {click: space, name: space }
+      - {click: return, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *sm_edge_w }
+  symbols:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: symbols
+    preview: true
+    height: *base_h
+    width: *sm_base_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *sm_edge_w }
+      - {click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
+      - {click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
+      - {click: 3, long_click: [ "3", "三", "肆", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+      - {click: 4, long_click: [ "4", "四", "叁", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
+      - {click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
+      - {click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
+      - {click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
+      - {click: 8, long_click: [ "8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧" ] }
+      - {click: 9, long_click: [ "9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨" ] }
+      - {click: 0, long_click: [ "0", "零", "０", "⓪", "°" ] }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {width: *sm_line2_blank_left_w}
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: [ "～", "~" ] }
+      - {click: "/", long_click: [ "/", "／", "|", "｜", "＼", "\\" ] }
+      - {click: ":", long_click: [ "：'", ":" ] }
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [ text_halfsemicolon_default, text_fullsemicolon_default ] }
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [ text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default ] }
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [ text_halfat_default, text_halfcaret_default ] }
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [ text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default ] }
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [ text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default ] }
+      - {width: *sm_line2_blank_right_w}
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_更多_dotSymbols, width: *sm_line3_func_left_w, name: symbol, long_click: [ "" ] }
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: [ "-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default ] }
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [ text_halfunderline_default, text_fullunderline_default ] }
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [ text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default ] }
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [ text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default ] }
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [ text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default ] }
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
+      - {click: backspace, width: *sm_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_返回_default_schema_default, width: *sm_line4_func_left1_w, name: default }
+      - {click: eisu_toggle_123_number_md_lg, name: numberPeriodFull, width: *sm_line4_func_left2_w }
+      - {click: send_dot, width: *sm_line4_func_left2_w }
+      - {click: space, width: *sm_line4_3left_2right_space_w, name: space }
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *sm_line4_func_right2_w, preview: false }
+      - {click: return, width: *sm_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *sm_edge_w }
+
+  symbols_land:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: symbols_land
+    preview: true
+    height: *base_h
+    width: *lg_base_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *lg_edge_w}
+      - {click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
+      - {click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
+      - {click: 3, long_click: [ "3", "三", "肆", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+      - {click: 4, long_click: [ "4", "四", "叁", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
+      - {click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
+      - {width: *lg_line1_blank_w}
+      - {click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
+      - {click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
+      - {click: 8, long_click: [ "8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧" ] }
+      - {click: 9, long_click: [ "9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨" ] }
+      - {click: 0, long_click: [ "0", "零", "０", "⓪", "°" ] }
+      - {width: *lg_edge_w}
+    #第2行
+      - {width: *lg_edge_w}
+      - {width: *lg_line2_blank_left_w}
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: [ "～", "~" ] }
+      - {click: "/", long_click: [ "/", "／", "|", "｜", "＼", "\\" ] }
+      - {click: ":", long_click: [ "：'", ":" ] }
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [ text_halfsemicolon_default, text_fullsemicolon_default ] }
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      - {width: *lg_line234_blank_w}
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [ text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default ] }
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [ text_halfat_default, text_halfcaret_default ] }
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [ text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default ] }
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [ text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default ] }
+      - {width: *lg_line2_blank_right_w}
+      - {width: *lg_edge_w}
+    #第3行
+      - {width: *lg_edge_w}
+      - {click: eisu_toggle_更多_dotSymbols, width: *lg_line3_func_left_w, name: symbol, long_click: [ "" ] }
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: [ "-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default ] }
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [ text_halfunderline_default, text_fullunderline_default ] }
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [ text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default ] }
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      - {width: *lg_line234_blank_w}
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [ text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default ] }
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [ text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default ] }
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
+      - {click: backspace, width: *lg_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_edge_w}
+    #第4行
+      - {width: *lg_edge_w}
+      - {click: eisu_toggle_返回_default_land, width: *lg_line4_func_left1_w, name: default }
+      - {click: eisu_toggle_123_number_land, name: numberPeriodFull, width: *lg_line4_func_left2_w }
+      - {click: send_dot, width: *lg_line4_func_left2_w }
+      - {click: space, width: *lg_line4_space_3left_left_w, name: space }
+      - {width: *lg_line234_blank_w}
+      - {click: space, width: *lg_line4_space_2right_right_w, name: space }
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *lg_line4_func_right2_w, preview: false }
+      - {click: return, width: *lg_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *lg_edge_w}
+  symbols_md_sm:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: symbols_md_sm
+    preview: true
+    height: *sm_base_h
+    width: *md_base_w
+    vertical_gap: *sm_vertical_gap_base_h
+    vertical_gap_land: *sm_vertical_gap_base_h
+    height_land: *sm_base_h
+    horizontal_gap: *sm_horizontal_gap_base_h
+    key_text_size: 14
+    key_upper_text_size: 9
+    key_down_text_size: 8
+    keys:
+    #第1行
+      - {width: *md_edge_w}
+      - {click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
+      - {click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
+      - {click: 3, long_click: [ "3", "三", "肆", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+      - {click: 4, long_click: [ "4", "四", "叁", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
+      - {click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
+      - {width: *md_line1_blank_w}
+      - {click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
+      - {click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
+      - {click: 8, long_click: [ "8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧" ] }
+      - {click: 9, long_click: [ "9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨" ] }
+      - {click: 0, long_click: [ "0", "零", "０", "⓪", "°" ] }
+      - {width: *md_edge_w}
+    #第2行
+      - {width: *md_edge_w}
+      - {width: *md_line2_blank_left_w}
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: [ "～", "~" ] }
+      - {click: "/", long_click: [ "/", "／", "|", "｜", "＼", "\\" ] }
+      - {click: ":", long_click: [ "：'", ":" ] }
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [ text_halfsemicolon_default, text_fullsemicolon_default ] }
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      - {width: *md_line234_blank_w}
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [ text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default ] }
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [ text_halfat_default, text_halfcaret_default ] }
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [ text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default ] }
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [ text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default ] }
+      - {width: *md_line2_blank_right_w}
+      - {width: *md_edge_w}
+    #第3行
+      - {width: *md_edge_w}
+      - {click: eisu_toggle_更多_dotSymbols, width: *md_line3_func_left_w, name: symbol, long_click: [ "" ] }
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: [ "-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default ] }
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [ text_halfunderline_default, text_fullunderline_default ] }
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [ text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default ] }
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      - {width: *md_line234_blank_w}
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [ text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default ] }
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [ text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default ] }
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
+      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w}
+    #第4行
+      - {width: *md_edge_w}
+      - {click: eisu_toggle_返回_default_md_sm, width: *md_line4_func_left1_w, name: default }
+      - {click: eisu_toggle_123_number_md_sm, name: numberPeriodFull, width: *md_line4_func_left2_w }
+      - {click: send_dot, width: *md_line4_func_left2_w }
+      - {click: space, width: *md_line4_space_3left_left_w, name: space }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space }
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *md_line4_func_right2_w, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_edge_w}
+  symbols_md_lg:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: symbols_md_lg
+    preview: true
+    height: *base_h
+    width: *md_base_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *md_edge_w}
+      - {click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
+      - {click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
+      - {click: 3, long_click: [ "3", "三", "肆", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+      - {click: 4, long_click: [ "4", "四", "叁", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
+      - {click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
+      - {width: *md_line1_blank_w}
+      - {click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
+      - {click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
+      - {click: 8, long_click: [ "8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧" ] }
+      - {click: 9, long_click: [ "9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨" ] }
+      - {click: 0, long_click: [ "0", "零", "０", "⓪", "°" ] }
+      - {width: *md_edge_w}
+    #第2行
+      - {width: *md_edge_w}
+      - {width: *md_line2_blank_left_w}
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: [ "～", "~" ] }
+      - {click: "/", long_click: [ "/", "／", "|", "｜", "＼", "\\" ] }
+      - {click: ":", long_click: [ "：'", ":" ] }
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [ text_halfsemicolon_default, text_fullsemicolon_default ] }
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      - {width: *md_line234_blank_w}
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [ text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default ] }
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [ text_halfat_default, text_halfcaret_default ] }
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [ text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default ] }
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [ text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default ] }
+      - {width: *md_line2_blank_right_w}
+      - {width: *md_edge_w}
+    #第3行
+      - {width: *md_edge_w}
+      - {click: eisu_toggle_更多_dotSymbols, width: *md_line3_func_left_w, name: symbol, long_click: [ "" ] }
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: [ "-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default ] }
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [ text_halfunderline_default, text_fullunderline_default ] }
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [ text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default ] }
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      - {width: *md_line234_blank_w}
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [ text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default ] }
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [ text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default ] }
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
+      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w}
+    #第4行
+      - {width: *md_edge_w}
+      - {click: eisu_toggle_返回_default_md_lg, width: *md_line4_func_left1_w, name: default }
+      - {click: eisu_toggle_123_number_md_lg, name: numberPeriodFull, width: *md_line4_func_left2_w }
+      - {click: send_dot, width: *md_line4_func_left2_w }
+      - {click: space, width: *md_line4_space_3left_left_w, name: space }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space }
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *md_line4_func_right2_w, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_edge_w}
+  symbols_md_md:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: symbols_md_md
+    preview: true
+    height: *base_h
+    width: *md_base_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *md_edge_w}
+      - {click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
+      - {click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
+      - {click: 3, long_click: [ "3", "三", "肆", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+      - {click: 4, long_click: [ "4", "四", "叁", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
+      - {click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
+      - {width: *md_line1_blank_w}
+      - {click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
+      - {click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
+      - {click: 8, long_click: [ "8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧" ] }
+      - {click: 9, long_click: [ "9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨" ] }
+      - {click: 0, long_click: [ "0", "零", "０", "⓪", "°" ] }
+      - {width: *md_edge_w}
+    #第2行
+      - {width: *md_edge_w}
+      - {width: *md_line2_blank_left_w}
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: [ "～", "~" ] }
+      - {click: "/", long_click: [ "/", "／", "|", "｜", "＼", "\\" ] }
+      - {click: ":", long_click: [ "：'", ":" ] }
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [ text_halfsemicolon_default, text_fullsemicolon_default ] }
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      - {width: *md_line234_blank_w}
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [ text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default ] }
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [ text_halfat_default, text_halfcaret_default ] }
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [ text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default ] }
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [ text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default ] }
+      - {width: *md_line2_blank_right_w}
+      - {width: *md_edge_w}
+    #第3行
+      - {width: *md_edge_w}
+      - {click: eisu_toggle_更多_dotSymbols, width: *md_line3_func_left_w, name: symbol, long_click: [ "" ] }
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: [ "-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default ] }
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [ text_halfunderline_default, text_fullunderline_default ] }
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [ text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default ] }
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      - {width: *md_line234_blank_w}
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [ text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default ] }
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [ text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default ] }
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
+      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *md_edge_w}
+    #第4行
+      - {width: *md_edge_w}
+      - {click: eisu_toggle_返回_default_md_md, width: *md_line4_func_left1_w, name: default }
+      - {click: eisu_toggle_123_number_md_md, name: numberPeriodFull, width: *md_line4_func_left2_w }
+      - {click: send_dot, width: *md_line4_func_left2_w }
+      - {click: space, width: *md_line4_space_3left_left_w, name: space }
+      - {width: *md_line234_blank_w}
+      - {click: space, width: *md_line4_space_2right_right_w, name: space }
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *md_line4_func_right2_w, preview: false }
+      - {click: return, width: *md_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *md_edge_w}
+  symbols_lg_sm:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: symbols_lg_sm
+    preview: true
+    height: *base_h
+    width: *lg_base_w
+    vertical_gap: *vertical_gap_base_h
+    vertical_gap_land: *vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *lg_edge_w}
+      - {click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
+      - {click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
+      - {click: 3, long_click: [ "3", "三", "肆", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+      - {click: 4, long_click: [ "4", "四", "叁", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
+      - {click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
+      - {width: *lg_line1_blank_w}
+      - {click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
+      - {click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
+      - {click: 8, long_click: [ "8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧" ] }
+      - {click: 9, long_click: [ "9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨" ] }
+      - {click: 0, long_click: [ "0", "零", "０", "⓪", "°" ] }
+      - {width: *lg_edge_w}
+    #第2行
+      - {width: *lg_edge_w}
+      - {width: *lg_line2_blank_left_w}
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: [ "～", "~" ] }
+      - {click: "/", long_click: [ "/", "／", "|", "｜", "＼", "\\" ] }
+      - {click: ":", long_click: [ "：'", ":" ] }
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [ text_halfsemicolon_default, text_fullsemicolon_default ] }
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      - {width: *lg_line234_blank_w}
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [ text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default ] }
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [ text_halfat_default, text_halfcaret_default ] }
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [ text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default ] }
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [ text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default ] }
+      - {width: *lg_line2_blank_right_w}
+      - {width: *lg_edge_w}
+    #第3行
+      - {width: *lg_edge_w}
+      - {click: eisu_toggle_更多_dotSymbols, width: *lg_line3_func_left_w, name: symbol, long_click: [ "" ] }
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: [ "-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default ] }
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [ text_halfunderline_default, text_fullunderline_default ] }
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [ text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default ] }
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      - {width: *lg_line234_blank_w}
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [ text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default ] }
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [ text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default ] }
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
+      - {click: backspace, width: *lg_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *lg_edge_w}
+    #第4行
+      - {width: *lg_edge_w}
+      - {click: eisu_toggle_返回_default_lg_sm, width: *lg_line4_func_left1_w, name: default }
+      - {click: eisu_toggle_123_number_lg_sm, name: numberPeriodFull, width: *lg_line4_func_left2_w }
+      - {click: send_dot, width: *lg_line4_func_left2_w }
+      - {click: space, width: *lg_line4_space_3left_left_w, name: space }
+      - {width: *lg_line234_blank_w}
+      - {click: space, width: *lg_line4_space_2right_right_w, name: space }
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *lg_line4_func_right2_w, preview: false }
+      - {click: return, width: *lg_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *lg_edge_w}
+  symbols_sm_md:
+    __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
+    ascii_mode: 0
+    name: symbols
+    preview: true
+    height: *sm_base_h
+    width: *sm_base_w
+    height_land: *sm_base_h
+    horizontal_gap: *sm_horizontal_gap_base_h
+    vertical_gap: *sm_vertical_gap_base_h
+    vertical_gap_land: *sm_vertical_gap_base_h
+    keys:
+    #第1行
+      - {width: *sm_edge_w }
+      - {click: 1, long_click: [ "1", "一", "壹", "１", "①", "⑴", "⒈", "❶", "㊀", "㈠" ] }
+      - {click: 2, long_click: [ "2", "二", "贰", "２", "②", "⑵", "⒉", "❷", "㊁", "㈡" ] }
+      - {click: 3, long_click: [ "3", "三", "肆", "３", "③", "⑶", "⒊", "❸", "㊂", "㈢" ] }
+      - {click: 4, long_click: [ "4", "四", "叁", "４", "④", "⑷", "⒋", "❹", "㊃", "㈣" ] }
+      - {click: 5, long_click: [ "5", "五", "伍", "５", "⑤", "⑸", "⒌", "❺", "㊄", "㈤" ] }
+      - {click: 6, long_click: [ "6", "六", "陆", "６", "⑥", "⑹", "⒍", "❻", "㊅", "㈥" ] }
+      - {click: 7, long_click: [ "7", "七", "柒", "７", "⑦", "⑺", "⒎", "❼", "㊆", "㈦" ] }
+      - {click: 8, long_click: [ "8", "八", "捌", "８", "⑧", "⑻", "⒏", "❽", "㊇", "㈧" ] }
+      - {click: 9, long_click: [ "9", "九", "玖", "９", "⑨", "⑼", "⒐", "❾", "㊈", "㈨" ] }
+      - {click: 0, long_click: [ "0", "零", "０", "⓪", "°" ] }
+      - {width: *sm_edge_w }
+    #第2行
+      - {width: *sm_edge_w }
+      - {width: *sm_line2_blank_left_w}
+      #c:~
+      - {click: commit_half_tilde_no_functional, long_click: [ "～", "~" ] }
+      - {click: "/", long_click: [ "/", "／", "|", "｜", "＼", "\\" ] }
+      - {click: ":", long_click: [ "：'", ":" ] }
+      #;
+      - {click: text_half_semicolon_default_no_functional, long_click: [ text_halfsemicolon_default, text_fullsemicolon_default ] }
+      #c:(
+      #l:（）()［］【】｛｝〈〉《》
+      - {click: text_full_bracket_left_default_no_functional, long_click: [ text_fullbracket_left_default, text_halfbracket_left_default, text_fullsquarebracketleft2_left_default, text_fullsquarebracketleft_left_default, text_fullbrace_left_default, text_fullsinglechineseguillemet_left_default, text_fullchineseguillemet_default ] }
+      #c:)
+      #l:）)］】｝〉》
+      - {click: text_full_bracket_close_left_no_functional, long_click: [ text_fullbracketclose_left, text_halfbracket_default, text_fullsquarebracketright2_default, text_fullsquarebracketright2_default, text_fullsquarebracketright_default, text_fullrightsinglechineseguillemet_default, text_fullrightchineseguillemet_default ] }
+      #c:@
+      - {click: text_halfat_default_no_functional, long_click: [ text_halfat_default, text_halfcaret_default ] }
+      #c:“”
+      #l:“”""＂＂「」『』
+      - {click: text_full_quotation_mark_left_default_no_functional, long_click: [ text_fullquotationmark_left_default, text_halfquotationmark_left_default, text_fullquotationmark2_left_default, text_fullcornerquotes_left_default, text_fulldoublequote_left_default ] }
+      #c:”
+      #l:”"＂」』
+      - {click: text_full_quotation_mark_right_default_no_functional, long_click: [ text_fullquotationmarkright_default, text_halfquotationmarkclose_default, text_fullquotationmarkright2_default, text_fullcornerquotesdown_default, text_fulldoublequoteleft_default ] }
+      - {width: *sm_line2_blank_right_w}
+      - {width: *sm_edge_w }
+    #第3行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_更多_dotSymbols, width: *sm_line3_func_left_w, name: symbol, long_click: [ "" ] }
+      #c: -
+      #l: -—•+=
+      - {click: "-", long_click: [ "-", "—", text_halfmiddledot_default, text_halfplus_default, text_halfequal_default ] }
+      #c: _
+      #l: _＿
+      - {click: text_half_under_line_default_no_functional, long_click: [ text_halfunderline_default, text_fullunderline_default ] }
+      #c: #
+      #l: #&＊*×§
+      - {click: text_half_pound_sign_default_no_functional, long_click: [ text_halfpoundsign_default, text_halfand_default, text_fullasterisk_default, text_halfasterisk_default, text_halfmultiplied_default, text_halfsection_default ] }
+      #c: ?
+      #l: ？?¿
+      - {click: text_full_question_mark_default_no_functional, long_click: [ text_fullquestionmark_default, text_halfquestionmark_default, text_halfdownquestionmark_default ] }
+      #c: ！!¡
+      #l: ！!¡
+      - {click: text_full_point_default_no_functional, long_click: [ text_fullpoint_default, text_halfpoint_default, text_halfdownpoint_default ] }
+      #c: ，
+      #l: ，,、
+      - {click: text_full_comma_default_no_functional, long_click: [ text_fullcomma_default, text_halfcomma_default, text_fullcomma2_default ] }
+      #c: 。
+      #l: 。⋯…⋯⋯
+      - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
+      - {click: backspace, width: *sm_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {width: *sm_edge_w }
+    #第4行
+      - {width: *sm_edge_w }
+      - {click: eisu_toggle_返回_default_sm_md, width: *sm_line4_func_left1_w, name: default }
+      - {click: eisu_toggle_123_number_sm_md, name: numberPeriodFull, width: *sm_line4_func_left2_w }
+      - {click: send_dot, width: *sm_line4_func_left2_w }
+      - {click: space, width: *sm_line4_3left_2right_space_w, name: space }
+      - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *sm_line4_func_right2_w, preview: false }
+      - {click: return, width: *sm_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+      - {width: *sm_edge_w }
