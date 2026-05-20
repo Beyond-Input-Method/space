@@ -1968,7 +1968,7 @@ preset_keyboards:
     #第4行
       - {width: *sm_edge_w }
       - {click: eisu_toggle_返回_default_schema_default, width: *sm_line4_func_left1_w, name: default }
-      - {click: eisu_toggle_123_number_md_lg, name: numberPeriodFull, width: *sm_line4_func_left2_w }
+      - {click: eisu_toggle_123_number, name: numberPeriodFull, width: *sm_line4_func_left2_w }
       - {click: send_dot, width: *sm_line4_func_left2_w }
       - {click: space, width: *sm_line4_3left_2right_space_w, name: space }
       - {click: text_fullcomma2_default, name: text_fullcomma2_default, width: *sm_line4_func_right2_w, preview: false }
