@@ -53,6 +53,6 @@ patch:
     patch_to: "{$current_schema}"
     # 这里最好在pc上测试过了，再放到进来
     patch:
-        # 时间、日期、星期
+        "engine/processors/@before 0": "TxProcessor"
         "engine/filters/+":
           - "stroke_filter"
