@@ -496,7 +496,7 @@ preset_keyboards:
       - {click: 1, label: '分词',  swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
       - {click: 2, label: 'ABC',  swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
       - {click: 3, label: 'DEF', swipe_up: commit_3, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
-      - {click: backspace, width: 17, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {click: backspace, width: 17, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     #第2行
       - {width: 17 }
       - {click: 4, label: 'GHI', swipe_up: commit_4, long_click: [ commit_g, commit_h, commit_i, commit_4, commit_G, commit_H, commit_I ] }
@@ -575,7 +575,7 @@ preset_keyboards:
       - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
       - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
       - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
-      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
       - {width: *lg_edge_w }
     #第4行
       - {width: *lg_edge_w }
@@ -651,7 +651,7 @@ preset_keyboards:
       - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
       - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
       - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
-      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
       - {width: *md_edge_w }
     #第4行
       - {width: *md_edge_w }
@@ -723,7 +723,7 @@ preset_keyboards:
       - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
       - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
       - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
-      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
       - {width: *md_edge_w }
     #第4行
       - {width: *md_edge_w }
@@ -795,7 +795,7 @@ preset_keyboards:
       - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
       - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
       - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
-      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
       - {width: *md_edge_w }
     #第4行
       - {width: *md_edge_w }
@@ -867,7 +867,7 @@ preset_keyboards:
       - {click: b, label: B, swipe_up: commit_fullexclamationpoint, swipe_down: "!", long_click: [ commit_b, commit_fullexclamationpoint, commit_B ] }
       - {click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
       - {click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
-      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
       - {width: *lg_edge_w }
     #第4行
       - {width: *lg_edge_w }
@@ -929,7 +929,7 @@ preset_keyboards:
       - {click: b, width: 17, label: 'BN', swipe_up: commit_fullcomma, swipe_down: commit_half_comma, long_click: [ commit_B, commit_b, commit_fullcomma, commit_n, commit_N ] }
       - {click: m, width: 17, label: 'M', swipe_up: commit_fulldot, swipe_down: commit_half_dot, long_click: [ commit_m, commit_fulldot, commit_M ] }
       - {width: 1 }
-      - {click: backspace, width: 15, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+      - {click: backspace, width: 15, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     #第4行
       - {click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false }
       - {click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false }
@@ -979,7 +979,7 @@ preset_keyboards:
       - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
       - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
       - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
-      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *sm_edge_w }
     #第4行
       - {width: *sm_edge_w }
@@ -1052,7 +1052,7 @@ preset_keyboards:
       - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
       - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
       - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
-      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_edge_w }
     #第4行
       - {width: *lg_edge_w }
@@ -1130,7 +1130,7 @@ preset_keyboards:
       - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
       - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
       - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
-      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w }
     #第4行
       - {width: *md_edge_w }
@@ -1205,7 +1205,7 @@ preset_keyboards:
       - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
       - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
       - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
-      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w }
     #第4行
       - {width: *md_edge_w }
@@ -1280,7 +1280,7 @@ preset_keyboards:
       - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
       - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
       - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
-      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *md_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w }
     #第4行
       - {width: *md_edge_w }
@@ -1355,7 +1355,7 @@ preset_keyboards:
       - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
       - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
       - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
-      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *lg_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_edge_w }
     #第4行
       - {width: *lg_edge_w }
@@ -1411,7 +1411,7 @@ preset_keyboards:
       - {click: b, swipe_up: "!", long_click: [ b, "!", B ] }
       - {click: n, swipe_up: ",", long_click: [ n, ",", N ] }
       - {click: m, swipe_up: ".", long_click: [ m, ".", M ] }
-      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *sm_line3_func_right_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *sm_edge_w }
     #第4行
       - {width: *sm_edge_w }
@@ -1438,7 +1438,7 @@ preset_keyboards:
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *sm_edge_w }
     #第2行
       - {width: *sm_edge_w }
@@ -1480,13 +1480,13 @@ preset_keyboards:
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_line234_blank_w }
       - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_edge_w }
     #第2行
       - {width: *lg_edge_w }
@@ -1551,13 +1551,13 @@ preset_keyboards:
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_line234_blank_w }
       - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *sm_number_collection_base_h, height_land: *sm_number_collection_base_h, row_height: *sm_number_row_h, row_height_land: *sm_number_row_h, row_vertical_gap: *sm_number_row_vertical_gap, show_row_back_image: false, name: table }
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w }
     #第2行
       - {width: *md_edge_w }
@@ -1617,13 +1617,13 @@ preset_keyboards:
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_line234_blank_w }
       - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w }
     #第2行
       - {width: *md_edge_w }
@@ -1683,13 +1683,13 @@ preset_keyboards:
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_line234_blank_w }
       - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w }
     #第2行
       - {width: *md_edge_w }
@@ -1749,13 +1749,13 @@ preset_keyboards:
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_line234_blank_w }
       - {collection: ["+", "-", "×", "/", "%", "=", ",", "#", "?", ".", ":", "*" ], height: *number_collection_base_h, height_land: *number_collection_base_h, row_height: *number_row_h, row_height_land: *number_row_h, row_vertical_gap: *number_row_vertical_gap, show_row_back_image: false, name: table }
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_edge_w }
     #第2行
       - {width: *lg_edge_w }
@@ -1817,7 +1817,7 @@ preset_keyboards:
       - {click: 1 }
       - {click: 2 }
       - {click: 3 }
-      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *sm_edge_w }
     #第2行
       - {width: *sm_edge_w }
@@ -1915,7 +1915,7 @@ preset_keyboards:
       #c: 。
       #l: 。⋯…⋯⋯
       - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
-      - {click: backspace, width: *sm_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *sm_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *sm_edge_w }
     #第4行
       - {width: *sm_edge_w }
@@ -2007,7 +2007,7 @@ preset_keyboards:
       #c: 。
       #l: 。⋯…⋯⋯
       - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
-      - {click: backspace, width: *lg_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *lg_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_edge_w}
     #第4行
       - {width: *lg_edge_w}
@@ -2105,7 +2105,7 @@ preset_keyboards:
       #c: 。
       #l: 。⋯…⋯⋯
       - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
-      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w}
     #第4行
       - {width: *md_edge_w}
@@ -2198,7 +2198,7 @@ preset_keyboards:
       #c: 。
       #l: 。⋯…⋯⋯
       - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
-      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w}
     #第4行
       - {width: *md_edge_w}
@@ -2291,7 +2291,7 @@ preset_keyboards:
       #c: 。
       #l: 。⋯…⋯⋯
       - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
-      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *md_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *md_edge_w}
     #第4行
       - {width: *md_edge_w}
@@ -2384,7 +2384,7 @@ preset_keyboards:
       #c: 。
       #l: 。⋯…⋯⋯
       - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
-      - {click: backspace, width: *lg_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *lg_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *lg_edge_w}
     #第4行
       - {width: *lg_edge_w}
@@ -2471,7 +2471,7 @@ preset_keyboards:
       #c: 。
       #l: 。⋯…⋯⋯
       - {click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
-      - {click: backspace, width: *sm_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+      - {click: backspace, width: *sm_line3_func_left_w, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }
       - {width: *sm_edge_w }
     #第4行
       - {width: *sm_edge_w }

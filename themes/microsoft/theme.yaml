@@ -71,7 +71,7 @@ preset_keyboards:
     - { click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
     - { click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
     - { width: 1 }
-    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft }
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false }
     - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false }
@@ -119,7 +119,7 @@ preset_keyboards:
     - { click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
     - { click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
     - { width: 1 }
-    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll }
+    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft }
     #4
     - { click: eisu_toggle_符_symbols_sm_md, width: 14, name: symbol, preview: false }
     - { click: eisu_toggle_123_number_sm_md, has_menu: text_halfperiod, width: 13, name: number, preview: false }

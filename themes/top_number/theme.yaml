@@ -88,7 +88,7 @@ preset_keyboards:
     - { click: n, label: N, swipe_up: "，", swipe_down: commit_half_comma, long_click: [ commit_n, ，, commit_N ] }
     - { click: m, label: M, swipe_up: "。", swipe_down: commit_halfperiod, long_click: [ commit_m, 。, commit_M ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+    - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false, height_land: 36 }
     - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false, height_land: 36 }
@@ -147,7 +147,7 @@ preset_keyboards:
     - { click: n, swipe_up: ",", long_click: [ N, ",", n ] }
     - { click: m, swipe_up: ".", long_click: [ M, ".", m ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol }
     - { click: eisu_toggle_123_number, width: 10, name: number }
@@ -174,7 +174,7 @@ preset_keyboards:
     - { click: 1, height: 64 }
     - { click: 2, height: 64 }
     - { click: 3, height: 64 }
-    - { click: backspace, width: 17, height: 64, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+    - { click: backspace, width: 17, height: 64, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
 
     # # #2
     - { width: 17 }
@@ -272,7 +272,7 @@ preset_keyboards:
     #l: 。⋯…⋯⋯
     - { click: text_full_period_default_no_functional, long_click: [ text_fullperiod_default, text_halfellipsis_default, text_halfunderellipsis_default, text_fullellipsis_default ] }
     - { width: 2 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_返回_default_schema_default, width: 13, name: default }
     - { click: eisu_toggle_123_number, name: numberPeriodFull, width: 13 }
@@ -315,7 +315,7 @@ preset_keyboards:
     - { click: text_halfexclamationpoint_default, width: 12 }
     - { click: text_fullapostrophe_default, width: 12 }
     - { width: 1 }
-    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo}
+    - { click: backspace, width: 13, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_ABC_default, width: 14, name: default }
     - { click: text_halfperiod_default, name: numberPeriodFull, width: 13 }
