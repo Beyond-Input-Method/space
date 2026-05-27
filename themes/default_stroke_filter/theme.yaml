@@ -44,11 +44,11 @@ preset_keyboards:
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
     #0
-    - { click: function_stroke_heng, width: 20, height_land: 32 }
-    - { click: function_stroke_shu, width: 20, height_land: 32 }
-    - { click: function_stroke_pie, width: 20, height_land: 32 }
-    - { click: function_stroke_na, width: 20, height_land: 32 }
-    - { click: function_stroke_zhe, width: 20, height_land: 32 }
+    - { click: function_stroke_heng, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_shu, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_pie, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_na, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_zhe, width: 20, height_land: 32, functional: false }
     # 1
     - { click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
     - { click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
