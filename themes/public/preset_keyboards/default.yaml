@@ -3,7 +3,7 @@ preset_keyboards:
   default:
     name: default
     ascii_mode: 0
-    height: 46
+    height: 146
     height_land: 34
     horizontal_gap: 6
     vertical_gap: 10
