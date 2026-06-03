@@ -53,6 +53,7 @@ preset_menu:
      eisu_toggle_haptic_board,                      # 触感（设置页）
      eisu_toggle_custom_phrase_board,               # 常用语
      eisu_toggle_patch_board,                       # 补丁管理
+     eisu_toggle_status_bar_board,                  # 方案状态栏
      #下面是补丁
      eisu_toggle_fuzzy_pinyin,                      # 模糊拼音设置
      eisu_toggle_patch_predict,                     # 联想补丁

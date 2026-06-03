@@ -5,7 +5,7 @@ preset_keys:
   #建议命名规则:
   #命令_label_**
   #如：
-  #    eisu_toggle_123_number: 跳转到标题为123的number键盘
+  #   eisu_toggle_123_number: 跳转到标题为123的number键盘
   #   mode_switch_cn_or_en: 切换中方或者英文
   #   text_delimiter: text组合命令
   #   text_fullquotationmark_left_default: text 组合命令，上屏全解符号并移动后再跳转到黑夜键盘
@@ -368,7 +368,74 @@ preset_keys:
   eisu_toggle_default: { icon: "keyboard_badge_globe.svg", send: Eisu_toggle, select: default }
   # 切到主键盘 default（展示「英」）
   eisu_toggle_ABC_default: { icon: "textformat.svg", label: "英", send: Eisu_toggle, select: default }
-  # （本节预设键结束；下接 function 类按键）
+  # （以下为横屏预设键_新增）
+  eisu_toggle_clear_setting2: { icon: "folder.svg", label: "清除", text: "{eisu_toggle_clear_setting}" }
+  # eisu_toggle_schema_default
+  eisu_toggle_schema_default_land: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_md_sm: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_sm_md: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_md_lg: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_lg_sm: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default_md_md: { icon: "keyboard_badge_ch.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  # eisu_toggle_ABC_english
+  eisu_toggle_ABC_english_land: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_land }
+  eisu_toggle_ABC_english_md_sm: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_md_sm }
+  eisu_toggle_ABC_english_sm_md: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_sm_md }
+  eisu_toggle_ABC_english_md_lg: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_md_lg }
+  eisu_toggle_ABC_english_lg_sm: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_lg_sm }
+  eisu_toggle_ABC_english_md_md: { icon: "keyboard_switch_ch.svg", label: "中/英", send: Eisu_toggle, select: english_md_md }
+  # eisu_toggle_返回_default_land
+  eisu_toggle_返回_default_land: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_land }
+  eisu_toggle_返回_default_lg_sm: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_lg_sm }
+  eisu_toggle_返回_default_md_sm: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_md_sm }
+  eisu_toggle_返回_default_sm_md: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_sm_md }
+  eisu_toggle_返回_default_md_lg: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_md_lg }
+  eisu_toggle_返回_default_md_md: { icon: "return_left_up.svg", label: 返回, send: Eisu_toggle, select: default_md_md }
+  # eisu_toggle_en_zh_default
+  eisu_toggle_en_zh_default_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_land_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_land}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_lg_sm_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_lg_sm}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_md_sm_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_md_sm}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_sm_md_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_md_lg_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_md_lg}{eisu_toggle_schema_default}" }
+  eisu_toggle_en_zh_default_md_md_schema_default: { icon: "en_ch.svg", label: "英/中", text: "{eisu_toggle_返回_default_md_md}{eisu_toggle_schema_default}" }
+  # eisu_toggle_ABC_english_schema_easy_en
+  eisu_toggle_ABC_english_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_land_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_land}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_md_sm_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_md_sm}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_sm_md_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_sm_md}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_md_lg_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_md_lg}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_lg_sm_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_lg_sm}{eisu_toggle_schema_en}" }
+  eisu_toggle_ABC_english_md_md_schema_easy_en: { icon: "ch_en.svg", label: "中/英", text: "{eisu_toggle_ABC_english_md_md}{eisu_toggle_schema_en}" }
+  # eisu_toggle_更多_dotSymbols
+  eisu_toggle_更多_dotSymbols: { icon: "symbols.svg", label: "更多", send: Eisu_toggle, select: .symbols }
+  # eisu_toggle_符_symbols
+  eisu_toggle_符_symbols_land: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_land }
+  eisu_toggle_符_symbols_md_sm: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_md_sm }
+  eisu_toggle_符_symbols_sm_md: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_sm_md }
+  eisu_toggle_符_symbols_md_lg: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_md_lg }
+  eisu_toggle_符_symbols_lg_sm: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_lg_sm }
+  eisu_toggle_符_symbols_md_md: { icon: "symbols.svg", label: "符", send: Eisu_toggle, select: symbols_md_md }
+  # eisu_toggle_123_number
+  eisu_toggle_123_number: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number }
+  eisu_toggle_123_number_land: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_land }
+  eisu_toggle_123_number_md_sm: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_md_sm }
+  eisu_toggle_123_number_sm_md: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_sm_md }
+  eisu_toggle_123_number_md_lg: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_md_lg }
+  eisu_toggle_123_number_lg_sm: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_lg_sm }
+  eisu_toggle_123_number_md_md: { icon: "number.svg", label: "123", send: Eisu_toggle, select: number_md_md }
+  # 圆圈数字定义
+  text_full_circled_1_default_no_functional: { label: "①", text: "①{eisu_toggle_default}", functional: false }
+  text_full_circled_2_default_no_functional: { label: "②", text: "②{eisu_toggle_default}", functional: false }
+  text_full_circled_3_default_no_functional: { label: "③", text: "③{eisu_toggle_default}", functional: false }
+  text_full_circled_4_default_no_functional: { label: "④", text: "④{eisu_toggle_default}", functional: false }
+  text_full_circled_5_default_no_functional: { label: "⑤", text: "⑤{eisu_toggle_default}", functional: false }
+  text_full_circled_6_default_no_functional: { label: "⑥", text: "⑥{eisu_toggle_default}", functional: false }
+  text_full_circled_7_default_no_functional: { label: "⑦", text: "⑦{eisu_toggle_default}", functional: false }
+  text_full_circled_8_default_no_functional: { label: "⑧", text: "⑧{eisu_toggle_default}", functional: false }
+  text_full_circled_9_default_no_functional: { label: "⑨", text: "⑨{eisu_toggle_default}", functional: false }
+  text_full_circled_10_default_no_functional: { label: "⑩", text: "⑩{eisu_toggle_default}", functional: false }
+  # （本节横屏预设键结束；下接 function 类按键）
   # （顶层：缩进映射块与下方「函数」小节之间的版式分隔，无配置项）
   #函数
   #清屏操作。option可带参数。0为上屏第一个候选；无参数为则不上屏。
@@ -614,7 +681,93 @@ preset_keys:
   text_fullcolon_default: { label: "：", text: "：{eisu_toggle_default}" }
   #  ï
   text_fullsmile_default: { label: "ï", text: "ï{eisu_toggle_default}" }
-
+#以下为新增符号键
+  # 货币名称定义
+  text_yuan_default: { label: "¥", text: "¥{eisu_toggle_default}", functional: false }
+  text_dollar_default: { label: "$", text: "${eisu_toggle_default}" }
+  text_euro_default: { label: "€", text: "€{eisu_toggle_default}" }
+  text_pound_default: { label: "£", text: "£{eisu_toggle_default}" }
+  text_ghanacedi_default: { label: "¢", text: "¢{eisu_toggle_default}" }
+  text_baht_default: { label: "฿", text: "฿{eisu_toggle_default}" }
+  text_rupee_default: { label: "₹", text: "₹{eisu_toggle_default}" }
+  text_peso_default: { label: "₱", text: "₱{eisu_toggle_default}" }
+  # 成组括号定义
+  text_halfbracket: { label: "（）", text: "(){Left}" }
+  text_halfguillemet: { label: "<>", text: "<>{Left}" }
+  text_halfquotationmark: { label: "\"\"", text: "\"\"{Left}" }
+  text_halfsquarebracketleft: { label: "［］", text: "［］{Left}" }
+  text_halfbrace: { label: "｛｝", text: "{}{Left}" }
+  text_fullbracket: { label: "（）", text: "（）{Left}" }
+  text_fullchineseguillemet: { label: "《》", text: "《》{Left}" }
+  text_fullquotationmark: { label: "“”", text: "“”{Left}" }
+  text_fullsemiquotationmark: { label: "‘’", text: "‘’{Left}" }
+  text_fullcornerquotes: { label: "「」", text: "「」{Left}" }
+  text_fullmdquote: { label: "『』", text: "『』{Left}" }
+  text_full_square_bracket_left: { label: "［］", text: "［］{Left}" }
+  text_fullsquarebracketleft2: { label: "［］", text: "［］{Left}" }
+  text_fullsquarebracketleft: { label: "【】", text: "【】{Left}" }
+  text_fullbrace: { label: "｛｝", text: "{}{Left}" }
+  text_fullbracket_right_default_no_functional: { label: ")", text: "）{eisu_toggle_default}", functional: false }
+  text_halfand_default_no_functional: { label: "&", text: "&{eisu_toggle_default}", functional: false }
+  text_half_question_mark_default_no_functional: { label: "?", text: "?{eisu_toggle_default}", functional: false }
+  text_half_point_default_no_functional: { label: " ",false }
+  text_half_comma_default_no_functional: { label: ",", text: ",{eisu_toggle_default}", functional: false }
+  text_half_period_default_no_functional: { label: ".", text: ".{eisu_toggle_default}", functional: false }
+  # 标点符号定义
+  commit_fulldot: { label: "  。", commit: "。" }
+  commit_bjgth: { label: "!", commit: "!" }
+  commit_halfquestionmark: { label: "?", commit: "?" }
+  commit_halfcolon: { label: ":", commit: ":" }
+  commit_halfcomma: { label: ",", commit: "," }
+  commit_halfquoteL: { label: "“", commit: "“" }
+  commit_halfquoteR: { label: "”", commit: "”" }
+  commit_backquote: { label: "`", commit: "`" }
+  commit_tab: { label: "Tab", commit: "	" }
+  commit_fullspace: { label: "⏘", commit: "　" }
+  commit_dash: { label: "—", commit: "——" }
+  commit_halfdash: { label: "-", commit: "-" }
+  commit_halfplus: { label: "+", commit: "+" }
+  commit_asterisk: { label: "*", commit: "*" }
+  commit_dunhao: { label: "、", commit: "、" }
+  commit_solidus: { label: "/", commit: "/" }
+  commit_equal: { label: "=", commit: "=" }
+  commit_ellipsis: { label: "…", commit: "……" }
+  commit_greater: { label: ">", commit: ">" }
+  commit_less: { label: "<", commit: "<" }
+  commit_smhL: { label: "《", commit: "《" }
+  commit_smhR: { label: "》", commit: "》" }
+  commit_division: { label: "÷", commit: "÷" }
+  commit_halfleftparen: { label: "(", commit: "(" }
+  commit_halfrightparen: { label: ")", commit: ")" }
+  commit_fullleftparen: { label: "（", commit: "（" }
+  commit_fullrightparen: { label: "）", commit: "）" }
+  commit_halfsemiquoteL: { label: "‘", commit: "‘" }
+  commit_halfsemiquoteR: { label: "’", commit: "’" }
+  commit_percent: { label: "%", commit: "%" }
+  commit_halfsemicolon: { label: ";", commit: ";" }
+  halfpoundsign: { label: "#", commit: "#" }
+  commit_fullat: { label: "@", commit: "@" }
+  # send定义
+  send_percent: { label: "%", send: "%" }
+  send_fenhao: { label: ";", send: ";" }
+  select_scecond: { label: "次选", send: "2" }
+  select_third: { label: "三选", send: "3" }
+  send_halfcomma: { label: "  ，", send: "," }
+  send_dot: { label: ".", send: "." }
+  send_comma: { label: ",", send: "," }
+  send_dot2: { label: "  。", send: "." }
+  send_halfbracketL: { label: "(", send: "(" }
+  send_halfbracketR: { label: ")", send: ")" }
+  send_halfsquarebracketL: { label: "[", send: "[" }
+  send_halfsquarebracketR: { label: "]", send: "]" }
+  send_plus: { label: "+", send: "+" }
+  send_minus: { label: "-", send: "-" }
+  send_grave: { label: "`", send: grave }
+  send_times: { label: "×", send: "*" }
+  send_devided: { label: "÷", send: "/" }
+  left: { icon: "arrow_left.svg", label: "⤆", send: Left }
+  right: { icon: "arrow_right.svg", label: "⤇", send: Right }
+#新增符号键结束
   #commit
   #commit ABC
   commit_Q: { label: "Q", commit: "Q" }
