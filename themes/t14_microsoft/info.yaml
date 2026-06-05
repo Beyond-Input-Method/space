@@ -1,4 +1,7 @@
-__include: ./../public/info/default:/
-name: 微软双拼14键
+name: 微软中文14键
+author: 筋斗云&牧码人
+support_platform: hmos
 version: 1.0.0
-url: https://github.com/Beyond-Input-Method/themes/t14_microsoft
+create_time: "2025-12-14"
+update_time: "2026-05-17"
+url: ""
