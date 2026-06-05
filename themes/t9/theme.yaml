@@ -58,7 +58,15 @@ preset_keyboards:
     - { click: 4, label: 'GHI', swipe_up: commit_4, height: 50, long_click: [ commit_g, commit_h, commit_i, commit_4, commit_G, commit_H, commit_I ] }
     - { click: 5, label: 'JKL', swipe_up: commit_5, height: 50, long_click: [ commit_j, commit_k, commit_l, commit_5, commit_J, commit_K, commit_L ] }
     - { click: 6, label: 'MNO', swipe_up: commit_6, height: 50, long_click: [ commit_m, commit_n, commit_o, commit_6, commit_M, commit_N, commit_O ] }
-    - { click: function_rime_clear, long_click: [function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste], width: 17, height: 50, name: dot }
+    - name: dot
+      width: 17
+      height: 50
+      click:
+        - { when: normal, send: next }
+        - { when: composing, send: function_rime_clear }
+        - { when: pasting, send: function_keyboard_paste }
+        - { when: selecting, send: function_keyboard_copy }
+      long_click: [function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste]
 
     ## #3
     - { width: 17 }
