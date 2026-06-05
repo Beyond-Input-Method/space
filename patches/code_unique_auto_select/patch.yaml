@@ -1,0 +1,41 @@
+# 自动上屏（码长可调）
+patch_to: "{$current_schema}"
+patch:
+  - title: "自动上屏（码长可调）"
+    key: "auto_select_master_switch"
+    description: "可调输入码长，并支持自动上屏和唯一候选自动提交。"
+    patch_to: "{$current_schema}"
+    bind_control: "auto_select_master_switch"
+    patch:
+      "speller/max_code_length": "{$max_code_length}"
+      "speller/auto_select": "{$auto_select}"
+      "speller/auto_select_unique_candidate": "{$auto_select_unique_candidate}"
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    - type: group
+      title: 自动上屏设置
+      footer_text: 调整输入码长与自动上屏方式
+    - type: toggle_switch
+      title: 启用自动上屏功能
+      key: auto_select_master_switch
+      default_value: false
+      toggle_style: switch
+    - type: toggle_switch
+      title: 自动上屏
+      key: auto_select
+      default_value: true
+      toggle_style: switch
+    - type: toggle_switch
+      title: 唯一候选自动提交
+      key: auto_select_unique_candidate
+      default_value: true
+      toggle_style: switch
+    - type: slider
+      title: 最大编码长度
+      key: max_code_length
+      default_value: 4
+      minimum_value: 2
+      maximum_value: 8
+      step: 1
