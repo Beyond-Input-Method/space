@@ -17,7 +17,7 @@ preset_styles:
     font: default_land
   light_md_sm:
     color_schema: default
-    candidate: default_md_sm
+    candidate: default
     keyboards: [default_md_sm, english_md_sm, number_md_sm, symbols_md_sm]
     font: default_md_sm
   light_sm_md:
@@ -27,7 +27,7 @@ preset_styles:
     font: default_sm_md
   light_md_md:
     color_schema: default
-    candidate: default_md_md
+    candidate: default
     keyboards: [default_md_md, english_md_md, number_md_md, symbols_md_md]
     font: default_md_md
   light_md_lg:

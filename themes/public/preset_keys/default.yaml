@@ -476,6 +476,27 @@ preset_keys:
   #换行
   # 支持系统：鸿蒙
   function_keyboard_newline: { icon: "return_down_left.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
+  #笔画：横
+  # 支持系统：鸿蒙
+  function_stroke_heng: { label: "一", send: function, command: stroke.append, option: "1" }
+  #笔画：竖
+  # 支持系统：鸿蒙
+  function_stroke_shu: { label: "丨", send: function, command: stroke.append, option: "2" }
+  #笔画：撇
+  # 支持系统：鸿蒙
+  function_stroke_pie: { label: "丿", send: function, command: stroke.append, option: "3" }
+  #笔画：捺/点
+  # 支持系统：鸿蒙
+  function_stroke_na: { label: "丶", send: function, command: stroke.append, option: "4" }
+  #笔画：折
+  # 支持系统：鸿蒙
+  function_stroke_zhe: { label: "乛", send: function, command: stroke.append, option: "5" }
+  #笔画：退一笔
+  # 支持系统：鸿蒙
+  function_stroke_backspace: { label: "退笔", send: function, command: stroke.backspace, option: "" }
+  #笔画：清除
+  # 支持系统：鸿蒙
+  function_stroke_clear: { label: "清除", send: function, command: stroke.clear, option: "" }
   #方案开关
   # 支持系统：鸿蒙
   function_rime_switcher: { icon: "more.svg", label: "方案开关", send: function, command: rime.switcher, option: "" }

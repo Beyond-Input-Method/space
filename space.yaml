@@ -1,7 +1,7 @@
-schema_id: bim_t9
+schema_id: rime_ice_26
 schema: bim-pinyin
 schema_dir: schemas/
-theme: t9
+theme: default
 theme_dir: themes/
 font: default
 font_dir: fonts/
