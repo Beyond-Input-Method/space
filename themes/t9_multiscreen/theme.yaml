@@ -493,7 +493,7 @@ preset_keyboards:
     keys:
     #第1行
       - {collection: [ "，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 150, height_land: 111, row_height: 37.5, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
-      - {click: 1, label: '分词',  swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
+      - __include: ./../public/preset_keyboards/t9_keys:/t9_key_1
       - {click: 2, label: 'ABC',  swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
       - {click: 3, label: 'DEF', swipe_up: commit_3, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
       - {click: backspace, width: 17, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}

@@ -48,7 +48,9 @@ preset_keyboards:
     #1
     # - {width: 1}
     - { collection: [ "，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
-    - { click: 1, label: '分词', height: 50, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
+    - __include: ./../public/preset_keyboards/t9_keys:/t9_key_1
+      height: 50
+      functional: false
     - { click: 2, label: 'ABC', height: 50, swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
     - { click: 3, label: 'DEF', swipe_up: commit_3, height: 50, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
     - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
@@ -58,16 +60,7 @@ preset_keyboards:
     - { click: 4, label: 'GHI', swipe_up: commit_4, height: 50, long_click: [ commit_g, commit_h, commit_i, commit_4, commit_G, commit_H, commit_I ] }
     - { click: 5, label: 'JKL', swipe_up: commit_5, height: 50, long_click: [ commit_j, commit_k, commit_l, commit_5, commit_J, commit_K, commit_L ] }
     - { click: 6, label: 'MNO', swipe_up: commit_6, height: 50, long_click: [ commit_m, commit_n, commit_o, commit_6, commit_M, commit_N, commit_O ] }
-    - name: dot
-      width: 17
-      height: 50
-      click:
-        - { when: normal, send: next }
-        - { when: composing, send: function_rime_clear }
-        - { when: pasting, send: function_keyboard_paste }
-        - { when: selecting, send: function_keyboard_copy }
-      long_click: [function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste]
-
+    - { click: [ { send: next, when: normal }, { send: function_rime_clear, when: composing }, { send: function_candidate_select_first, when: predicting }, { send: function_keyboard_paste, when: pasting }, { send: function_keyboard_copy, when: selecting } ], height: 50, long_click: [ function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste ], name: dot, width: 17 }
     ## #3
     - { width: 17 }
     - { click: 7, label: 'PQRS', swipe_up: commit_7, height: 50, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
@@ -77,7 +70,7 @@ preset_keyboards:
     ## #4
     - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
     - { click: eisu_toggle_123_number, width: 12, height: 46 }
-    - { click: space, name: space, swipe_up: commit_0, width: 42, height: 46 }
+    - { click: space, double_click: [{ send: "。", when: composing }], name: space, swipe_up: commit_0, width: 42, height: 46 }
     - { click: eisu_toggle_ABC_english_schema_easy_en, width: 12, height: 46 }
     # - {click: return, name: return, width: 17, height: 44, composing: confirm}
 
@@ -264,7 +257,7 @@ preset_keyboards:
     #1
     # - {width: 1}
     - { collection: [ "，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 101, height_land: 111, row_height: 31, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
-    - { click: 1, label: '分词', swipe_up: commit_1, swipe_down: "一", long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ] }
+    - __include: ./../public/preset_keyboards/t9_keys:/t9_key_1
     - { click: 2, label: 'ABC', swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
     - { click: 3, label: 'DEF', swipe_up: commit_3, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
     - { click: backspace, width: 17, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo }

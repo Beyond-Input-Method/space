@@ -470,6 +470,13 @@ preset_keys:
   function_rime_switches_search_single_char: { send: function, command: rime.switches, option: "search_single_char" }
 
 
+  # candidate
+  # 上屏第一个候选，option为参数。可修改为第二，第三.....
+  function_candidate_select_first: { label: "首选", send: function, command: candidate.select, option: 0 }
+  function_candidate_select_second: { label: "次选",send: function, command: candidate.select, option: 1 }
+  function_candidate_select_third: { label: "三选",send: function, command: candidate.select, option: 2 }
+
+
 
   #text
   text_full_period: { label: "。", text: "。" }
@@ -726,5 +733,9 @@ preset_keys:
   commit_fullcomma: { label: "，", commit: "，" }
   commit_fulldot: { label: "。", commit: "。" }
   commit_halfquote: { label: "”", commit: "”" }
+
+  # T9 键盘 1 键：按输入状态切换标签与行为
+  click_1_segmentation: { label: "分词", send: 1, functional: false}
+  click_1_symbol: { label: "1@.", send: 1, functional: false}
 
   
