@@ -406,6 +406,14 @@ preset_keys:
   #粘贴
   # 支持系统：鸿蒙6(现在有鸿蒙bug。暂时无效)
   function_keyboard_paste: { icon: "text_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
+  #粘贴剪贴板历史（general 分类，index 从 0 起）
+  function_pasteboard_paste_0: { icon: "text_clipboard.svg", label: "粘贴历史0", send: function, command: pasteboard.paste, option: "0" }
+  function_pasteboard_paste_1: { icon: "text_clipboard.svg", label: "粘贴历史1", send: function, command: pasteboard.paste, option: "1" }
+  function_pasteboard_paste_2: { icon: "text_clipboard.svg", label: "粘贴历史2", send: function, command: pasteboard.paste, option: "2" }
+  #粘贴剪贴板收藏（favorite 分类，index 从 0 起）
+  function_pasteboard_paste_fav_0: { icon: "star.svg", label: "粘贴收藏0", send: function, command: pasteboard.paste, option: ["favorite", "0"] }
+  function_pasteboard_paste_fav_1: { icon: "star.svg", label: "粘贴收藏1", send: function, command: pasteboard.paste, option: ["favorite", "1"] }
+  function_pasteboard_paste_fav_2: { icon: "star.svg", label: "粘贴收藏2", send: function, command: pasteboard.paste, option: ["favorite", "2"] }
   #换行
   # 支持系统：鸿蒙
   function_keyboard_newline: { icon: "return_down_left.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
