@@ -502,18 +502,19 @@ preset_keyboards:
       - {click: 4, label: 'GHI', swipe_up: commit_4, long_click: [ commit_g, commit_h, commit_i, commit_4, commit_G, commit_H, commit_I ] }
       - {click: 5, label: 'JKL', swipe_up: commit_5, long_click: [ commit_j, commit_k, commit_l, commit_5, commit_J, commit_K, commit_L ] }
       - {click: 6, label: 'MNO', swipe_up: commit_6, long_click: [ commit_m, commit_n, commit_o, commit_6, commit_M, commit_N, commit_O ] }
-      - {click: function_rime_clear, long_click: [function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste], width: 17, name: dot }
+      - { click: [ { send: next, when: normal }, { send: function_rime_clear, when: composing }, { send: function_candidate_select_first, when: predicting }, { send: function_keyboard_paste, when: pasting }, { send: function_keyboard_copy, when: selecting } ], long_click: [ function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste ], name: dot, width: 17 }
+      # - {click: function_rime_clear, long_click: [function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste], width: 17, name: dot }
       #第3行
       - {width: 17 }
       - {click: 7, label: 'PQRS', swipe_up: commit_7, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
       - {click: 8, label: 'TUV', swipe_up: commit_8, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
       - {click: 9, label: 'WXYZ', swipe_up: commit_9, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
-      - {click: return, name: return, width: 17, height: 97, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
-      #第4行
       - {click: eisu_toggle_符_dotsymbols, width: 17, name: default }
-      - {click: eisu_toggle_123_number, width: 12 }
-      - {click: space, name: space, swipe_up: commit_0, width: 42 }
-      - {click: eisu_toggle_ABC_english_schema_easy_en, width: 12 }
+      #第4行
+      - {click: eisu_toggle_ABC_english_schema_easy_en, width: 17 }
+      - {click: eisu_toggle_123_number, width: 14 }
+      - {click: space, name: space, swipe_up: commit_0, width: 38 }
+      - {click: return, name: return, width: 31, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
 
   default_land:
     name: default_land
@@ -879,6 +880,7 @@ preset_keyboards:
       - {click: eisu_toggle_ABC_english_lg_sm_schema_easy_en, has_menu: text_halfcomma, width: *lg_line4_func_right2_w, name: english, preview: false }
       - {click: return, width: *lg_line4_func_right1_w, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false }
       - {width: *lg_edge_w }
+
   #sm_md
   default_sm_md:
     vertical_gap: 4
@@ -923,6 +925,7 @@ preset_keyboards:
       - { click: eisu_toggle_123_number_sm_md, width: 12 }
       - { click: space, name: space, swipe_up: commit_0, width: 42 }
       - { click: eisu_toggle_ABC_english_sm_md_schema_easy_en, width: 12 }
+
   english:
     width: 10
     ascii_mode: 1
@@ -970,11 +973,11 @@ preset_keyboards:
       - {width: *sm_edge_w }
       #第4行
       - {width: *sm_edge_w }
-      - {click: eisu_toggle_符_symbols, width: *sm_line4_func_left1_w, name: symbol }
+      - {click: eisu_toggle_en_zh_default_schema_default, width: *sm_line4_func_left1_w, name: english, preview: false }
       - {click: eisu_toggle_123_number, width: *sm_line4_func_left2_w, name: number }
-      - {click: send_dot, width: *sm_line4_func_left2_w }
+      - {click: eisu_toggle_符_symbols, width: *sm_line4_func_right2_w, name: symbol }
       - {click: space, width: *sm_line4_3left_2right_space_w, name: space }
-      - {click: eisu_toggle_en_zh_default_schema_default, width: *sm_line4_func_right2_w, name: english, preview: false }
+      - {click: send_dot, width: *sm_line4_func_left2_w }
       - {click: return, width: *sm_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
       - {width: *sm_edge_w }
   english_land:
@@ -1355,6 +1358,7 @@ preset_keyboards:
       - {click: eisu_toggle_en_zh_default_lg_sm_schema_default, width: *lg_line4_func_right2_w, name: english, preview: false }
       - {click: return, width: *lg_line4_func_right1_w, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
       - {width: *lg_edge_w }
+
   english_sm_md:
     vertical_gap: 4
     height: 31
@@ -1419,6 +1423,8 @@ preset_keyboards:
       #- {click: eisu_toggle_返回_default, width: 11, name: english}
       - { click: eisu_toggle_返回_default_sm_md_schema_default, width: 12, name: english, preview: false }
       - { click: return, width: 17, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next]}
+
+
   number:
     __include: ./../public/preset_menu/default:/preset_menu/symbol_menu
     ascii_mode: 1
