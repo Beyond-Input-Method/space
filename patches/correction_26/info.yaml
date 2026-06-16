@@ -4,6 +4,3 @@ name: "拼音26键自动纠错"
 update_time: "2026-04-16"
 url: ""
 version: 1.0.0
-# 支持的方案
-support_schemas:
-  - wanxiang

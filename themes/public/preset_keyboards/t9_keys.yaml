@@ -1,0 +1,13 @@
+# T9 键盘可复用按键片段
+# 用法示例：
+#   - __include: ./../public/preset_keyboards/t9_keys:/t9_key_1
+#     height: 50
+
+t9_key_1:
+  functional: false
+  swipe_up: commit_1
+  swipe_down: "一"
+  long_click: [ commit_halfslash, commit_halfminus, commit_halfunderline, commit_1, commit_halfat, commit_halfpoundsign, commit_half_dot ]
+  click:
+    - { when: normal, send: click_1_symbol }
+    - { when: composing, send: click_1_segmentation }

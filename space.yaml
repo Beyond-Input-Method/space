@@ -1,7 +1,7 @@
-schema_id: bim_t9
+schema_id: rime_ice_26
 schema: bim-pinyin
 schema_dir: schemas/
-theme: t9
+theme: default
 theme_dir: themes/
 font: default
 font_dir: fonts/
@@ -17,6 +17,8 @@ sound_volume: 0
 sound_effect: default
 haptics_on: true
 haptics_volume: 1
+haptic: system
+haptic_dir: haptics/
 global_keyboard_menu: [
   function_common_open_vip,
   function_common_speech_recognition, #
