@@ -1,0 +1,5 @@
+__include: ./../public/info/default:/
+name: 标准笔画过滤26键
+version: 1.0.0
+update_time: "2026-05-27"
+url: https://github.com/Beyond-Input-Method/themes/default_stroke_filter

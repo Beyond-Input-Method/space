@@ -44,16 +44,11 @@ preset_keyboards:
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
     #0
-    - { click: 1, label: 1, height_land: 32 }
-    - { click: 2, label: 2, height_land: 32 }
-    - { click: 3, label: 3, height_land: 32 }
-    - { click: 4, label: 4, height_land: 32 }
-    - { click: 5, label: 5, height_land: 32 }
-    - { click: 6, label: 6, height_land: 32 }
-    - { click: 7, label: 7, height_land: 32 }
-    - { click: 8, label: 8, height_land: 32 }
-    - { click: 9, label: 9, height_land: 32 }
-    - { click: 0, label: 0, height_land: 32 }
+    - { click: function_stroke_heng, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_shu, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_pie, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_na, width: 20, height_land: 32, functional: false }
+    - { click: function_stroke_zhe, width: 20, height_land: 32, functional: false }
     # 1
     - { click: q, label: Q, swipe_up: commit_1, swipe_down: "一", long_click: [ commit_q, commit_1, commit_Q ] }
     - { click: w, label: W, swipe_up: commit_2, swipe_down: "二", long_click: [ commit_w, commit_2, commit_W ] }
@@ -91,17 +86,9 @@ preset_keyboards:
     - { click: backspace, width: 13, name: backspace, preview: false, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     #4
     - { click: eisu_toggle_符_symbols, width: 14, name: symbol, preview: false, height_land: 36 }
-    - __include: ./../public/preset_keyboards/bottom_func_keys:/bottom_number_key
-      width: 13
-      name: number
-      preview: false
-      height_land: 36
+    - { click: eisu_toggle_123_number, has_menu: text_halfperiod, width: 13, name: number, preview: false, height_land: 36 }
     - { click: space, width: 38, name: space, swipe_up: select_second, preview: false, height_land: 36 }
-    - __include: ./../public/preset_keyboards/bottom_func_keys:/bottom_english_key
-      width: 11
-      name: english
-      preview: false
-      height_land: 36
+    - { click: eisu_toggle_ABC_english_schema_easy_en, has_menu: text_halfcomma, width: 11, name: english, preview: false, height_land: 36 }
     - { click: return, width: 24, name: return, swipe_up: select_third, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next], rect_preview: true, preview: false, height_land: 36 }
     width: 10
 
