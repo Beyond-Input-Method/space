@@ -1,0 +1,35 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "remove_terminal_punctuation"
+      mode: "fast"
+      totalTimeoutMs: 500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "remove_terminal_punctuation"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+  sceneMappings:
+    "remove_punctuation": "remove_terminal_punctuation"
+  sourceMappings:
+    "remove_punctuation": "remove_terminal_punctuation"
+
+user:
+  enabledProcessors:
+    - "remove_terminal_punctuation"
+  qualityMode: "fast"

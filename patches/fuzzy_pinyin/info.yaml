@@ -6,6 +6,8 @@ url: ""
 version: 1.0.0
 #支持的方案
 support_schemas:
+  - wanxiang_t9
+  - wanxiang
   - bim_t9
   - bim_t14 # 超越14键（全拼）
   - rime_ice_18 # 雾凇拼音（全拼）

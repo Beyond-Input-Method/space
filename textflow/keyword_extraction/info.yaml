@@ -1,0 +1,9 @@
+name: "关键词提取"
+description: "关键词提取处理器，自动提取文本中的重要关键词"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"

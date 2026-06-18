@@ -1,0 +1,9 @@
+name: "文本分词"
+description: "文本分词处理器，将文本分割为词语或短语"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"

@@ -1,0 +1,9 @@
+name: "文本摘要"
+description: "文本摘要处理器，生成简洁忠实的文本摘要"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"

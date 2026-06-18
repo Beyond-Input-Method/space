@@ -1,0 +1,313 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# 语音（speech）textflow 后处理配置
+#
+# 路由模型：
+#   directory = "speech"                      → 加载此 config.yaml
+#   source    = "speech"（固定）
+#   scene     = <launchMode>.<punct>.<filler>[.<autosend>]
+#                launchMode: hold_space | click_icon
+#                punct:      nop | space_punct | no_terminal
+#                filler:     filler_off | filler_on
+#                autosend:   autosend_off | autosend_on（仅 click_icon 场景）
+#
+# 处理器启用规则（根据 _speech_setting patch 3 个开关 + 启动方式）：
+#   - enable_punctuation + puncMode=2 → space_as_punctuation
+#   - enable_punctuation + puncMode=3 → remove_terminal_punctuation
+#   - enable_filler_filter=true       → asr_normalization
+#   - enable_auto_send=true           → keyword_command_trigger（仅 click_icon）
+#
+# 执行顺序（多个 step 同时启用时）：
+#   1) keyword_command_trigger  先检测 over,over 以便短路取消或 finalize
+#   2) asr_normalization        LLM 清理口水词 / 同音 / 混排
+#   3) space_as_punctuation / remove_terminal_punctuation  标点处理（互斥）
+# ─────────────────────────────────────────────────────────────────────────────
+
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-16060168362a488c96daa8bcd813e1fa"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: false  # 处理器都按纯文本读取响应，开启 json_object 会把正文包成 {"output":...} 导致上屏原始 JSON
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    # ── 长按空格：autosend 永远 off ──────────────────────────────────
+    - pipelineId: "pp_hs_nop_floff"
+      mode: "balanced"
+      totalTimeoutMs: 1000
+      pipelineFailureStrategy: "use_original"
+      steps: []
+
+    - pipelineId: "pp_hs_nop_flon"
+      mode: "balanced"
+      totalTimeoutMs: 4000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "asr_normalization"
+          order: 1
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_hs_sp_floff"
+      mode: "balanced"
+      totalTimeoutMs: 1500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "space_as_punctuation"
+          order: 1
+          timeoutMs: 1200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_hs_sp_flon"
+      mode: "balanced"
+      totalTimeoutMs: 5000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "asr_normalization"
+          order: 1
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+        - name: "space_as_punctuation"
+          order: 2
+          timeoutMs: 1200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_hs_nt_floff"
+      mode: "balanced"
+      totalTimeoutMs: 500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "remove_terminal_punctuation"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_hs_nt_flon"
+      mode: "balanced"
+      totalTimeoutMs: 4000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "asr_normalization"
+          order: 1
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+        - name: "remove_terminal_punctuation"
+          order: 2
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+
+    # ── 点击图标：autosend 可开 ──────────────────────────────────────
+    - pipelineId: "pp_ci_nop_floff_asoff"
+      mode: "balanced"
+      totalTimeoutMs: 1000
+      pipelineFailureStrategy: "use_original"
+      steps: []
+
+    - pipelineId: "pp_ci_nop_floff_ason"
+      mode: "balanced"
+      totalTimeoutMs: 500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_command_trigger"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_nop_flon_asoff"
+      mode: "balanced"
+      totalTimeoutMs: 4000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "asr_normalization"
+          order: 1
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_nop_flon_ason"
+      mode: "balanced"
+      totalTimeoutMs: 4500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_command_trigger"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+        - name: "asr_normalization"
+          order: 2
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_sp_floff_asoff"
+      mode: "balanced"
+      totalTimeoutMs: 1500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "space_as_punctuation"
+          order: 1
+          timeoutMs: 1200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_sp_floff_ason"
+      mode: "balanced"
+      totalTimeoutMs: 2000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_command_trigger"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+        - name: "space_as_punctuation"
+          order: 2
+          timeoutMs: 1200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_sp_flon_asoff"
+      mode: "balanced"
+      totalTimeoutMs: 5000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "asr_normalization"
+          order: 1
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+        - name: "space_as_punctuation"
+          order: 2
+          timeoutMs: 1200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_sp_flon_ason"
+      mode: "balanced"
+      totalTimeoutMs: 5500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_command_trigger"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+        - name: "asr_normalization"
+          order: 2
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+        - name: "space_as_punctuation"
+          order: 3
+          timeoutMs: 1200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_nt_floff_asoff"
+      mode: "balanced"
+      totalTimeoutMs: 500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "remove_terminal_punctuation"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_nt_floff_ason"
+      mode: "balanced"
+      totalTimeoutMs: 800
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_command_trigger"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+        - name: "remove_terminal_punctuation"
+          order: 2
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_nt_flon_asoff"
+      mode: "balanced"
+      totalTimeoutMs: 4000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "asr_normalization"
+          order: 1
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+        - name: "remove_terminal_punctuation"
+          order: 2
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+
+    - pipelineId: "pp_ci_nt_flon_ason"
+      mode: "balanced"
+      totalTimeoutMs: 4500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_command_trigger"
+          order: 1
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+        - name: "asr_normalization"
+          order: 2
+          timeoutMs: 3000
+          retryCount: 0
+          enabled: true
+        - name: "remove_terminal_punctuation"
+          order: 3
+          timeoutMs: 200
+          retryCount: 0
+          enabled: true
+
+  # ── source|scene → pipelineId 路由 ───────────────────────────────
+  sourceSceneMappings:
+    "speech|hold_space.nop.filler_off":                      "pp_hs_nop_floff"
+    "speech|hold_space.nop.filler_on":                       "pp_hs_nop_flon"
+    "speech|hold_space.space_punct.filler_off":              "pp_hs_sp_floff"
+    "speech|hold_space.space_punct.filler_on":               "pp_hs_sp_flon"
+    "speech|hold_space.no_terminal.filler_off":              "pp_hs_nt_floff"
+    "speech|hold_space.no_terminal.filler_on":               "pp_hs_nt_flon"
+    "speech|click_icon.nop.filler_off.autosend_off":         "pp_ci_nop_floff_asoff"
+    "speech|click_icon.nop.filler_off.autosend_on":          "pp_ci_nop_floff_ason"
+    "speech|click_icon.nop.filler_on.autosend_off":          "pp_ci_nop_flon_asoff"
+    "speech|click_icon.nop.filler_on.autosend_on":           "pp_ci_nop_flon_ason"
+    "speech|click_icon.space_punct.filler_off.autosend_off": "pp_ci_sp_floff_asoff"
+    "speech|click_icon.space_punct.filler_off.autosend_on":  "pp_ci_sp_floff_ason"
+    "speech|click_icon.space_punct.filler_on.autosend_off":  "pp_ci_sp_flon_asoff"
+    "speech|click_icon.space_punct.filler_on.autosend_on":   "pp_ci_sp_flon_ason"
+    "speech|click_icon.no_terminal.filler_off.autosend_off": "pp_ci_nt_floff_asoff"
+    "speech|click_icon.no_terminal.filler_off.autosend_on":  "pp_ci_nt_floff_ason"
+    "speech|click_icon.no_terminal.filler_on.autosend_off":  "pp_ci_nt_flon_asoff"
+    "speech|click_icon.no_terminal.filler_on.autosend_on":   "pp_ci_nt_flon_ason"
+
+  # 兜底 source 映射：未匹配到任何 (source, scene) 时用此保底（空 steps）
+  sourceMappings:
+    "speech": "pp_hs_nop_floff"
+
+user:
+  enabledProcessors: []
+  qualityMode: "balanced"

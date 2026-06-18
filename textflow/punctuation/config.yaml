@@ -1,0 +1,35 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "punctuation"
+      mode: "balanced"
+      totalTimeoutMs: 2500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "punctuation"
+          order: 1
+          timeoutMs: 1500
+          retryCount: 0
+          enabled: true
+  sceneMappings:
+    "punctuation": "punctuation"
+  sourceMappings:
+    "punctuation": "punctuation"
+
+user:
+  enabledProcessors:
+    - "punctuation"
+  qualityMode: "balanced"

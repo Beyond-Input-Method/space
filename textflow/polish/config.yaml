@@ -1,0 +1,35 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "polish"
+      mode: "quality"
+      totalTimeoutMs: 5000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "polish"
+          order: 1
+          timeoutMs: 3000
+          retryCount: 1
+          enabled: true
+  sceneMappings:
+    "polish": "polish"
+  sourceMappings:
+    "polish": "polish"
+
+user:
+  enabledProcessors:
+    - "polish"
+  qualityMode: "quality"

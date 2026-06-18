@@ -1,0 +1,10 @@
+name: "文本润色"
+description: "文本润色处理器，改进写作风格、可读性和流畅度"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"
+  - "speech"

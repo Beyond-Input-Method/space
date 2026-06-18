@@ -1,0 +1,10 @@
+name: "文本纠错"
+description: "文本纠错处理器，修复语法、拼写和输入错误"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"
+  - "speech"
