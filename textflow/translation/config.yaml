@@ -1,0 +1,36 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "translation"
+      mode: "quality"
+      totalTimeoutMs: 6000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "translation"
+          order: 1
+          timeoutMs: 4000
+          retryCount: 1
+          enabled: true
+  sceneMappings:
+    "translation": "translation"
+    "translate": "translation"
+  sourceMappings:
+    "translation": "translation"
+
+user:
+  enabledProcessors:
+    - "translation"
+  qualityMode: "quality"

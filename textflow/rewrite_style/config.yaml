@@ -1,0 +1,36 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "rewrite_style"
+      mode: "quality"
+      totalTimeoutMs: 6000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "rewrite_style"
+          order: 1
+          timeoutMs: 3500
+          retryCount: 1
+          enabled: true
+  sceneMappings:
+    "rewrite": "rewrite_style"
+    "style": "rewrite_style"
+  sourceMappings:
+    "rewrite": "rewrite_style"
+
+user:
+  enabledProcessors:
+    - "rewrite_style"
+  qualityMode: "quality"

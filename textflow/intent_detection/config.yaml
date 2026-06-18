@@ -1,0 +1,35 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "intent_detection"
+      mode: "fast"
+      totalTimeoutMs: 2500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "intent_detection"
+          order: 1
+          timeoutMs: 1500
+          retryCount: 0
+          enabled: true
+  sceneMappings:
+    "intent": "intent_detection"
+  sourceMappings:
+    "intent": "intent_detection"
+
+user:
+  enabledProcessors:
+    - "intent_detection"
+  qualityMode: "fast"

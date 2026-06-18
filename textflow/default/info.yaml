@@ -1,0 +1,10 @@
+name: "默认"
+description: "通用文本处理场景，支持键盘输入和语音输入的纠错与标点补全"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-07"
+update_date: "2026-04-07"
+supported_sources:
+  - "keyboard"
+  - "speech"
+  - "clipboard"
