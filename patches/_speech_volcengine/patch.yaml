@@ -1,6 +1,6 @@
 patch_to: "{$file:speech:volcengine}"
 patch:
-  - title: "豆包语音配置"
+  - title: "自定义豆包语音配置"
     key: "speech_volcengine_config"
     description: "为当前语音配置豆包语音的 appKey 和 accessKey"
     patch_to: "{$file:speech:volcengine}"
@@ -8,14 +8,13 @@ patch:
     patch:
       appKey: "{$speech_app_key}"
       accessKey: "{$speech_access_key}"
-      enablePunc: "{$speech_enable_punc}"
 
 controls:
   stringsTable: "Root"
   preferences:
     - type: group
       title: "豆包语音配置"
-      footer_text: "配置豆包语音识别所需的 appKey、accessKey 和标点符号设置"
+      footer_text: "如需自定义配置豆包语音识别所需的 appKey、accessKey"
 
     # 总开关
     - type: toggle_switch
@@ -38,8 +37,3 @@ controls:
       placeholder: "请输入 Access Key"
       keyboardType: "password"
 
-    - type: toggle_switch
-      title: "自动添加标点符号"
-      key: speech_enable_punc
-      default_value: true
-      toggle_style: switch

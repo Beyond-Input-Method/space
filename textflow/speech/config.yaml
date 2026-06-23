@@ -22,19 +22,8 @@
 #   3) space_as_punctuation / remove_terminal_punctuation  标点处理（互斥）
 # ─────────────────────────────────────────────────────────────────────────────
 
-gateway:
-  defaultGatewayId: "deepseek_main"
-  gateways:
-    deepseek_main:
-      providerType: "deepseek"
-      baseUrl: "https://api.deepseek.com"
-      apiKey: "sk-16060168362a488c96daa8bcd813e1fa"
-      modelFast: "deepseek-chat"
-      modelBalanced: "deepseek-chat"
-      modelQuality: "deepseek-chat"
-      enableStructuredOutput: false  # 处理器都按纯文本读取响应，开启 json_object 会把正文包成 {"output":...} 导致上屏原始 JSON
-      enableStream: false
-      enableDeepThinking: false
+# 网关已收敛到全局 textflow/gateways.yaml（所有目录共享），此处不再声明 gateway。
+# 如需本目录使用独立网关，可在此重新加入 gateway: 段（会回退到 per-directory 路径）。
 
 pipeline:
   pipelines:
@@ -283,8 +272,29 @@ pipeline:
           retryCount: 0
           enabled: true
 
+    # ── 实时探测（partial / 非 final 结果专用）──────────────────────
+    # 仅跑 keyword_command_trigger，零 LLM，超低时延（150ms）。
+    # 用途：识别过程中（isLast=false）实时检测结束语（如 over,over），命中即由
+    #       ArkTS 侧主动收尾（finalize 发送最后一包，强制引擎立刻吐出 final），
+    #       省去等待 VAD 静音的尾部延迟。
+    # 注意：此 pipeline 只「探测」，不改写、不上屏；上屏 + 规范化由 final 结果走
+    #       标准 *_ason pipeline 完成；自动发送由 ArkTS 依据 partial 探测结论触发
+    #       （final 在中文语境下会把 over over 改写成同音词，自身已测不到触发词）。
+    - pipelineId: "pp_speech_detect"
+      mode: "balanced"
+      totalTimeoutMs: 200
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_command_trigger"
+          order: 1
+          timeoutMs: 150
+          retryCount: 0
+          enabled: true
+
   # ── source|scene → pipelineId 路由 ───────────────────────────────
   sourceSceneMappings:
+    # 实时探测（partial 结果）：source=speech, scene=partial_detect
+    "speech|partial_detect":                                "pp_speech_detect"
     "speech|hold_space.nop.filler_off":                      "pp_hs_nop_floff"
     "speech|hold_space.nop.filler_on":                       "pp_hs_nop_flon"
     "speech|hold_space.space_punct.filler_off":              "pp_hs_sp_floff"

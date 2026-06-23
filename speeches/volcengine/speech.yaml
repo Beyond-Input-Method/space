@@ -24,7 +24,7 @@ enablePunc: true
 # "1": 智能添加标点 - 自动识别语义添加合适标点
 # "2": 空格代替标点 - 用空格代替所有标点符号
 # "3": 句末不加标点 - 不在句末添加标点，保留其他位置标点
-puncMode: "3"
+puncMode: "1"
 
 # ==================== 口水词过滤配置 ====================
 # Filler Words Filter Settings
@@ -40,9 +40,4 @@ enableFilterFiller: false
 # 是否启用语音自动发送功能
 # true: 检测到触发短语时自动发送消息
 # false: 关闭自动发送
-enableAutoSend: true
-
-# 自动发送触发短语
-# 当语音识别到该短语时，自动触发发送操作
-# 建议设置为不易与正常输入混淆的词组
-triggerPhrase: "over,over"
+enableAutoSend: false

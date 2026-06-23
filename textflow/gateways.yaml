@@ -1,0 +1,31 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# 全局网关注册表（所有 textflow 目录共享，单一真相源）
+#
+# 各场景 config.yaml 不再各自声明 gateway，统一引用此处定义的网关（按 gatewayId，
+# 见各 pipeline step 的 gatewayId 字段；缺省用 defaultGatewayId）。
+#
+# 安全：apiKey 不在此下发（属机密）。由 native（bimkit）在加载时按 providerType 注入，
+#       见 textflow_server.cpp injectGatewayCredentials / CredentialProvider。
+#       本地调试可临时显式写 apiKey，会优先于注入值。
+# ─────────────────────────────────────────────────────────────────────────────
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: false  # 处理器按纯文本读取响应，开启 json_object 会污染上屏
+      enableStream: false
+      enableDeepThinking: false
+    doubao_main:
+      providerType: "doubao"           # 命中内置 Doubao adapter；apiKey 由 native 注入
+      baseUrl: "https://ark.cn-beijing.volces.com/api/v3"
+      modelFast: "doubao-seed-2-0-mini-260215"
+      modelBalanced: "doubao-seed-2-0-mini-260215"
+      modelQuality: "doubao-seed-2-0-mini-260215"
+      enableStructuredOutput: false
+      enableStream: false
+      enableDeepThinking: false
