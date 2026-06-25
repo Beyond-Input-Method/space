@@ -74,6 +74,7 @@ preset_keys:
       function_common_open_host             # 打开主机应用
     ]
   }
+
   # 清除设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_clear_setting: {
@@ -120,15 +121,47 @@ preset_keys:
       eisu_toggle_patch_speech_setting,
     ]
   }
+
+  # 清除设置
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_clear_quick_panel: {
+    icon: "eraser_line.svg",
+    label: "清除设置",
+    send: Eisu_toggle,
+    select: _quick_panel,
+    option: [
+      function_keyboard_clearAll,
+      function_keyboard_clearLeft,
+      function_keyboard_clearRight,
+      function_keyboard_undo,
+      function_keyboard_redo,
+      function_keyboard_deleteLeft,
+      function_keyboard_deleteRight,
+    ]
+  }
+  # 剪切设置
+  # 支持系统：鸿蒙，iOS
+  eisu_toggle_cut_quick_panel: {
+    icon: "cut.svg",
+    label: "剪切设置",
+    send: Eisu_toggle,
+    select: _quick_panel,
+    option: [
+      function_keyboard_selectAll,
+      function_keyboard_cut,
+      function_keyboard_copy,
+      function_keyboard_paste,
+      function_keyboard_newline,
+    ]
+  }
+
+
   # 语音设置
   # 支持系统：鸿蒙
   eisu_toggle_patch_speech_setting: { icon: "gearshape.svg", label: "语音设置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_setting" ] }
   # 笔画过滤
   # 支持系统：鸿蒙
   eisu_toggle_patch_speech_volcengine: { icon: "key_circle_fill.svg", label: "豆包语音配置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_volcengine" ] }
-
-
-
 
 
   # 键盘选择
@@ -213,7 +246,7 @@ preset_keys:
 
   # 剪切板
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_clip_board: { icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
+  eisu_toggle_clip_board: { type: command, icon: "text_clipboard.svg", label: "剪切板", send: Eisu_toggle, select: _clip_board }
   #剪切板搜索
   # 支持系统：iOS
   eisu_toggle_search_clip_board: { icon: "doc_text_badge_magnifyingglass_mirroring.svg", label: "剪切板搜索", send: Eisu_toggle, select: _search_clip_board }
@@ -247,7 +280,7 @@ preset_keys:
   eisu_toggle_haptics_board: { icon: "a_4d_vibration.svg", label: " 触感", send: Eisu_toggle, select: _haptics_board }
   #emoji
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_emoji: { icon: "face_laughing.svg", label: "emoji", send: Eisu_toggle, select: .emoji, option: [] }
+  eisu_toggle_emoji: { type: command, icon: "face_laughing.svg", label: "emoji", send: Eisu_toggle, select: .emoji, option: [] }
   #收起键盘
   # 支持系统：鸿蒙，iOS
   eisu_toggle_dismiss_keyboard: { icon: "arrow_down_square.svg", label: "收起键盘", send: Eisu_toggle, select: _dismiss_keyboard, option: [] }
@@ -324,6 +357,8 @@ preset_keys:
   select_second: { label: "次选", send: 2 }
   # 选择第三候选（send 3）
   select_third: { label: "三选", send: 3 }
+  #日期
+  rime_send_date: { label: "日期", text: "rq" }
   # 换行（上屏换行符，非 Return 键事件）
   # 上屏换行符 \n（commit）
   next: { icon: "return_down_left.svg", label: "换行", commit: "\\n" }
@@ -462,7 +497,7 @@ preset_keys:
   function_stroke_clear: { label: "清除", send: function, command: stroke.clear, option: "" }
   #方案开关
   # 支持系统：鸿蒙
-  function_rime_switcher: { icon: "more.svg", label: "方案开关", send: function, command: rime.switcher, option: "" }
+  function_rime_switcher: { type: command, icon: "more.svg", label: "方案开关", send: function, command: rime.switcher, option: "" }
   #部署（所有方案，速度慢）
   # 支持系统：鸿蒙
   function_rime_deploy: { icon: "arrow_clockwise.svg", label: "部署", send: function, command: rime.deploy, option: "" }
@@ -478,13 +513,15 @@ preset_keys:
 
   #vip
   # 支持系统：鸿蒙
-  function_common_open_vip: { icon: "vip_rectangle.svg", label: "vip", send: function, command: common.open_vip, option: "" }
+  function_common_open_vip: { type: command, icon: "vip_rectangle.svg", label: "vip", send: function, command: common.open_vip, option: "" }
 
   #语音识别
   # 支持系统：鸿蒙
-  function_common_speech_recognition: { icon: "mic_circle.svg", label: "语音识别", send: function, command: speech.start, option: "" }
+  function_common_speech_recognition: { type: command, icon: "mic_circle.svg", label: "语音识别", send: function, command: speech.start, option: "" }
 
-
+  # 中英键盘切换（条件显示目标态：中文键盘显示“英”，点击切到英文，反之亦然）
+  # 支持系统：鸿蒙
+  function_keyboard_switch_cn_en: { type: keyboard_switch, label: "中英", send: function, command: keyboard.switch_cn_en, option: "" }
 
   # 默认的方案状态
   # commandl固定为：rime.switches option参数为方案switches的name
@@ -505,8 +542,11 @@ preset_keys:
   function_candidate_select_first: { label: "首选", send: function, command: candidate.select, option: 0 }
   function_candidate_select_second: { label: "次选",send: function, command: candidate.select, option: 1 }
   function_candidate_select_third: { label: "三选",send: function, command: candidate.select, option: 2 }
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 
   #text
   text_full_period: { label: "。", text: "。" }
