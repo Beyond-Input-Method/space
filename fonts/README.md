@@ -12,13 +12,17 @@
 
 ```text
 /space/fonts/
-  ├── ark-pixel-font/
+  ├── default/                       # 系统默认字体（仅 info.yaml，无字体文件，走系统字体）
+  │   └── info.yaml
+  ├── jf-openhuninn-2.1/             # 仓库当前内置的字体示例
   │   ├── info.yaml
-  │   └── ark-pixel-10px-monospaced-zh_cn.ttf
-  └── your-font/
+  │   └── jf-openhuninn-2.1.ttf
+  └── your-font/                     # 你新增的字体
       ├── info.yaml
       └── your-font.ttf
 ```
+
+> 当前仓库内置两套字体：`default/`（系统字体，无字体文件）与 `jf-openhuninn-2.1/`（justfont 粉圆，`.ttf`）。
 
 ## 2. 快速导入步骤
 
@@ -30,7 +34,7 @@
 
 ## 3. info.yaml 配置模板
 
-可参考 `/space/fonts/ark-pixel-font/info.yaml`。
+可参考 `/space/fonts/jf-openhuninn-2.1/info.yaml`。
 
 ```yaml
 id: your-font-id
@@ -59,7 +63,7 @@ font_dir: fonts/
 
 说明：
 
-- `font`: 默认字体目录名（例如 `ark-pixel-font`）。
+- `font`: 默认字体目录名（例如 `default` 或 `jf-openhuninn-2.1`）。
 - `font_dir`: 字体根目录（通常为 `fonts/`）。
 
 如果不修改，系统会使用当前默认值；你也可以通过应用内“字体”列表动态切换。
