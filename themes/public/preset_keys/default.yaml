@@ -542,11 +542,6 @@ preset_keys:
   function_candidate_select_first: { label: "首选", send: function, command: candidate.select, option: 0 }
   function_candidate_select_second: { label: "次选",send: function, command: candidate.select, option: 1 }
   function_candidate_select_third: { label: "三选",send: function, command: candidate.select, option: 2 }
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
 
   #text
   text_full_period: { label: "。", text: "。" }
