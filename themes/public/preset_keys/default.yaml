@@ -34,6 +34,7 @@ preset_keys:
       eisu_toggle_sound_board,              # 声音设置
       eisu_toggle_haptic_board,             # 触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
+      eisu_toggle_one_hand_board,           # 单手模式
       eisu_toggle_common_setting_board,     # 通用设置
       eisu_toggle_status_bar_board,         # 状态栏
       eisu_toggle_font_board,               # 字体
@@ -186,6 +187,9 @@ preset_keys:
   # 键盘调节
   # 支持系统：鸿蒙
   eisu_toggle_edit_keyboard_board: { icon: "mobiledata.svg", label: "键盘调节", send: Eisu_toggle, select: _edit_keyboard_board }
+  # 单手模式
+  # 支持系统：鸿蒙
+  eisu_toggle_one_hand_board: { icon: "onehand.svg", label: "单手模式", send: Eisu_toggle, select: _one_hand_board }
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
@@ -523,6 +527,19 @@ preset_keys:
   # 支持系统：鸿蒙
   function_keyboard_switch_cn_en: { type: keyboard_switch, label: "中英", send: function, command: keyboard.switch_cn_en, option: "" }
 
+  # 检查软件更新（有可用更新时图标右上角显示红点）
+  # 支持系统：鸿蒙、安卓
+  function_common_check_update: { type: indicator, icon: "arrow_clockwise.svg", label: "检查更新", send: function, command: app.check_update, option: "" }
+
+  # 撤销（动态/函数执行型）：清空或删除文本后出现，点击恢复；撤销栈为空时自动隐藏。
+  # visible_when=can_undo 由 CommandInvoker 维护；command 走责任链执行 keyboard.undo。
+  # 支持系统：鸿蒙、安卓
+  function_keyboard_undo_dynamic: { type: action, icon: "undo.svg", label: "撤销", send: function, command: keyboard.undo, option: [ "visible_when=can_undo" ] }
+
+  # 提示（提示型，示例）：点击弹提示；dismiss_after_tap 使其点击后永久消失。标题取 label、正文取 preview。
+  # 仅作演示，发布前可从菜单移除。支持系统：鸿蒙、安卓
+  function_demo_prompt: { type: prompt, icon: "exclamationmark_circle_fill.svg", label: "提示", preview: "这是一条工具栏提示信息，点击「知道了」后本项会永久消失。", option: [ "dismiss_after_tap" ] }
+
   # 默认的方案状态
   # commandl固定为：rime.switches option参数为方案switches的name
   # 繁简转换
@@ -554,7 +571,7 @@ preset_keys:
   text_full_dun: { label: "、", text: "、" }
   text_full_tilde: { label: "～", text: "～" }
   text_full_colon: { label: "：", text: "：" }
-  text_full_square_bracket_left_left: { label: "［", text: "［］{Left}" }
+  text_full_square_bracket_left: { label: "［", text: "［］{Left}" }
   text_full_square_bracket_right: { label: "］", text: "］" }
   text_full_smile: { label: "ï", text: "ï" }
   text_full_comma: { label: "、", text: "、" }
