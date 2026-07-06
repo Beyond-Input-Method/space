@@ -30,21 +30,29 @@
 - **space.yaml**
   - 这是整个 Space 的「入口配置文件」。
   - 它告诉系统：默认用哪个方案、哪个主题、哪些资源目录。
-  - 当前内容示例（简化解释）：
-    - `schema`: 默认输入方案名称，例如 `bim-pinyin`。
+  - 当前内容示例（简化解释，字段顺序与实际文件一致）：
+    - `schema_id`: 默认启用的具体方案 id，例如 `rime_ice_26`（对应 `schemas/bim-pinyin/rime_ice_26.schema.yaml`）。
+    - `schema`: 默认输入方案家族名称，例如 `bim-pinyin`。
     - `schema_dir`: 输入方案所在的目录，一般是 `schemas/`。
-    - `theme`: 默认主题名称，例如 `t9`。
+    - `theme`: 默认主题名称，例如 `default`。
     - `theme_dir`: 主题所在的目录，一般是 `themes/`。
+    - `font`: 默认字体方案名称，例如 `default`。
+    - `font_dir`: 字体资源目录，一般是 `fonts/`。
     - `symbol`: 默认符号方案名称，例如 `default`。
     - `symbol_dir`: 符号配置目录，一般是 `symbols/`。
     - `emoticon`: 默认表情方案名称，例如 `default`。
     - `emoticon_dir`: 表情配置目录，一般是 `emoticons/`。
+    - `speech`: 默认语音（听写/TTS）服务名称，例如 `volcengine`。
+    - `speech_dir`: 语音服务配置目录，一般是 `speeches/`。
     - `config_version`: 配置版本号，目前是 `1.0`，用来区分不同配置格式。
     - `sound_on`: 是否开启按键音效（`true/false`）。
     - `sound_volume`: 按键音量大小（数字）。
     - `sound_effect`: 使用哪一套音效资源，例如 `default`。
     - `haptics_on`: 是否开启按键振动（`true/false`）。
     - `haptics_volume`: 振动强度（数字）。
+    - `haptic`: 默认振动方案名称，例如 `system`。
+    - `haptic_dir`: 振动配置目录，一般是 `haptics/`。
+    - `global_keyboard_menu`: 全局键盘菜单项列表，定义键盘上长按 / 功能菜单里出现哪些功能按钮（如 VIP、语音识别、emoji、剪切板、Rime 切换器等）。
 
 - **LICENSE**
   - Space 仓库的开源协议文件。
@@ -68,6 +76,10 @@
   - 键盘主题相关资源：颜色、布局风格、背景等。
   - 想做「皮肤」类效果时，通常会改这里的文件。
 
+- **fonts/**
+  - 字体资源目录，每个子目录是一套字体方案（如 `default/`、`jf-openhuninn-2.1/`）。
+  - `space.yaml` 里的 `font` / `font_dir` 字段会引用这里的某套字体。
+
 - **symbols/**
   - 符号面板配置，比如各种标点、特殊符号、数学符号等如何排布。
   - 不同的 symbol 方案可以决定你看到的是「哪一套符号键盘」。
@@ -82,7 +94,12 @@
 
 - **haptics/**
   - 震动（触觉反馈）配置，比如按键时「轻震一下」还是「重点震动」。
-  - `space.yaml` 里的 `haptics_on` 和 `haptics_volume` 会影响这些效果是否启用、强度多大。
+  - `space.yaml` 里的 `haptics_on`、`haptics_volume` 控制是否启用与强度；`haptic` / `haptic_dir` 指定使用哪套振动方案。
+
+- **speeches/**
+  - 语音服务（听写 / 语音识别 / TTS）配置目录，每个子目录是一套服务（如 `default/` 本地、`volcengine/` 火山引擎）。
+  - 每套服务通常包含 `info.yaml`（界面信息）与 `speech.yaml`（provider 与凭据配置）。
+  - `space.yaml` 里的 `speech` / `speech_dir` 字段决定默认使用哪套服务。
 
 - **patches/**
   - 补丁配置，用来对现有方案做「局部修改 / 增强」。
@@ -96,6 +113,9 @@
 - **resources/**
   - 通用资源目录，里面可能包含图片、模板、配置片段等，供其他目录引用。
   - 可以理解成「共享素材库」。
+
+- **tutorials/**
+  - 面向用户 / 开发者的图文教程（Markdown），例如 `custom_phrase.md`（自定义短语教程）。
 
 ---
 
@@ -169,21 +189,31 @@
     - 你只需要在主题自己的 `theme.yaml` 里定制少量差异化内容。
 
 - **`__include` 语法：从 public 引用公共配置**
-  - 在 `t9/theme.yaml` 开头，你会看到类似这样的写法：
-    - `style: __include: ./../public/style/default:/style`
-    - `preset_styles: __include: ./../public/preset_styles/default:/preset_styles`
-    - `preset_candidates: __include: ./../public/preset_candidates/default:/preset_candidates`
-    - `preset_fonts: __include: ./../public/preset_fonts/default:/preset_fonts`
-    - `preset_color_schemes: __include: ./../public/preset_color_schemes/default:/preset_color_schemes`
-    - `preset_keys: __include: ./../public/preset_keys/default:/preset_keys`
+  - 在 `t9/theme.yaml` 开头，你会看到类似这样的写法（注意 `__include` 是**另起一行、缩进**写的，不是和键名同一行）：
+    ```yaml
+    style:
+      __include: ./../public/style/default:/style
+    preset_styles:
+      __include: ./../public/preset_styles/default:/preset_styles
+    preset_candidates:
+      __include: ./../public/preset_candidates/default:/preset_candidates
+    preset_fonts:
+      __include: ./../public/preset_fonts/default:/preset_fonts
+    preset_color_schemes:
+      __include: ./../public/preset_color_schemes/default:/preset_color_schemes
+    preset_keys:
+      __include: ./../public/preset_keys/default:/preset_keys
+    ```
   - 可以简单理解为：
     - `__include: A:/B` 表示「从文件/目录 A 里，把路径 B 对应的那一段配置**拷贝过来用**」。
     - 这样 `t9` 主题就可以直接复用 `public` 里的默认样式、颜色和键盘预设。
 
 - **主题里的 preset_keyboards 如何用到 public？**
-  - 在 `t9/theme.yaml` 里，`preset_keyboards` 下会有这样的配置：
-    - `__include: ./../public/preset_menu/default:/preset_menu/default_menu`
-  - 而 `themes/public/preset_keyboards/default.yaml` 中，则定义了默认的字母键盘布局（QWERTY 行、按键大小、间距等）。
+  - 在 `t9/theme.yaml` 里，`preset_keyboards` 下会以 `__include` 引用 public 的按键行与菜单，例如：
+    - `__include: ./../public/preset_keyboards/t9_keys:/t9_key_1`（引用 T9 按键行）
+    - `__include: ./../public/preset_keyboards/bottom_func_keys:/bottom_number_key`（引用底部功能键）
+    - `__include: ./../public/preset_menu/default:/preset_menu/symbol_menu`（引用符号菜单）
+  - 而 `themes/public/preset_keyboards/` 下的文件（如 `default.yaml`）则定义了默认的字母键盘布局（QWERTY 行、按键大小、间距等）。
   - 多个主题（比如 `t9` 和别的主题）可以共享这一份默认键盘布局，再各自加一点点差异配置。
 
 > 如果你只是想「改一个主题的颜色或布局」，建议：
@@ -197,11 +227,13 @@
 `schemas/` 目录里放的是**输入方案**，比如全拼、双拼、五笔等。我们用一个稍微技术一点、但尽量好懂的方式来解释：
 
 - **子目录 = 一大类方案家族**
-  - 例如：
+  - 当前实际存在的方案家族目录：
     - `bim-pinyin/`：拼音相关的所有方案（全拼、各种双拼、T9 拼音等）。
     - `bim-wubi/`：五笔方案。
+    - `bim-stroke/`：笔画方案。
+    - `bim-cangjie/`：仓颉方案。
     - `zhuyin/`：注音方案。
-    - `wanxiang/` 等：其他方案家族。
+    - `wanxiang/`：万象方案家族。
   - 打开 `bim-pinyin/` 可以看到很多文件：
     - `xxx.schema.yaml`：方案主配置（最关键）。
     - `xxx.custom.yaml`：用户 / 默认的个性化覆盖配置。
@@ -256,7 +288,8 @@
 
 - **结合实际目录来理解**
   - 现在的项目里，`schemas/bim-pinyin/` 已经包含了一整套拼音方案家族：
-    - 比如 `bim_t9.schema.yaml`、`double_pinyin.schema.yaml`、`rime_ice.schema.yaml` 等等。
+    - 比如 `bim_t9.schema.yaml`、`bim_t14.schema.yaml`、`double_pinyin.schema.yaml`、各种双拼变体（`double_pinyin_mspy/_sogou/_flypy/_ziguang` 及其 `_14` / `_18` 版本）、以及 `rime_ice_18.schema.yaml`、`rime_ice_26.schema.yaml` 等等。
+    - 注意：并不存在裸的 `rime_ice.schema.yaml`，实际是带键位后缀的 `rime_ice_18` / `rime_ice_26`；`space.yaml` 默认的 `schema_id: rime_ice_26` 就指向后者。
   - 如果你将来需要导入一套全新的方案，可以大致按这样准备 zip 包：
     - zip 里面有一个目录，比如 `my_schema/`；
     - 这个目录里至少有一个 `my_schema.schema.yaml`；

@@ -4,27 +4,35 @@
 
 本文档包含 10 种不同风格的虚拟键盘按键触感方案，每种方案都严格遵循 HarmonyOS 振动开发规范。每种风格包含 4 个触感配置文件，分别对应不同的按键类型。
 
+除这 10 种风格外，仓库还内置 3 个特殊方案：`default`（默认）、`system`（系统，`space.yaml` 默认的 `haptic: system` 即指向它）、`power`（强力，含 `power_one/` 子方案）。它们结构更简（见下）。
+
 ## 目录结构
 
 ```
-keyboard_haptics/
+haptics/
 ├── gentle/          # 轻柔触感
 ├── crisp/           # 清脆触感
 ├── mechanical/      # 机械键盘触感
 ├── typewriter/      # 打字机触感
 ├── modern/          # 现代简约触感
-├── strong/          # 强劲有力触感
+├── strong/          # 强劲有力触感（含 power_one/ 子方案）
 ├── bouncy/          # 弹性触感
 ├── precise/         # 精准触感
 ├── comfortable/     # 舒适触感
-└── gaming/          # 游戏触感
+├── gaming/          # 游戏触感
+├── default/         # 默认方案（仅 default.json）
+├── system/          # 系统方案（仅 info.yaml，使用系统默认振动）
+└── power/           # 强力方案（default.json + power_one/ 子方案）
 ```
 
-每个目录包含 4 个 JSON 文件：
+上面 10 种风格目录各包含 4 个 JSON 文件：
 - `default.json` - 默认按键触感
 - `return.json` - 回车键触感
 - `backspace.json` - 删除键触感
 - `space.json` - 空格键触感
+
+**每个方案目录还包含一个 `info.yaml`**（名片信息：`name`、`description`、`version`、`create_date` 等）。
+`default` / `system` / `power` 三个特殊方案不一定包含全部 4 个 JSON：`system` 只有 `info.yaml`（走系统默认振动），`default` 只有 `default.json`，`power` 含 `default.json` 并在 `power_one/` 下另有一套配置。
 
 ## 方案详细说明
 
@@ -179,7 +187,7 @@ keyboard_haptics/
 import vibrator from '@ohos.vibrator';
 
 // 加载触感文件
-const hapticFile = 'keyboard_haptics/crisp/default.json';
+const hapticFile = 'haptics/crisp/default.json';
 
 // 触发振动
 vibrator.startVibration({
@@ -200,7 +208,10 @@ vibrator.startVibration({
 
 ## 文件清单
 
-共计 **40 个 JSON 文件**，分布在 10 个目录中：
+10 种风格方案共计 **40 个 JSON 文件**（每种 4 个），分布在 10 个目录中。
+此外 `default/`（1 个 JSON）、`power/`（含 `power_one/`，共 2 个 JSON）、`system/`（0 个 JSON）三个特殊方案另算，且每个方案目录都附带一个 `info.yaml`。
+
+10 种风格的 JSON 清单：
 
 ```
 ✅ gentle/default.json

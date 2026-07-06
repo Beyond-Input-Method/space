@@ -22,15 +22,20 @@
 ```text
 resources/space/speeches/
 ├── default/
-│   └── info.yaml
+│   ├── info.yaml        # 界面说明卡片
+│   └── speech.yaml      # provider 与凭据配置
 └── volcengine/
-    └── info.yaml
+    ├── info.yaml
+    └── speech.yaml
 ```
 
 你可以把它理解成：
 
 - 文件夹名 = 这个语音服务的内部名字
-- `info.yaml` = 这个语音服务的说明卡片
+- `info.yaml` = 这个语音服务的**说明卡片**（页面上显示什么、缺 key 时弹什么）
+- `speech.yaml` = 这个语音服务的**接入配置**（用哪个 provider、要哪些密钥）
+
+> 注意：每个语音服务目录下其实有**两个**配置文件。本文大部分篇幅讲 `info.yaml`，`speech.yaml` 的说明见下方「`speech.yaml` 是什么」一节。
 
 程序会读取 `info.yaml`，然后决定：
 
@@ -40,6 +45,39 @@ resources/space/speeches/
 - 缺少 key 时弹窗显示什么按钮
 - “去申请”按钮跳到哪个网址
 - “配置 key”按钮跳到哪个补丁设置页
+
+---
+
+## 一·补、`speech.yaml` 是什么
+
+`info.yaml` 管「页面长什么样」，`speech.yaml` 管「真正用哪个语音引擎、要哪些密钥」。
+
+当前仓库里两个例子：
+
+- `default/speech.yaml`：本地（离线）语音，只有一行
+  ```yaml
+  provider: local
+  ```
+
+- `volcengine/speech.yaml`：火山引擎（豆包）云端语音，需要密钥
+  ```yaml
+  # 语音服务提供商
+  provider: volcengine
+  # 豆包语音应用密钥
+  appKey: ''
+  # 豆包语音访问密钥
+  accessKey: ''
+  # 是否启用自动标点符号（true 自动加标点 / false 不加）
+  enablePunc: true
+  ```
+
+字段说明：
+
+- `provider`：用哪个语音引擎。目前支持 `local`（系统本地识别）与 `volcengine`（火山引擎云端）。
+- `appKey` / `accessKey`：云端 provider 的密钥，留空表示尚未配置（用户需在 App 里通过对应补丁页填写）。
+- `enablePunc`：是否让识别结果自动带标点（仅部分 provider 支持）。
+
+> 一句话：**新增一个云端语音服务时，除了写 `info.yaml`，还要在同目录放一个 `speech.yaml` 指定 `provider` 和密钥字段。**
 
 ---
 
