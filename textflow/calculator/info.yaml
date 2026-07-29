@@ -1,0 +1,9 @@
+name: "计算器"
+description: "数学表达式计算器，支持四则运算、幂运算和百分比计算"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"

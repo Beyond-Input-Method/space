@@ -1,0 +1,10 @@
+name: "意图检测"
+description: "意图检测处理器，识别用户输入的主要意图"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"
+  - "speech"

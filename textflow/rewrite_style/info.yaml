@@ -1,0 +1,9 @@
+name: "风格改写"
+description: "风格改写处理器，将文本改写为指定风格"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"

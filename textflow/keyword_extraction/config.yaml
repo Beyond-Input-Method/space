@@ -1,0 +1,35 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "keyword_extraction"
+      mode: "balanced"
+      totalTimeoutMs: 4000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "keyword_extraction"
+          order: 1
+          timeoutMs: 2500
+          retryCount: 0
+          enabled: true
+  sceneMappings:
+    "keyword": "keyword_extraction"
+  sourceMappings:
+    "keyword": "keyword_extraction"
+
+user:
+  enabledProcessors:
+    - "keyword_extraction"
+  qualityMode: "balanced"

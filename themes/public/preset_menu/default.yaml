@@ -9,8 +9,8 @@ preset_menu:
      function_common_speech_recognition, #
      eisu_toggle_emoji,           # 显示emoji表情选择器
      eisu_toggle_clip_board,      # 打开剪切板
-     eisu_toggle_cut_setting,      # 剪切操作
-     eisu_toggle_clear_setting,   # 清除文本相关操作
+     eisu_toggle_clear_quick_panel,   # 清除文本相关操作
+     eisu_toggle_cut_quick_panel,      # 剪切操作
      function_rime_switcher       # Rime输入法切换器
     ] }
   
@@ -44,9 +44,15 @@ preset_menu:
   all_menu:
     menu: { events: [
      function_common_speech_recognition,            # 语音识别
+     function_keyboard_switch_cn_en,                # 中英键盘切换（动态显示目标态）
+     function_common_check_update,                  # 检查软件更新（有更新带红点）
+     function_keyboard_undo_dynamic,                # 撤销（动态：清空/删除后出现）
+     eisu_toggle_clear_quick_panel,                 # 清除文本相关操作
+     eisu_toggle_cut_quick_panel,                   # 剪切操作
      eisu_toggle_schema_board,                      # 键盘方案选择
      eisu_toggle_theme_list_board,                  # 主题
      eisu_toggle_edit_keyboard_board,               # 键盘调节
+     eisu_toggle_one_hand_board,                    # 单手模式
      eisu_toggle_sound_board,                       # 声音设置
      eisu_toggle_common_setting_board,              # 通用设置
      eisu_toggle_toolbar_customize,                 # 定制工具栏

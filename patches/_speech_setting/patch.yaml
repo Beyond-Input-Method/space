@@ -1,0 +1,130 @@
+patch_to: "{$file:speech:volcengine}"
+patch:
+  - title: "标点展示"
+    key: "speech_punctuation_patch"
+    description: "配置语音识别的标点符号展示方式"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_punctuation"
+    patch:
+      enablePunc: true
+      puncMode: "{$punctuation_mode}"
+
+  - title: "口水词去除"
+    key: "speech_filler_filter_patch"
+    description: "自动去除语音识别中的语气词和口头禅"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_filler_filter"
+    patch:
+      enableFilterFiller: true
+  
+
+  - title: "语音指令总开关"
+    key: "speech_auto_send_patch"
+    description: "开启后，下方各触发词指令生效"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_auto_send"
+    patch:
+      enableAutoSend: true
+
+  - title: "触发词：over over → 发送"
+    key: "speech_cmd_over_patch"
+    description: "说'over over'时自动发送当前输入内容"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_cmd_over"
+    patch:
+      enableCmdOver: true
+
+  - title: "触发词：发送发送 → 发送"
+    key: "speech_cmd_send_patch"
+    description: "说'发送发送'时自动发送当前输入内容"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_cmd_send"
+    patch:
+      enableCmdSend: true
+
+  - title: "触发词：取消取消 → 取消"
+    key: "speech_cmd_cancel_patch"
+    description: "说'取消取消'时丢弃当前语音并退出"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_cmd_cancel"
+    patch:
+      enableCmdCancel: true
+
+  - title: "触发词：算了算了 → 取消"
+    key: "speech_cmd_suanle_patch"
+    description: "说'算了算了'时丢弃当前语音并退出"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_cmd_suanle"
+    patch:
+      enableCmdSuanle: true
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    - type: group
+      title: "标点配置"
+
+    # 总开关
+    - type: toggle_switch
+      title: "启用标点展示"
+      key: enable_punctuation
+      default_value: false
+      toggle_style: switch
+
+    - type: multi_value
+      title: "标点符号模式"
+      key: punctuation_mode
+      default_value: "1"
+      values:
+        - "1"
+        - "2"
+        - "3"
+      titles:
+        - "智能添加标点"
+        - "空格代替标点"
+        - "句末不加标点"
+
+    - type: group
+      title: "口水词去除"
+      footer_text: "去除语音中的口水词，如'嗯'、'啊'等"
+    # 总开关
+    - type: toggle_switch
+      title: "启用口水词去除"
+      key: enable_filler_filter
+      default_value: false
+      toggle_style: switch
+
+    - type: group
+      title: "语音指令"
+      footer_text: "说出触发词可自动发送或取消。各触发词可单独开关，均为双写以降低误触发。"
+    # 总开关
+    - type: toggle_switch
+      title: "启用语音指令"
+      key: enable_auto_send
+      default_value: false
+      toggle_style: switch
+
+    # 各触发词独立开关（在"启用语音指令"开启后生效）
+    - type: toggle_switch
+      title: "over over → 发送"
+      key: enable_cmd_over
+      default_value: true
+      toggle_style: switch
+
+    - type: toggle_switch
+      title: "发送发送 → 发送"
+      key: enable_cmd_send
+      default_value: true
+      toggle_style: switch
+
+    - type: toggle_switch
+      title: "取消取消 → 取消"
+      key: enable_cmd_cancel
+      default_value: true
+      toggle_style: switch
+
+    - type: toggle_switch
+      title: "算了算了 → 取消"
+      key: enable_cmd_suanle
+      default_value: true
+      toggle_style: switch

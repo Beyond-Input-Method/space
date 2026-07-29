@@ -12,8 +12,32 @@ appKey: ''
 # Access Key for VolcEngine API
 accessKey: ''
 
-# 是否启用自动标点符号
-# Enable automatic punctuation
-# true: 自动添加标点符号 / false: 不添加标点符号
+# ==================== 标点符号配置 ====================
+# Punctuation Settings
+
+# 是否启用标点符号功能
+# true: 启用标点符号处理 / false: 不启用
 enablePunc: true
 
+# 标点符号模式
+# Punctuation mode
+# "1": 智能添加标点 - 自动识别语义添加合适标点
+# "2": 空格代替标点 - 用空格代替所有标点符号
+# "3": 句末不加标点 - 不在句末添加标点，保留其他位置标点
+puncMode: "1"
+
+# ==================== 口水词过滤配置 ====================
+# Filler Words Filter Settings
+
+# 是否启用口水词（语气词）过滤
+# true: 自动去除语音中的语气词，如"嗯"、"啊"、"这个"、"那个"等
+# false: 保留所有原始识别内容
+enableFilterFiller: false
+
+# ==================== 自动发送配置 ====================
+# Auto Send Settings
+
+# 是否启用语音自动发送功能
+# true: 检测到触发短语时自动发送消息
+# false: 关闭自动发送
+enableAutoSend: false

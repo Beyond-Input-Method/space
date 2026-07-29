@@ -1,0 +1,9 @@
+name: "移除末尾标点"
+description: "移除文本末尾的标点符号，用于语音输入后处理"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "speech"
+  - "keyboard"

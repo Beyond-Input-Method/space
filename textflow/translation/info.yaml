@@ -1,0 +1,9 @@
+name: "文本翻译"
+description: "文本翻译处理器，支持多语言互译"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"

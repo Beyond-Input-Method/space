@@ -1,0 +1,10 @@
+name: "智能标点"
+description: "智能标点补全处理器，自动添加适当的标点符号"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "keyboard"
+  - "clipboard"
+  - "speech"

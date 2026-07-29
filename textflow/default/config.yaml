@@ -1,0 +1,43 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "default_text_optimize"
+      mode: "balanced"
+      totalTimeoutMs: 5000
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "correction"
+          order: 1
+          timeoutMs: 2000
+          retryCount: 1
+          enabled: true
+        - name: "punctuation"
+          order: 2
+          timeoutMs: 1500
+          retryCount: 0
+          enabled: true
+  sceneMappings:
+    "chat": "default_text_optimize"
+    "document": "default_text_optimize"
+  sourceMappings:
+    "keyboard": "default_text_optimize"
+    "clipboard": "default_text_optimize"
+
+user:
+  enabledProcessors:
+    - "correction"
+    - "punctuation"
+  qualityMode: "balanced"

@@ -1,0 +1,9 @@
+name: "关键词命令触发"
+description: "关键词命令触发处理器，识别语音输入末尾的特定触发词并执行对应命令"
+version: "1.0.0"
+author: "bim"
+create_date: "2026-04-08"
+update_date: "2026-04-08"
+supported_sources:
+  - "speech"
+

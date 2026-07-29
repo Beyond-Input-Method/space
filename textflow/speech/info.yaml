@@ -1,0 +1,8 @@
+name: "语音输入"
+description: "语音识别后处理：按启动方式（长按空格/点击图标）× 3 个 patch 开关（标点模式/口水词/over,over 自动发送）路由到 18 种 pipeline 组合"
+version: "2.0.0"
+author: "bim"
+create_date: "2026-04-07"
+update_date: "2026-04-18"
+supported_sources:
+  - "speech"

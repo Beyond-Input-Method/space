@@ -1,0 +1,35 @@
+gateway:
+  defaultGatewayId: "deepseek_main"
+  gateways:
+    deepseek_main:
+      providerType: "deepseek"
+      baseUrl: "https://api.deepseek.com"
+      apiKey: "sk-your-api-key-here"
+      modelFast: "deepseek-chat"
+      modelBalanced: "deepseek-chat"
+      modelQuality: "deepseek-chat"
+      enableStructuredOutput: true
+      enableStream: false
+      enableDeepThinking: false
+
+pipeline:
+  pipelines:
+    - pipelineId: "calculator"
+      mode: "fast"
+      totalTimeoutMs: 500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "calculator"
+          order: 1
+          timeoutMs: 300
+          retryCount: 0
+          enabled: true
+  sceneMappings:
+    "calculator": "calculator"
+  sourceMappings:
+    "calculator": "calculator"
+
+user:
+  enabledProcessors:
+    - "calculator"
+  qualityMode: "fast"
