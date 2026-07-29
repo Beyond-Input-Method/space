@@ -148,6 +148,8 @@ preset_keys:
     send: Eisu_toggle,
     select: _quick_panel,
     option: [
+      function_keyboard_selectAllCut,
+      function_keyboard_selectAllCopy,
       function_keyboard_selectAll,
       function_keyboard_cut,
       function_keyboard_copy,
@@ -464,6 +466,12 @@ preset_keys:
   #复制
   # 支持系统：鸿蒙6
   function_keyboard_copy: { icon: "doc_plaintext_2.svg", label: "复制", send: function, command: keyboard.copy, option: "" }
+  #全选并剪切
+  # 支持系统：鸿蒙6
+  function_keyboard_selectAllCut: { icon: "cut.svg", label: "全选剪切", text: "{function_keyboard_selectAll}{function_keyboard_cut}" }
+  #全选并复制
+  # 支持系统：鸿蒙6
+  function_keyboard_selectAllCopy: { icon: "doc_plaintext_2.svg", label: "全选复制", text: "{function_keyboard_selectAll}{function_keyboard_copy}" }
   #粘贴
   # 支持系统：鸿蒙6(现在有鸿蒙bug。暂时无效)
   function_keyboard_paste: { icon: "text_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
@@ -581,7 +589,7 @@ preset_keys:
   text_delimiter: { icon: "textformat.svg", label: "分隔", text: "{'}", name: delimiter }
   # .
   commit_halfperiod: { label: ".", commit: "." } #直接上屏半角句号
-  text_halfperiod_default: { label: ".", text: ".{eisu_toggle_default}" } #上屏全角句号再跳转到default键盘
+  text_halfperiod_default: { label: "。", text: ".{eisu_toggle_default}" } #上屏全角句号再跳转到default键盘
   text_fullperiod_default: { label: "。", text: "。{eisu_toggle_default}" } #上屏全角句号再跳转到default键盘
   text_full_period_default_no_functional: { label: "。", text: "。{eisu_toggle_default}", functional: false } #上屏全角句号再跳转到default键盘
   # ⋯
