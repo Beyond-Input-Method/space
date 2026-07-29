@@ -1,0 +1,6 @@
+# default settings
+# encoding: utf-8
+__include: ./../public/info/default:/
+name: 标准传统中文26键
+version: 1.0.0
+
