@@ -25,25 +25,25 @@ preset_keys:
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
       eisu_toggle_theme_list_board,         # 主题
-      eisu_toggle_custom_phrase_board,      # 常用语
       eisu_toggle_patch_board,              # 补丁管理
       eisu_toggle_toolbar_customize,        # 定制工具栏
-      eisu_toggle_clip_board,               # 剪切板
       eisu_toggle_speech_setting,           # 语音设置
-      function_rime_deploy,                 # 重新部署Rime
+      eisu_toggle_common_setting_board,     # 通用设置
+      eisu_toggle_status_bar_board,         # 状态栏
+      eisu_toggle_one_hand_board,           # 单手模式
       eisu_toggle_sound_board,              # 声音设置
       eisu_toggle_haptic_board,             # 触感设置
       eisu_toggle_edit_keyboard_board,      # 键盘布局调整
-      eisu_toggle_one_hand_board,           # 单手模式
-      eisu_toggle_common_setting_board,     # 通用设置
-      eisu_toggle_status_bar_board,         # 状态栏
       eisu_toggle_font_board,               # 字体
       eisu_toggle_fuzzy_pinyin,             # 模糊拼音设置
+      eisu_toggle_custom_phrase_board,      # 常用语
 #      eisu_toggle_cut_setting,             # 剪切板
 #      eisu_toggle_search_clip_board,       # 剪切板搜索
+      eisu_toggle_clip_board,               # 剪切板
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
       eisu_toggle_file_manager,             # 文件管理器
+      function_rime_deploy,                 # 重新部署Rime
 #      eisu_toggle_open_web_browser,         # 打开网页浏览器
       # eisu_toggle_switch_setting,
       # eisu_toggle_schema_setting,
@@ -534,6 +534,10 @@ preset_keys:
   # 中英键盘切换（条件显示目标态：中文键盘显示“英”，点击切到英文，反之亦然）
   # 支持系统：鸿蒙
   function_keyboard_switch_cn_en: { type: keyboard_switch, label: "中英", send: function, command: keyboard.switch_cn_en, option: "" }
+
+  # 系统输入法切换列表
+  # 支持系统：鸿蒙
+  function_keyboard_showInputMethodList: { type: command, icon: "list_bullet.svg", label: "切换输入法", send: function, command: keyboard.showInputMethodList, option: "" }
 
   # 检查软件更新（有可用更新时图标右上角显示红点）
   # 支持系统：鸿蒙、安卓
