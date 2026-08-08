@@ -24,6 +24,7 @@ preset_keys:
     select: _setting_board,
     option: [
       eisu_toggle_schema_board,             # 键盘方案选择
+      eisu_toggle_handwriting_board,        # 手写输入
       eisu_toggle_theme_list_board,         # 主题
       eisu_toggle_patch_board,              # 补丁管理
       eisu_toggle_toolbar_customize,        # 定制工具栏
@@ -170,6 +171,10 @@ preset_keys:
   # 键盘选择
   # 支持系统：鸿蒙
   eisu_toggle_schema_board: { icon: "keyboard_badge_handwritten.svg", label: "键盘选择", send: Eisu_toggle, select: _schema_dir_board }
+
+  # 手写输入（主题键盘页 handwriting，custom_key 画板 + 系统候选栏）
+  # 支持系统：鸿蒙
+  eisu_toggle_handwriting_board: { icon: "hand_scribble.svg", label: "手写", send: Eisu_toggle, select: handwriting }
   # 声音
   # 支持系统：鸿蒙，iOS
   eisu_toggle_sound_board: { icon: "speaker_wave_3.svg", label: "声音", send: Eisu_toggle, select: _sound_board }

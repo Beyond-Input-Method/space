@@ -486,3 +486,5 @@ preset_keyboards:
     - { click: commit_halfperiod, name: commit_halfperiod, width: 13, preview: false }
     # - {click: eisu_toggle_符_number, name: numberPeriodFull, width: 13}
     - { click: return, width: 20, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+  handwriting:
+    __include: ./../public/preset_keyboards/default:/preset_keyboards/handwriting

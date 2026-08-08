@@ -340,3 +340,5 @@ preset_keyboards:
     __include: ./../public/preset_keyboards/default:/preset_keyboards/symbols_sm_md
   # half_symbols_sm_md:
   #   __include: ./public/preset_keyboards/default:/preset_keyboards/half_symbols_sm_md
+  handwriting:
+    __include: ./../public/preset_keyboards/default:/preset_keyboards/handwriting
