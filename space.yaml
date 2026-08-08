@@ -26,6 +26,6 @@ global_keyboard_menu: [
   eisu_toggle_clip_board,      # 打开剪切板
   eisu_toggle_cut_quick_panel,      # 剪切操作
   eisu_toggle_clear_quick_panel,   # 清除文本相关操作
-  function_rime_switcher       # Rime输入法切换器
+  eisu_toggle_status_bar_board,         # 状态栏
 ]
 

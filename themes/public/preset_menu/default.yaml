@@ -85,6 +85,8 @@ preset_menu:
      function_keyboard_clearLeft,                   # 左清空
      function_keyboard_clearRight,                  # 右清空
      function_keyboard_redo,                        # 重做
+     function_keyboard_selectAllCut,                # 全选后剪切
+     function_keyboard_selectAllCopy,               # 全选后复制
      function_keyboard_selectAll,                   # 全选
      function_keyboard_cut,                         # 剪切
      function_keyboard_copy,                        # 复制

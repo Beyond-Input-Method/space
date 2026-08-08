@@ -1,0 +1,87 @@
+patch_to: "{$current_theme}"
+
+patch:
+  - title: "自定义九键常用符号"
+    key: "t9_collection_symbols"
+    description: "自定义标准中文九键左侧符号栏中的 11 个符号"
+    patch_to: "{$current_theme}"
+    bind_control: "t9_collection_symbols"
+    patch:
+      "preset_keyboards/default/keys/@0/collection/@0": "{$t9_collection_symbol_1}"
+      "preset_keyboards/default/keys/@0/collection/@1": "{$t9_collection_symbol_2}"
+      "preset_keyboards/default/keys/@0/collection/@2": "{$t9_collection_symbol_3}"
+      "preset_keyboards/default/keys/@0/collection/@3": "{$t9_collection_symbol_4}"
+      "preset_keyboards/default/keys/@0/collection/@4": "{$t9_collection_symbol_5}"
+      "preset_keyboards/default/keys/@0/collection/@5": "{$t9_collection_symbol_6}"
+      "preset_keyboards/default/keys/@0/collection/@6": "{$t9_collection_symbol_7}"
+      "preset_keyboards/default/keys/@0/collection/@7": "{$t9_collection_symbol_8}"
+      "preset_keyboards/default/keys/@0/collection/@8": "{$t9_collection_symbol_9}"
+      "preset_keyboards/default/keys/@0/collection/@9": "{$t9_collection_symbol_10}"
+      "preset_keyboards/default/keys/@0/collection/@10": "{$t9_collection_symbol_11}"
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    - type: group
+      title: "九键常用符号"
+      footer_text: "按显示顺序分别修改标准中文九键左侧符号栏中的 11 个符号"
+    - type: toggle_switch
+      title: "启用自定义九键常用符号"
+      key: t9_collection_symbols
+      default_value: false
+      toggle_style: switch
+    - type: text_field
+      title: "第 1 个符号"
+      key: t9_collection_symbol_1
+      default_value: "，"
+      placeholder: "，"
+    - type: text_field
+      title: "第 2 个符号"
+      key: t9_collection_symbol_2
+      default_value: "。"
+      placeholder: "。"
+    - type: text_field
+      title: "第 3 个符号"
+      key: t9_collection_symbol_3
+      default_value: "？"
+      placeholder: "？"
+    - type: text_field
+      title: "第 4 个符号"
+      key: t9_collection_symbol_4
+      default_value: "！"
+      placeholder: "！"
+    - type: text_field
+      title: "第 5 个符号"
+      key: t9_collection_symbol_5
+      default_value: "、"
+      placeholder: "、"
+    - type: text_field
+      title: "第 6 个符号"
+      key: t9_collection_symbol_6
+      default_value: "；"
+      placeholder: "；"
+    - type: text_field
+      title: "第 7 个符号"
+      key: t9_collection_symbol_7
+      default_value: "："
+      placeholder: "："
+    - type: text_field
+      title: "第 8 个符号"
+      key: t9_collection_symbol_8
+      default_value: "@"
+      placeholder: "@"
+    - type: text_field
+      title: "第 9 个符号"
+      key: t9_collection_symbol_9
+      default_value: "…"
+      placeholder: "…"
+    - type: text_field
+      title: "第 10 个符号"
+      key: t9_collection_symbol_10
+      default_value: "~"
+      placeholder: "~"
+    - type: text_field
+      title: "第 11 个符号"
+      key: t9_collection_symbol_11
+      default_value: "'"
+      placeholder: "'"
