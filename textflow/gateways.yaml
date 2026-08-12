@@ -14,9 +14,9 @@ gateway:
     deepseek_main:
       providerType: "deepseek"
       baseUrl: "https://api.deepseek.com"
-      modelFast: "deepseek-chat"
-      modelBalanced: "deepseek-chat"
-      modelQuality: "deepseek-chat"
+      modelFast: "deepseek-v4-flash"
+      modelBalanced: "deepseek-v4-flash"
+      modelQuality: "deepseek-v4-flash"
       enableStructuredOutput: false  # 处理器按纯文本读取响应，开启 json_object 会污染上屏
       enableStream: false
       enableDeepThinking: false
