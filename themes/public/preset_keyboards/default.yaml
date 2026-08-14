@@ -236,6 +236,35 @@ preset_keyboards:
     - { click: space, width: 31, name: space }
     - { click: eisu_toggle_en_zh_default_sm_md_schema_default, width: 11, name: english, preview: false }
     - { click: return, width: 24, name: return, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+  # 手写：大画板 + 右侧退格/标点列 + 底栏（候选走系统候选栏）
+  handwriting:
+    name: handwriting
+    ascii_mode: 0
+    height: 46
+    height_land: 34
+    horizontal_gap: 6
+    vertical_gap: 10
+    vertical_gap_land: 4
+    round_corner: 6
+    preview: false
+    shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
+    width: 10
+    keys:
+    # 画板 + 右侧退格
+    - { custom_key: handwriting, width: 66, height: 162, height_land: 111, name: handwriting_pad }
+    - { click: backspace, width: 17, height: 40, height_land: 34, name: backspace, preview: false, swipe_up: function_keyboard_clearAll, swipe_down: function_keyboard_undo }
+    # 画板下方占位 + 右侧标点列
+    - { width: 66 }
+    - { collection: ["，", "。", "？", "！"], width: 17, height: 122, height_land: 77, row_height: 30, row_height_land: 25, row_vertical_gap: 3, show_row_back_image: false, name: table }
+    - { width: 66 }
+    - { width: 17 }
+    # 底栏：符号 | 123 | ABC | 语音 | 写拼 | 回车
+    - { click: eisu_toggle_符_dotsymbols, width: 14, height: 46, name: symbol, preview: false }
+    - { click: eisu_toggle_123_number, width: 12, height: 46, name: number, preview: false }
+    - { click: eisu_toggle_ABC_english_schema_easy_en, width: 12, height: 46, name: english, preview: false }
+    - { click: function_common_speech_recognition, width: 20, height: 46, name: speech, preview: false }
+    - { click: eisu_toggle_ABC_default, width: 14, height: 46, label: "写拼", preview: false }
+    - { click: return, width: 18, height: 46, name: return, composing: confirm, preview: false, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight, function_keyboard_undo, function_keyboard_redo, next] }
   number:
     #。？！…（））；、～:[]ï`#：+*/×
     __include: ./../public/preset_menu/default:/preset_menu/symbol_menu

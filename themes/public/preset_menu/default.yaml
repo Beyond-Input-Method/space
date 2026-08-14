@@ -11,7 +11,7 @@ preset_menu:
      eisu_toggle_clip_board,      # 打开剪切板
      eisu_toggle_clear_quick_panel,   # 清除文本相关操作
      eisu_toggle_cut_quick_panel,      # 剪切操作
-     function_rime_switcher       # Rime输入法切换器
+     eisu_toggle_status_bar_board,         # 状态栏
     ] }
   
   # 符号菜单 - 特殊符号选择器
@@ -45,12 +45,16 @@ preset_menu:
     menu: { events: [
      function_common_speech_recognition,            # 语音识别
      function_keyboard_switch_cn_en,                # 中英键盘切换（动态显示目标态）
+     function_keyboard_showInputMethodList,         # 系统输入法切换列表
      function_common_check_update,                  # 检查软件更新（有更新带红点）
      function_keyboard_undo_dynamic,                # 撤销（动态：清空/删除后出现）
      eisu_toggle_clear_quick_panel,                 # 清除文本相关操作
      eisu_toggle_cut_quick_panel,                   # 剪切操作
      eisu_toggle_schema_board,                      # 键盘方案选择
+     function_keyboard_switchTheme_handwriting_large, # 手写键盘
+     function_handwriting_find,                     # 手写找字
      eisu_toggle_theme_list_board,                  # 主题
+     function_keyboard_rebuildTheme,                # 刷新主题
      eisu_toggle_edit_keyboard_board,               # 键盘调节
      eisu_toggle_one_hand_board,                    # 单手模式
      eisu_toggle_sound_board,                       # 声音设置
@@ -77,6 +81,7 @@ preset_menu:
      eisu_toggle_haptics_board,                     # 触感（独立面板）
      eisu_toggle_emoji,                             # 表情符号选择器
      eisu_toggle_switcher,                          # 切换（F4）
+     function_keyboard_reuseLastInput,              # 重用上次输入
      function_keyboard_clearAll,                    # 清空输入
      function_keyboard_undo,                        # 撤销
      function_keyboard_deleteLeft,                  # 左删除
@@ -84,6 +89,8 @@ preset_menu:
      function_keyboard_clearLeft,                   # 左清空
      function_keyboard_clearRight,                  # 右清空
      function_keyboard_redo,                        # 重做
+     function_keyboard_selectAllCut,                # 全选后剪切
+     function_keyboard_selectAllCopy,               # 全选后复制
      function_keyboard_selectAll,                   # 全选
      function_keyboard_cut,                         # 剪切
      function_keyboard_copy,                        # 复制

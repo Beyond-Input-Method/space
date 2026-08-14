@@ -46,33 +46,20 @@ preset_keyboards:
     width: 22
     keys:
     #1
-    # - {width: 1}
-    - { collection: [ "，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 17, height: 162, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
-    - __include: ./../public/preset_keyboards/t9_keys:/t9_key_1
-      height: 50
-      functional: false
-    - { click: 2, label: 'ABC', height: 50, swipe_up: commit_2, swipe_down: "一", long_click: [ commit_a, commit_b, commit_c, commit_2, commit_A, commit_B, commit_C ] }
-    - { click: 3, label: 'DEF', swipe_up: commit_3, height: 50, long_click: [ commit_d, commit_e, commit_f, commit_3, commit_D, commit_E, commit_F ] }
-    - { click: backspace, width: 17, height: 50, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
-
+    - { custom_key: handwriting, width: 86, height: 163, height_land: 111, name: handwriting_pad }
+    - { click: backspace, width: 14, height: 50, name: backspace, swipe_up: function_keyboard_clearLeft, swipe_down: function_keyboard_undo}
     # # #2
-    - { width: 17 }
-    - { click: 4, label: 'GHI', swipe_up: commit_4, height: 50, long_click: [ commit_g, commit_h, commit_i, commit_4, commit_G, commit_H, commit_I ] }
-    - { click: 5, label: 'JKL', swipe_up: commit_5, height: 50, long_click: [ commit_j, commit_k, commit_l, commit_5, commit_J, commit_K, commit_L ] }
-    - { click: 6, label: 'MNO', swipe_up: commit_6, height: 50, long_click: [ commit_m, commit_n, commit_o, commit_6, commit_M, commit_N, commit_O ] }
-    - { click: [ { send: next, when: normal }, { send: function_rime_clear, when: composing }, { send: function_candidate_select_first, when: predicting }, { send: function_keyboard_paste, when: pasting }, { send: function_keyboard_copy, when: selecting } ], height: 50, long_click: [ function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste ], name: dot, width: 17 }
+    - { width: 86 }
+    # - { click: [ { send: next, when: normal }, { send: function_rime_clear, when: composing }, { send: function_candidate_select_first, when: predicting }, { send: function_keyboard_paste, when: pasting }, { send: function_keyboard_copy, when: selecting } ], height: 50, long_click: [ function_keyboard_selectAll, function_keyboard_cut, function_keyboard_copy, function_keyboard_paste ], name: dot, width: 14 }
+    - { collection: [ "，", "。", "？", "！", "、", "；", "：", "@", "…", "~", "'" ], width: 14, height: 108, height_land: 111, row_height: 39, row_height_land: 35, row_vertical_gap: 3, show_row_back_image: false, name: table }
     ## #3
-    - { width: 17 }
-    - { click: 7, label: 'PQRS', swipe_up: commit_7, height: 50, long_click: [ commit_p, commit_q, commit_r, commit_s, commit_7, commit_P, commit_Q, commit_R, commit_S ] }
-    - { click: 8, label: 'TUV', swipe_up: commit_8, height: 50, long_click: [ commit_t, commit_u, commit_v, commit_8, commit_T, commit_U, commit_V ] }
-    - { click: 9, label: 'WXYZ', swipe_up: commit_9, height: 50, long_click: [ commit_w, commit_x, commit_y, commit_z, commit_9, commit_W, commit_X, commit_Y, commit_Z ] }
-    - { click: return, name: return, width: 17, height: 102, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
+    - { width: 100 }
     ## #4
     - { click: eisu_toggle_符_dotsymbols, width: 17, height: 46, name: default }
     - { click: eisu_toggle_123_number, width: 12, height: 46 }
     - { click: space, double_click: [{ send: "。", when: composing }], name: space, swipe_up: commit_0, width: 42, height: 46 }
     - { click: eisu_toggle_ABC_english_schema_easy_en, width: 12, height: 46 }
-    # - {click: return, name: return, width: 17, height: 44, composing: confirm}
+    - { click: return, name: return, width: 17, height: 46, height_land: 73, composing: confirm, long_click: [function_keyboard_clearAll, function_keyboard_clearLeft, function_keyboard_clearRight,  function_keyboard_undo, function_keyboard_redo, next] }
 
 
   english:

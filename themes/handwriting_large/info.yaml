@@ -1,0 +1,5 @@
+__include: ./../public/info/default:/
+name: 标准手宽屏手写键盘
+version: 1.0.0
+update_time: "2026-05-17"
+url: https://github.com/Beyond-Input-Method/themes/handwriting_large
