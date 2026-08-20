@@ -45,6 +45,7 @@ preset_keys:
       eisu_toggle_pasteboard_setting_board, # 剪切板设置
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
       eisu_toggle_file_manager,             # 文件管理器
+      function_keyboard_rebuildTheme,       # 重载主题
       function_rime_deploy,                 # 重新部署Rime
 #      eisu_toggle_open_web_browser,         # 打开网页浏览器
       # eisu_toggle_switch_setting,
@@ -71,7 +72,6 @@ preset_keys:
 #      function_keyboard_newline,            # 换行
 
       # Rime输入法相关功能
-      function_rime_deploy_schema,          # 重新部署当前方案
 #      function_rime_switcher,               # 切换
 #      function_rime_clear,                  # 重新输入
       function_common_open_host             # 打开主机应用
