@@ -1,0 +1,36 @@
+# 英文键盘锁定
+# 给各断点 preset_keyboards/english* 的 lock 加开关。
+# lock: true 时，切到英文键盘后会记住该页（切应用后仍停留在英文键盘）。
+
+patch_to: "{$current_theme}"
+patch:
+  - title: "记住英文键盘"
+    key: "english_keyboard_lock_enabled"
+    description: "切到英文键盘后，换成别的应用再回来，是否仍停在英文键盘"
+    patch_to: "{$current_theme}"
+    bind_control: "english_keyboard_lock_enabled"
+    patch:
+      "preset_keyboards/english/lock": "{$english_keyboard_lock}"
+      "preset_keyboards/english_sm_md/lock": "{$english_keyboard_lock}"
+      "preset_keyboards/english_land/lock": "{$english_keyboard_lock}"
+      "preset_keyboards/english_md_sm/lock": "{$english_keyboard_lock}"
+      "preset_keyboards/english_md_lg/lock": "{$english_keyboard_lock}"
+      "preset_keyboards/english_md_md/lock": "{$english_keyboard_lock}"
+      "preset_keyboards/english_lg_sm/lock": "{$english_keyboard_lock}"
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    - type: group
+      title: 英文键盘
+      footer_text: 先打开「启用此设置」。打开「记住英文键盘」时，换到别的应用再回来仍是英文键盘；关掉则会回到中文键盘
+    - type: toggle_switch
+      title: 启用此设置
+      key: english_keyboard_lock_enabled
+      default_value: false
+      toggle_style: switch
+    - type: toggle_switch
+      title: 记住英文键盘
+      key: english_keyboard_lock
+      default_value: true
+      toggle_style: switch

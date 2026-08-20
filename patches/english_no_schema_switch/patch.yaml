@@ -1,0 +1,34 @@
+# 中英键不切方案
+# 去掉各断点 eisu_toggle_ABC_english_*_schema_easy_en 组合里的 {eisu_toggle_schema_en}，
+# 只切对应英文键盘页，不自动切换到 easy_en 方案。
+
+patch_to: "{$current_theme}"
+patch:
+  - title: "中/英只换键盘"
+    key: "english_no_schema_switch"
+    description: "点「中/英」只换成英文键盘，不切换输入方案"
+    patch_to: "{$current_theme}"
+    bind_control: "english_no_schema_switch"
+    patch:
+      # 部分替换 text，保留各主题自定义的 icon / label
+      "preset_keys/eisu_toggle_ABC_english_schema_easy_en/text": "{eisu_toggle_ABC_english}"
+      "preset_keys/eisu_toggle_ABC_english_sm_md_schema_easy_en/text": "{eisu_toggle_ABC_english_sm_md}"
+      "preset_keys/eisu_toggle_ABC_english_land_schema_easy_en/text": "{eisu_toggle_ABC_english_land}"
+      "preset_keys/eisu_toggle_ABC_english_md_sm_schema_easy_en/text": "{eisu_toggle_ABC_english_md_sm}"
+      "preset_keys/eisu_toggle_ABC_english_md_lg_schema_easy_en/text": "{eisu_toggle_ABC_english_md_lg}"
+      "preset_keys/eisu_toggle_ABC_english_md_md_schema_easy_en/text": "{eisu_toggle_ABC_english_md_md}"
+      "preset_keys/eisu_toggle_ABC_english_lg_sm_schema_easy_en/text": "{eisu_toggle_ABC_english_lg_sm}"
+      # t26_pro / custom_t26_pro 菜单里用了这个别名
+      "preset_keys/eisu_toggle_ABC_english_schema_sm_md_easy_en/text": "{eisu_toggle_ABC_english_sm_md}"
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    - type: group
+      title: 中英切换
+      footer_text: 开启后，点「中/英」只换成英文键盘，输入方案保持不变
+    - type: toggle_switch
+      title: 中/英只换键盘
+      key: english_no_schema_switch
+      default_value: false
+      toggle_style: switch
