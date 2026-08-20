@@ -59,6 +59,28 @@ preset_menu:
      eisu_toggle_one_hand_board,                    # 单手模式
      eisu_toggle_sound_board,                       # 声音设置
      eisu_toggle_common_setting_board,              # 通用设置
+     eisu_toggle_common_setting_switches,           # 通用开关宫格
+     commonsetting_toggle_show_comment,             # 逐码显示
+     commonsetting_toggle_show_preedit,             # 编码显示
+     commonsetting_toggle_text_preview_supported,   # 嵌入编码
+     commonsetting_toggle_show_space_schema_name,   # 空格键显示方案名
+     commonsetting_toggle_shift_single_tap_locked,  # Shift 单击锁定
+     commonsetting_toggle_stroke_gesture_filter_enabled, # 笔画手势筛选
+     commonsetting_toggle_keyboard_handwriting_filter_enabled, # 键盘手写
+     commonsetting_toggle_candidate_handwriting_find_enabled, # 候选栏手写查字
+     commonsetting_toggle_english_auto_space,       # 英文选词自动空格
+     commonsetting_toggle_english_auto_capitalize,  # 英文句首自动大写
+     commonsetting_toggle_uppercase_direct_commit,  # 大写字母直接上屏
+     commonsetting_toggle_swipe_up_enabled,         # 上滑
+     commonsetting_toggle_swipe_down_enabled,       # 下滑
+     commonsetting_toggle_swipe_left_enabled,       # 左滑
+     commonsetting_toggle_swipe_right_enabled,      # 右滑
+     commonsetting_toggle_show_key_upper_label,     # 显示上滑符
+     commonsetting_toggle_show_key_upper_label_with_functional, # 功能键显示上滑符
+     commonsetting_toggle_show_key_down_label,      # 显示下滑符
+     commonsetting_toggle_show_key_down_label_in_landscape, # 横屏显示下滑符
+     commonsetting_toggle_show_key_down_label_with_functional, # 功能键显示下滑符
+     commonsetting_toggle_has_moving_preedit,       # 滑动选择编码
      eisu_toggle_toolbar_customize,                 # 定制工具栏
      eisu_toggle_haptic_board,                      # 触感（设置页）
      eisu_toggle_custom_phrase_board,               # 常用语

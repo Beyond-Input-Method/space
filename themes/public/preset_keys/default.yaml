@@ -29,6 +29,7 @@ preset_keys:
       eisu_toggle_toolbar_customize,        # 定制工具栏
       eisu_toggle_speech_setting,           # 语音设置
       eisu_toggle_common_setting_board,     # 通用设置
+      eisu_toggle_common_setting_switches,  # 通用开关
       eisu_toggle_status_bar_board,         # 状态栏
       eisu_toggle_one_hand_board,           # 单手模式
       function_theme_toggle_handwriting_large, #手写键盘
@@ -197,6 +198,37 @@ preset_keys:
   # 设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
+  # 通用开关（CommonSetting 布尔项，点击原地切换）
+  # 支持系统：鸿蒙
+  eisu_toggle_common_setting_switches: {
+    icon: "switch_square_lefthalf_filled.svg",
+    label: "通用开关",
+    send: Eisu_toggle,
+    select: _setting_board,
+    option: [
+      commonsetting_toggle_show_comment,
+      commonsetting_toggle_show_preedit,
+      commonsetting_toggle_text_preview_supported,
+      commonsetting_toggle_show_space_schema_name,
+      commonsetting_toggle_shift_single_tap_locked,
+      commonsetting_toggle_stroke_gesture_filter_enabled,
+      commonsetting_toggle_keyboard_handwriting_filter_enabled,
+      commonsetting_toggle_candidate_handwriting_find_enabled,
+      commonsetting_toggle_english_auto_space,
+      commonsetting_toggle_english_auto_capitalize,
+      commonsetting_toggle_uppercase_direct_commit,
+      commonsetting_toggle_swipe_up_enabled,
+      commonsetting_toggle_swipe_down_enabled,
+      commonsetting_toggle_swipe_left_enabled,
+      commonsetting_toggle_swipe_right_enabled,
+      commonsetting_toggle_show_key_upper_label,
+      commonsetting_toggle_show_key_upper_label_with_functional,
+      commonsetting_toggle_show_key_down_label,
+      commonsetting_toggle_show_key_down_label_in_landscape,
+      commonsetting_toggle_show_key_down_label_with_functional,
+      commonsetting_toggle_has_moving_preedit,
+    ]
+  }
   # 状态栏
   # 支持系统：鸿蒙
   eisu_toggle_status_bar_board: { icon: "statusbar_cast.svg", label: "状态栏", send: Eisu_toggle, select: _status_bar_board }
@@ -594,6 +626,32 @@ preset_keys:
   function_rime_switches_full_shape: { send: function, command: rime.switches, option: "full_shape" }
   # search_single_char 单字/词
   function_rime_switches_search_single_char: { send: function, command: rime.switches, option: "search_single_char" }
+
+  # CommonSetting 布尔开关（工具栏 / 设置宫格 / 键盘键均可引用）
+  # type + command + option[0]=Preferences key；label 供设置宫格，无 icon 时工具栏用首字
+  # 支持系统：鸿蒙
+  commonsetting_toggle_show_comment: { type: commonsetting_toggle, icon: "list_square.svg", label: "逐码显示", send: function, command: commonsetting.toggle, option: [show_comment] }
+  commonsetting_toggle_show_preedit: { type: commonsetting_toggle, icon: "textformat.svg", label: "编码显示", send: function, command: commonsetting.toggle, option: [show_preedit] }
+  commonsetting_toggle_text_preview_supported: { type: commonsetting_toggle, icon: "textformat.svg", label: "嵌入编码", send: function, command: commonsetting.toggle, option: [text_preview_supported] }
+  commonsetting_toggle_show_key_down_label: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label] }
+  commonsetting_toggle_show_key_down_label_with_functional: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "功能键显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label_with_functional] }
+  commonsetting_toggle_show_key_down_label_in_landscape: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "横屏显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label_in_landscape] }
+  commonsetting_toggle_show_key_upper_label: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label] }
+  commonsetting_toggle_show_key_upper_label_with_functional: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "功能键显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label_with_functional] }
+  commonsetting_toggle_show_space_schema_name: { type: commonsetting_toggle, icon: "space_1.svg", label: "空格键显示方案名", send: function, command: commonsetting.toggle, option: [show_space_schema_name] }
+  commonsetting_toggle_shift_single_tap_locked: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "Shift 单击锁定", send: function, command: commonsetting.toggle, option: [shift_single_tap_locked] }
+  commonsetting_toggle_has_moving_preedit: { type: commonsetting_toggle, icon: "textformat.svg", label: "滑动选择编码", send: function, command: commonsetting.toggle, option: [has_moving_preedit] }
+  commonsetting_toggle_swipe_up_enabled: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "上滑", send: function, command: commonsetting.toggle, option: [swipe_up_enabled] }
+  commonsetting_toggle_swipe_down_enabled: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "下滑", send: function, command: commonsetting.toggle, option: [swipe_down_enabled] }
+  commonsetting_toggle_swipe_left_enabled: { type: commonsetting_toggle, icon: "arrow_left.svg", label: "左滑", send: function, command: commonsetting.toggle, option: [swipe_left_enabled] }
+  commonsetting_toggle_swipe_right_enabled: { type: commonsetting_toggle, icon: "arrow_right.svg", label: "右滑", send: function, command: commonsetting.toggle, option: [swipe_right_enabled] }
+  commonsetting_toggle_stroke_gesture_filter_enabled: { type: commonsetting_toggle, icon: "keyboard_badge_bihua.svg", label: "笔画手势筛选", send: function, command: commonsetting.toggle, option: [stroke_gesture_filter_enabled] }
+  commonsetting_toggle_keyboard_handwriting_filter_enabled: { type: commonsetting_toggle, icon: "hand_scribble.svg", label: "键盘手写", send: function, command: commonsetting.toggle, option: [keyboard_handwriting_filter_enabled] }
+  commonsetting_toggle_candidate_handwriting_find_enabled: { type: commonsetting_toggle, icon: "hand_scribble.svg", label: "候选栏手写查字", send: function, command: commonsetting.toggle, option: [candidate_handwriting_find_enabled] }
+  commonsetting_toggle_handwriting_data_collection_enabled: { type: commonsetting_toggle, icon: "hand_scribble.svg", label: "手写数据采集", send: function, command: commonsetting.toggle, option: [handwriting_data_collection_enabled] }
+  commonsetting_toggle_english_auto_space: { type: commonsetting_toggle, icon: "keyboard_badge_globe.svg", label: "英文选词自动空格", send: function, command: commonsetting.toggle, option: [english_auto_space] }
+  commonsetting_toggle_english_auto_capitalize: { type: commonsetting_toggle, icon: "keyboard_badge_globe.svg", label: "英文句首自动大写", send: function, command: commonsetting.toggle, option: [english_auto_capitalize] }
+  commonsetting_toggle_uppercase_direct_commit: { type: commonsetting_toggle, icon: "textformat.svg", label: "大写字母直接上屏", send: function, command: commonsetting.toggle, option: [uppercase_direct_commit] }
 
 
   # candidate
