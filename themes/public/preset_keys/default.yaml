@@ -98,7 +98,7 @@ preset_keys:
   # 剪切设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_cut_setting: {
-    icon: "cut.svg",
+    icon: "rectangle_and_cut.svg",
     label: "剪切设置",
     send: Eisu_toggle,
     select: _setting_board,
@@ -145,7 +145,7 @@ preset_keys:
   # 剪切设置
   # 支持系统：鸿蒙，iOS
   eisu_toggle_cut_quick_panel: {
-    icon: "cut.svg",
+    icon: "rectangle_and_cut.svg",
     label: "剪切设置",
     send: Eisu_toggle,
     select: _quick_panel,
@@ -163,7 +163,7 @@ preset_keys:
 
   # 语音设置
   # 支持系统：鸿蒙
-  eisu_toggle_patch_speech_setting: { icon: "gearshape.svg", label: "语音设置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_setting" ] }
+  eisu_toggle_patch_speech_setting: { icon: "mic_fill.svg", label: "语音设置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_setting" ] }
   # 笔画过滤
   # 支持系统：鸿蒙
   eisu_toggle_patch_speech_volcengine: { icon: "key_circle_fill.svg", label: "豆包语音配置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_volcengine" ] }
@@ -197,7 +197,7 @@ preset_keys:
   eisu_toggle_one_hand_board: { icon: "onehand.svg", label: "单手模式", send: Eisu_toggle, select: _one_hand_board }
   # 设置
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
+  eisu_toggle_common_setting_board: { icon: "gearshape_fill.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
   # 通用开关（CommonSetting 布尔项，点击原地切换）
   # 支持系统：鸿蒙
   eisu_toggle_common_setting_switches: {
@@ -245,10 +245,10 @@ preset_keys:
   eisu_toggle_fuzzy_pinyin: { icon: "flashlight_on.svg", label: "模糊拼音", send: Eisu_toggle, select: _patch_setting, option: ["fuzzy_pinyin"]}
   # 联想
   # 支持系统：鸿蒙
-  eisu_toggle_patch_predict: { icon: "flashlight_on.svg", label: "联想", send: Eisu_toggle, select: _patch_setting, option: [ "predict" ] }
+  eisu_toggle_patch_predict: { icon: "AI_word_suggest.svg", label: "联想", send: Eisu_toggle, select: _patch_setting, option: [ "predict" ] }
   # 候选栏配置
   # 支持系统：鸿蒙
-  eisu_toggle_patch_candidate: { icon: "list_square.svg", label: "候选栏配置", send: Eisu_toggle, select: _patch_setting, option: [ "candidate" ] }
+  eisu_toggle_patch_candidate: { icon: "list_bullet_square.svg", label: "候选栏配置", send: Eisu_toggle, select: _patch_setting, option: [ "candidate" ] }
   # 字符过滤
   # 支持系统：鸿蒙
   eisu_toggle_patch_character_filter: { icon: "filter_color.svg", label: "字符过滤", send: Eisu_toggle, select: _patch_setting, option: [ "character_filter" ] }
@@ -257,16 +257,16 @@ preset_keys:
   eisu_toggle_patch_date: { icon: "calendar.svg", label: "快速输出日期", send: Eisu_toggle, select: _patch_setting, option: [ "date" ] }
   # 快速输出日期18键专用
   # 支持系统：鸿蒙
-  eisu_toggle_patch_date_18: { icon: "calendar.svg", label: "快速输出日期18键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_18" ] }
+  eisu_toggle_patch_date_18: { icon: "calendar_18.svg", label: "快速输出日期18键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_18" ] }
   # 快速输出日期14键专用
   # 支持系统：鸿蒙
-  eisu_toggle_patch_date_t14: { icon: "calendar.svg", label: "快速输出日期14键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_t14" ] }
+  eisu_toggle_patch_date_t14: { icon: "calendar_14.svg", label: "快速输出日期14键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_t14" ] }
   # 快速输出日期9键专用
   # 支持系统：鸿蒙
-  eisu_toggle_patch_date_t9: { icon: "calendar.svg", label: "快速输出日期9键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_t9" ] }
+  eisu_toggle_patch_date_t9: { icon: "calendar_09.svg", label: "快速输出日期9键专用", send: Eisu_toggle, select: _patch_setting, option: [ "date_t9" ] }
   # 日期js版
   # 支持系统：鸿蒙
-  eisu_toggle_patch_datejs: { icon: "calendar.svg", label: "日期js版", send: Eisu_toggle, select: _patch_setting, option: [ "datejs" ] }
+  eisu_toggle_patch_datejs: { icon: "code_square.svg", label: "日期js版", send: Eisu_toggle, select: _patch_setting, option: [ "datejs" ] }
   # 键盘配置
   # 支持系统：鸿蒙
   eisu_toggle_patch_keyboard: { icon: "keyboard_badge_gearshape.svg", label: "键盘配置", send: Eisu_toggle, select: _patch_setting, option: [ "keyboard" ] }
@@ -278,7 +278,7 @@ preset_keys:
   eisu_toggle_patch_calculator: { icon: "calculator.svg", label: "计算器", send: Eisu_toggle, select: _patch_setting, option: [ "calculator" ] }
   # 计算器JS版
   # 支持系统：鸿蒙
-  eisu_toggle_patch_calculatorjs: { icon: "calculator.svg", label: "计算器js版", send: Eisu_toggle, select: _patch_setting, option: [ "calculatorjs" ] }
+  eisu_toggle_patch_calculatorjs: { icon: "calculator_fill.svg", label: "计算器js版", send: Eisu_toggle, select: _patch_setting, option: [ "calculatorjs" ] }
   # 笔画过滤
   # 支持系统：鸿蒙
   eisu_toggle_patch_stroke_filter: { icon: "keyboard_badge_bihua.svg", label: "笔画过滤", send: Eisu_toggle, select: _patch_setting, option: [ "stroke_filter" ] }
@@ -306,7 +306,7 @@ preset_keys:
 
   #开关设置
   # 支持系统：iOS
-  eisu_toggle_switch_setting: { icon: "switch_square_lefthalf_filled.svg", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
+  eisu_toggle_switch_setting: { icon: "line_3_horizontal_circle.svg", label: "开关", send: Eisu_toggle, select: _setting, option: [ mode_switch_cn_or_en, mode_switch_pasteboard_monitoring_on_or_off, mode_switch_system_info_on_or_off ] }
   #方案的switch
   # 支持系统：iOS
   eisu_toggle_schema_setting: { icon: "slider_horizontal_2_square.svg", label: "设置", send: Eisu_toggle, select: _schema_setting }
@@ -339,7 +339,7 @@ preset_keys:
 
   #语音引擎
   # 支持系统：iOS
-  eisu_toggle_speech_list_board: { icon: "mic_badge_gearshape.svg", label: "语音引擎", send: Eisu_toggle, select: _speech_list_board }
+  eisu_toggle_speech_list_board: { icon: "waveform.svg", label: "语音引擎", send: Eisu_toggle, select: _speech_list_board }
 
 
 
@@ -350,10 +350,10 @@ preset_keys:
   mode_switch_cn_or_en: { icon: "keyboard_badge_globe.svg", toggle: ascii_mode, send: Mode_switch, states: [ 中文, 西文 ], name: Mode_switch }
   #剪切板监控
   # 支持系统：iOS
-  mode_switch_pasteboard_monitoring_on_or_off: { icon: "text_clipboard.svg", toggle: app_setting/pasteboard_monitoring_switch, send: Mode_switch, states: [ 剪切板监控关, 剪切板监控开 ], select: bim, name: Mode_switch }
+  mode_switch_pasteboard_monitoring_on_or_off: { icon: "bolt_clipboard.svg", toggle: app_setting/pasteboard_monitoring_switch, send: Mode_switch, states: [ 剪切板监控关, 剪切板监控开 ], select: bim, name: Mode_switch }
   #启动显示系统信息
   # 支持系统：iOS
-  mode_switch_system_info_on_or_off: { icon: "info_circle.svg", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
+  mode_switch_system_info_on_or_off: { icon: "info_circle_fill.svg", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
   # （空行语义：与下方「基础导航 / Eisu_toggle」预设键分组分隔）
   # 基础编辑与导航（光标、修饰、回车、空格等）
   # 光标左移（Left）
@@ -384,13 +384,13 @@ preset_keys:
   # 发送数字 2
   send_2: { label: "", send: 2 }
   # 发送句点「.」
-  send_dot: { icon: "textformat.svg", label: ".", send: . }
+  send_dot: { icon: "dot_circle.svg", label: ".", send: . }
   # 发送等号「=」
-  send_equal: { icon: "textformat.svg",label: "=", send: "="}
+  send_equal: { icon: "equals.svg",label: "=", send: "="}
   # 分词键（发送单引号）
-  participle: { icon: "textformat.svg", label: 分词, send: "'" }
+  participle: { icon: "wavyline_below_character.svg", label: 分词, send: "'" }
   # 发送分号「;」
-  send_semicolon: { icon: "textformat.svg", label: ";", send: ";" }
+  send_semicolon: { icon: "line_3_horizontal.svg", label: ";", send: ";" }
   # （分组间隔：直接发送 → 候选与换行）
   # 候选栏：选择第 2 / 第 3 候选
   # 选择第二候选（send 2）
@@ -401,13 +401,13 @@ preset_keys:
   rime_send_date: { label: "日期", text: "rq" }
   # 换行（上屏换行符，非 Return 键事件）
   # 上屏换行符 \n（commit）
-  next: { icon: "return_down_left.svg", label: "换行", commit: "\\n" }
+  next: { icon: "arrow_uturn_down.svg", label: "换行", commit: "\\n" }
   # （分组间隔：候选/换行 → Eisu 方案切换）
   # Eisu_toggle + option:schema — 切换输入方案（如 easy_en / 恢复默认）
   # 切到 easy_en 方案（schema）
-  eisu_toggle_schema_en: { icon: "textformat.svg", label: "ABC", send: Eisu_toggle, select: easy_en, option: schema }
+  eisu_toggle_schema_en: { icon: "translate.svg", label: "ABC", send: Eisu_toggle, select: easy_en, option: schema }
   # 恢复默认方案（.default + schema）
-  eisu_toggle_schema_default: { icon: "textformat.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
+  eisu_toggle_schema_default: { icon: "translate_square.svg", label: "ABC", send: Eisu_toggle, select: .default, option: schema }
   # （分组间隔：schema → 键盘页切换）
   # Eisu_toggle — 切换键盘页/布局（number / english / symbols / default 等；.前缀 表示主题内默认页）
   # sm_md：小屏/中屏变体布局
@@ -462,9 +462,9 @@ preset_keys:
   # 组合：返回 sm_md + 默认方案
   eisu_toggle_返回_default_sm_md_schema_default: { icon: "return_left_up.svg", label: 返回, text: "{eisu_toggle_返回_default_sm_md}{eisu_toggle_schema_default}" }
   # 切到主键盘 default（仅图标）
-  eisu_toggle_default: { icon: "keyboard_badge_globe.svg", send: Eisu_toggle, select: default }
+  eisu_toggle_default: { icon: "keyboard_square.svg", send: Eisu_toggle, select: default }
   # 切到主键盘 default（展示「英」）
-  eisu_toggle_ABC_default: { icon: "textformat.svg", label: "英", send: Eisu_toggle, select: default }
+  eisu_toggle_ABC_default: { icon: "globe_and_keyboard.svg", label: "英", send: Eisu_toggle, select: default }
   # （本节预设键结束；下接 function 类按键）
   # （顶层：缩进映射块与下方「函数」小节之间的版式分隔，无配置项）
   #函数
@@ -477,7 +477,7 @@ preset_keys:
   #左删除
   # 支持系统：鸿蒙
   # option可带参数为删除字数，默认为 1
-  function_keyboard_deleteLeft: { icon: "delete_left.svg", label: "左删除", send: function, command: keyboard.deleteLeft, option: "1" }
+  function_keyboard_deleteLeft: { icon: "eraser_line_mirroring.svg", label: "左删除", send: function, command: keyboard.deleteLeft, option: "1" }
   #右删除
   # 支持系统：鸿蒙
   # option可带参数。为删除字数，默认为 1
@@ -502,24 +502,24 @@ preset_keys:
   function_keyboard_copy: { icon: "doc_plaintext_2.svg", label: "复制", send: function, command: keyboard.copy, option: "" }
   #全选并剪切
   # 支持系统：鸿蒙6
-  function_keyboard_selectAllCut: { icon: "cut.svg", label: "全选剪切", text: "{function_keyboard_selectAll}{function_keyboard_cut}" }
+  function_keyboard_selectAllCut: { icon: "square_and_cut.svg", label: "全选剪切", text: "{function_keyboard_selectAll}{function_keyboard_cut}" }
   #全选并复制
   # 支持系统：鸿蒙6
-  function_keyboard_selectAllCopy: { icon: "doc_plaintext_2.svg", label: "全选复制", text: "{function_keyboard_selectAll}{function_keyboard_copy}" }
+  function_keyboard_selectAllCopy: { icon: "checkmark_square_on_square.svg", label: "全选复制", text: "{function_keyboard_selectAll}{function_keyboard_copy}" }
   #粘贴
   # 支持系统：鸿蒙6(现在有鸿蒙bug。暂时无效)
-  function_keyboard_paste: { icon: "text_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
+  function_keyboard_paste: { icon: "checkmark_clipboard.svg", label: "粘贴", send: function, command: keyboard.paste, option: "" }
   #粘贴剪贴板历史（general 分类，index 从 0 起）
-  function_pasteboard_paste_0: { icon: "list_number.svg", label: "粘贴历史0", send: function, command: pasteboard.paste, option: "0" }
-  function_pasteboard_paste_1: { icon: "list_number.svg", label: "粘贴历史1", send: function, command: pasteboard.paste, option: "1" }
-  function_pasteboard_paste_2: { icon: "list_number.svg", label: "粘贴历史2", send: function, command: pasteboard.paste, option: "2" }
+  function_pasteboard_paste_0: { icon: "doc_text_2.svg", label: "粘贴历史0", send: function, command: pasteboard.paste, option: "0" }
+  function_pasteboard_paste_1: { icon: "doc_plaintext.svg", label: "粘贴历史1", send: function, command: pasteboard.paste, option: "1" }
+  function_pasteboard_paste_2: { icon: "rectangle_on_rectangle.svg", label: "粘贴历史2", send: function, command: pasteboard.paste, option: "2" }
   #粘贴剪贴板收藏（favorite 分类，index 从 0 起）
   function_pasteboard_paste_fav_0: { icon: "star_fill.svg", label: "粘贴收藏0", send: function, command: pasteboard.paste, option: ["favorite", "0"] }
-  function_pasteboard_paste_fav_1: { icon: "star_fill.svg", label: "粘贴收藏1", send: function, command: pasteboard.paste, option: ["favorite", "1"] }
-  function_pasteboard_paste_fav_2: { icon: "star_fill.svg", label: "粘贴收藏2", send: function, command: pasteboard.paste, option: ["favorite", "2"] }
+  function_pasteboard_paste_fav_1: { icon: "star_circle.svg", label: "粘贴收藏1", send: function, command: pasteboard.paste, option: ["favorite", "1"] }
+  function_pasteboard_paste_fav_2: { icon: "star_circle_fill.svg", label: "粘贴收藏2", send: function, command: pasteboard.paste, option: ["favorite", "2"] }
   #换行
   # 支持系统：鸿蒙
-  function_keyboard_newline: { icon: "return_down_left.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
+  function_keyboard_newline: { icon: "arrow_uturn_down.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
   #笔画：横
   # 支持系统：鸿蒙
   function_stroke_heng: { label: "一", send: function, command: stroke.append, option: "1" }
@@ -549,13 +549,13 @@ preset_keys:
   function_rime_deploy: { icon: "arrow_clockwise.svg", label: "部署", send: function, command: rime.deploy, option: "" }
   #部署当前方案（当前使用的方案，速度快）
   # 支持系统：鸿蒙
-  function_rime_deploy_schema: { icon: "arrow_clockwise.svg", label: "部署方案", send: function, command: rime.deploySchema, option: "" }
+  function_rime_deploy_schema: { icon: "character_arrow_clockwise.svg", label: "部署方案", send: function, command: rime.deploySchema, option: "" }
   #重输
   # 支持系统：鸿蒙
-  function_rime_clear: { icon: "clean.svg", label: "重输", send: function, command: candidate.clear, option: "" }
+  function_rime_clear: { icon: "trash.svg", label: "重输", send: function, command: candidate.clear, option: "" }
   #更多设置
   # 支持系统：鸿蒙
-  function_common_open_host: { icon: "more.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
+  function_common_open_host: { icon: "house_setting.svg", label: "更多设置", send: function, command: common.open_host, option: "" }
 
   #vip
   # 支持系统：鸿蒙
@@ -579,31 +579,31 @@ preset_keys:
 
   # 切换当前方案目录下的方案；option 支持 schema_id 或方案显示名称
   # 支持系统：鸿蒙, 安桌
-  function_keyboard_switchSchema: { type: command, icon: "keyboard_badge_handwritten.svg", label: "切换方案", send: function, command: keyboard.switchSchema, option: "rime_ice_26" }
+  function_keyboard_switchSchema: { type: command, icon: "keyboard.svg", label: "切换方案", send: function, command: keyboard.switchSchema, option: "rime_ice_26" }
 
   # 切换方案目录及其方案；option 依次为目录和方案，均支持内部标识或显示名称
   # 支持系统：鸿蒙, 安桌
-  function_keyboard_switchSchemaDir: { type: command, icon: "keyboard_badge_handwritten.svg", label: "切换方案目录", send: function, command: keyboard.switchSchemaDir, option: [ "bim-pinyin", "rime_ice_26" ] }
+  function_keyboard_switchSchemaDir: { type: command, icon: "keyboard_fill.svg", label: "切换方案目录", send: function, command: keyboard.switchSchemaDir, option: [ "bim-pinyin", "rime_ice_26" ] }
 
   # 切换主题,再点击回到上次主题
   # 支持系统：鸿蒙, 安桌
-  function_theme_toggle_handwriting_large: { type: theme_toggle, icon: "hand_scribble.svg", label: "手写键盘", send: function, command: keyboard.switchTheme, option: "handwriting_large" }
+  function_theme_toggle_handwriting_large: { type: theme_toggle, icon: "handwriting_set.svg", label: "手写键盘", send: function, command: keyboard.switchTheme, option: "handwriting_large" }
 
   # 切换主题；option 支持主题显示名称、id 或目录名
   # 支持系统：鸿蒙, 安桌
-  function_keyboard_switchTheme_handwriting_large: { type: command, icon: "hand_scribble.svg", label: "切换手写键盘", send: function, command: keyboard.switchTheme, option: "handwriting_large" }
+  function_keyboard_switchTheme_handwriting_large: { type: command, icon: "hand_draw.svg", label: "切换手写键盘", send: function, command: keyboard.switchTheme, option: "handwriting_large" }
 
   # 删除当前主题的 build 缓存后重新加载主题
   # 支持系统：鸿蒙, 安桌
-  function_keyboard_rebuildTheme: { type: command, icon: "arrow_clockwise.svg", label: "重载主题", send: function, command: keyboard.rebuildTheme, option: "" }
+  function_keyboard_rebuildTheme: { type: command, icon: "wrench_and_screwdriver.svg", label: "重载主题", send: function, command: keyboard.rebuildTheme, option: "" }
 
   # 重新输入最近一次非空上屏文本
   # 支持系统：鸿蒙, 安桌
-  function_keyboard_reuseLastInput: { type: command, icon: "arrow_clockwise.svg", label: "重用上次输入", send: function, command: keyboard.reuseLastInput, option: "" }
+  function_keyboard_reuseLastInput: { type: command, icon: "repeat.svg", label: "重用上次输入", send: function, command: keyboard.reuseLastInput, option: "" }
 
   # 检查软件更新（有可用更新时图标右上角显示红点）
   # 支持系统：鸿蒙、安卓
-  function_common_check_update: { type: indicator, icon: "arrow_clockwise.svg", label: "检查更新", send: function, command: app.check_update, option: "" }
+  function_common_check_update: { type: indicator, icon: "square_and_arrow_down.svg", label: "检查更新", send: function, command: app.check_update, option: "" }
 
   # 撤销（动态/函数执行型）：清空或删除文本后出现，点击恢复；撤销栈为空时自动隐藏。
   # visible_when=can_undo 由 CommandInvoker 维护；command 走责任链执行 keyboard.undo。
@@ -630,28 +630,28 @@ preset_keys:
   # CommonSetting 布尔开关（工具栏 / 设置宫格 / 键盘键均可引用）
   # type + command + option[0]=Preferences key；label 供设置宫格，无 icon 时工具栏用首字
   # 支持系统：鸿蒙
-  commonsetting_toggle_show_comment: { type: commonsetting_toggle, icon: "list_square.svg", label: "逐码显示", send: function, command: commonsetting.toggle, option: [show_comment] }
-  commonsetting_toggle_show_preedit: { type: commonsetting_toggle, icon: "textformat.svg", label: "编码显示", send: function, command: commonsetting.toggle, option: [show_preedit] }
-  commonsetting_toggle_text_preview_supported: { type: commonsetting_toggle, icon: "textformat.svg", label: "嵌入编码", send: function, command: commonsetting.toggle, option: [text_preview_supported] }
-  commonsetting_toggle_show_key_down_label: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label] }
-  commonsetting_toggle_show_key_down_label_with_functional: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "功能键显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label_with_functional] }
-  commonsetting_toggle_show_key_down_label_in_landscape: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "横屏显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label_in_landscape] }
-  commonsetting_toggle_show_key_upper_label: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label] }
-  commonsetting_toggle_show_key_upper_label_with_functional: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "功能键显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label_with_functional] }
-  commonsetting_toggle_show_space_schema_name: { type: commonsetting_toggle, icon: "space_1.svg", label: "空格键显示方案名", send: function, command: commonsetting.toggle, option: [show_space_schema_name] }
-  commonsetting_toggle_shift_single_tap_locked: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "Shift 单击锁定", send: function, command: commonsetting.toggle, option: [shift_single_tap_locked] }
-  commonsetting_toggle_has_moving_preedit: { type: commonsetting_toggle, icon: "textformat.svg", label: "滑动选择编码", send: function, command: commonsetting.toggle, option: [has_moving_preedit] }
-  commonsetting_toggle_swipe_up_enabled: { type: commonsetting_toggle, icon: "arrow_up.svg", label: "上滑", send: function, command: commonsetting.toggle, option: [swipe_up_enabled] }
-  commonsetting_toggle_swipe_down_enabled: { type: commonsetting_toggle, icon: "arrow_down_square.svg", label: "下滑", send: function, command: commonsetting.toggle, option: [swipe_down_enabled] }
-  commonsetting_toggle_swipe_left_enabled: { type: commonsetting_toggle, icon: "arrow_left.svg", label: "左滑", send: function, command: commonsetting.toggle, option: [swipe_left_enabled] }
-  commonsetting_toggle_swipe_right_enabled: { type: commonsetting_toggle, icon: "arrow_right.svg", label: "右滑", send: function, command: commonsetting.toggle, option: [swipe_right_enabled] }
-  commonsetting_toggle_stroke_gesture_filter_enabled: { type: commonsetting_toggle, icon: "keyboard_badge_bihua.svg", label: "笔画手势筛选", send: function, command: commonsetting.toggle, option: [stroke_gesture_filter_enabled] }
-  commonsetting_toggle_keyboard_handwriting_filter_enabled: { type: commonsetting_toggle, icon: "hand_scribble.svg", label: "键盘手写", send: function, command: commonsetting.toggle, option: [keyboard_handwriting_filter_enabled] }
-  commonsetting_toggle_candidate_handwriting_find_enabled: { type: commonsetting_toggle, icon: "hand_scribble.svg", label: "候选栏手写查字", send: function, command: commonsetting.toggle, option: [candidate_handwriting_find_enabled] }
-  commonsetting_toggle_handwriting_data_collection_enabled: { type: commonsetting_toggle, icon: "hand_scribble.svg", label: "手写数据采集", send: function, command: commonsetting.toggle, option: [handwriting_data_collection_enabled] }
-  commonsetting_toggle_english_auto_space: { type: commonsetting_toggle, icon: "keyboard_badge_globe.svg", label: "英文选词自动空格", send: function, command: commonsetting.toggle, option: [english_auto_space] }
-  commonsetting_toggle_english_auto_capitalize: { type: commonsetting_toggle, icon: "keyboard_badge_globe.svg", label: "英文句首自动大写", send: function, command: commonsetting.toggle, option: [english_auto_capitalize] }
-  commonsetting_toggle_uppercase_direct_commit: { type: commonsetting_toggle, icon: "textformat.svg", label: "大写字母直接上屏", send: function, command: commonsetting.toggle, option: [uppercase_direct_commit] }
+  commonsetting_toggle_show_comment: { type: commonsetting_toggle, icon: "list_letter.svg", label: "逐码显示", send: function, command: commonsetting.toggle, option: [show_comment] }
+  commonsetting_toggle_show_preedit: { type: commonsetting_toggle, icon: "character_textbox.svg", label: "编码显示", send: function, command: commonsetting.toggle, option: [show_preedit] }
+  commonsetting_toggle_text_preview_supported: { type: commonsetting_toggle, icon: "eye.svg", label: "嵌入编码", send: function, command: commonsetting.toggle, option: [text_preview_supported] }
+  commonsetting_toggle_show_key_down_label: { type: commonsetting_toggle, icon: "text_and_arrow_down.svg", label: "显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label] }
+  commonsetting_toggle_show_key_down_label_with_functional: { type: commonsetting_toggle, icon: "chevron_down.svg", label: "功能键显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label_with_functional] }
+  commonsetting_toggle_show_key_down_label_in_landscape: { type: commonsetting_toggle, icon: "rectangle_rotate.svg", label: "横屏显示下滑符", send: function, command: commonsetting.toggle, option: [show_key_down_label_in_landscape] }
+  commonsetting_toggle_show_key_upper_label: { type: commonsetting_toggle, icon: "text_and_arrow_up.svg", label: "显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label] }
+  commonsetting_toggle_show_key_upper_label_with_functional: { type: commonsetting_toggle, icon: "chevron_up.svg", label: "功能键显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label_with_functional] }
+  commonsetting_toggle_show_space_schema_name: { type: commonsetting_toggle, icon: "word_book.svg", label: "空格键显示方案名", send: function, command: commonsetting.toggle, option: [show_space_schema_name] }
+  commonsetting_toggle_shift_single_tap_locked: { type: commonsetting_toggle, icon: "lock.svg", label: "Shift 单击锁定", send: function, command: commonsetting.toggle, option: [shift_single_tap_locked] }
+  commonsetting_toggle_has_moving_preedit: { type: commonsetting_toggle, icon: "text_and_arrow_up_and_down.svg", label: "滑动选择编码", send: function, command: commonsetting.toggle, option: [has_moving_preedit] }
+  commonsetting_toggle_swipe_up_enabled: { type: commonsetting_toggle, icon: "swipeup_input.svg", label: "上滑", send: function, command: commonsetting.toggle, option: [swipe_up_enabled] }
+  commonsetting_toggle_swipe_down_enabled: { type: commonsetting_toggle, icon: "arrow_down.svg", label: "下滑", send: function, command: commonsetting.toggle, option: [swipe_down_enabled] }
+  commonsetting_toggle_swipe_left_enabled: { type: commonsetting_toggle, icon: "arrow_left_circle.svg", label: "左滑", send: function, command: commonsetting.toggle, option: [swipe_left_enabled] }
+  commonsetting_toggle_swipe_right_enabled: { type: commonsetting_toggle, icon: "arrow_right_circle.svg", label: "右滑", send: function, command: commonsetting.toggle, option: [swipe_right_enabled] }
+  commonsetting_toggle_stroke_gesture_filter_enabled: { type: commonsetting_toggle, icon: "funnel.svg", label: "笔画手势筛选", send: function, command: commonsetting.toggle, option: [stroke_gesture_filter_enabled] }
+  commonsetting_toggle_keyboard_handwriting_filter_enabled: { type: commonsetting_toggle, icon: "scribble.svg", label: "键盘手写", send: function, command: commonsetting.toggle, option: [keyboard_handwriting_filter_enabled] }
+  commonsetting_toggle_candidate_handwriting_find_enabled: { type: commonsetting_toggle, icon: "asterisk_rectangle_badge_handwritten.svg", label: "候选栏手写查字", send: function, command: commonsetting.toggle, option: [candidate_handwriting_find_enabled] }
+  commonsetting_toggle_handwriting_data_collection_enabled: { type: commonsetting_toggle, icon: "data.svg", label: "手写数据采集", send: function, command: commonsetting.toggle, option: [handwriting_data_collection_enabled] }
+  commonsetting_toggle_english_auto_space: { type: commonsetting_toggle, icon: "space_enlarge.svg", label: "英文选词自动空格", send: function, command: commonsetting.toggle, option: [english_auto_space] }
+  commonsetting_toggle_english_auto_capitalize: { type: commonsetting_toggle, icon: "bold.svg", label: "英文句首自动大写", send: function, command: commonsetting.toggle, option: [english_auto_capitalize] }
+  commonsetting_toggle_uppercase_direct_commit: { type: commonsetting_toggle, icon: "textformat_size_square.svg", label: "大写字母直接上屏", send: function, command: commonsetting.toggle, option: [uppercase_direct_commit] }
 
 
   # candidate
@@ -678,7 +678,7 @@ preset_keys:
   text_half_pound_sign: { label: "#", text: "#" }
   text_half_colon: { label: "：", text: ":" }
 
-  text_delimiter: { icon: "textformat.svg", label: "分隔", text: "{'}", name: delimiter }
+  text_delimiter: { icon: "indent_right.svg", label: "分隔", text: "{'}", name: delimiter }
   # .
   commit_halfperiod: { label: ".", commit: "." } #直接上屏半角句号
   text_halfperiod_default: { label: "。", text: ".{eisu_toggle_default}" } #上屏全角句号再跳转到default键盘
