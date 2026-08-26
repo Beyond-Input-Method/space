@@ -282,6 +282,9 @@ preset_keys:
   # 笔画过滤
   # 支持系统：鸿蒙
   eisu_toggle_patch_stroke_filter: { icon: "keyboard_badge_bihua.svg", label: "笔画过滤", send: Eisu_toggle, select: _patch_setting, option: [ "stroke_filter" ] }
+  # T9筛选
+  # 支持系统：鸿蒙
+  eisu_toggle_patch_t9_filter: { icon: "grid.svg", label: "T9筛选", send: Eisu_toggle, select: _patch_setting, option: [ "t9_filter" ] }
 
 
   # 剪切板
@@ -661,6 +664,10 @@ preset_keys:
   function_candidate_select_third: { label: "三选",send: function, command: candidate.select, option: 2 }
 
   #text
+
+  #组合键例子，向rime发送: Control+z组合键；
+  text_command_control_z: { label: "，", text: "，{Control+z}", functional: false }
+
   text_full_period: { label: "。", text: "。" }
   text_full_question_mark: { label: "？", text: "？" }
   text_full_point: { label: "！", text: "！" }
@@ -695,6 +702,7 @@ preset_keys:
   text_halfcomma_default: { label: ",", text: ",{eisu_toggle_default}" }
   text_fullcomma_default: { label: "，", text: "，{eisu_toggle_default}" }
   text_full_comma_default_no_functional: { label: "，", text: "，{eisu_toggle_default}", functional: false }
+
   #  、
   text_fullcomma2_default: { label: "、", text: "、{eisu_toggle_default}" }
   text_fulldun_default: { label: "、", text: "、{eisu_toggle_default}" }

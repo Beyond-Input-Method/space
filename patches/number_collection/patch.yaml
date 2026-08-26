@@ -1,0 +1,105 @@
+patch_to: "{$current_theme}"
+
+patch:
+  - title: "自定义数字键盘常用符号"
+    key: "number_collection_symbols"
+    description: "自定义数字键盘左侧符号栏中的 12 个符号"
+    patch_to: "{$current_theme}"
+    bind_control: "number_collection_symbols"
+    patch:
+      "preset_keyboards/number/keys/@0/collection/@0": "{$number_collection_symbol_1}"
+      "preset_keyboards/number/keys/@0/collection/@1": "{$number_collection_symbol_2}"
+      "preset_keyboards/number/keys/@0/collection/@2": "{$number_collection_symbol_3}"
+      "preset_keyboards/number/keys/@0/collection/@3": "{$number_collection_symbol_4}"
+      "preset_keyboards/number/keys/@0/collection/@4": "{$number_collection_symbol_5}"
+      "preset_keyboards/number/keys/@0/collection/@5": "{$number_collection_symbol_6}"
+      "preset_keyboards/number/keys/@0/collection/@6": "{$number_collection_symbol_7}"
+      "preset_keyboards/number/keys/@0/collection/@7": "{$number_collection_symbol_8}"
+      "preset_keyboards/number/keys/@0/collection/@8": "{$number_collection_symbol_9}"
+      "preset_keyboards/number/keys/@0/collection/@9": "{$number_collection_symbol_10}"
+      "preset_keyboards/number/keys/@0/collection/@10": "{$number_collection_symbol_11}"
+      "preset_keyboards/number/keys/@0/collection/@11": "{$number_collection_symbol_12}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@0": "{$number_collection_symbol_1}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@1": "{$number_collection_symbol_2}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@2": "{$number_collection_symbol_3}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@3": "{$number_collection_symbol_4}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@4": "{$number_collection_symbol_5}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@5": "{$number_collection_symbol_6}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@6": "{$number_collection_symbol_7}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@7": "{$number_collection_symbol_8}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@8": "{$number_collection_symbol_9}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@9": "{$number_collection_symbol_10}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@10": "{$number_collection_symbol_11}"
+      "preset_keyboards/number_sm_md/keys/@0/collection/@11": "{$number_collection_symbol_12}"
+
+controls:
+  stringsTable: "Root"
+  preferences:
+    - type: group
+      title: "数字键盘常用符号"
+      footer_text: "按显示顺序分别修改数字键盘左侧符号栏中的 12 个符号"
+    - type: toggle_switch
+      title: "启用自定义数字键盘常用符号"
+      key: number_collection_symbols
+      default_value: false
+      toggle_style: switch
+    - type: text_field
+      title: "第 1 个符号"
+      key: number_collection_symbol_1
+      default_value: "+"
+      placeholder: "+"
+    - type: text_field
+      title: "第 2 个符号"
+      key: number_collection_symbol_2
+      default_value: "-"
+      placeholder: "-"
+    - type: text_field
+      title: "第 3 个符号"
+      key: number_collection_symbol_3
+      default_value: "×"
+      placeholder: "×"
+    - type: text_field
+      title: "第 4 个符号"
+      key: number_collection_symbol_4
+      default_value: "/"
+      placeholder: "/"
+    - type: text_field
+      title: "第 5 个符号"
+      key: number_collection_symbol_5
+      default_value: "%"
+      placeholder: "%"
+    - type: text_field
+      title: "第 6 个符号"
+      key: number_collection_symbol_6
+      default_value: "="
+      placeholder: "="
+    - type: text_field
+      title: "第 7 个符号"
+      key: number_collection_symbol_7
+      default_value: ","
+      placeholder: ","
+    - type: text_field
+      title: "第 8 个符号"
+      key: number_collection_symbol_8
+      default_value: "#"
+      placeholder: "#"
+    - type: text_field
+      title: "第 9 个符号"
+      key: number_collection_symbol_9
+      default_value: "?"
+      placeholder: "?"
+    - type: text_field
+      title: "第 10 个符号"
+      key: number_collection_symbol_10
+      default_value: "."
+      placeholder: "."
+    - type: text_field
+      title: "第 11 个符号"
+      key: number_collection_symbol_11
+      default_value: ":"
+      placeholder: ":"
+    - type: text_field
+      title: "第 12 个符号"
+      key: number_collection_symbol_12
+      default_value: "*"
+      placeholder: "*"
