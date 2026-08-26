@@ -1,0 +1,13 @@
+# 给当前方案添加 T9 拼音筛选（TxProcessor + t9.db）
+# 未配置 tx/db 时引擎不会启用筛选，避免静默落到 9 键库。
+
+patch_to: "{$current_schema}"
+patch:
+  - title: "T9筛选"
+    key: "t9_filter"
+    description: "给方案添加T9筛选"
+    patch_to: "{$current_schema}"
+    patch:
+      "engine/processors/@before 0": "TxProcessor"
+      tx:
+        db: t9.db

@@ -40,7 +40,7 @@ preset_keyboards:
     long_preview_round_corner: 9
     long_preview_padding: 0
     long_preview_margin: 4
-    preview: true
+    preview: false
     shadow: { radius: 0.1, offsetX: 0, offsetY: 1.2, color: "#90949C" }
     #现在只支持配置click,swipe_up,swipe_down键盘
     keys:
