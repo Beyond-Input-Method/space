@@ -65,6 +65,7 @@ patch:
         "switches/+":
           - name: prediction
             states: [联想开, 联想关]
+            reset: 1
         "predictor":
           # predict db file in user directory/shared directory
           # default to 'predict.db'
