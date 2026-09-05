@@ -49,7 +49,7 @@ patch:
   # patch_to是补丁的目标文件。比如/xxx/wubi86.custom.yaml, 当然也可以是方案目录或者主题目录。
   - title: "键盘"
     key: "keyboard_font"
-    description: "修改键盘字体"
+    description: "修改键盘字体与圆角"
     bind_control: "keyboard_font"
     # 这里最好在pc上测试过了，再放到进来
     patch:
@@ -62,12 +62,13 @@ patch:
         "preset_fonts/default/key_down_text_size": "{$key_down_text_size}"
         "preset_keyboards/default/key_down_text_offset_x": "{$key_down_text_offset_x}"
         "preset_keyboards/default/key_down_text_offset_y": "{$key_down_text_offset_y}"
+        "preset_keyboards/default/round_corner": "{$round_corner}"
 # 配置项列表，包含所有的设置选项
 controls:
   preferences:
     - type: group                    # 控件类型：分组标题
       title: 键盘设置             # 显示标题：在界面上显示的文字
-      footer_text: 配置键盘字体大小  # 底部说明：显示在分组下方的解释文字
+      footer_text: 配置键盘字体大小与按键圆角  # 底部说明：显示在分组下方的解释文字
     # 开关控件，用于开启或关闭功能
     - type: toggle_switch            # 控件类型：开关按钮
       title: 启用键盘字体                # 显示标题：在界面上显示的文字
@@ -75,6 +76,13 @@ controls:
       default_value: false            # 默认值：首次使用时的初始设置
       toggle_style: switch           # 开关样式：switch=滑动开关，checkmark=勾选框
     # 滑块控件，用于选择数值范围
+    - type: slider                   # 控件类型：滑块
+      title: 按键圆角                    # 显示标题：在界面上显示的文字
+      key: round_corner              # 配置键名：用于保存和读取设置值的唯一标识
+      default_value: 6               # 默认值：与 preset_keyboards/default/round_corner 一致
+      minimum_value: 0               # 最小值：滑块左端的数值
+      maximum_value: 24              # 最大值：滑块右端的数值
+      step: 1                        # 步长：每次滑动的最小增减量
     - type: slider                   # 控件类型：滑块
       title: 键符字体大小                # 显示标题：在界面上显示的文字
       key: key_text_size            # 配置键名：用于保存和读取设置值的唯一标识
