@@ -1,0 +1,19 @@
+patch_to: "{$current_schema}"
+patch:
+  - title: "支持14键"
+    key: "support_t14"
+    description: "为当前方案添加14键字母映射"
+    patch:
+      "speller/algebra/+":
+        - "derive/w/q/"
+        - "derive/r/e/"
+        - "derive/y/t/"
+        - "derive/i/u/"
+        - "derive/p/o/"
+        - "derive/s/a/"
+        - "derive/f/d/"
+        - "derive/h/g/"
+        - "derive/k/j/"
+        - "derive/x/z/"
+        - "derive/v/c/"
+        - "derive/n/b/"
