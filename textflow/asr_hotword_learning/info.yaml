@@ -1,0 +1,4 @@
+id: "asr_hotword_learning"
+name: "语音纠错热词提取"
+description: "仅从裁剪后的用户纠错片段提取结构化热词候选，不回写输入框"
+version: "1"
