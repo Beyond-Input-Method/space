@@ -16,6 +16,30 @@ patch:
     bind_control: "enable_filler_filter"
     patch:
       enableFilterFiller: true
+
+  - title: "繁体中文输出"
+    key: "speech_output_zh_variant_patch"
+    description: "将语音识别结果转换为所选繁体中文变体"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_output_zh_variant"
+    patch:
+      outputZhVariant: "{$output_zh_variant}"
+
+  - title: "语种及方言识别"
+    key: "speech_language_identification_patch"
+    description: "识别中英文及支持的中文方言，并在 additions 中返回语种或场景标签"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_lid"
+    patch:
+      enableLid: true
+
+  - title: "语义顺滑"
+    key: "speech_semantic_smoothing_patch"
+    description: "删除或修正识别结果中的停顿词、语气词和语义重复，让文本更连贯"
+    patch_to: "{$file:speech:volcengine}"
+    bind_control: "enable_ddc"
+    patch:
+      enableDdc: true
   
 
   - title: "语音指令总开关"
@@ -91,6 +115,49 @@ controls:
     - type: toggle_switch
       title: "启用口水词去除"
       key: enable_filler_filter
+      default_value: false
+      toggle_style: switch
+
+    - type: group
+      title: "繁体中文输出"
+      footer_text: "开启后，将识别结果转换为所选繁体中文变体。"
+
+    - type: toggle_switch
+      title: "启用繁体中文输出"
+      key: enable_output_zh_variant
+      default_value: false
+      toggle_style: switch
+
+    - type: multi_value
+      title: "繁体中文类型"
+      key: output_zh_variant
+      default_value: "traditional"
+      values:
+        - "traditional"
+        - "tw"
+        - "hk"
+      titles:
+        - "大陆繁体"
+        - "台湾正体"
+        - "香港繁体"
+
+    - type: group
+      title: "语种及方言识别"
+      footer_text: "支持中文、英文、上海话、闽南话、四川话、陕西话和粤语；识别标签由服务端返回到 additions。"
+
+    - type: toggle_switch
+      title: "启用语种及方言识别"
+      key: enable_lid
+      default_value: true
+      toggle_style: switch
+
+    - type: group
+      title: "语义顺滑"
+      footer_text: "开启后，系统会删除或修正停顿词、语气词和语义重复，让识别文本更连贯。默认关闭。"
+
+    - type: toggle_switch
+      title: "启用语义顺滑"
+      key: enable_ddc
       default_value: false
       toggle_style: switch
 
