@@ -1,0 +1,15 @@
+patch_to: "{$current_schema}"
+patch:
+  - title: "支持18键"
+    key: "support_t18"
+    description: "为当前方案添加18键字母映射"
+    patch:
+      "speller/algebra/+":
+        - "derive/e/w/"
+        - "derive/t/r/"
+        - "derive/o/i/"
+        - "derive/d/s/"
+        - "derive/g/f/"
+        - "derive/k/j/"
+        - "derive/c/x/"
+        - "derive/n/b/"
