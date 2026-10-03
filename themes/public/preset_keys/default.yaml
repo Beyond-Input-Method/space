@@ -122,6 +122,7 @@ preset_keys:
       eisu_toggle_speech_list_board,
       eisu_toggle_patch_speech_volcengine,
       eisu_toggle_patch_speech_setting,
+      eisu_toggle_personal_hotwords,
     ]
   }
 
@@ -167,6 +168,9 @@ preset_keys:
   # 笔画过滤
   # 支持系统：鸿蒙
   eisu_toggle_patch_speech_volcengine: { icon: "key_circle_fill.svg", label: "豆包语音配置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_volcengine" ] }
+  # 个性化语音热词：打开宿主热词页
+  # 支持系统：鸿蒙
+  eisu_toggle_personal_hotwords: { icon: "text_speaker_wave_rectangle.svg", label: "个性化热词", send: Eisu_toggle, select: _personal_hotwords }
 
 
   # 键盘选择
