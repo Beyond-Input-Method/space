@@ -19,6 +19,16 @@ accessKey: ''
 # true: 启用标点符号处理 / false: 不启用
 enablePunc: true
 
+# 中文识别结果变体。留空表示保持简体；可选 traditional / tw / hk
+outputZhVariant: ''
+
+# 是否启用中英文及方言识别；默认开启
+enableLid: true
+
+# 是否启用语义顺滑。开启后会删改停顿词、语气词和语义重复
+# true: 启用 / false: 关闭。默认关闭
+enableDdc: false
+
 # 标点符号模式
 # Punctuation mode
 # "1": 智能添加标点 - 自动识别语义添加合适标点
