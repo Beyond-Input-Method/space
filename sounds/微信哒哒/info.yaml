@@ -1,0 +1,11 @@
+name: 微信哒哒
+author: By647Uni
+version: 1.0.0
+url: https://github.com/Beyond-Input-Method/space
+createTime: 2026-10-08
+updateTime: 2026-10-08
+# description: 从微信键盘 APK(wxkb_1370_32)的 assets/sound/ 直接提取的官方原始音效, 未经重采样/裁切/归一化, 仅把 16bit 无损加宽为 24bit。空格与回车在官方就是同一个 key_press_action.wav。
+# supportPlatforms:
+# preview: ""
+# dirPath: ""
+# dirName: ""
