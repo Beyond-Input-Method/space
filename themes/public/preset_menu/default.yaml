@@ -63,6 +63,7 @@ preset_menu:
      commonsetting_toggle_show_preedit,             # 编码显示
      commonsetting_toggle_text_preview_supported,   # 嵌入编码
      commonsetting_toggle_show_space_schema_name,   # 空格键显示方案名
+     commonsetting_toggle_space_select_prediction, # 空格上屏联想
      commonsetting_toggle_shift_single_tap_locked,  # Shift 单击锁定
      commonsetting_toggle_stroke_gesture_filter_enabled, # 笔画手势筛选
      commonsetting_toggle_keyboard_handwriting_filter_enabled, # 键盘手写

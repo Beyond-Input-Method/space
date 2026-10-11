@@ -210,6 +210,7 @@ preset_keys:
       commonsetting_toggle_show_preedit,
       commonsetting_toggle_text_preview_supported,
       commonsetting_toggle_show_space_schema_name,
+      commonsetting_toggle_space_select_prediction,
       commonsetting_toggle_shift_single_tap_locked,
       commonsetting_toggle_stroke_gesture_filter_enabled,
       commonsetting_toggle_keyboard_handwriting_filter_enabled,
@@ -642,6 +643,7 @@ preset_keys:
   commonsetting_toggle_show_key_upper_label: { type: commonsetting_toggle, icon: "text_and_arrow_up.svg", label: "显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label] }
   commonsetting_toggle_show_key_upper_label_with_functional: { type: commonsetting_toggle, icon: "chevron_up.svg", label: "功能键显示上滑符", send: function, command: commonsetting.toggle, option: [show_key_upper_label_with_functional] }
   commonsetting_toggle_show_space_schema_name: { type: commonsetting_toggle, icon: "word_book.svg", label: "空格键显示方案名", send: function, command: commonsetting.toggle, option: [show_space_schema_name] }
+  commonsetting_toggle_space_select_prediction: { type: commonsetting_toggle, icon: "space_enlarge.svg", label: "空格上屏联想", send: function, command: commonsetting.toggle, option: [space_select_prediction] }
   commonsetting_toggle_shift_single_tap_locked: { type: commonsetting_toggle, icon: "lock.svg", label: "Shift 单击锁定", send: function, command: commonsetting.toggle, option: [shift_single_tap_locked] }
   commonsetting_toggle_has_moving_preedit: { type: commonsetting_toggle, icon: "text_and_arrow_up_and_down.svg", label: "滑动选择编码", send: function, command: commonsetting.toggle, option: [has_moving_preedit] }
   commonsetting_toggle_swipe_up_enabled: { type: commonsetting_toggle, icon: "swipeup_input.svg", label: "上滑", send: function, command: commonsetting.toggle, option: [swipe_up_enabled] }
