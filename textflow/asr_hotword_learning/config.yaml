@@ -1,0 +1,19 @@
+pipeline:
+  pipelines:
+    - pipelineId: "pp_asr_hotword_extraction"
+      mode: "balanced"
+      totalTimeoutMs: 2500
+      pipelineFailureStrategy: "use_original"
+      steps:
+        - name: "asr_hotword_extraction"
+          order: 1
+          timeoutMs: 2200
+          retryCount: 0
+          enabled: true
+  sourceSceneMappings:
+    "asr_hotword_learning|extract": "pp_asr_hotword_extraction"
+  sourceMappings:
+    "asr_hotword_learning": "pp_asr_hotword_extraction"
+user:
+  enabledProcessors: []
+  qualityMode: "balanced"
