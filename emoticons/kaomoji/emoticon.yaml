@@ -1,0 +1,37 @@
+- id: greetings
+  type: 0
+  name: 问候
+  items:
+    - '(^_^)'
+    - '(｡･ω･｡)ﾉ'
+    - 'ヾ(≧▽≦*)o'
+- id: happy
+  type: 0
+  name: 开心
+  items:
+    - '(≧▽≦)'
+    - 'ヾ(＾∇＾)'
+- id: cheer
+  type: 0
+  name: 加油
+  items:
+    - '(ง •̀_•́)ง'
+    - 'ᕦ(ò_óˇ)ᕤ'
+- id: sad
+  type: 0
+  name: 伤心
+  items:
+    - '(ಥ﹏ಥ)'
+    - '(╥﹏╥)'
+- id: surprised
+  type: 0
+  name: 惊讶
+  items:
+    - '(⊙_⊙)'
+    - 'Σ(°△°|||)'
+- id: speechless
+  type: 0
+  name: 无语
+  items:
+    - '¯\_(ツ)_/¯'
+    - '(－_－)'

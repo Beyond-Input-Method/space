@@ -1,4 +1,4 @@
-name: 默认
+name: Emoji
 author: 筋斗云
 version: 1.0.0
 description: 默认表情
@@ -9,3 +9,4 @@ updateTime: 2023-03-30
 # preview: ""
 # dirPath: ""
 # dirName: ""
+icon: tab.svg
