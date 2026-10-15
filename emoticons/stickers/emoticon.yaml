@@ -1,9 +1,0 @@
-- id: stickers
-  type: 0
-  name: 动态贴纸
-  items:
-    - id: blink
-      kind: animated
-      name: 眨眼
-      path: blink.gif
-      thumbnail: cover.png

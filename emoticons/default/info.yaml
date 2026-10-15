@@ -1,12 +1,3 @@
 name: Emoji
-author: 筋斗云
-version: 1.0.0
-description: 默认表情
-url: https://github.com/Beyond-Input-Method/emoticons/default
-createTime: 2023-03-30
-updateTime: 2023-03-30
-# supportPlatforms:
-# preview: ""
-# dirPath: ""
-# dirName: ""
-icon: tab.svg
+version: 2.0.0
+author: BIM
