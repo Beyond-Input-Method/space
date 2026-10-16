@@ -1,0 +1,10 @@
+{
+  "multiline-kaomoji": {
+    "replacement": "kaomoji",
+    "files": {
+      "tab.svg": "b19f605da03e38db30d677dbd7451bcc5448e9ed09c3f06923f119ae98094c58",
+      "emoticon.yaml": "7f4772320418e157afa66315f8e2e8e378e0842403e52decda27cb7deea1f4af",
+      "info.yaml": "eba2cc7f5e26ba4116a3b5e9f7dfce5b6a5c2fc5e0e60525b800a932297703eb"
+    }
+  }
+}
