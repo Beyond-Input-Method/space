@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""从固定版本 Unicode 清单和本文件维护的文字画生成三个正式表情包。
+"""从固定版本 Unicode 清单和本文件维护的文字画生成 Emoji、颜文字两个正式表情包。
 
 用法：python3 tools/generate_emoticons.py
-只更新 default、kaomoji、multiline-kaomoji，不删除用户目录。
+只更新 default、kaomoji；仅移除指纹完全匹配的已退役官方包。
 """
 from pathlib import Path
 import collections
@@ -13,7 +13,28 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'tools/data/emoji-test-18.0.txt'
-TRANSLATIONS = {'Smileys & Emotion':'笑脸与情感', 'People & Body':'人物与手势', 'Component':'肤色与发型', 'Animals & Nature':'动物与自然', 'Food & Drink':'食物与饮品', 'Travel & Places':'旅行与地点', 'Activities':'活动与运动', 'Objects':'物品', 'Symbols':'符号', 'Flags':'旗帜'}
+COMMON_SOURCE = ROOT / 'tools/data/emoji-common.json'
+RETIRED_SOURCE = ROOT / 'tools/data/retired-emoticon-packs.json'
+CATEGORY_IDS = {
+    '笑脸':'smileys', '情感':'emotion', '手势':'gestures', '身体':'body', '人物':'people',
+    '肤色':'skin-tone', '发型':'hair-style', '动物':'animals', '植物':'plants',
+    '食物':'food', '饮品':'drinks', '餐具':'dishware', '地点':'places', '交通':'transport',
+    '时间':'time', '天气':'weather', '活动':'activities', '运动':'sports', '物品':'objects', '符号':'symbols', '旗帜':'flags'
+}
+
+def category_for(group, subgroup):
+    if group == 'Smileys & Emotion': return '情感' if subgroup in {'heart','emotion'} else '笑脸'
+    if group == 'People & Body':
+        if subgroup.startswith('hand-') or subgroup == 'hands': return '手势'
+        return '身体' if subgroup == 'body-parts' else '人物'
+    if group == 'Component': return {'skin-tone':'肤色','hair-style':'发型'}[subgroup]
+    if group == 'Animals & Nature': return '植物' if subgroup.startswith('plant-') else '动物'
+    if group == 'Food & Drink': return {'drink':'饮品','dishware':'餐具'}.get(subgroup,'食物')
+    if group == 'Travel & Places':
+        if subgroup.startswith('transport-'): return '交通'
+        return {'time':'时间','sky & weather':'天气','hotel':'地点'}.get(subgroup,'地点')
+    if group == 'Activities': return '运动' if subgroup == 'sport' else '活动'
+    return {'Objects':'物品','Symbols':'符号','Flags':'旗帜'}[group]
 
 def quote(value):
     return json.dumps(value, ensure_ascii=False)
@@ -25,11 +46,14 @@ def write_pack(pack_id, title, groups, emoji=False):
     result = []
     for group_id, label, values in groups:
         items = []
+        local_seen = set()
+        shortcut = emoji and group_id == 'common'
         for value in values:
             assert value and '\r' not in value and '\t' not in value
-            assert ('\n' in value) == (pack_id == 'multiline-kaomoji')
-            if value not in seen:
-                seen.add(value)
+            assert not emoji or '\n' not in value
+            if value not in local_seen and (shortcut or value not in seen):
+                local_seen.add(value)
+                if not shortcut: seen.add(value)
                 items.append(value)
         if items:
             result.append((group_id, label, items))
@@ -38,8 +62,8 @@ def write_pack(pack_id, title, groups, emoji=False):
         lines += [f'- id: {quote(gid)}', f'  type: {1 if emoji else 0}', f'  name: {quote(name)}', '  items:']
         lines += ['    - ' + quote(value) for value in items]
     (directory / 'emoticon.yaml').write_text('\n'.join(lines) + '\n')
-    (directory / 'info.yaml').write_text(f'name: {title}\nversion: 2.0.0\nauthor: BIM\n')
-    return {'groups': len(result), 'items':len(seen), 'sha256':hashlib.sha256((directory/'emoticon.yaml').read_bytes()).hexdigest()}
+    (directory / 'info.yaml').write_text(f'name: {title}\nversion: 3.0.0\nauthor: BIM\n')
+    return {'groups': len(result), 'items':len(seen), 'display_entries':sum(len(items) for _,_,items in result), 'sha256':hashlib.sha256((directory/'emoticon.yaml').read_bytes()).hexdigest()}
 
 
 def emojis():
@@ -48,16 +72,22 @@ def emojis():
     groups = collections.OrderedDict()
     statuses = collections.Counter()
     for line in text.splitlines():
-        if line.startswith('# group: '):
-            group = line.removeprefix('# group: ')
-            groups.setdefault(group, [])
+        if line.startswith('# group: '): group = line.removeprefix('# group: ')
+        elif line.startswith('# subgroup: '): subgroup = line.removeprefix('# subgroup: ')
         elif line and not line.startswith('#'):
             match = re.match(r'^([0-9A-F ]+)\s*;\s*([\w-]+)\s*#', line)
             if match and match[2] in {'fully-qualified', 'component'}:
-                groups[group].append(''.join(chr(int(cp,16)) for cp in match[1].split()))
+                name = category_for(group, subgroup)
+                groups.setdefault(name, []).append(''.join(chr(int(cp,16)) for cp in match[1].split()))
                 statuses[match[2]] += 1
-    assert set(groups) == set(TRANSLATIONS)
-    values = [(re.sub('[^a-z]+','-', name.lower()).strip('-'), TRANSLATIONS[name], items) for name, items in groups.items()]
+    assert set(groups) == set(CATEGORY_IDS)
+    common = json.loads(COMMON_SOURCE.read_text())
+    shortcuts = [item['text'] for item in common['items']]
+    official = {value for values in groups.values() for value in values}
+    assert len(shortcuts) == 64 and len(set(shortcuts)) == 64
+    assert set(shortcuts) <= official, '常用条目必须是完整官方 Emoji 序列'
+    values = [(common['id'],common['name'],shortcuts)]
+    values += [(CATEGORY_IDS[name],name,items) for name,items in groups.items()]
     return values, statuses
 
 # 每类维护不同表情核心及与情境相符的手势，避免编号、文字标签凑数。
@@ -120,13 +150,42 @@ def multiline():
     return groups
 
 
+def kaomoji():
+    groups = collections.OrderedDict()
+    for gid, name, values in single() + multiline():
+        if name not in groups: groups[name] = (gid, [])
+        groups[name][1].extend(values)
+    # 同主题单行在前，多行在后；完整文本不修剪、不重新居中。
+    return [(gid,name,sorted(values,key=lambda value: '\n' in value)) for name,(gid,values) in groups.items()]
+
+def retire_official_packs():
+    outcome = {}
+    for pack, spec in json.loads(RETIRED_SOURCE.read_text()).items():
+        directory = ROOT / 'emoticons' / pack
+        if directory.is_symlink() or (directory.exists() and not directory.is_dir()):
+            outcome[pack] = 'preserved-custom'
+            continue
+        if not directory.exists(): continue
+        expected = spec['files']
+        children = list(directory.iterdir())
+        if directory.is_symlink() or {p.name for p in children} != set(expected) or any(
+            p.is_symlink() or not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest() != expected[p.name]
+            for p in children):
+            outcome[pack] = 'preserved-custom'
+            continue
+        for p in children: p.unlink()
+        directory.rmdir()
+        outcome[pack] = 'retired-official'
+    return outcome
+
 def main():
     emoji_groups, statuses = emojis()
-    result = {'unicode_version':'18.0', 'qualification':dict(statuses), 'emoji_source_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(), 'packs':{}}
+    result = {'unicode_version':'18.0', 'qualification':dict(statuses), 'emoji_source_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
+              'common_source_sha256':hashlib.sha256(COMMON_SOURCE.read_bytes()).hexdigest(), 'packs':{}}
     result['packs']['default'] = write_pack('default','Emoji',emoji_groups,True)
-    result['packs']['kaomoji'] = write_pack('kaomoji','单行颜文字',single())
-    result['packs']['multiline-kaomoji'] = write_pack('multiline-kaomoji','多行颜文字',multiline())
+    result['packs']['kaomoji'] = write_pack('kaomoji','颜文字',kaomoji())
     assert result['packs']['default']['items'] == sum(statuses.values())
+    retire_official_packs()
     (ROOT/'tools/emoticon-manifest.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
 
