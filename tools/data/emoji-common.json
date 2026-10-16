@@ -1,0 +1,270 @@
+{
+  "id": "common",
+  "name": "常用",
+  "selection_method": "Unicode 2019 公开频率作历史参考，结合中文聊天场景人工整理；不是当前排名或大模型输入统计。",
+  "sources": [
+    {
+      "url": "https://home.unicode.org/emoji/emoji-frequency/",
+      "data_year": 2019,
+      "scope": "多来源总体使用频率；不能代表中文或特定平台实时排名"
+    }
+  ],
+  "items": [
+    {
+      "text": "😂",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "❤️",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😍",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🤣",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😊",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🙏",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "💕",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😭",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😘",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "👍",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😅",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "👏",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😁",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🔥",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "💔",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "💙",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😢",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🤔",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😆",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🙄",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "💪",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😉",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "👌",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🤗",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😔",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😎",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😇",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🌹",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🎉",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "✌️",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "✨",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😱",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😌",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🙌",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😋",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🙂",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🤩",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😄",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😀",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😃",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "💯",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🙈",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "😒",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🤭",
+      "basis": "unicode-frequency-2019"
+    },
+    {
+      "text": "🥰",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🥺",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🫡",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🥹",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "😮",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "😡",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "😴",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "😳",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "👋",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🤝",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🥳",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🎂",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🎁",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "✅",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "❌",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "❓",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "☕",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🍻",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🌞",
+      "basis": "chinese-chat-curation"
+    },
+    {
+      "text": "🌙",
+      "basis": "chinese-chat-curation"
+    }
+  ]
+}
