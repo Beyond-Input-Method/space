@@ -1,0 +1,3 @@
+# 继承标准中文26键，在主题内部应用速成主键符补丁。
+__include: ./../default/theme:/
+__patch: key_labels:/patch
