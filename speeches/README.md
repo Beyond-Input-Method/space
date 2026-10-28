@@ -69,6 +69,12 @@ resources/space/speeches/
   accessKey: ''
   # 是否启用自动标点符号（true 自动加标点 / false 不加）
   enablePunc: true
+  # 中文结果变体。留空保持简体；可选 traditional / tw / hk
+  outputZhVariant: ''
+  # 是否启用中英文及方言识别，默认开启
+  enableLid: true
+  # 是否启用语义顺滑，默认关闭
+  enableDdc: false
   ```
 
 字段说明：
@@ -76,6 +82,9 @@ resources/space/speeches/
 - `provider`：用哪个语音引擎。目前支持 `local`（系统本地识别）与 `volcengine`（火山引擎云端）。
 - `appKey` / `accessKey`：云端 provider 的密钥，留空表示尚未配置（用户需在 App 里通过对应补丁页填写）。
 - `enablePunc`：是否让识别结果自动带标点（仅部分 provider 支持）。
+- `outputZhVariant`：豆包中文结果变体，可选 `traditional`（大陆繁体）、`tw`（台湾正体）、`hk`（香港繁体）；不设置或留空时保持简体。
+- `enableLid`：是否启用中英文及方言识别，默认 `true`；开启后服务端会在 `additions` 中返回语种/场景标签。
+- `enableDdc`：是否启用语义顺滑，默认 `false`。开启后会删除或修正停顿词、语气词和语义重复。
 
 > 一句话：**新增一个云端语音服务时，除了写 `info.yaml`，还要在同目录放一个 `speech.yaml` 指定 `provider` 和密钥字段。**
 

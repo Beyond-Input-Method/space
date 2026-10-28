@@ -122,6 +122,7 @@ preset_keys:
       eisu_toggle_speech_list_board,
       eisu_toggle_patch_speech_volcengine,
       eisu_toggle_patch_speech_setting,
+      eisu_toggle_personal_hotwords,
     ]
   }
 
@@ -163,10 +164,13 @@ preset_keys:
 
   # 语音设置
   # 支持系统：鸿蒙
-  eisu_toggle_patch_speech_setting: { icon: "mic_fill.svg", label: "语音设置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_setting" ] }
+  eisu_toggle_patch_speech_setting: { icon: "mic_circle.svg", label: "语音设置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_setting" ] }
   # 笔画过滤
   # 支持系统：鸿蒙
-  eisu_toggle_patch_speech_volcengine: { icon: "key_circle_fill.svg", label: "豆包语音配置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_volcengine" ] }
+  eisu_toggle_patch_speech_volcengine: { icon: "key_horizontal.svg", label: "豆包语音配置", send: Eisu_toggle, select: _patch_setting, option: [ "_speech_volcengine" ] }
+  # 个性化语音热词：打开宿主热词页
+  # 支持系统：鸿蒙
+  eisu_toggle_personal_hotwords: { icon: "text_speaker_wave_rectangle.svg", label: "个性化热词", send: Eisu_toggle, select: _personal_hotwords }
 
 
   # 键盘选择
@@ -197,11 +201,11 @@ preset_keys:
   eisu_toggle_one_hand_board: { icon: "onehand.svg", label: "单手模式", send: Eisu_toggle, select: _one_hand_board }
   # 设置
   # 支持系统：鸿蒙，iOS
-  eisu_toggle_common_setting_board: { icon: "gearshape_fill.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
+  eisu_toggle_common_setting_board: { icon: "gearshape.svg", label: "设置", send: Eisu_toggle, select: _common_setting_board }
   # 通用开关（CommonSetting 布尔项，点击原地切换）
   # 支持系统：鸿蒙
   eisu_toggle_common_setting_switches: {
-    icon: "switch_square_lefthalf_filled.svg",
+    icon: "switch_square.svg",
     label: "通用开关",
     send: Eisu_toggle,
     select: _setting_board,
@@ -278,7 +282,7 @@ preset_keys:
   eisu_toggle_patch_calculator: { icon: "calculator.svg", label: "计算器", send: Eisu_toggle, select: _patch_setting, option: [ "calculator" ] }
   # 计算器JS版
   # 支持系统：鸿蒙
-  eisu_toggle_patch_calculatorjs: { icon: "calculator_fill.svg", label: "计算器js版", send: Eisu_toggle, select: _patch_setting, option: [ "calculatorjs" ] }
+  eisu_toggle_patch_calculatorjs: { icon: "calculator.svg", label: "计算器js版", send: Eisu_toggle, select: _patch_setting, option: [ "calculatorjs" ] }
   # 笔画过滤
   # 支持系统：鸿蒙
   eisu_toggle_patch_stroke_filter: { icon: "keyboard_badge_bihua.svg", label: "笔画过滤", send: Eisu_toggle, select: _patch_setting, option: [ "stroke_filter" ] }
@@ -356,7 +360,7 @@ preset_keys:
   mode_switch_pasteboard_monitoring_on_or_off: { icon: "bolt_clipboard.svg", toggle: app_setting/pasteboard_monitoring_switch, send: Mode_switch, states: [ 剪切板监控关, 剪切板监控开 ], select: bim, name: Mode_switch }
   #启动显示系统信息
   # 支持系统：iOS
-  mode_switch_system_info_on_or_off: { icon: "info_circle_fill.svg", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
+  mode_switch_system_info_on_or_off: { icon: "info_circle.svg", toggle: app_setting/show_system_info, send: Mode_switch, states: [ 系统信息关, 系统信息开 ], select: bim, name: Mode_switch }
   # （空行语义：与下方「基础导航 / Eisu_toggle」预设键分组分隔）
   # 基础编辑与导航（光标、修饰、回车、空格等）
   # 光标左移（Left）
@@ -517,9 +521,9 @@ preset_keys:
   function_pasteboard_paste_1: { icon: "doc_plaintext.svg", label: "粘贴历史1", send: function, command: pasteboard.paste, option: "1" }
   function_pasteboard_paste_2: { icon: "rectangle_on_rectangle.svg", label: "粘贴历史2", send: function, command: pasteboard.paste, option: "2" }
   #粘贴剪贴板收藏（favorite 分类，index 从 0 起）
-  function_pasteboard_paste_fav_0: { icon: "star_fill.svg", label: "粘贴收藏0", send: function, command: pasteboard.paste, option: ["favorite", "0"] }
+  function_pasteboard_paste_fav_0: { icon: "star.svg", label: "粘贴收藏0", send: function, command: pasteboard.paste, option: ["favorite", "0"] }
   function_pasteboard_paste_fav_1: { icon: "star_circle.svg", label: "粘贴收藏1", send: function, command: pasteboard.paste, option: ["favorite", "1"] }
-  function_pasteboard_paste_fav_2: { icon: "star_circle_fill.svg", label: "粘贴收藏2", send: function, command: pasteboard.paste, option: ["favorite", "2"] }
+  function_pasteboard_paste_fav_2: { icon: "star_circle.svg", label: "粘贴收藏2", send: function, command: pasteboard.paste, option: ["favorite", "2"] }
   #换行
   # 支持系统：鸿蒙
   function_keyboard_newline: { icon: "arrow_uturn_down.svg", label: "换行", send: function, command: keyboard.newline, option: "" }
@@ -586,7 +590,7 @@ preset_keys:
 
   # 切换方案目录及其方案；option 依次为目录和方案，均支持内部标识或显示名称
   # 支持系统：鸿蒙, 安桌
-  function_keyboard_switchSchemaDir: { type: command, icon: "keyboard_fill.svg", label: "切换方案目录", send: function, command: keyboard.switchSchemaDir, option: [ "bim-pinyin", "rime_ice_26" ] }
+  function_keyboard_switchSchemaDir: { type: command, icon: "keyboard.svg", label: "切换方案目录", send: function, command: keyboard.switchSchemaDir, option: [ "bim-pinyin", "rime_ice_26" ] }
 
   # 切换主题,再点击回到上次主题
   # 支持系统：鸿蒙, 安桌
@@ -615,7 +619,7 @@ preset_keys:
 
   # 提示（提示型，示例）：点击弹提示；dismiss_after_tap 使其点击后永久消失。标题取 label、正文取 preview。
   # 仅作演示，发布前可从菜单移除。支持系统：鸿蒙、安卓
-  function_demo_prompt: { type: prompt, icon: "exclamationmark_circle_fill.svg", label: "提示", preview: "这是一条工具栏提示信息，点击「知道了」后本项会永久消失。", option: [ "dismiss_after_tap" ] }
+  function_demo_prompt: { type: prompt, icon: "exclamationmark_circle.svg", label: "提示", preview: "这是一条工具栏提示信息，点击「知道了」后本项会永久消失。", option: [ "dismiss_after_tap" ] }
 
   # 默认的方案状态
   # commandl固定为：rime.switches option参数为方案switches的name

@@ -1,0 +1,23 @@
+{
+  "unicode_version": "18.0",
+  "qualification": {
+    "fully-qualified": 3963,
+    "component": 9
+  },
+  "emoji_source_sha256": "8f3735cda1f92a779d78af67cf86066bb1f07143dc22f2ac29394d9bc57ab21a",
+  "common_source_sha256": "de755739f0d7f62be0ee63800be2a28c7e2726177fb60b26609f21d0f9d2e0ea",
+  "packs": {
+    "default": {
+      "groups": 22,
+      "items": 3972,
+      "display_entries": 4036,
+      "sha256": "96deaa5b6f6132bfdc0af609f37848a28a7affa8cf0b388588a1007081f824b5"
+    },
+    "kaomoji": {
+      "groups": 32,
+      "items": 1296,
+      "display_entries": 1296,
+      "sha256": "a129c7f5557225d59e2028fc3112305f98a7e1adda43493ffa8503219d83ed20"
+    }
+  }
+}
