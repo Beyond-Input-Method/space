@@ -1,0 +1,15 @@
+name: Sherpa 离线语音
+description: |
+  基于 sherpa-onnx 2.0.1 与 SenseVoice int8 模型的本地语音识别。
+
+  • 无需联网、账号或云端密钥，音频仅在设备本地处理
+  • 支持普通话、粤语、英语、日语和韩语，默认自动检测语言
+  • 录音结束后识别并输出文字，首次识别包含模型加载时间
+  • 可在 speech.yaml 配置模型路径、语言、数字规范化及线程数
+  • 默认单次录音上限 60 秒，超限会提示失败
+
+version: '2.0.1'
+provider: sherpa_onnx
+support_platforms: [hmos]
+create_date: 2026-10-29
+update_date: 2026-10-29

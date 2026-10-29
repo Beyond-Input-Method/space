@@ -1,0 +1,25 @@
+# Sherpa ONNX 2.0.1：SenseVoice 离线识别，松手后输出最终文字。
+# 所有文件路径相对于本 speech.yaml 所在目录；导入后自动解析为沙箱路径。
+provider: sherpa_onnx
+modelType: sense_voice
+tokens: SenseVoice/tokens.txt
+senseVoice:
+  model: SenseVoice/model.int8.onnx
+  # auto 自动检测；也可指定 zh / en / yue / ja / ko
+  language: auto
+  # 数字、日期等逆文本规范化；覆盖通用 enableItn
+  useItn: true
+
+audioConfig:
+  sampleRate: 16000
+  bits: 16
+  channels: 1
+numThreads: 2
+computeProvider: cpu
+debug: false
+decodingMethod: greedy_search
+enableItn: true
+# 缓存上限，超过时明确报错，避免长录音占用过多内存（1～300 秒）。
+maxRecordingSeconds: 60
+# 含模型加载在内的最终结果等待时长（1500～120000 毫秒）。
+finalizeTimeoutMs: 30000
