@@ -10,6 +10,6 @@ description: |
 
 version: '2.0.1'
 provider: sherpa_onnx
-support_platforms: [hmos]
+support_platforms: [hmos, ios]
 create_date: 2026-10-29
-update_date: 2026-10-29
+update_date: 2026-10-30

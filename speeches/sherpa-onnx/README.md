@@ -14,3 +14,7 @@
 语音在松手后执行离线推理，无实时 partial。默认单次录音最长 60 秒，等待结果最长 30 秒，可在 speech.yaml 调整。
 
 info.yaml 的版本为资源元数据。使用此资源需要共享 bimkit 已移除默认 1.0.0～2.0.0 版本范围限制的修复。
+
+## iOS
+
+iOS 使用同一份 speech.yaml 与 SenseVoice 模型，info.yaml 声明 hmos 和 ios 平台。模型在 Host App 内加载，键盘扩展通过 App Group 请求录音并接收最终结果。iOS 需启用完全访问、麦克风权限和现有 PiP 待机流程。打包时保留相对目录结构；模型仍不纳入 Git。
