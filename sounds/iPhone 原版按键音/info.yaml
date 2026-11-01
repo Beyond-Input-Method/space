@@ -5,7 +5,9 @@ url: https://github.com/Beyond-Input-Method/sounds
 createTime: 2026-08-30
 updateTime: 2026-08-30
 # description:
-# supportPlatforms:
+support_platforms:
+  - android
+  - hmos
 # preview: ""
 # dirPath: ""
 # dirName: ""

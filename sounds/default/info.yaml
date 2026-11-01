@@ -5,7 +5,9 @@ url: https://github.com/Beyond-Input-Method/sounds/default
 createTime: 2023-03-30
 updateTime: 2023-03-30
 description: 默认音效
-# supportPlatforms:
+support_platforms:
+  - android
+  - hmos
 # preview: ""
 # dirPath: ""
 # dirName: ""
