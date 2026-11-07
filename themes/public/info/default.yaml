@@ -7,6 +7,19 @@ update_time: 2023-03-30
 
 # description: ""
 # support_platforms: ""
-# preview: ""
+# 主题卡片预览图（相对主题目录，仅 png/gif）：
+# 单图：
+# preview: preview.png
+# 多图轮播：
+# preview:
+#   - preview_1.png
+#   - preview_2.gif
+# Light / Dark（运行时按当前深浅色优先；缺失则回退 preview）：
+# preview_light:
+#   - preview_light_1.png
+# preview_dark:
+#   - preview_dark_1.png
+# 也可直接放文件：preview_1260x2720.png / preview_light_1260x2720.png / preview_dark_1260x2720.png
+# 读取顺序（逐级排他）：当前 mode → 默认 preview_* → preview.png → 应用默认占位图。
 # dirPath: ""
 # dirName: ""

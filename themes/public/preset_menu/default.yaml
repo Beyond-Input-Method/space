@@ -54,6 +54,7 @@ preset_menu:
      function_handwriting_find,                     # 手写找字
      eisu_toggle_theme_list_board,                  # 主题
      function_keyboard_rebuildTheme,                # 刷新主题
+     function_keyboard_captureThemePreview,         # 截取主题预览
      eisu_toggle_edit_keyboard_board,               # 键盘调节
      eisu_toggle_one_hand_board,                    # 单手模式
      eisu_toggle_sound_board,                       # 声音设置
