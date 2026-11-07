@@ -46,6 +46,7 @@ preset_keys:
       eisu_toggle_pasteboard_favorite_board, # 收藏的剪切板项目
       eisu_toggle_file_manager,             # 文件管理器
       function_keyboard_rebuildTheme,       # 重载主题
+      function_keyboard_captureThemePreview, # 截取主题预览
       function_rime_deploy,                 # 重新部署Rime
 #      eisu_toggle_open_web_browser,         # 打开网页浏览器
       # eisu_toggle_switch_setting,
@@ -603,6 +604,10 @@ preset_keys:
   # 删除当前主题的 build 缓存后重新加载主题
   # 支持系统：鸿蒙, 安桌
   function_keyboard_rebuildTheme: { type: command, icon: "wrench_and_screwdriver.svg", label: "重载主题", send: function, command: keyboard.rebuildTheme, option: "" }
+
+  # 回到键盘 root 后截取当前分辨率主题预览图，保存到主题目录
+  # 支持系统：鸿蒙
+  function_keyboard_captureThemePreview: { type: command, icon: "camera_2.svg", label: "截取主题预览", send: function, command: keyboard.captureThemePreview, option: "" }
 
   # 重新输入最近一次非空上屏文本
   # 支持系统：鸿蒙, 安桌
