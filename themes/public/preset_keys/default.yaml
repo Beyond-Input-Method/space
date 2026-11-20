@@ -742,7 +742,7 @@ preset_keys:
   text_fullsquarebracketleft_left_default: { label: "【", text: "【】{Left}{eisu_toggle_default}" }
   text_fullsquarebracketright_default: { label: "】", text: "】{eisu_toggle_default}" }
   #｛｝
-  text_fullbrace_left_default: { label: "{", text: "｛｝{left}{eisu_toggle_default}" }
+  text_fullbrace_left_default: { label: "{", text: "｛｝{Left}{eisu_toggle_default}" }
   text_fullrightbrace_default: { label: "}", text: "｝{eisu_toggle_default}" }
   text_halfleftbrace_default: { label: "{", text: "{{eisu_toggle_default}" }
   text_halfrightbrace_default: { label: "}", text: "}{eisu_toggle_default}" }
@@ -757,9 +757,10 @@ preset_keys:
   #引号 “”""＂＂「」『』
   # “”
   text_fullquotationmark_left_default: { label: "“", text: "“”{Left}{eisu_toggle_default}" }
-  text_full_quotation_mark_left_default_no_functional: { label: "“", text: "“”{Left}{eisu_toggle_default}", functional: false }
+  text_full_quotation_mark_left_default_no_functional: { label: "“”", text: "“”{Left}{eisu_toggle_default}", functional: false }
   text_fullquotationmarkright_default: { label: "〞", text: "〞{eisu_toggle_default}" }
-  text_full_quotation_mark_right_default_no_functional: { label: "〞", text: "〞{eisu_toggle_default}", functional: false }
+  # 左右键点按均插入成对引号，各自的长按备选仍由键盘布局定义。
+  text_full_quotation_mark_right_default_no_functional: { label: "“”", text: "“”{Left}{eisu_toggle_default}", functional: false }
   text_quotationmark_left_default: { label: "〝", text: "〝〞{Left}{eisu_toggle_default}" }
   text_fullquotationmark_left: { label: "“", text: "“”{Left}" }
   # ""
